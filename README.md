@@ -1,5 +1,5 @@
-## Department of Decentralization
+## Protocol Berg
 
-This is a website on the world-wide web utilizing hyper-links to assist you navigating the numerous websites of the Department of Decentralization from Berlin.
+This is a website on the world-wide web utilizing hyper-links to assist you navigating the website of the Protocol Berg conference in Berlin.
 
-* <https://ethberlin.org>
+* <https://protocol.berlin>
