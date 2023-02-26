@@ -1,5 +1,5 @@
 import * as React from "react";
-import refs from "./references";
+import refs from "../references";
 
 const FootNote = ({ id, author, description, year, url, accessed }) => (
   <li id={`fn${id}`} className="flex flex-row">
