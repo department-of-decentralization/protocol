@@ -11,7 +11,7 @@ const FootNote = ({ id, author, description, year, url, accessed }) => (
       {url && (
         <>
           <span className="text-sm"> URL: </span>
-          <a href="{url}" className="font-mono text-xs">
+          <a href={url} className="font-mono text-xs">
             {url}.
           </a>
         </>
