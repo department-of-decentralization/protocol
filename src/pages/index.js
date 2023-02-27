@@ -42,9 +42,6 @@ const IndexPage = () => {
         </p>
         <p className="text-center">WORK IN PROGRESS</p>
         <p className="author">
-          Satoshi Nakamoto, Vitalik Buterin, Juan Benet, Molly Mackinley, Gavin
-          Wood, Robert Habermeier, Ethan Buchanan, Zaki Manian, Jae Kwon, et
-          alia.
           <div className="mt-8 text-lg">
             September 15, 2023, Kreuzberg, Berlin
           </div>
