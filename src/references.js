@@ -8,7 +8,7 @@ const references = {
   },
   dappcon: {
     author: "DAPPCON",
-    description: "Dapp Developer Conference",
+    description: "Dapp-Developer Conference",
     year: "2023",
     url: "https://dappcon.io/",
     accessed: "22.02.2023",
@@ -35,6 +35,7 @@ const references = {
   xberg: {
     author: "Visit Berlin",
     description: "Friedrichshain-Kreuzberg",
+    year: "2023",
     url: "https://www.visitberlin.de/en/bezirke/friedrichshain-kreuzberg",
     accessed: "22.02.2023",
   },
