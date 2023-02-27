@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://protocol.berlin`,
   },
   plugins: ["gatsby-plugin-postcss"],
 };
