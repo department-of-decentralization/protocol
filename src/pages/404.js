@@ -25,21 +25,16 @@ const codeStyles = {
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
+    <main className="my-24">
+      <header className="text-center">
+        <h1 className="font-bold">Page not found</h1>
+        <p className="italic text-center">
+          Sorry, we couldn't find what you were looking for.
+        </p>
+        <p className="text-center">
+          Have you heard about <Link to="/">Protocol Berg</Link> yet?
+        </p>
+      </header>
     </main>
   )
 }
