@@ -43,7 +43,7 @@ const IndexPage = () => {
         </p>
         <p className="text-center">
           A Department-of-Decentralization
-          <Ref src={refs.dod} /> event.
+          <Ref src={refs.dod} /> event; edition 0b11111100111.
         </p>
         <p className="author">
           <div className="mt-8 text-lg">
@@ -54,25 +54,21 @@ const IndexPage = () => {
 
       <div className="abstract">
         <h2 className="font-bold">Abstract</h2>
-        <p>
-          There are various conferences addressing end-user applications and
-          consumer-grade products
-          <Ref src={refs.dappcon} />
-          <Ref src={refs.desci} />
-          <Ref src={refs.blockchainweek} />. However, not many of them create a
-          stage specifically for protocol research, decentralized
-          infrastructure, or core-developer experience. Protocol Berg is a novel
-          summit to address this shortcoming by creating a one-day event with
-          two parallel stages and several opportunities for technical workshops
-          and protocol community gatherings. Attendance is free of charge. The
-          event will not host any sponsors or commercial vendors.
-        </p>
+        <small className="mt-4">
+          Protocol Berg is a novel summit providing a stage specifically for
+          protocol research, decentralized infrastructure, and core-developer
+          experience. The one-day event with two stages, opportunities for
+          technical workshops, and protocol community gatherings brings together
+          protocol reserachers and other stakeholders from different
+          decentralized protocols. Attendance is free of charge. The event will
+          not host any sponsors or commercial talks.
+        </small>
       </div>
       <section>
         <h2 className="font-bold">Conference</h2>
         <p>
-          Protocol Berg will be a one-day technical conference targeting an
-          audience of protocol engineers, system engineers, network engineers,
+          Protocol Berg is a one-day technical conference targeting an audience of
+          protocol engineers, system engineers, network engineers,
           blockchain-operation engineers, decentralized-infrastructure
           administrators, as well as researchers and other curious minds.
         </p>
@@ -82,20 +78,20 @@ const IndexPage = () => {
           infrastructure, open-source governance, and protocol research.
         </p>
         <p>
-          The venue will be equipped with two stages, one for keynotes,
-          visionary talks, and events, and one for hands-down technical talks.
-          In addition, there will be workshop areas for deep technical study and
-          knowledge-sharing classes.
+          We expect 500-600 attendees and tickets will be free as in{" "}
+          <span className="italic">free lemonade</span>.
+          All attendees have to adhere to the event's{" "}
+          <a href="/conduct">Code of Conduct</a>.
         </p>
         <p>
-          We expect 500-600 attendees and tickets will be free as in{" "}
-          <span className="italic">free lemonade</span>. There will be no
-          sponsors and no swag, or any other distractions whatsoever.
+          Protocol Berg is a donation-backed non-profit event. There will be no
+          sponsors.
         </p>
       </section>
 
       <section>
         <h2 className="font-bold">Call for Participation</h2>
+        <p>Applications for tickets will open shortly.</p>
         <p>
           To submit a technical talk or workshop proposal, use our Pretalx
           interface: <br />
@@ -129,15 +125,19 @@ const IndexPage = () => {
           years. Cast iron columns carry a five-meter-high ceiling, the parquet
           is made of old beech. Deep arched windows open the room to the light.
           The result is a magnificent venue with a good deal of charm - perhaps
-          the most beautiful in Berlin-Kreuzberg
+          one of the most beautiful in Berlin-Kreuzberg
           <Ref src={refs.xberg} />.
         </p>
         <p>
-          Latitude/Longitude:
+          The venue will be equipped with two stages. In addition, there will be
+          workshop areas for deep technical study and knowledge-sharing classes.
+        </p>
+        <p>
+          <span className="font-bold">Latitude/Longitude:</span>
           <br />
           <span className="ml-12">52.504853, 13.434746</span>
           <br />
-          Street Address:
+          <span className="font-bold">Street Address:</span>
           <br />
           <span className="ml-12">
             K&ouml;penicker Stra&szlig;e 16-17, 10997 Berlin-Kreuzberg
@@ -149,8 +149,8 @@ const IndexPage = () => {
       <section>
         <h2 className="font-bold">About the Host</h2>
         <p>
-          The <span className="italic">Department of Decentralization</span>
-          <Ref src={refs.dod} /> is a collective of people from various crypto,
+          The <a href="/decentralization" className="italic">Department
+          of Decentralization</a> is a collective of people from various crypto,
           decentralization, and blockchain communities in and around Berlin. The
           group first assembled in 2018 to organize events such as ETHBerlin
           <Ref src={refs.ethberlin} /> or GoerliCon
@@ -159,9 +159,9 @@ const IndexPage = () => {
         <p>
           The aim is to be an agnostic vehicle to drive adoption, educate
           newcomers, and raise awareness on the challenges and benefits of
-          decentralization and open source software. Currently, the Department
-          is primarily run from Berlin. The collective is composed of around a
-          dozen members and takes decisions using rough consensus.
+          decentralization and open source software. Currently, the
+          Department is primarily run from Berlin. The collective is composed
+          of around a dozen members who contribute on a voluntary basis.
         </p>
       </section>
       <footer className="footnotes mt-8">
@@ -175,19 +175,6 @@ const IndexPage = () => {
               ))
           }
         </ul>
-        <p className="mt-4 italic">
-          <br />
-          Angaben gem&auml;&szlig; &sect; 5 TMG: Goerli Dezentral gGmbH,
-          Mariannenstra&szlig;e 9-10, 10999 Berlin, Handelsregister: HRB 207663
-          B, Registergericht: Amtsgericht, Charlottenburg, Berlin,
-          Umstatzsteuer-ID: DE325917754, vertreten durch A. Schoedon, Telefon:
-          +49 (0) 30 20613410, E-Mail:{" "}
-          <a href="mailto:schoedon@protocol.berlin">schoedon@protocol.berlin</a>
-          . Goerli Dezentral gGmbH is a non-profit organization serving
-          tax-privileged purposes, according to the articles of association. The
-          organization meets the statutory requirements under &sect;&sect; 51,
-          59, 60, and 61 AO in Germany.
-        </p>
       </footer>
     </main>
   );
