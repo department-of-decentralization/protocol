@@ -1,5 +1,6 @@
 import * as React from "react";
 import refs from "../references";
+import { SEO } from "../components/seo";
 
 const FootNote = ({ id, author, description, year, url, accessed }) => (
   <li id={`fn${id}`} className="flex flex-row">
@@ -41,7 +42,8 @@ const IndexPage = () => {
           The decentralized protocol and infrastructure conference.
         </p>
         <p className="text-center">
-          A Department-of-Decentralization<Ref src={refs.dod} /> event.
+          A Department-of-Decentralization
+          <Ref src={refs.dod} /> event.
         </p>
         <p className="author">
           <div className="mt-8 text-lg">
@@ -54,15 +56,16 @@ const IndexPage = () => {
         <h2 className="font-bold">Abstract</h2>
         <p>
           There are various conferences addressing end-user applications and
-          consumer-grade products<Ref src={refs.dappcon} />
+          consumer-grade products
+          <Ref src={refs.dappcon} />
           <Ref src={refs.desci} />
           <Ref src={refs.blockchainweek} />. However, not many of them create a
-          stage specifically for protocol research, decentralized infrastructure, or
-          core-developer experience. Protocol Berg is a novel summit to address
-          this shortcoming by creating a one-day event with two parallel stages
-          and several opportunities for technical workshops and protocol
-          community gatherings. Attendance is free of charge. The event will
-          not host any sponsors or commercial vendors.
+          stage specifically for protocol research, decentralized
+          infrastructure, or core-developer experience. Protocol Berg is a novel
+          summit to address this shortcoming by creating a one-day event with
+          two parallel stages and several opportunities for technical workshops
+          and protocol community gatherings. Attendance is free of charge. The
+          event will not host any sponsors or commercial vendors.
         </p>
       </div>
       <section>
@@ -96,7 +99,11 @@ const IndexPage = () => {
         <p>
           To submit a technical talk or workshop proposal, use our Pretalx
           interface: <br />
-          <a href="https://speak.protocol.berlin" target="_blank"className="ml-12">
+          <a
+            href="https://speak.protocol.berlin"
+            target="_blank"
+            className="ml-12"
+          >
             https://speak.protocol.berlin
           </a>
         </p>
@@ -113,20 +120,29 @@ const IndexPage = () => {
         <h2 className="font-bold">Venue</h2>
         <p>
           The <span className="italic">Heeresbäckerei</span> (magazine in the
-          army bakery)<Ref src={refs.heeresbaeckerei} /> in Berlin-Kreuzberg is
-          an impressive industrial monument located directly at the river Spree. The
-          magazine in the west wing was used as a warehouse since 1890. Lorries
-          with flour and grain traveled on rails between the magazine and the
-          bakery. The brick building has retained its substance over the years.
-          Cast iron columns carry a five-meter-high ceiling, the parquet is made
-          of old beech. Deep arched windows open the room to the light.
+          army bakery)
+          <Ref src={refs.heeresbaeckerei} /> in Berlin-Kreuzberg is an
+          impressive industrial monument located directly at the river Spree.
+          The magazine in the west wing was used as a warehouse since 1890.
+          Lorries with flour and grain traveled on rails between the magazine
+          and the bakery. The brick building has retained its substance over the
+          years. Cast iron columns carry a five-meter-high ceiling, the parquet
+          is made of old beech. Deep arched windows open the room to the light.
           The result is a magnificent venue with a good deal of charm - perhaps
-          the most beautiful in Berlin-Kreuzberg<Ref src={refs.xberg} />.
+          the most beautiful in Berlin-Kreuzberg
+          <Ref src={refs.xberg} />.
         </p>
-        <p>Latitude/Longitude:<br />
-          <span className="ml-12">52.504853, 13.434746</span><br />
-          Street Address:<br />
-          <span className="ml-12">K&ouml;penicker Stra&szlig;e 16-17, 10997 Berlin-Kreuzberg</span>.
+        <p>
+          Latitude/Longitude:
+          <br />
+          <span className="ml-12">52.504853, 13.434746</span>
+          <br />
+          Street Address:
+          <br />
+          <span className="ml-12">
+            K&ouml;penicker Stra&szlig;e 16-17, 10997 Berlin-Kreuzberg
+          </span>
+          .
         </p>
       </section>
 
@@ -137,8 +153,8 @@ const IndexPage = () => {
           <Ref src={refs.dod} /> is a collective of people from various crypto,
           decentralization, and blockchain communities in and around Berlin. The
           group first assembled in 2018 to organize events such as ETHBerlin
-          <Ref src={refs.ethberlin} /> or GoerliCon<Ref src={refs.goerli} />{" "}
-          and has been active since.
+          <Ref src={refs.ethberlin} /> or GoerliCon
+          <Ref src={refs.goerli} /> and has been active since.
         </p>
         <p>
           The aim is to be an agnostic vehicle to drive adoption, educate
@@ -159,17 +175,18 @@ const IndexPage = () => {
               ))
           }
         </ul>
-        <p className="mt-4 italic"><br />
-          Angaben gem&auml;&szlig; &sect; 5 TMG:
-          Goerli Dezentral gGmbH, Mariannenstra&szlig;e 9-10, 10999 Berlin,
-          Handelsregister: HRB 207663 B, Registergericht: Amtsgericht,
-          Charlottenburg, Berlin, Umstatzsteuer-ID: DE325917754,
-          vertreten durch A. Schoedon, Telefon: +49 (0) 30 20613410, E-Mail:{" "}
-          <a href="mailto:schoedon@protocol.berlin">schoedon@protocol.berlin</a>.
-          Goerli Dezentral gGmbH is a non-profit organization serving
-          tax-privileged purposes, according to the articles of association.
-          The organization meets the statutory requirements under
-          &sect;&sect; 51, 59, 60, and 61 AO in Germany.
+        <p className="mt-4 italic">
+          <br />
+          Angaben gem&auml;&szlig; &sect; 5 TMG: Goerli Dezentral gGmbH,
+          Mariannenstra&szlig;e 9-10, 10999 Berlin, Handelsregister: HRB 207663
+          B, Registergericht: Amtsgericht, Charlottenburg, Berlin,
+          Umstatzsteuer-ID: DE325917754, vertreten durch A. Schoedon, Telefon:
+          +49 (0) 30 20613410, E-Mail:{" "}
+          <a href="mailto:schoedon@protocol.berlin">schoedon@protocol.berlin</a>
+          . Goerli Dezentral gGmbH is a non-profit organization serving
+          tax-privileged purposes, according to the articles of association. The
+          organization meets the statutory requirements under &sect;&sect; 51,
+          59, 60, and 61 AO in Germany.
         </p>
       </footer>
     </main>
@@ -178,4 +195,9 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Protocol Berg, Sept 15, Berlin</title>;
+export const Head = () => (
+  <>
+    {" "}
+    <SEO />
+  </>
+);
