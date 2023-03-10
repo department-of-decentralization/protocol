@@ -36,14 +36,14 @@ const DecentralizationPage = () => {
         <h2 className="font-bold">About Us</h2>
         <p>
           Protocol Berg is organized by the Department of Decentralization, a
-          collective of people from various crypto- and blockchain communities in
-          and around Berlin. The group first assembled in 2018 to organize
+          collective of people from various crypto- and blockchain communities
+          in and around Berlin. The group first assembled in 2018 to organize
           ETHBerlin and has been active since.
         </p>
         <p>
-          Our aim is to be an agnostic vehicle to drive adoption, educate
-          newcomers, and raise awareness on the challenges and benefits of
-          decentralization and open source software.
+        Our aim is to be an agnostic vehicle to drive adoption, educate
+        newcomers, and raise awareness on the challenges and benefits of
+        decentralization and open source software.
         </p>
         <p>Our projects to date:</p>
         <ul>
@@ -111,24 +111,23 @@ const DecentralizationPage = () => {
             <a href="https://web.archive.org/web/20220426113132/https://twopointfive.online/" target="_blank">twopointfive.online</a>
           </li>
           <li>
-            <span className="font-bold">StrikeDAO (2022): </span>The Ethereum
+            <span className="font-bold">StrikeDAO (2022):</span> The Ethereum
             domain of Bundeskunsthalle was squatted by artist Hito Steyerl and the
             DoD. The StrikeDAO voted on three models of future governance of this
             squatted domain, quadratically:{" "}
             <a href="https://strikedao.com" target="_blank">strikedao.com</a>
           </li>
           <li>
-            <span className="font-bold">ETHBerlin³ (2022): </span>hackathon,
-            conference, and cultural festival, third edition:{" "}
+            <span className="font-bold">ETHBerlin³ - to the power of 3 (2022):</span>
+            hackathon, conference, and cultural festival, third edition:{" "}
             <a href="https://ethberlin.ooo" target="_blank">
               ethberlin.ooo
             </a>
           </li>
         </ul>
         <p className="mt-8">
-          Currently, the Department is primarily run from Berlin. We are around a
-          dozen members and currently take collective decisions using rough
-          consensus.
+          Currently, the Department is primarily run from Berlin. The collective
+          is composed of around a dozen members who contribute on a voluntary basis.
         </p>
       </section>
     </main>
