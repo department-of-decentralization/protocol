@@ -1,29 +1,9 @@
 const references = {
   dod: {
     author: "Department of Decentralization",
-    description: "About Us - ETHBerlin",
-    year: "2022",
-    url: "https://ethberlin.ooo/decentralization/",
-    accessed: "22.02.2023",
-  },
-  dappcon: {
-    author: "DAPPCON",
-    description: "Dapp-Developer Conference",
+    description: "About Us",
     year: "2023",
-    url: "https://dappcon.io/",
-    accessed: "22.02.2023",
-  },
-  desci: {
-    author: "DeSci Berlin",
-    description: "Decentralized Science Conference",
-    year: "2023",
-    url: "https://desci.berlin/",
-    accessed: "22.02.2023",
-  },
-  blockchainweek: {
-    description: "Berlin Blockchain Week",
-    year: "2022",
-    url: "https://blockchainweek.berlin/",
+    url: "https://protocol.berlin/decentralization/",
     accessed: "22.02.2023",
   },
   heeresbaeckerei: {
