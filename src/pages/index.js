@@ -104,7 +104,7 @@ const IndexPage = () => {
           </a>
         </p>
         <p>
-          To join our collective as contributor or volunteer, please email us:{" "}
+        To provide feedback or ask questions, please email us:{" "}
           <br />
           <a href="mailto:hello@protocol.berlin" className="ml-12">
             hello@protocol.berlin{" "}
