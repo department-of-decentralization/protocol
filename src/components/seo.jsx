@@ -22,7 +22,7 @@ export const SEO = ({ title, description, pathname, children }) => {
     <>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+      <meta name="image" content={seo.image + "?cache-break-1"} />
       <meta name="og:title" content={seo.title} />
       <meta name="og:url" content={seo.url} />
       <meta name="og:description" content={seo.description} />
