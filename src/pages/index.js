@@ -175,7 +175,7 @@ const IndexPage = () => {
               ))
           }
         </ul>
-        <p className="mt-4 italic">
+        <p className="mt-4 italic text-center">
           <br />
           <a href="/contact">Impressum</a>.
         </p>

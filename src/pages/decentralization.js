@@ -64,8 +64,8 @@ const DecentralizationPage = () => {
           </li>
           <li>
             <span className="font-bold">Goerli Testnet (2019): </span>Born at
-            ETHBerlin and launched at GoerliCon, the Goerli Testnet is now one of
-            the most essential public-facing Ethereum testnets after the Merge.
+            ETHBerlin and launched at GoerliCon, the Goerli Testnet is now
+            the essential public-facing Ethereum testnets after the Merge.
           </li>
           <li>
             <span className="font-bold">
