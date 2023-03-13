@@ -153,8 +153,8 @@ const IndexPage = () => {
           of Decentralization</a> is a collective of people from various crypto,
           decentralization, and blockchain communities in and around Berlin. The
           group first assembled in 2018 to organize events such as ETHBerlin
-          <Ref src={refs.ethberlin} /> or GoerliCon
-          <Ref src={refs.goerli} /> and has been active since.
+          <Ref src={refs.ethberlin} /><Ref src={refs.ethb2rlin} /><Ref src={refs.ethb3rlin} />{" "}
+          or GoerliCon <Ref src={refs.goerli} /> and has been active since.
         </p>
         <p>
           The aim is to be an agnostic vehicle to drive adoption, educate
