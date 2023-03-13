@@ -37,13 +37,13 @@ const DecentralizationPage = () => {
         <p>
           Protocol Berg is organized by the Department of Decentralization, a
           collective of people from various crypto- and blockchain communities
-          in and around Berlin. The group first assembled in 2018 to organize
+          in and around Berlin. The group assembled in 2018 to organize
           ETHBerlin and has been active since.
         </p>
         <p>
-        Our aim is to be an agnostic vehicle to drive adoption, educate
-        newcomers, and raise awareness on the challenges and benefits of
-        decentralization and open source software.
+        We aim to be an agnostic vehicle to drive adoption, educate
+        newcomers, and raise awareness of the challenges and benefits of
+        decentralization and open-source software.
         </p>
         <p>Our projects to date:</p>
         <ul>
@@ -65,7 +65,7 @@ const DecentralizationPage = () => {
           <li>
             <span className="font-bold">Goerli Testnet (2019): </span>Born at
             ETHBerlin and launched at GoerliCon, the Goerli Testnet is now one of
-            the most important public-facing Ethereum testnets after the Merge.
+            the most essential public-facing Ethereum testnets after the Merge.
           </li>
           <li>
             <span className="font-bold">
@@ -113,12 +113,12 @@ const DecentralizationPage = () => {
           <li>
             <span className="font-bold">StrikeDAO (2022):</span> The Ethereum
             domain of Bundeskunsthalle was squatted by artist Hito Steyerl and the
-            DoD. The StrikeDAO voted on three models of future governance of this
-            squatted domain, quadratically:{" "}
+            DoD. The StrikeDAO voted on three models of the future governance of this
+            squatted domain quadratically:{" "}
             <a href="https://strikedao.com" target="_blank">strikedao.com</a>
           </li>
           <li>
-            <span className="font-bold">ETHBerlin³ - to the power of 3 (2022):</span>
+            <span className="font-bold">ETHBerlin³ - to the power of 3 (2022):</span>{" "}
             hackathon, conference, and cultural festival, third edition:{" "}
             <a href="https://ethberlin.ooo" target="_blank">
               ethberlin.ooo
@@ -127,7 +127,7 @@ const DecentralizationPage = () => {
         </ul>
         <p className="mt-8">
           Currently, the Department is primarily run from Berlin. The collective
-          is composed of around a dozen members who contribute on a voluntary basis.
+          is composed of around a dozen members who contribute voluntarily.
         </p>
       </section>
     </main>

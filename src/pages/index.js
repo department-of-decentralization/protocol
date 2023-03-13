@@ -55,11 +55,11 @@ const IndexPage = () => {
       <div className="abstract">
         <h2 className="font-bold">Abstract</h2>
         <small className="mt-4">
-          Protocol Berg is a novel summit providing a stage specifically for
+          Protocol Berg is a novel summit providing a location specifically for
           protocol research, decentralized infrastructure, and core-developer
           experience. The one-day event with two stages, opportunities for
           technical workshops, and protocol community gatherings brings together
-          protocol reserachers and other stakeholders from different
+          protocol researchers and other stakeholders from different
           decentralized protocols. Attendance is free of charge. The event will
           not host any sponsors or commercial talks.
         </small>
@@ -70,7 +70,7 @@ const IndexPage = () => {
           Protocol Berg is a one-day technical conference targeting an audience of
           protocol engineers, system engineers, network engineers,
           blockchain-operation engineers, decentralized-infrastructure
-          administrators, as well as researchers and other curious minds.
+          administrators, researchers, and other curious minds.
         </p>
         <p>
           Topics covered by the event orbit mainly around consensus protocols,
@@ -78,14 +78,14 @@ const IndexPage = () => {
           infrastructure, open-source governance, and protocol research.
         </p>
         <p>
-          We expect 500-600 attendees and tickets will be free as in{" "}
+          We expect 500-600 attendees, and tickets will be free, as in{" "}
           <span className="italic">free lemonade</span>.
           All attendees have to adhere to the event's{" "}
           <a href="/conduct">Code of Conduct</a>.
         </p>
         <p>
-          Protocol Berg is a donation-backed non-profit event. There will be no
-          sponsors.
+          Protocol Berg is a donation-backed non-profit event. Therefore, there
+          will be no sponsors.
         </p>
       </section>
 
@@ -120,11 +120,11 @@ const IndexPage = () => {
           <Ref src={refs.heeresbaeckerei} /> in Berlin-Kreuzberg is an
           impressive industrial monument located directly at the river Spree.
           The magazine in the west wing was used as a warehouse since 1890.
-          Lorries with flour and grain traveled on rails between the magazine
+          Lorries with flour and grain travelled on rails between the magazine
           and the bakery. The brick building has retained its substance over the
-          years. Cast iron columns carry a five-meter-high ceiling, the parquet
+          years. Cast iron columns carry a five-meter-high ceiling. The parquet
           is made of old beech. Deep arched windows open the room to the light.
-          The result is a magnificent venue with a good deal of charm - perhaps
+          The result is a magnificent venue with charm - perhaps
           one of the most beautiful in Berlin-Kreuzberg
           <Ref src={refs.xberg} />.
         </p>
@@ -152,16 +152,16 @@ const IndexPage = () => {
           The <a href="/decentralization" className="italic">Department
           of Decentralization</a> is a collective of people from various crypto,
           decentralization, and blockchain communities in and around Berlin. The
-          group first assembled in 2018 to organize events such as ETHBerlin
+          group assembled in 2018 to organize events such as ETHBerlin
           <Ref src={refs.ethberlin} /><Ref src={refs.ethb2rlin} /><Ref src={refs.ethb3rlin} />{" "}
-          or GoerliCon <Ref src={refs.goerli} /> and has been active since.
+          or GoerliCon<Ref src={refs.goerli} /> and has been active since.
         </p>
         <p>
           The aim is to be an agnostic vehicle to drive adoption, educate
-          newcomers, and raise awareness on the challenges and benefits of
-          decentralization and open source software. Currently, the
+          newcomers, and raise awareness of the challenges and benefits of
+          decentralization and open-source software. Currently, the
           Department is primarily run from Berlin. The collective is composed
-          of around a dozen members who contribute on a voluntary basis.
+          of around a dozen members who contribute voluntarily.
         </p>
       </section>
       <footer className="footnotes mt-8">
@@ -175,6 +175,10 @@ const IndexPage = () => {
               ))
           }
         </ul>
+        <p className="mt-4 italic">
+          <br />
+          <a href="/contact">Impressum</a>.
+        </p>
       </footer>
     </main>
   );
