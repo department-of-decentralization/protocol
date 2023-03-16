@@ -61,7 +61,7 @@ const ContactPage = () => {
         </p>
       </section>
       <section>
-        <h2 className="font-bold">Impressum</h2>
+        <h2 className="font-bold" id="imprint">Impressum</h2>
         <p>
           Angaben gem&auml;&szlig; &sect; 5 TMG: Goerli Dezentral gGmbH,
           Mariannenstra&szlig;e 9-10, 10999 Berlin, Handelsregister: HRB 207663
