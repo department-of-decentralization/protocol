@@ -90,7 +90,7 @@ const DecentralizationPage = () => {
           </li>
           <li>
             <span className="font-bold">Ecosystem Job-Openings (2019): </span>
-            connecting talents with web3-companies during the bear market.
+            connecting talent with web3-companies during the bear market.
           </li>
           <li>
             <span className="font-bold">
