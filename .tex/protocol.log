@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.8)  22 FEB 2023 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.26)  17 MAR 2023 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,29 +436,73 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 11.
 Package: hologo 2021-11-16 v1.15 A logo collection with bookmark support (HO)
 Package hologo Info: Using driver `pdftex'.
 )
-\@quotelevel=\count399
-\@quotereset=\count400
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+)
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen153
+\captionmargin=\dimen154
+\caption@leftmargin=\dimen155
+\caption@rightmargin=\dimen156
+\caption@width=\dimen157
+\caption@indent=\dimen158
+\caption@parindent=\dimen159
+\caption@hangindent=\dimen160
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count399
+\c@continuedfloat=\count400
+Package caption Info: hyperref package is loaded.
+)
+(/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count401
+\c@subtable=\count402
+)
+\@quotelevel=\count403
+\@quotereset=\count404
  (./protocol.aux)
 \openout1 = `protocol.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -507,8 +551,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'protocol.bbl' found.
  (./protocol.bbl)
-Package biblatex Info: Reference section=0 on input line 22.
-Package biblatex Info: Reference segment=0 on input line 22.
+Package biblatex Info: Reference section=0 on input line 25.
+Package biblatex Info: Reference segment=0 on input line 25.
 
 (/usr/share/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
@@ -517,26 +561,10 @@ Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
+)
+Package hyperref Info: Link coloring ON on input line 25.
 
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
-
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count401
-\scratchdimen=\dimen151
-\scratchbox=\box51
-\nofMPsegments=\count402
-\nofMParguments=\count403
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count404
-\MPscratchDim=\dimen152
-\MPnumerator=\count405
-\makeMPintoPDFobject=\count406
-\everyMPtoPDFconversion=\toks21
-)))
-Package hyperref Info: Link coloring ON on input line 22.
- (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
 (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -545,47 +573,125 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count407
+\c@section@level=\count405
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 25.
+LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \nameref on input line 25.
 
 (./protocol.out) (./protocol.out)
 \@outlinefile=\write4
 \openout4 = `protocol.out'.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 24.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 24.
 
-Overfull \hbox (6.19719pt too wide) in paragraph at lines 24--24
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count406
+\scratchdimen=\dimen161
+\scratchbox=\box51
+\nofMPsegments=\count407
+\nofMParguments=\count408
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count409
+\MPscratchDim=\dimen162
+\MPnumerator=\count410
+\makeMPintoPDFobject=\count411
+\everyMPtoPDFconversion=\toks21
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 27.
+
+Overfull \hbox (6.19719pt too wide) in paragraph at lines 27--27
  [][] 
  []
 
+<img/satoshi.png, id=32, 1027.84pt x 1026.83624pt>
+File: img/satoshi.png Graphic file (type png)
+<use img/satoshi.png>
+Package pdftex.def Info: img/satoshi.png  used on input line 43.
+(pdftex.def)             Requested size: 72.55527pt x 72.48126pt.
+
+Underfull \hbox (badness 1931) in paragraph at lines 44--44
+\OT1/cmr/m/n/10.95 coin, A Peer-to-Peer, Elec-
+ []
+
+<img/molly.png, id=33, 1027.84pt x 1027.84pt>
+File: img/molly.png Graphic file (type png)
+<use img/molly.png>
+Package pdftex.def Info: img/molly.png  used on input line 47.
+(pdftex.def)             Requested size: 72.55527pt x 72.55212pt.
+
+Underfull \hbox (badness 5217) in paragraph at lines 48--48
+\OT1/cmr/m/n/10.95 A Content-Addressed, Ver-
+ []
+
+<img/vitalik.png, id=34, 1027.84pt x 1027.84pt>
+File: img/vitalik.png Graphic file (type png)
+<use img/vitalik.png>
+Package pdftex.def Info: img/vitalik.png  used on input line 51.
+(pdftex.def)             Requested size: 72.55527pt x 72.55212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]\OT1/cmr/m/n/10.95 (c) |\OT1/cmr/bx/n/10.95 Vi-ta-lik Bu-terin\OT1/cmr/m/n/10
+.95 ,
+ []
+
+<img/megan.png, id=35, 1027.84pt x 1027.84pt>
+File: img/megan.png Graphic file (type png)
+<use img/megan.png>
+Package pdftex.def Info: img/megan.png  used on input line 58.
+(pdftex.def)             Requested size: 72.55527pt x 72.55212pt.
+<img/gavin.png, id=36, 1027.84pt x 1027.84pt>
+File: img/gavin.png Graphic file (type png)
+<use img/gavin.png>
+Package pdftex.def Info: img/gavin.png  used on input line 62.
+(pdftex.def)             Requested size: 72.55527pt x 72.55212pt.
+<img/hsiao.png, id=37, 1027.84pt x 1027.84pt>
+File: img/hsiao.png Graphic file (type png)
+<use img/hsiao.png>
+Package pdftex.def Info: img/hsiao.png  used on input line 66.
+(pdftex.def)             Requested size: 72.55527pt x 72.55212pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]\OT1/cmr/m/n/10.95 (f) |\OT1/cmr/bx/n/10.95 Hsiao-Wei Wang\OT1/cmr/m/n/10.95 
+,
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 53.
+(Font)              <12> on input line 90.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 53.
+(Font)              <8> on input line 90.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 53.
+(Font)              <6> on input line 90.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (11.50368pt too wide) in paragraph at lines 79--83
+Overfull \hbox (11.50368pt too wide) in paragraph at lines 118--122
 \OT1/cmr/m/n/12 del-sreg-is-ter: HRB 207663 B, Reg-is-terg-ericht: Amts-gericht
  Char-lot-ten-burg, Berlin, Umstatzsteuer-
  []
 
 
-Overfull \hbox (44.3939pt too wide) in paragraph at lines 79--83
+Overfull \hbox (44.3939pt too wide) in paragraph at lines 118--122
 \OT1/cmr/m/n/12 ID: DE325917754, vertreten durch Afri Schoe-don, [][]$\OT1/cmtt
 /m/n/12 schoedon @ ethberlin . org$[][]\OT1/cmr/m/n/12 , +49 (0)30 20613410. 
  []
 
-[2]
-Overfull \hbox (41.91237pt too wide) in paragraph at lines 92--92
+[2 <./img/satoshi.png> <./img/molly.png> <./img/vitalik.png> <./img/megan.png> 
+<./img/gavin.png> <./img/hsiao.png>]
+Overfull \hbox (41.91237pt too wide) in paragraph at lines 132--132
 []\OT1/cmr/m/n/12 Helmchen Events. \OT1/cmr/m/it/12 Mag-a-zin in der Heeresb^^?
 ackerei\OT1/cmr/m/n/12 . \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : [][]$\OT1/cmtt/m
 /n/12 https : / / www . magazin -[] heeresbaeckerei .
@@ -599,13 +705,13 @@ Package logreq Info: Writing requests to 'protocol.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16188 strings out of 478238
- 286093 string characters out of 5850456
- 997022 words of memory out of 5000000
- 34272 multiletter control sequences out of 15000+600000
+ 17994 strings out of 478238
+ 320651 string characters out of 5850456
+ 1030398 words of memory out of 5000000
+ 36042 multiletter control sequences out of 15000+600000
  476835 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,68p,741b,1379s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,68p,741b,1379s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -615,10 +721,10 @@ r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
 er/sfrm1200.pfb>
-Output written on protocol.pdf (3 pages, 121009 bytes).
+Output written on protocol.pdf (3 pages, 10256965 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 140 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 79 words of extra memory for PDF output out of 10000 (max. 10000000)
 
