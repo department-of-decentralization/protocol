@@ -67,8 +67,8 @@ const IndexPage = () => {
       <section>
         <h2 className="font-bold">Conference</h2>
         <p>
-          Protocol Berg is a one-day technical conference targeting an audience of
-          protocol engineers, system engineers, network engineers,
+          Protocol Berg is a one-day technical conference targeting an audience
+          of protocol engineers, system engineers, network engineers,
           blockchain-operation engineers, decentralized-infrastructure
           administrators, researchers, and other curious minds.
         </p>
@@ -79,9 +79,8 @@ const IndexPage = () => {
         </p>
         <p>
           We expect 500-600 attendees, and tickets will be free, as in{" "}
-          <span className="italic">free lemonade</span>.
-          All attendees have to adhere to the event's{" "}
-          <a href="/conduct">Code of Conduct</a>.
+          <span className="italic">free lemonade</span>. All attendees have to
+          adhere to the event's <a href="/conduct">Code of Conduct</a>.
         </p>
         <p>
           Protocol Berg is a donation-backed non-profit event. Therefore, there
@@ -104,8 +103,7 @@ const IndexPage = () => {
           </a>
         </p>
         <p>
-        To provide feedback or ask questions, please email us:{" "}
-          <br />
+          To provide feedback or ask questions, please email us: <br />
           <a href="mailto:hello@protocol.berlin" className="ml-12">
             hello@protocol.berlin{" "}
           </a>
@@ -124,8 +122,8 @@ const IndexPage = () => {
           and the bakery. The brick building has retained its substance over the
           years. Cast iron columns carry a five-meter-high ceiling. The parquet
           is made of old beech. Deep arched windows open the room to the light.
-          The result is a magnificent venue with charm - perhaps
-          one of the most beautiful in Berlin-Kreuzberg
+          The result is a magnificent venue with charm - perhaps one of the most
+          beautiful in Berlin-Kreuzberg
           <Ref src={refs.xberg} />.
         </p>
         <p>
@@ -149,22 +147,27 @@ const IndexPage = () => {
       <section>
         <h2 className="font-bold">About the Host</h2>
         <p>
-          The <a href="/decentralization" className="italic">Department
-          of Decentralization</a> is a collective of people from various crypto,
-          decentralization, and blockchain communities in and around Berlin. The
-          group assembled in 2018 to organize events such as ETHBerlin
-          <Ref src={refs.ethberlin} /><Ref src={refs.ethb2rlin} /><Ref src={refs.ethb3rlin} />{" "}
-          or GoerliCon<Ref src={refs.goerli} /> and has been active since.
+          The{" "}
+          <a href="/decentralization" className="italic">
+            Department of Decentralization
+          </a>{" "}
+          is a collective of people from various crypto, decentralization, and
+          blockchain communities in and around Berlin. The group assembled in
+          2018 to organize events such as ETHBerlin
+          <Ref src={refs.ethberlin} />
+          <Ref src={refs.ethb2rlin} />
+          <Ref src={refs.ethb3rlin} /> or GoerliCon
+          <Ref src={refs.goerli} /> and has been active since.
         </p>
         <p>
           The aim is to be an agnostic vehicle to drive adoption, educate
           newcomers, and raise awareness of the challenges and benefits of
-          decentralization and open-source software. Currently, the
-          Department is primarily run from Berlin. The collective is composed
-          of around a dozen members who contribute voluntarily.
+          decentralization and open-source software. Currently, the Department
+          is primarily run from Berlin. The collective is composed of around a
+          dozen members who contribute voluntarily.
         </p>
       </section>
-      <footer className="footnotes mt-8">
+      <footer className="footnotes mt-8 break-all">
         <ul>
           {
             // make refs object into an array by sorting their id and map over it
