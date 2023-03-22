@@ -33,12 +33,17 @@ const ContactPage = () => {
       </p>
     </header>
       <section>
-        <h2 className="font-bold">Contact</h2>
+        <h2 className="font-bold" id="contact">Contact</h2>
         <p>
           To attend the conference, please wait for official announcements:{" "}
           <br />
-          <a href="https://protocol.berlin" className="ml-12">
-            https://protocol.berlin{" "}
+          <a href="/" className="ml-12">protocol.berlin</a>
+        </p>
+        <p>
+          To connect to the protocol community, join our matrix space:{" "}
+          <br />
+          <a href="https://matrix.to/#/%23protocol:tchncs.de" target="_blank" className="ml-12">
+            &#x23;protocol:tchncs.de{" "}
           </a>
         </p>
         <p>
@@ -49,7 +54,7 @@ const ContactPage = () => {
             target="_blank"
             className="ml-12"
           >
-            https://speak.protocol.berlin
+            speak.protocol.berlin
           </a>
         </p>
         <p>
@@ -58,6 +63,30 @@ const ContactPage = () => {
           <a href="mailto:hello@protocol.berlin" className="ml-12">
             hello@protocol.berlin{" "}
           </a>
+        </p>
+      </section>
+      <section>
+        <h2 className="font-bold" id="donations">Dontations</h2>
+        <p>
+          The Department of Decentralization is a non-profit organization
+          accepting donations either via cryptographic transactions or
+          traditional wire transfers.
+        </p>
+        <p>
+          ETH & RAI: <code>dezent.eth</code><br />
+          (<code>0x59cc3Fc56B8B2988F259EC1E6f3446907130f728</code>)
+        </p>
+        <p>
+          Beneficiary: <code>Goerli Dezentral gGmbH</code><br />
+          International Bank Account Number: <code>DE16 1005 0000 0190 8447 44</code><br />
+          Bank Identifier Code: <code>BELADEBEXXX</code><br />
+          Subject: <code>Spende Protocol Berg</code>
+        </p>
+        <p>
+          Please avoid using central-bank backed or issued tokens such as USDC,
+          USDT, or DAI. To donate on other platforms or to get a donation receipt,
+          please message us at {" "}
+          <a href="mailto:donations@protocol.berlin">donations@protocol.berlin</a>.
         </p>
       </section>
       <section>

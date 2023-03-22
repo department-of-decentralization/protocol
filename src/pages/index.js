@@ -53,7 +53,7 @@ const IndexPage = () => {
       </header>
 
       <div className="abstract">
-        <h2 className="font-bold">Abstract</h2>
+        <h2 className="font-bold" id="abstract">Abstract</h2>
         <small className="mt-4">
           Protocol Berg is a novel summit providing a location specifically for
           protocol research, decentralized infrastructure, and core-developer
@@ -65,7 +65,7 @@ const IndexPage = () => {
         </small>
       </div>
       <section>
-        <h2 className="font-bold">Conference</h2>
+        <h2 className="font-bold" id="conference">Conference</h2>
         <p>
           Protocol Berg is a one-day technical conference targeting an audience
           of protocol engineers, system engineers, network engineers,
@@ -89,8 +89,15 @@ const IndexPage = () => {
       </section>
 
       <section>
-        <h2 className="font-bold">Call for Participation</h2>
+        <h2 className="font-bold" id="cfp">Call for Participation</h2>
         <p>Applications for tickets will open shortly.</p>
+        <p>
+          To connect to the protocol community, join our matrix space:{" "}
+          <br />
+          <a href="https://matrix.to/#/%23protocol:tchncs.de" target="_blank" className="ml-12">
+            &#x23;protocol:tchncs.de
+          </a>
+        </p>
         <p>
           To submit a technical talk or workshop proposal, use our Pretalx
           interface: <br />
@@ -99,19 +106,16 @@ const IndexPage = () => {
             target="_blank"
             className="ml-12"
           >
-            https://speak.protocol.berlin
+            speak.protocol.berlin
           </a>
         </p>
         <p>
-          To provide feedback or ask questions, please email us: <br />
-          <a href="mailto:hello@protocol.berlin" className="ml-12">
-            hello@protocol.berlin{" "}
-          </a>
+          To provide feedback or ask questions, please <a href="/contact#contact">email us</a>.
         </p>
       </section>
 
       <section>
-        <h2 className="font-bold">Venue</h2>
+        <h2 className="font-bold" id="venue">Venue</h2>
         <p>
           The <span className="italic">Heeresbäckerei</span> (magazine in the
           army bakery)
@@ -145,7 +149,7 @@ const IndexPage = () => {
       </section>
 
       <section>
-        <h2 className="font-bold">About the Host</h2>
+        <h2 className="font-bold" id="host">About the Host</h2>
         <p>
           The{" "}
           <a href="/decentralization" className="italic">
@@ -180,7 +184,7 @@ const IndexPage = () => {
         </ul>
         <p className="mt-4 italic text-center">
           <br />
-          <a href="/contact">Impressum</a>.
+          <a href="/contact#imprint">Impressum</a>.
         </p>
       </footer>
     </main>
