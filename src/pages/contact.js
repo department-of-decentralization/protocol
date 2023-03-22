@@ -66,7 +66,7 @@ const ContactPage = () => {
         </p>
       </section>
       <section>
-        <h2 className="font-bold" id="donations">Dontations</h2>
+        <h2 className="font-bold" id="donations">Donations</h2>
         <p>
           The Department of Decentralization is a non-profit organization
           accepting donations either via cryptographic transactions or
