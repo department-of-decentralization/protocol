@@ -53,7 +53,9 @@ const IndexPage = () => {
       </header>
 
       <div className="abstract">
-        <h2 className="font-bold" id="abstract">Abstract</h2>
+        <h2 className="font-bold" id="abstract">
+          Abstract
+        </h2>
         <small className="mt-4">
           Protocol Berg is a novel summit providing a location specifically for
           protocol research, decentralized infrastructure, and core-developer
@@ -65,7 +67,9 @@ const IndexPage = () => {
         </small>
       </div>
       <section>
-        <h2 className="font-bold" id="conference">Conference</h2>
+        <h2 className="font-bold" id="conference">
+          Conference
+        </h2>
         <p>
           Protocol Berg is a one-day technical conference targeting an audience
           of protocol engineers, system engineers, network engineers,
@@ -87,35 +91,76 @@ const IndexPage = () => {
           will be no sponsors.
         </p>
       </section>
-
+      <section></section>
       <section>
-        <h2 className="font-bold" id="cfp">Call for Participation</h2>
-        <p>Applications for tickets will open shortly.</p>
+        <h2 className="font-bold" id="cfp">
+          Call for Participation
+        </h2>
         <p>
-          To connect to the protocol community, join our matrix space:{" "}
-          <br />
-          <a href="https://matrix.to/#/%23protocol:tchncs.de" target="_blank" className="ml-12">
-            &#x23;protocol:tchncs.de
-          </a>
+          The call for participation is now open. To submit a{" "}
+          <b>technical talk or workshop proposal</b>, use our Pretalx interface:{" "}
         </p>
         <p>
-          To submit a technical talk or workshop proposal, use our Pretalx
-          interface: <br />
           <a
-            href="https://speak.protocol.berlin"
+            href="https://speak.protocol.berlin/protocol-berg/cfp"
             target="_blank"
+            rel="noreferrer"
             className="ml-12"
           >
             speak.protocol.berlin
           </a>
         </p>
+        <p>Talk and workshop proposals should align with one of our tracks:</p>
+        <ul className="list-disc pl-6">
+          <li>
+            <b>Consensus:</b> validation concepts, fork choice, and finality
+            considerations
+          </li>
+          <li>
+            <b>Networking:</b> communication in federated, distributed, and
+            decentralized systems
+          </li>
+          <li>
+            <b>Infrastructure:</b> distributed clusters, testing and testnet
+            infrastructure, blockchain operations
+          </li>
+          <li>
+            <b>Databases:</b> efficient storage and retrieval of complex system
+            states
+          </li>
+          <li>
+            <b>Cryptography:</b> key management, zero-knowledge technologies,
+            hash functions, encryption
+          </li>
+          <li>
+            <b>Governance & Society:</b> broader concepts of protocol research
+            and development, social protocols, philosophical musings on human
+            coordination and decentralized, open-source, off-chain and on-chain
+            governance structures and processes
+          </li>
+        </ul>
+        <h3 className="font-bold">Attendees</h3>
+        <p>Applications for tickets will open shortly.</p>
         <p>
-          To provide feedback or ask questions, please <a href="/contact#contact">email us</a>.
+          To connect to the protocol community, join our matrix space: <br />
+          <a
+            href="https://matrix.to/#/%23protocol:tchncs.de"
+            target="_blank"
+            className="ml-12"
+          >
+            &#x23;protocol:tchncs.de
+          </a>
+        </p>
+        <p>
+          To provide feedback or ask questions, please{" "}
+          <a href="/contact#contact">email us</a>.
         </p>
       </section>
 
       <section>
-        <h2 className="font-bold" id="venue">Venue</h2>
+        <h2 className="font-bold" id="venue">
+          Venue
+        </h2>
         <p>
           The <span className="italic">Heeresbäckerei</span> (magazine in the
           army bakery)
@@ -149,7 +194,9 @@ const IndexPage = () => {
       </section>
 
       <section>
-        <h2 className="font-bold" id="host">About the Host</h2>
+        <h2 className="font-bold" id="host">
+          About the Host
+        </h2>
         <p>
           The{" "}
           <a href="/decentralization" className="italic">
