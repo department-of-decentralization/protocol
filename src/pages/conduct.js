@@ -118,6 +118,14 @@ const CodeOfConductPage = () => {
           <a href="mailto:escalate@protocol.berlin">escalate@protocol.berlin</a>
         </p>
       </section>
+      <p>
+        <a
+          href="/"
+          className="ml-12"
+        >
+          protocol.berlin
+        </a>
+      </p>
     </main>
   )
 }
