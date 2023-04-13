@@ -35,9 +35,17 @@ const ContactPage = () => {
       <section>
         <h2 className="font-bold" id="contact">Contact</h2>
         <p>
-          To attend the conference, please wait for official announcements:{" "}
+          To follow us for updates, find us on Lens or Bluesky:
           <br />
-          <a href="/" className="ml-12">protocol.berlin</a>
+          <span className="ml-12">
+            Bsky Staging:{" "}
+            <a href="https://staging.bsky.app/profile/protocol.berlin" target="_blank">@protocol.berlin</a>
+          </span>
+          <br />
+          <span className="ml-12">
+            Lenster:{" "}
+            <a href="https://lenster.xyz/u/ethberlin" target="_blank">@ethberlin</a>
+          </span>
         </p>
         <p>
           To connect to the protocol community, join our matrix space:{" "}
@@ -50,7 +58,7 @@ const ContactPage = () => {
           To submit a technical talk or workshop proposal, use our Pretalx
           interface: <br />
           <a
-            href="https://speak.protocol.berlin"
+            href="https://speak.protocol.berlin/protocol-berg/cfp"
             target="_blank"
             className="ml-12"
           >
@@ -83,7 +91,7 @@ const ContactPage = () => {
           Subject: <code>Spende Protocol Berg</code>
         </p>
         <p>
-          Please avoid using central-bank backed or issued tokens such as USDC,
+          Please avoid using central-bank issued or backed tokens such as USDC,
           USDT, or DAI. To donate on other platforms or to get a donation receipt,
           please message us at {" "}
           <a href="mailto:donations@protocol.berlin">donations@protocol.berlin</a>.
@@ -106,6 +114,14 @@ const ContactPage = () => {
           59, 60, and 61 AO in Germany.
         </p>
       </section>
+      <p>
+        <a
+          href="/"
+          className="ml-12"
+        >
+          protocol.berlin
+        </a>
+      </p>
     </main>
   )
 }
