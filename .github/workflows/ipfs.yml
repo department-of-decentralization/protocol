@@ -1,0 +1,29 @@
+name: IPFS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: aquiladev/ipfs-action@v0.3.1
+        name: Upload to Pinata
+        with:
+          path: ./
+          pinName: ipns.protocol.berlin.${{ github.sha }}
+          service: pinata
+          pinataKey: ${{ secrets.PINATA_KEY }}
+          pinataSecret: ${{ secrets.PINATA_SECRET }}
+      - uses: aquiladev/ipfs-action@v0.3.1
+        name: Upload to Infura
+        with:
+          path: ./
+          pinName: ipns.protocol.berlin.${{ github.sha }}
+          service: infura
+          infuraProjectId: ${{ secrets.INFURA_ID }}
+          infuraProjectSecret: ${{ secrets.INFURA_SECRET }}
