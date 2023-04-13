@@ -48,7 +48,7 @@ const DecentralizationPage = () => {
         <p>Our projects to date:</p>
         <ul>
           <li>
-            <span className="font-bold">ETHBerlin (2018):</span> Hackathon,
+            <span className="ml-12 font-bold">ETHBerlin (2018):</span> Hackathon,
             conference, and the first event that ran almost entirely using
             decentralized applications:{" "}
             <a href="https://ethberlin.com" target="_blank">
@@ -56,44 +56,44 @@ const DecentralizationPage = () => {
             </a>
           </li>
           <li>
-            <span className="font-bold">GoerliCon 0 (2019): </span>The Ethereum
+            <span className="ml-12 font-bold">GoerliCon 0 (2019): </span>The Ethereum
             testnet and infrastructure conference where the Goerli Testnet was
             launched live on stage: <a href="https://goerli.net/" target="_blank">
               goerli.net
             </a>
           </li>
           <li>
-            <span className="font-bold">Goerli Testnet (2019): </span>Born at
+            <span className="ml-12 font-bold">Goerli Testnet (2019): </span>Born at
             ETHBerlin and launched at GoerliCon, the Goerli Testnet is now
             the essential public-facing Ethereum testnets after the Merge.
           </li>
           <li>
-            <span className="font-bold">
+            <span className="ml-12 font-bold">
               Blockstars Education Program (2019):
             </span>{" "}
             A partnership with <a href="https://b9lab.com/" target="_blank">B9lab</a>
             {" "}to onboard new hackers to web3.
           </li>
           <li>
-            <span className="font-bold">
+            <span className="ml-12 font-bold">
               There is no such thing as Blockchain Art (2019):{" "}
             </span>
             a study to explore the art world and the intersection with our
             systems.
           </li>
           <li>
-            <span className="font-bold">ETHBerlin ZWEI (2019): </span>hackathon,
+            <span className="ml-12 font-bold">ETHBerlin ZWEI (2019): </span>hackathon,
             conference, and cultural festival, second edition:{" "}
             <a href="https://ethberlinzwei.com" target="_blank">
               ethberlinzwei.com
             </a>
           </li>
           <li>
-            <span className="font-bold">Ecosystem Job-Openings (2019): </span>
+            <span className="ml-12 font-bold">Ecosystem Job-Openings (2019): </span>
             connecting talent with web3-companies during the bear market.
           </li>
           <li>
-            <span className="font-bold">
+            <span className="ml-12 font-bold">
               ETHParis 2 (2020) - The Un-Hackathon:{" "}
             </span>
             ETHParis 2 was hosted by the Department of Decentralization and
@@ -102,7 +102,7 @@ const DecentralizationPage = () => {
             <a href="https://web.archive.org/web/20200318163540/https://www.hackparis.io/" target="_blank">hackparis.com</a>
           </li>
           <li>
-            <span className="font-bold">
+            <span className="ml-12 font-bold">
               TwoPointFive (2020) - The Talk Show:{" "}
             </span>
             TwoPointFive was a white-label virtual conference. No shill, no
@@ -111,14 +111,14 @@ const DecentralizationPage = () => {
             <a href="https://web.archive.org/web/20220426113132/https://twopointfive.online/" target="_blank">twopointfive.online</a>
           </li>
           <li>
-            <span className="font-bold">StrikeDAO (2022):</span> The Ethereum
+            <span className="ml-12 font-bold">StrikeDAO (2022):</span> The Ethereum
             domain of Bundeskunsthalle was squatted by artist Hito Steyerl and the
             DoD. The StrikeDAO voted on three models of the future governance of this
             squatted domain quadratically:{" "}
             <a href="https://strikedao.com" target="_blank">strikedao.com</a>
           </li>
           <li>
-            <span className="font-bold">ETHBerlin³ - to the power of 3 (2022):</span>{" "}
+            <span className="ml-12 font-bold">ETHBerlin³ - to the power of 3 (2022):</span>{" "}
             hackathon, conference, and cultural festival, third edition:{" "}
             <a href="https://ethberlin.ooo" target="_blank">
               ethberlin.ooo
@@ -130,6 +130,14 @@ const DecentralizationPage = () => {
           is composed of around a dozen members who contribute voluntarily.
         </p>
       </section>
+      <p>
+        <a
+          href="/"
+          className="ml-12"
+        >
+          protocol.berlin
+        </a>
+      </p>
     </main>
   )
 }
