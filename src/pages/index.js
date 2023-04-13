@@ -42,12 +42,13 @@ const IndexPage = () => {
           The decentralized protocol and infrastructure conference.
         </p>
         <p className="text-center">
-          A Department-of-Decentralization
-          <Ref src={refs.dod} /> event; edition 0b11111100111.
+          September 15, 2023, Kreuzberg, Berlin;<br />
+          a Department-of-Decentralization
+          <Ref src={refs.dod} /> event;<br />
+          edition 0b11111100111.
         </p>
         <p className="author">
           <div className="mt-8 text-lg">
-            September 15, 2023, Kreuzberg, Berlin
           </div>
         </p>
       </header>
@@ -142,6 +143,19 @@ const IndexPage = () => {
         <h3 className="font-bold">Attendees</h3>
         <p>Applications for tickets will open shortly.</p>
         <p>
+          To follow us for updates, find us on Lens or Bluesky:
+          <br />
+          <span className="ml-12">
+            Bsky Staging:{" "}
+            <a href="https://staging.bsky.app/profile/protocol.berlin" target="_blank">@protocol.berlin</a>
+          </span>
+          <br />
+          <span className="ml-12">
+            Lenster:{" "}
+            <a href="https://lenster.xyz/u/ethberlin" target="_blank">@ethberlin</a>
+          </span>
+        </p>
+        <p>
           To connect to the protocol community, join our matrix space: <br />
           <a
             href="https://matrix.to/#/%23protocol:tchncs.de"
@@ -180,15 +194,24 @@ const IndexPage = () => {
           workshop areas for deep technical study and knowledge-sharing classes.
         </p>
         <p>
-          <span className="font-bold">Latitude/Longitude:</span>
+          Latitude/Longitude:
           <br />
-          <span className="ml-12">52.504853, 13.434746</span>
+          <a
+            href="https://nominatim.openstreetmap.org/ui/search.html?q=52.504853%2C13.434746"
+            target="_blank"
+            className="ml-12"
+          >
+            52.504853, 13.434746</a>
           <br />
-          <span className="font-bold">Street Address:</span>
+          Street Address:
           <br />
-          <span className="ml-12">
+          <a
+            href="https://nominatim.openstreetmap.org/ui/search.html?q=K%C3%B6penicker+Stra%C3%9Fe+16%2C+10997+Berlin"
+            target="_blank"
+            className="ml-12"
+          >
             K&ouml;penicker Stra&szlig;e 16-17, 10997 Berlin-Kreuzberg
-          </span>
+          </a>
           .
         </p>
       </section>
@@ -217,6 +240,22 @@ const IndexPage = () => {
           is primarily run from Berlin. The collective is composed of around a
           dozen members who contribute voluntarily.
         </p>
+        <p>
+          The content of this website is available through IPFS:
+          <br />
+          <span className="ml-12">
+            IPNS:{" "}
+            <a href="ipns://protocol.berlin" target="_blank">ipns://protocol.berlin</a>
+          </span>
+          <br />
+          <span className="ml-12">
+            ENS:{" "}
+            <a href="https://dezent.eth" target="_blank">https://dezent.eth</a>
+          </span>
+        </p>
+        <p>
+          <a href="/contact#imprint">Impressum</a> gem&auml;&szlig; &sect; 5 TMG.
+        </p>
       </section>
       <footer className="footnotes mt-8 break-all">
         <ul>
@@ -229,10 +268,6 @@ const IndexPage = () => {
               ))
           }
         </ul>
-        <p className="mt-4 italic text-center">
-          <br />
-          <a href="/contact#imprint">Impressum</a>.
-        </p>
       </footer>
     </main>
   );
