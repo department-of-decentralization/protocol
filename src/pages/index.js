@@ -1,6 +1,7 @@
 import * as React from "react";
 import refs from "../references";
 import { SEO } from "../components/seo";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 const FootNote = ({ id, author, description, year, url, accessed }) => (
   <li id={`fn${id}`} className="flex flex-row">
@@ -33,10 +34,28 @@ const Ref = ({ src }) => {
   );
 };
 
+const DarkModeButton = () => {
+  const [isDarkMode, setDarkMode] = React.useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!isDarkMode);
+    document.body.classList.toggle("latex-dark");
+  };
+  return (
+    <DarkModeSwitch
+      style={{ marginBottom: "2rem" }}
+      checked={isDarkMode}
+      onChange={toggleDarkMode}
+      className="absolute top-4 right-4"
+      size={20}
+      sunColor="#444444"
+    />
+  );
+};
 const IndexPage = () => {
   return (
-    <main className="my-24">
-      <header className="text-center">
+    <main>
+      <DarkModeButton />
+      <header className="text-center my-24">
         <h1 className="font-bold">Protocol Berg</h1>
         <p className="italic text-center">
           The decentralized protocol and infrastructure conference.
