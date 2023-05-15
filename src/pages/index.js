@@ -195,7 +195,7 @@ const IndexPage = () => {
         </p>
         <p>
           To provide feedback or ask questions, please{" "}
-          <a href="/contact#contact">email us</a>.
+          <a href="mailto:hello@protocol.berlin:">email us</a>.
         </p>
       </section>
 
@@ -283,6 +283,9 @@ const IndexPage = () => {
         </p>
         <p>
           <a href="/contact#imprint">Impressum</a> gem&auml;&szlig; &sect; 5 TMG.
+        </p>
+        <p>
+          <a href="/contact">Contact</a>
         </p>
       </section>
       <footer className="footnotes mt-8 break-all">
