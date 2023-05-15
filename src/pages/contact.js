@@ -35,20 +35,7 @@ const ContactPage = () => {
       <section>
         <h2 className="font-bold" id="contact">Contact</h2>
         <p>
-          To follow us for updates, find us on Lens or Bluesky:
-          <br />
-          <span className="ml-12">
-            Bsky Staging:{" "}
-            <a href="https://staging.bsky.app/profile/protocol.berlin" target="_blank">@protocol.berlin</a>
-          </span>
-          <br />
-          <span className="ml-12">
-            Lenster:{" "}
-            <a href="https://lenster.xyz/u/ethberlin" target="_blank">@ethberlin</a>
-          </span>
-        </p>
-        <p>
-          To connect to the protocol community, join our matrix space:{" "}
+          To connect to the Protocol Berg community, join our [matrix] space:{" "}
           <br />
           <a href="https://matrix.to/#/%23protocol:tchncs.de" target="_blank" className="ml-12">
             &#x23;protocol:tchncs.de{" "}
@@ -81,7 +68,7 @@ const ContactPage = () => {
           traditional wire transfers.
         </p>
         <p>
-          ETH & RAI: <code>dezent.eth</code><br />
+          Donations in ETH or RAI on Ethereum mainnet: <code>dezent.eth</code><br />
           (<code>0x59cc3Fc56B8B2988F259EC1E6f3446907130f728</code>)
         </p>
         <p>
@@ -91,8 +78,7 @@ const ContactPage = () => {
           Subject: <code>Spende Protocol Berg</code>
         </p>
         <p>
-          Please avoid using central-bank issued or backed tokens such as USDC,
-          USDT, or DAI. To donate on other platforms or to get a donation receipt,
+          To donate on other platforms or to get a donation receipt,
           please message us at {" "}
           <a href="mailto:donations@protocol.berlin">donations@protocol.berlin</a>.
         </p>
