@@ -92,9 +92,11 @@ const IndexPage = () => {
         </h2>
         <p>
           Protocol Berg is a one-day technical conference targeting an audience
-          of protocol engineers, system engineers, network engineers,
-          blockchain-operation engineers, decentralized-infrastructure
+          of protocol/system/network engineers, decentralized-infrastructure
           administrators, researchers, and other curious minds.
+          Protocol Berg aims to bring distributed technology ecosystems
+          together to exchange concepts and technology, talk about shared open problems,
+          and learn from each other.
         </p>
         <p>
           Topics covered by the event orbit mainly around consensus protocols,
@@ -116,9 +118,10 @@ const IndexPage = () => {
         <h2 className="font-bold" id="cfp">
           Call for Participation
         </h2>
+         <h3 className="font-bold">Speakers</h3>
         <p>
           The call for participation is now open. To submit a{" "}
-          <b>technical talk or workshop proposal</b>, use our Pretalx interface:{" "}
+          <b>talk or workshop proposal</b>, use our Pretalx interface:{" "}
         </p>
         <p>
           <a
@@ -161,8 +164,9 @@ const IndexPage = () => {
         </ul>
         <h3 className="font-bold">Attendees</h3>
         <p>Applications for tickets will open shortly.</p>
-        <p>
-          To follow us for updates, find us on Lens or Bluesky:
+         <h3 className="font-bold">Updates</h3>
+       <p>
+          To follow us for updates, find us on Bluesky, Lens, or Twitter:
           <br />
           <span className="ml-12">
             Bsky Staging:{" "}
@@ -173,9 +177,14 @@ const IndexPage = () => {
             Lenster:{" "}
             <a href="https://lenster.xyz/u/ethberlin" target="_blank">@ethberlin</a>
           </span>
+           <br />
+          <span className="ml-12">
+            Twitter:{" "}
+            <a href="https://twitter.com/ETHBerlin" target="_blank">@ethberlin</a>
+          </span>
         </p>
         <p>
-          To connect to the protocol community, join our matrix space: <br />
+          To connect to the Protocol Berg community, join our [matrix] space: <br />
           <a
             href="https://matrix.to/#/%23protocol:tchncs.de"
             target="_blank"
