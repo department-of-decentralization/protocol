@@ -120,12 +120,17 @@ const IndexPage = () => {
         <h2 className="font-bold" id="speakers">
           Speakers
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {speakers.map((speaker, index) => (
-            <div className="text-center" key={index}>
-              <Speaker speaker={speaker} index={index} />
-            </div>
-          ))}
+        <div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {speakers.map((speaker, index) => (
+              <div className="text-center" key={index}>
+                <Speaker speaker={speaker} index={index} />
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center justify-center text-lg">
+            <p>Figure 1: Speakers of Protocol Berg, 2023. </p>
+          </div>
         </div>
       </section>
       <section>

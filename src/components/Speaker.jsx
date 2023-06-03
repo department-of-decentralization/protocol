@@ -3,42 +3,49 @@ import dummySpeaker from "../images/speakers/dummy.png";
 import twitterLogo from "../images/twitter.png";
 import githubLogo from "../images/github.png";
 
+function getAlphab(index) {
+  if (index < 0 || index >= 26) {
+    return null; // Index out of range for alphabetical characters
+  }
+
+  var charCode = "a".charCodeAt(0) + index;
+  return String.fromCharCode(charCode);
+}
+
 const Speaker = ({ speaker, index }) => {
   const { twitter, github, name, image, organization } = speaker;
   return (
-    <div>
-      <img
-        src={image?.default || speaker?.image || dummySpeaker}
-        alt={name}
-        className="mx-auto h-32 grayscale m-2"
-      />
-      <div className="">
-        <div>
+    <div className="flex flex-col items-center justify-center">
+      <div className="flex justify-center items-center h-32 w-32 overflow-clip">
+        <img
+          src={image?.default || speaker?.image || dummySpeaker}
+          alt={name}
+          className="grayscale object-contain w-48"
+        />
+      </div>
+      <div className="text-justify">
+        <span>
+          {"(" + getAlphab(index) + ") "}
           <b>{name}</b>
-        </div>
-        <div>
-          {organization && <span className="italic">{organization.name}</span>}
-        </div>
-        <div className="flex justify-center mt-2">
+        </span>
+        <span>
+          {organization && <span className="">{", " + organization.name}</span>}
+        </span>
+        <span className="">
           {twitter && (
-            <a href={twitter} rel="noopener noreferrer" target="_blank">
-              <img
-                src={twitterLogo}
-                className="mx-2 h-4 invert opacity-70 hover:opacity-100"
-                alt="twitter"
-              />
-            </a>
+            <>
+              <span>{", "}</span>
+              <a href={twitter} rel="noopener noreferrer" target="_blank">
+                Twitter
+              </a>
+            </>
           )}
           {github && (
             <a href={github} rel="noopener noreferrer" target="_blank">
-              <img
-                src={githubLogo}
-                className="mx-2 h-4 invert opacity-70 hover:opacity-100"
-                alt="github"
-              />
+              {", "}Github
             </a>
           )}
-        </div>
+        </span>
       </div>
     </div>
   );
