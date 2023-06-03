@@ -2,6 +2,8 @@ import * as React from "react";
 import refs from "../references";
 import { SEO } from "../components/seo";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import speakers from "../speakers";
+import Speaker from "../components/Speaker";
 
 const FootNote = ({ id, author, description, year, url, accessed }) => (
   <li id={`fn${id}`} className="flex flex-row">
@@ -61,14 +63,15 @@ const IndexPage = () => {
           The decentralized protocol and infrastructure conference.
         </p>
         <p className="text-center">
-          September 15, 2023, Kreuzberg, Berlin;<br />
+          September 15, 2023, Kreuzberg, Berlin;
+          <br />
           a Department-of-Decentralization
-          <Ref src={refs.dod} /> event;<br />
+          <Ref src={refs.dod} /> event;
+          <br />
           edition 0b11111100111.
         </p>
         <p className="author">
-          <div className="mt-8 text-lg">
-          </div>
+          <div className="mt-8 text-lg"></div>
         </p>
       </header>
 
@@ -93,10 +96,10 @@ const IndexPage = () => {
         <p>
           Protocol Berg is a one-day technical conference targeting an audience
           of protocol/system/network engineers, decentralized-infrastructure
-          administrators, researchers, and other curious minds.
-          Protocol Berg aims to bring distributed technology ecosystems
-          together to exchange concepts and technology, talk about shared open problems,
-          and learn from each other.
+          administrators, researchers, and other curious minds. Protocol Berg
+          aims to bring distributed technology ecosystems together to exchange
+          concepts and technology, talk about shared open problems, and learn
+          from each other.
         </p>
         <p>
           Topics covered by the event orbit mainly around consensus protocols,
@@ -113,12 +116,23 @@ const IndexPage = () => {
           will be no sponsors.
         </p>
       </section>
-      <section></section>
+      <section>
+        <h2 className="font-bold" id="speakers">
+          Speakers
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {speakers.map((speaker, index) => (
+            <div className="text-center" key={index}>
+              <Speaker speaker={speaker} index={index} />
+            </div>
+          ))}
+        </div>
+      </section>
       <section>
         <h2 className="font-bold" id="cfp">
           Call for Participation
         </h2>
-         <h3 className="font-bold">Speakers</h3>
+        <h3 className="font-bold">Speakers</h3>
         <p>
           The call for participation is now open. To submit a{" "}
           <b>talk or workshop proposal</b>, use our Pretalx interface:{" "}
@@ -164,27 +178,34 @@ const IndexPage = () => {
         </ul>
         <h3 className="font-bold">Attendees</h3>
         <p>Applications for tickets will open shortly.</p>
-         <h3 className="font-bold">Updates</h3>
-       <p>
+        <h3 className="font-bold">Updates</h3>
+        <p>
           To follow us for updates, find us on Bluesky, Lens, or Twitter:
           <br />
           <span className="ml-12">
             Bluesky:{" "}
-            <a href="https://bsky.app/profile/protocol.berlin" target="_blank">@protocol.berlin</a>
+            <a href="https://bsky.app/profile/protocol.berlin" target="_blank">
+              @protocol.berlin
+            </a>
           </span>
           <br />
           <span className="ml-12">
             Lenster:{" "}
-            <a href="https://lenster.xyz/u/ethberlin" target="_blank">@ethberlin</a>
+            <a href="https://lenster.xyz/u/ethberlin" target="_blank">
+              @ethberlin
+            </a>
           </span>
-           <br />
+          <br />
           <span className="ml-12">
             Twitter:{" "}
-            <a href="https://twitter.com/ETHBerlin" target="_blank">@ETHBerlin</a>
+            <a href="https://twitter.com/ETHBerlin" target="_blank">
+              @ETHBerlin
+            </a>
           </span>
         </p>
         <p>
-          To connect to the Protocol Berg community, join our [matrix] space: <br />
+          To connect to the Protocol Berg community, join our [matrix] space:{" "}
+          <br />
           <a
             href="https://matrix.to/#/%23protocol:tchncs.de"
             target="_blank"
@@ -229,7 +250,8 @@ const IndexPage = () => {
             target="_blank"
             className="ml-12"
           >
-            52.504853, 13.434746</a>
+            52.504853, 13.434746
+          </a>
           <br />
           Street Address:
           <br />
@@ -273,17 +295,22 @@ const IndexPage = () => {
           <br />
           <span className="ml-12">
             IPNS:{" "}
-            <a href="ipns://protocol.berlin" target="_blank">ipns://protocol.berlin</a>
+            <a href="ipns://protocol.berlin" target="_blank">
+              ipns://protocol.berlin
+            </a>
           </span>
           <br />
           <span className="ml-12">
             ENS:{" "}
-            <a href="https://dezent.eth" target="_blank">https://dezent.eth</a>
+            <a href="https://dezent.eth" target="_blank">
+              https://dezent.eth
+            </a>
           </span>
         </p>
         <p>
           <a href="/contact">Contact</a>.{" "}
-          <a href="/contact#imprint">Impressum</a> gem&auml;&szlig; &sect; 5 TMG.
+          <a href="/contact#imprint">Impressum</a> gem&auml;&szlig; &sect; 5
+          TMG.
         </p>
       </section>
       <footer className="footnotes mt-8 break-all">
