@@ -1,5 +1,5 @@
 import React from "react";
-import dummySpeaker from "../images/speakers/dummy.png";
+import dummySpeaker from "../images/speakers/halftoneAvatar.png";
 import twitterLogo from "../images/twitter.png";
 import githubLogo from "../images/github.png";
 
@@ -16,14 +16,14 @@ const Speaker = ({ speaker, index }) => {
   const { twitter, github, name, image, organization } = speaker;
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="flex justify-center items-center h-32 w-32 overflow-clip">
+      <div className="flex justify-center items-center h-40 w-40 overflow-clip">
         <img
           src={image?.default || speaker?.image || dummySpeaker}
           alt={name}
-          className="grayscale object-contain w-48"
+          className="grayscale brightness-125 opacity-70 contrast-100 object-contain w-48"
         />
       </div>
-      <div className="text-justify">
+      <div className="text-center">
         <span>
           {"(" + getAlphab(index) + ") "}
           <b>{name}</b>
