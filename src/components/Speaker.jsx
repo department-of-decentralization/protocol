@@ -35,15 +35,30 @@ const Speaker = ({ speaker, index }) => {
           {twitter && (
             <>
               <span>{", "}</span>
-              <a href={twitter} rel="noopener noreferrer" target="_blank">
+              <a
+                href={twitter}
+                rel="noopener noreferrer"
+                target="_blank"
+                style={{ color: "black" }}
+                className="underline"
+              >
                 Twitter
               </a>
             </>
           )}
           {github && (
-            <a href={github} rel="noopener noreferrer" target="_blank">
-              {", "}Github
-            </a>
+            <>
+              <span>{", "}</span>
+              <a
+                href={github}
+                rel="noopener noreferrer"
+                target="_blank"
+                style={{ color: "black" }}
+                className="underline"
+              >
+                Github
+              </a>
+            </>
           )}
         </span>
       </div>
