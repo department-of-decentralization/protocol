@@ -169,8 +169,8 @@ const IndexPage = () => {
           To follow us for updates, find us on Bluesky, Lens, or Twitter:
           <br />
           <span className="ml-12">
-            Bsky Staging:{" "}
-            <a href="https://staging.bsky.app/profile/protocol.berlin" target="_blank">@protocol.berlin</a>
+            Bluesky:{" "}
+            <a href="https://bsky.app/profile/protocol.berlin" target="_blank">@protocol.berlin</a>
           </span>
           <br />
           <span className="ml-12">
@@ -180,7 +180,7 @@ const IndexPage = () => {
            <br />
           <span className="ml-12">
             Twitter:{" "}
-            <a href="https://twitter.com/ETHBerlin" target="_blank">@ethberlin</a>
+            <a href="https://twitter.com/ETHBerlin" target="_blank">@ETHBerlin</a>
           </span>
         </p>
         <p>
@@ -195,7 +195,7 @@ const IndexPage = () => {
         </p>
         <p>
           To provide feedback or ask questions, please{" "}
-          <a href="mailto:hello@protocol.berlin:">email us</a>.
+          <a href="mailto:hello@protocol.berlin">email us</a>.
         </p>
       </section>
 
@@ -282,10 +282,8 @@ const IndexPage = () => {
           </span>
         </p>
         <p>
+          <a href="/contact">Contact</a>.{" "}
           <a href="/contact#imprint">Impressum</a> gem&auml;&szlig; &sect; 5 TMG.
-        </p>
-        <p>
-          <a href="/contact">Contact</a>
         </p>
       </section>
       <footer className="footnotes mt-8 break-all">
