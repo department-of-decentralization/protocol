@@ -4,8 +4,11 @@ import twitterLogo from "../images/twitter.png";
 import githubLogo from "../images/github.png";
 
 function getAlphab(index) {
-  if (index < 0 || index >= 26) {
+  if (index < 0) {
     return null; // Index out of range for alphabetical characters
+  }
+  if (index > 25) {
+    return getAlphab(index / 26 - 1) + getAlphab(index % 26); // Index out of range for alphabetical characters
   }
 
   var charCode = "a".charCodeAt(0) + index;
@@ -23,7 +26,7 @@ const Speaker = ({ speaker, index }) => {
           className="grayscale brightness-125 opacity-70 contrast-100 object-contain w-48"
         />
       </div>
-      <div className="text-center">
+      <div className="text-center mt-1">
         <span>
           {"(" + getAlphab(index) + ") "}
           <b>{name}</b>
@@ -35,13 +38,7 @@ const Speaker = ({ speaker, index }) => {
           {twitter && (
             <>
               <span>{", "}</span>
-              <a
-                href={twitter}
-                rel="noopener noreferrer"
-                target="_blank"
-                style={{ color: "black" }}
-                className="underline"
-              >
+              <a href={twitter} rel="noopener noreferrer" target="_blank">
                 Twitter
               </a>
             </>
@@ -49,13 +46,7 @@ const Speaker = ({ speaker, index }) => {
           {github && (
             <>
               <span>{", "}</span>
-              <a
-                href={github}
-                rel="noopener noreferrer"
-                target="_blank"
-                style={{ color: "black" }}
-                className="underline"
-              >
+              <a href={github} rel="noopener noreferrer" target="_blank">
                 Github
               </a>
             </>
