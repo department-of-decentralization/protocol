@@ -70,15 +70,6 @@ const speakers = [
     twitter: "https://twitter.com/AnotherJannik",
   },
   {
-    name: "Sam Hart",
-    organization: {
-      name: "Skip",
-      url: null,
-    },
-    image: require("./images/speakers/sam.jpg"),
-    twitter: "https://twitter.com/hxrts",
-  },
-  {
     name: "Masih Derkani",
     organization: {
       name: "Protocol Labs",
@@ -137,7 +128,6 @@ const speakers = [
   },
   {
     name: "Viet",
-    organization: {},
     image: require("./images/speakers/viet.jpg"),
   },
   {
