@@ -6,7 +6,6 @@ const speakers = [
       url: "https://protocol.ai/",
     },
     image: require("./images/speakers/will.jpg"),
-    matrix: "@willscott:matrix.org",
     website: "http://wills.co.tt",
   },
   {
@@ -17,7 +16,6 @@ const speakers = [
     },
     image: require("./images/speakers/barnabe.jpg"),
     warpcast: "https://warpcast.com/barnabe",
-    matrix: "@barnabemonnot:matrix.org",
   },
   {
     name: "Federico Kunze Küllmer",
@@ -45,7 +43,6 @@ const speakers = [
     },
     image: require("./images/speakers/pari.jpg"),
     twitter: "https://twitter.com/parithosh_j",
-    matrix: "@parithosh:matrix.org",
     website: "https://parithosh.com",
   },
   {
@@ -88,7 +85,6 @@ const speakers = [
     },
     image: require("./images/speakers/molly.jpg"),
     twitter: "https://twitter.com/momack28",
-    matrix: "@momack2:matrix.org",
   },
   {
     name: "Richard Meissner",
@@ -125,7 +121,6 @@ const speakers = [
   {
     name: "tomaka",
     image: require("./images/speakers/tomaka.png"),
-    matrix: "@tomaka17:matrix.org",
   },
   {
     name: "Viet",
@@ -157,7 +152,6 @@ const speakers = [
     organization: {
       name: "Permanent",
     },
-    matrix: "@macg:matrix.org",
   },
   {
     name: "Guillaume Ballet",
@@ -167,7 +161,6 @@ const speakers = [
     },
     image: require("./images/speakers/guillaume.jpg"),
     twitter: "https://twitter.com/gballet",
-    matrix: "gballet:matrix.org",
   },
   {
     name: "Jonas Seiferth",
