@@ -6,6 +6,8 @@ const speakers = [
       url: "https://protocol.ai/",
     },
     image: require("./images/speakers/will.jpg"),
+    matrix: "@willscott:matrix.org",
+    website: "http://wills.co.tt",
   },
   {
     name: "Barnabé Monnot",
@@ -14,8 +16,8 @@ const speakers = [
       url: "https://ethereum.foundation/",
     },
     image: require("./images/speakers/barnabe.jpg"),
-    twitter: "https://twitter.com/barnabemonnot",
-    github: "https://github.com/barnabemonnot",
+    warpcast: "https://warpcast.com/barnabe",
+    matrix: "@barnabemonnot:matrix.org",
   },
   {
     name: "Federico Kunze Küllmer",
@@ -33,6 +35,7 @@ const speakers = [
       url: "https://evmos.org/",
     },
     image: require("./images/speakers/daniel.jpg"),
+    twitter: "https://twitter.com/danburck",
   },
   {
     name: "Parithosh",
@@ -42,6 +45,8 @@ const speakers = [
     },
     image: require("./images/speakers/pari.jpg"),
     twitter: "https://twitter.com/parithosh_j",
+    matrix: "@parithosh:matrix.org",
+    website: "https://parithosh.com",
   },
   {
     name: "Barnabas Busa",
@@ -54,20 +59,18 @@ const speakers = [
   {
     name: "cheeky-gorilla",
     organization: {
-      name: "Protocol Guild Contributor",
+      name: "Protocol Guild",
       url: "https://twitter.com/ProtocolGuild",
     },
     image: require("./images/speakers/cheeky.jpg"),
-    twitter: "https://twitter.com/cheekygorilla0x",
+    twitter: "https://twitter.com/ProtocolGuild",
   },
   {
     name: "Jannik",
     organization: {
-      name: "Brainbot",
-      url: "https://brainbot.com/",
+      name: "Shutter Network",
     },
     image: require("./images/speakers/jannik.png"),
-    twitter: "https://twitter.com/AnotherJannik",
   },
   {
     name: "Masih Derkani",
@@ -76,20 +79,21 @@ const speakers = [
       url: "https://protocol.ai/",
     },
     image: require("./images/speakers/masih.jpg"),
+    website: "https://derkani.org",
   },
   {
     name: "Molly Mackinlay",
     organization: {
-      name: "Protocol Labs",
-      url: "https://protocol.ai/",
+      name: "Protocol Labs Starfleet",
     },
     image: require("./images/speakers/molly.jpg"),
     twitter: "https://twitter.com/momack28",
+    matrix: "@momack2:matrix.org",
   },
   {
     name: "Richard Meissner",
     organization: {
-      name: "Safe",
+      name: "Safe Project",
       url: "https://safe.global/",
     },
     image: require("./images/speakers/richard.jpg"),
@@ -97,10 +101,6 @@ const speakers = [
   },
   {
     name: "Robert Habermeier",
-    organization: {
-      name: "Polkadot",
-      url: "https://polkadot.network/",
-    },
     image: require("./images/speakers/robert.jpg"),
   },
   {
@@ -120,24 +120,27 @@ const speakers = [
     },
     image: require("./images/speakers/tina.jpg"),
     twitter: "https://twitter.com/html_tina",
+    website: "https://tina.codes/",
   },
   {
     name: "tomaka",
     image: require("./images/speakers/tomaka.png"),
-    twitter: "https://twitter.com/tomaka17",
+    matrix: "@tomaka17:matrix.org",
   },
   {
     name: "Viet",
     image: require("./images/speakers/viet.jpg"),
+    organization: {
+      name: "Celestia Labs",
+    },
   },
   {
     name: "Yajin (Andy) Zhou",
     organization: {
-      name: "BlockSec",
-      url: "https://blocksec.com/",
+      name: "BlockSec & Zhejiang University",
     },
     image: require("./images/speakers/yajin.jpg"),
-    twitter: "https://twitter.com/yajinzhou",
+    website: "https://yajin.org",
   },
   {
     name: "dapplion",
@@ -151,7 +154,10 @@ const speakers = [
   {
     name: "Garrett Macdonald",
     image: require("./images/speakers/garrett.jpg"),
-    twitter: "https://twitter.com/bitcoingarrett",
+    organization: {
+      name: "Permanent",
+    },
+    matrix: "@macg:matrix.org",
   },
   {
     name: "Guillaume Ballet",
@@ -161,6 +167,7 @@ const speakers = [
     },
     image: require("./images/speakers/guillaume.jpg"),
     twitter: "https://twitter.com/gballet",
+    matrix: "gballet:matrix.org",
   },
   {
     name: "Jonas Seiferth",
