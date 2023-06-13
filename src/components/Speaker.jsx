@@ -10,7 +10,7 @@ function getAlphab(index) {
     return null; // Index out of range for alphabetical characters
   }
   if (index > 25) {
-    return getAlphab(index / 26 - 1) + getAlphab(index % 26); // Index out of range for alphabetical characters
+    return getAlphab(index / 26 - 1) + getAlphab(index % 26); // Index out of range for a single alphabetical character
   }
 
   var charCode = "a".charCodeAt(0) + index;
