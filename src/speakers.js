@@ -182,11 +182,9 @@ const speakers = [
   },
 ];
 
-const sortedSpeakers = speakers.sort((a, b) => {
-  if (a.name > b.name) return 1;
-  if (a.name < b.name) return -1;
-  return 0;
-});
+const shuffledSpeakers = speakers.sort(() => (
+  Math.random() > .5) ? 1 : -1
+);
 
-console.log(sortedSpeakers);
-export default sortedSpeakers;
+console.log(shuffledSpeakers);
+export default shuffledSpeakers;
