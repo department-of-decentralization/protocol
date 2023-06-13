@@ -186,5 +186,4 @@ const shuffledSpeakers = speakers.sort(() => (
   Math.random() > .5) ? 1 : -1
 );
 
-console.log(shuffledSpeakers);
 export default shuffledSpeakers;
