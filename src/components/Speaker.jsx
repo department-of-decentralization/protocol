@@ -20,13 +20,16 @@ function getAlphab(index) {
 const Speaker = ({ speaker, index }) => {
   const { twitter, github, website, matrix, name, image, organization } =
     speaker;
+  const src = image?.default || speaker?.image || dummySpeaker;
   return (
     <div className="flex flex-col items-center justify-center mt-6">
       <div className="flex justify-center items-center h-40 w-40 overflow-clip">
         <img
-          src={image?.default || speaker?.image || dummySpeaker}
+          src={src}
           alt={name}
-          className="grayscale brightness-125 opacity-70 contrast-100 object-contain w-48"
+          className={`grayscale ${
+            src !== dummySpeaker ? "brightness-125 opacity-70 contrast-100" : ""
+          } object-contain w-48`}
         />
       </div>
       <div className="text-center mt-1">

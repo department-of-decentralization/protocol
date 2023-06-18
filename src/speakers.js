@@ -1,5 +1,84 @@
 const speakers = [
   {
+    name: "Philipp Kant",
+    organization: {
+      name: "Mina Foundation",
+    },
+    image: require("./images/speakers/philipp.jpg"),
+    twitter: "https://twitter.com/philipp_kant",
+  },
+  {
+    name: "Max Inden",
+    organization: {
+      name: "Protocol Labs",
+      url: "https://protocol.ai/",
+    },
+    image: require("./images/speakers/max-inden.jpg"),
+    website: "https://max-inden.de",
+  },
+  {
+    name: "Laura Lotti",
+    organization: {
+      name: "Other Internet",
+    },
+  },
+  {
+    name: "Jenny Pollack",
+    image: require("./images/speakers/jenny.jpg"),
+    website: "https://jenny.lol",
+  },
+  {
+    name: "Dawid Szlachta",
+    organization: {
+      name: "TrueBlocks, LLC",
+    },
+    image: require("./images/speakers/dawid.jpg"),
+  },
+  {
+    name: "Asynchronous Phil",
+    twitter: "https://twitter.com/ph_lux",
+    image: require("./images/speakers/phil.jpg"),
+  },
+  {
+    name: "Toby Shorin",
+    organization: {
+      name: "Other Internet",
+    },
+    image: require("./images/speakers/toby.jpg"),
+    twitter: "https://twitter.com/tobyshorin",
+    website: "https://tobyshorin.com",
+  },
+  {
+    name: "Erik Kundt",
+    organization: {
+      name: "Radicle",
+    },
+    image: require("./images/speakers/erik.jpg"),
+    twitter: "https://twitter.com/_erikli_",
+  },
+  {
+    name: "D.",
+    organization: {
+      name: "Anoma",
+    },
+    github: "https://github.com/degregat",
+    image: require("./images/speakers/d.jpg"),
+  },
+  {
+    name: "Charleen Fei",
+    organization: {
+      name: "Interchain GmbH",
+    },
+    twitter: "https://twitter.com/chrlylrhc",
+  },
+  {
+    name: "Anirudha Bose",
+    organization: {
+      name: "Brave",
+    },
+    twitter: "https://twitter.com/onybose",
+  },
+  {
     name: "Will Scott",
     organization: {
       name: "Protocol Labs",
@@ -100,6 +179,38 @@ const speakers = [
     image: require("./images/speakers/robert.jpg"),
   },
   {
+    name: "Sebastian Martinez",
+    organization: {
+      name: "Radicle",
+    },
+    image: require("./images/speakers/sebastian.jpg"),
+  },
+  {
+    name: "Steffen Kux",
+    organization: {
+      name: "dm3.network, corpus.io",
+    },
+    twitter: "https://twitter.com/steffenkux",
+    image: require("./images/speakers/steffen.jpg"),
+  },
+  {
+    name: "Susannah Evans",
+    organization: {
+      name: "Interchain Gmbh",
+    },
+    image: require("./images/speakers/susannah.jpg"),
+    twitter: "https://twitter.com/susevans",
+  },
+  {
+    name: "Thomas Jay Rush",
+    organization: {
+      name: "TrueBlocks, LLC",
+    },
+    image: require("./images/speakers/jay.jpg"),
+    twitter: "https://twitter.com/trueblocks",
+    website: "https://trueblocks.io",
+  },
+  {
     name: "Sam Hart",
     organization: {
       name: "Skip",
@@ -182,8 +293,6 @@ const speakers = [
   },
 ];
 
-const shuffledSpeakers = speakers.sort(() => (
-  Math.random() > .5) ? 1 : -1
-);
+const shuffledSpeakers = speakers.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
 export default shuffledSpeakers;
