@@ -89,9 +89,42 @@ const IndexPage = () => {
           not host any sponsors or commercial talks.
         </small>
       </div>
+      <div>
+        <h2 className="font-bold" id="toc">
+          Table of Contents
+        </h2>
+        <ol className="pl-6 text-lg">
+          <li>
+            <a href="#conference">1. Conference</a>
+          </li>
+          <li>
+            <a href="#speakers">2. Speakers</a>
+          </li>
+          <li>
+            <a href="#cfp">3. Call for Participation</a>
+            <ul className="pl-6">
+              <li>
+                <a href="#cfp-speakers">3.1 Speakers</a>
+              </li>
+              <li>
+                <a href="#cfp-attendees">3.2 Attendees</a>
+              </li>
+              <li>
+                <a href="#cfp-updates">3.3 Updates</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#venue">4. Venue</a>
+          </li>
+          <li>
+            <a href="#host">5. About the Host</a>
+          </li>
+        </ol>
+      </div>
       <section>
         <h2 className="font-bold" id="conference">
-          Conference
+          1. Conference
         </h2>
         <p>
           Protocol Berg is a one-day technical conference targeting an audience
@@ -118,7 +151,7 @@ const IndexPage = () => {
       </section>
       <section>
         <h2 className="font-bold" id="speakers">
-          Speakers
+          2. Speakers
         </h2>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -135,9 +168,11 @@ const IndexPage = () => {
       </section>
       <section>
         <h2 className="font-bold" id="cfp">
-          Call for Participation
+          3. Call for Participation
         </h2>
-        <h3 className="font-bold">Speakers</h3>
+        <h3 className="font-bold" id="cfp-speakers">
+          3.1 Speakers
+        </h3>
         <p>
           The call for participation is now open. To submit a{" "}
           <b>talk or workshop proposal</b>, use our Pretalx interface:{" "}
@@ -181,9 +216,22 @@ const IndexPage = () => {
             governance structures and processes
           </li>
         </ul>
-        <h3 className="font-bold">Attendees</h3>
-        <p>Applications for tickets will open shortly.</p>
-        <h3 className="font-bold">Updates</h3>
+        <h3 className="font-bold" id="cfp-attendees">
+          3.2 Attendees
+        </h3>
+        <p>Applications are open!</p>
+        <p className="ml-12">
+          <a
+            href="https://join.protocol.berlin/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            join.protocol.berlin
+          </a>
+        </p>
+        <h3 className="font-bold" id="cfp-updates">
+          3.3 Updates
+        </h3>
         <p>
           To follow us for updates, find us on Bluesky, Lens, or Twitter:
           <br />
@@ -227,7 +275,7 @@ const IndexPage = () => {
 
       <section>
         <h2 className="font-bold" id="venue">
-          Venue
+          4. Venue
         </h2>
         <p>
           The <span className="italic">Heeresbäckerei</span> (magazine in the
@@ -273,7 +321,7 @@ const IndexPage = () => {
 
       <section>
         <h2 className="font-bold" id="host">
-          About the Host
+          5. About the Host
         </h2>
         <p>
           The{" "}
