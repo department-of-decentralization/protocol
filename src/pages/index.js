@@ -229,13 +229,32 @@ const IndexPage = () => {
             join.protocol.berlin
           </a>
         </p>
-        <p>Ticket vouchers will be distributed on a "first come first serve" basis for all eligible applications.</p>
-        <p>In addition to the public application form, there are two more ways to get tickets:</p>
+        <p>
+          Ticket vouchers will be distributed on a "first come first serve"
+          basis for all eligible applications.
+        </p>
+        <p>
+          In addition to the public application form, there are two more ways to
+          get tickets:
+        </p>
         <ol>
-          <li> Each confirmed speaker will receive 4 vouchers to distribute at their discretion.</li>
-          <li> We will allocate a certain contingent of ticket vouchers for the Ethereum, COSMOS, IPFS/Filecoin & Polkadot ecosystems to distribute to their communities.</li>
+          <li>
+            {" "}
+            Each confirmed speaker will receive 4 vouchers to distribute at
+            their discretion.
+          </li>
+          <li>
+            {" "}
+            We will allocate a certain contingent of ticket vouchers for the
+            Ethereum, COSMOS, IPFS/Filecoin & Polkadot ecosystems to distribute
+            to their communities.
+          </li>
         </ol>
-        <p>Attendance is free of charge. Note that a voucher needs to be redeemed and turned into a ticket in our ticket shop (link coming soon). No ticket, no entry.</p>
+        <p>
+          Attendance is free of charge. Note that a voucher needs to be redeemed
+          and turned into a ticket in our ticket shop (link coming soon). No
+          ticket, no entry.
+        </p>
         <h3 className="font-bold" id="cfp-updates">
           3.3 Updates
         </h3>
