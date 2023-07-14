@@ -42,17 +42,6 @@ const ContactPage = () => {
           </a>
         </p>
         <p>
-          To submit a technical talk or workshop proposal, use our Pretalx
-          interface: <br />
-          <a
-            href="https://speak.protocol.berlin/protocol-berg/cfp"
-            target="_blank"
-            className="ml-12"
-          >
-            speak.protocol.berlin
-          </a>
-        </p>
-        <p>
           To provide feedback or ask questions, please email us:{" "}
           <br />
           <a href="mailto:hello@protocol.berlin" className="ml-12">

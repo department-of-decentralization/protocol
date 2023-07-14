@@ -107,10 +107,13 @@ const IndexPage = () => {
                 <a href="#cfp-speakers">3.1 Speakers</a>
               </li>
               <li>
-                <a href="#cfp-attendees">3.2 Attendees</a>
+                <a href="#cfp-volunteers">3.2 Volunteers</a>
               </li>
               <li>
-                <a href="#cfp-updates">3.3 Updates</a>
+                <a href="#cfp-attendees">3.3 Attendees</a>
+              </li>
+              <li>
+                <a href="#cfp-updates">3.4 Updates</a>
               </li>
             </ul>
           </li>
@@ -174,12 +177,12 @@ const IndexPage = () => {
           3.1 Speakers
         </h3>
         <p>
-          The call for participation is now open. To submit a{" "}
+          The call for participation is now closed. To modify or confirm your{" "}
           <b>talk or workshop proposal</b>, use our Pretalx interface:{" "}
         </p>
         <p>
           <a
-            href="https://speak.protocol.berlin/protocol-berg/cfp"
+            href="https://speak.protocol.berlin"
             target="_blank"
             rel="noreferrer"
             className="ml-12"
@@ -210,16 +213,33 @@ const IndexPage = () => {
             hash functions, encryption
           </li>
           <li>
-            <b>Governance & Society:</b> broader concepts of protocol research
+            <b>Governance &amp; Society:</b> broader concepts of protocol research
             and development, social protocols, philosophical musings on human
             coordination and decentralized, open-source, off-chain and on-chain
             governance structures and processes
           </li>
         </ul>
-        <h3 className="font-bold" id="cfp-attendees">
-          3.2 Attendees
+        <h3 className="font-bold" id="cfp-volunteers">
+          3.2 Volunteers
         </h3>
-        <p>Applications are open!</p>
+        <p>Volunteer applications are open!</p>
+        <p className="ml-12">
+          <a
+            href="https://help.protocol.berlin/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            help.protocol.berlin
+          </a>
+        </p>
+        <p>
+          Ticket vouchers will be distributed on a "first come first serve"
+          basis for all eligible applications.
+        </p>
+        <h3 className="font-bold" id="cfp-attendees">
+          3.3 Attendees
+        </h3>
+        <p>General admission applications are open!</p>
         <p className="ml-12">
           <a
             href="https://join.protocol.berlin/"
@@ -256,7 +276,7 @@ const IndexPage = () => {
           ticket, no entry.
         </p>
         <h3 className="font-bold" id="cfp-updates">
-          3.3 Updates
+          3.4 Updates
         </h3>
         <p>
           To follow us for updates, find us on Bluesky, Lens, or Twitter:
