@@ -213,10 +213,10 @@ const IndexPage = () => {
             hash functions, encryption
           </li>
           <li>
-            <b>Governance &amp; Society:</b> broader concepts of protocol research
-            and development, social protocols, philosophical musings on human
-            coordination and decentralized, open-source, off-chain and on-chain
-            governance structures and processes
+            <b>Governance &amp; Society:</b> broader concepts of protocol
+            research and development, social protocols, philosophical musings on
+            human coordination and decentralized, open-source, off-chain and
+            on-chain governance structures and processes
           </li>
         </ul>
         <h3 className="font-bold" id="cfp-volunteers">
@@ -231,10 +231,6 @@ const IndexPage = () => {
           >
             help.protocol.berlin
           </a>
-        </p>
-        <p>
-          Ticket vouchers will be distributed on a "first come first serve"
-          basis for all eligible applications.
         </p>
         <h3 className="font-bold" id="cfp-attendees">
           3.3 Attendees
