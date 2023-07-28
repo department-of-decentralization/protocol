@@ -1,5 +1,12 @@
 const speakers = [
   {
+    name: "Tanishq Jasoria",
+    organization: {
+      name: "Nethermind",
+    },
+    image: require("./images/speakers/tanishq.jpg"),
+  },
+  {
     name: "Philipp Kant",
     organization: {
       name: "Mina Foundation",
