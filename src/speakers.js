@@ -28,6 +28,7 @@ const speakers = [
     organization: {
       name: "Other Internet",
     },
+    image: require("./images/speakers/laura.jpg"),
   },
   {
     name: "Jenny Pollack",
@@ -37,7 +38,7 @@ const speakers = [
   {
     name: "Dawid Szlachta",
     organization: {
-      name: "TrueBlocks, LLC",
+      name: "TrueBlocks",
     },
     image: require("./images/speakers/dawid.jpg"),
   },
@@ -76,6 +77,7 @@ const speakers = [
     organization: {
       name: "Interchain GmbH",
     },
+    image: require("./images/speakers/charleen.jpg"),
     twitter: "https://twitter.com/chrlylrhc",
   },
   {
@@ -211,7 +213,7 @@ const speakers = [
   {
     name: "Thomas Jay Rush",
     organization: {
-      name: "TrueBlocks, LLC",
+      name: "TrueBlocks",
     },
     image: require("./images/speakers/jay.jpg"),
     twitter: "https://twitter.com/trueblocks",
@@ -224,7 +226,7 @@ const speakers = [
       url: "https://skip.money/",
     },
     twitter: "https://twitter.com/hxrts",
-    image: require("./images/speakers/sam.jpg"),
+    image: require("./images/speakers/sam.jpeg"),
   },
   {
     name: "tina",
@@ -298,8 +300,169 @@ const speakers = [
     image: require("./images/speakers/kaitlin.jpg"),
     twitter: "https://twitter.com/kaitlin_beegle",
   },
+  {
+    name: "Aliasgar Merchant",
+    organization: {
+      name: "Informal Systems",
+    },
+    image: require("./images/speakers/aliasgar.png"),
+    twitter: "https://twitter.com/Ali_the_Curios",
+  },
+  {
+    name: "austingriffith",
+    organization: {
+      name: "BuildGuild & EF",
+    },
+    image: require("./images/speakers/austin.jpg"),
+    twitter: "https://twitter.com/austingriffith",
+  },
+  {
+    name: "Christian Reitwiessner",
+    organization: {
+      name: "powdr labs",
+    },
+    image: require("./images/speakers/chris.jpg"),
+    twitter: "https://twitter.com/chriseth",
+  },
+  {
+    name: "Constanza Gallo",
+    organization: {
+      name: "Swarm Foundation",
+    },
+    image: require("./images/speakers/constanza.jpg"),
+    twitter: "https://twitter.com/costgallo",
+  },
+  {
+    name: "elizabeth",
+    organization: {
+      name: "Astria",
+    },
+    image: require("./images/speakers/elizabeth.jpeg"),
+    twitter: "https://twitter.com/elizabethereum",
+  },
+  {
+    name: "eskimor",
+    organization: {
+      name: "Parity Technologies",
+    },
+    image: require("./images/speakers/eskimor.jpg"),
+  },
+  {
+    name: "Grigoris",
+    organization: {
+      name: "Rawsciousness",
+    },
+    image: require("./images/speakers/grigoris.jpg"),
+    twitter: "https://twitter.com/rawsciousness",
+  },
+  {
+    name: "Igor Mandrigin",
+    organization: {
+      name: "Gateway.fm",
+    },
+    image: require("./images/speakers/igor.jpg"),
+    twitter: "https://twitter.com/mandrigin",
+  },
+  {
+    name: "Jaya Klara Brekke",
+    organization: {
+      name: "Nym",
+    },
+    image: require("./images/speakers/jaya.jpg"),
+    twitter: "https://twitter.com/jayapapaya",
+  },
+  {
+    name: "Laurence Kirk",
+    organization: {
+      name: "Extropy.IO",
+    },
+    image: require("./images/speakers/laurence.jpg"),
+  },
+  {
+    name: "Lefteris Karapetsas",
+    organization: {
+      name: "rotki",
+    },
+    image: require("./images/speakers/lefteris.jpg"),
+    twitter: "https://twitter.com/LefterisJP",
+  },
+  {
+    name: "Mario Havel",
+    organization: {
+      name: "Ethereum Foundation",
+    },
+    image: require("./images/speakers/mario.jpg"),
+  },
+  {
+    name: "Max Hampshire",
+    organization: {
+      name: "Nym",
+    },
+  },
+  {
+    name: "protolambda",
+    organization: {
+      name: "OP Labs",
+    },
+    image: require("./images/speakers/proto.jpeg"),
+    twitter: "https://twitter.com/protolambda",
+  },
+  {
+    name: "Remco Bloemen",
+    organization: {
+      name: "Worldcoin",
+    },
+    image: require("./images/speakers/remco.jpg"),
+    website: "https://xn--2-umb.com/",
+  },
+  {
+    name: "rene",
+    organization: {
+      name: "Celestia",
+    },
+    image: require("./images/speakers/rene.jpg"),
+    twitter: "https://twitter.com/renelubov",
+  },
+  {
+    name: "Sacha",
+    organization: {
+      name: "Parity Technologies",
+    },
+    image: require("./images/speakers/sacha.png"),
+    twitter: "https://twitter.com/SachaL__",
+  },
+  {
+    name: "Sebastian Buergel",
+    organization: {
+      name: "HOPR",
+    },
+    image: require("./images/speakers/scbuergel.jpg"),
+    twitter: "https://twitter.com/SCBuergel",
+  },
+  {
+    name: "Tim Daubenschütz",
+    organization: {
+      name: "Kiwi News",
+    },
+    image: require("./images/speakers/tim.jpg"),
+    twitter: "https://twitter.com/timdaub",
+  },
+  {
+    name: "Wassim Z. Alsindi",
+    organization: {
+      name: "MIT Computational Law Report",
+    },
+    image: require("./images/speakers/wassim.jpg"),
+    website: "https://wassim.pubpub.org",
+  },
+  {
+    name: "Yabir Garcia",
+    organization: {
+      name: "rotki",
+    },
+    image: require("./images/speakers/yabir.jpg"),
+  },
 ];
 
 const shuffledSpeakers = speakers.sort(() => (Math.random() > 0.5 ? 1 : -1));
-
 export default shuffledSpeakers;
