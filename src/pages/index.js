@@ -4,6 +4,7 @@ import { SEO } from "../components/seo";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import speakers from "../speakers";
 import Speaker from "../components/Speaker";
+import Schedule from "./schedule";
 
 const FootNote = ({ id, author, description, year, url, accessed }) => (
   <li id={`fn${id}`} className="flex flex-row">
@@ -151,6 +152,14 @@ const IndexPage = () => {
           Protocol Berg is a donation-backed non-profit event. Therefore, there
           will be no sponsors.
         </p>
+      </section>
+      <section>
+        <h2 className="font-bold" id="schedule">
+          1.1 Schedule
+        </h2>
+        <div>
+          <Schedule />
+        </div>
       </section>
       <section>
         <h2 className="font-bold" id="speakers">

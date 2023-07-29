@@ -1,0 +1,433 @@
+{
+  "schedule": {
+    "version": "0.0",
+    "base_url": "https://speak.protocol.berlin/protocol-berg/schedule/",
+    "conference": {
+      "acronym": "protocol-berg",
+      "title": "Protocol Berg",
+      "start": "2023-09-15",
+      "end": "2023-09-15",
+      "daysCount": 1,
+      "timeslot_duration": "00:05",
+      "time_zone_name": "Europe/Berlin",
+      "rooms": [
+        {
+          "name": "Magazin - Main Stage",
+          "guid": "cad228f7-ffd0-4ef5-a920-be0800d1b292",
+          "description": "The main stage located on the ground floor in the big, bright magazine of the bakery.",
+          "capacity": 350
+        },
+        {
+          "name": "Atelier - Side Stage",
+          "guid": "66cbeeb9-e485-4078-85cc-cabc3768d537",
+          "description": "The side stage on the second floor above the magazine, all the way to the top.",
+          "capacity": 150
+        },
+        {
+          "name": "Loft - Workshop 0",
+          "guid": "47c52da9-5c17-49df-b7ec-1c599a5ef0a5",
+          "description": "The workshop room 0 on the first floor above the magazine.",
+          "capacity": 50
+        },
+        {
+          "name": "Atelier - Workshop 1",
+          "guid": "4115564e-25d3-415e-80d8-0efe729decc9",
+          "description": "The workshop room 1 on the second floor above the magazine.",
+          "capacity": 50
+        }
+      ],
+      "days": [
+        {
+          "index": 1,
+          "date": "2023-09-15",
+          "day_start": "2023-09-15T04:00:00+02:00",
+          "day_end": "2023-09-16T03:59:00+02:00",
+          "rooms": {
+            "Magazin - Main Stage": [
+              {
+                "id": 17,
+                "guid": "9eee71d2-982b-5b30-b8b2-8af14ba9e87f",
+                "logo": "",
+                "date": "2023-09-15T15:00:00+02:00",
+                "start": "15:00",
+                "duration": "01:20",
+                "room": "Magazin - Main Stage",
+                "slug": "protocol-berg-17-the-blockspace-expo",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/G7Z33N/",
+                "title": "The Blockspace Expo",
+                "subtitle": "",
+                "track": "Consensus",
+                "type": "Workshop: Deep Dive",
+                "language": "en",
+                "abstract": "Protocol researchers and developers from distant ecosystems gather to talk about their blockspace.",
+                "description": "We wish to set up a workshop centred around blockspace and its provision in four different ecosystems. Blockspace is the key resource supplied by blockchains, which allows users to transact. Considerable infrastructure has now seen the light of day towards refining blockspace and delivering more value across the stack, from users to the protocol. But blockspace is not an homogenous resource, being deeply tied with both the consensus protocols which supply it and the infrastructure which refines it. Comparing notes between ecosystems will allow us to uncover best practices and opportunities to learn from one another.\r\n\r\nOur workshop will feature researchers and developers from four different ecosystems, represented by but not limited to:\r\n- Robert Habermeier (Polkadot) https://twitter.com/rphmeier/status/1631467728555974658\r\n- Sam Hart (Skip Protocol) https://twitter.com/SkipProtocol/status/1642895191857299458\r\n- Philippe (Shutter Network) https://twitter.com/project_shutter/status/1628430652990267393\r\n- Barnabé Monnot (Robust Incentives Group @ Ethereum Foundation) https://twitter.com/barnabemonnot/status/1628836608270016517\r\n\r\nWe intend to discuss themes among resource pricing, MEV, base-layer encryption, composability and likely others!",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 17,
+                    "code": "E3QQUM",
+                    "public_name": "Barnabé Monnot",
+                    "biography": "Barnabé Monnot is a research scientist for the Robust Incentives Group, a research team of the Ethereum Foundation dedicated to the study of cryptoeconomics and mechanism design.",
+                    "answers": []
+                  },
+                  {
+                    "id": 42,
+                    "code": "CLABRV",
+                    "public_name": "Sam Hart",
+                    "biography": "Sam is the Head of Product and Strategy at Skip, a team building MEV solutions that improve protocol sustainability and cross-chain UX. He is also Co-founder of Timewave, an organization that creates tools for intelligent on-chain resource allocation and trustless cooperation.",
+                    "answers": []
+                  },
+                  {
+                    "id": 41,
+                    "code": "3EJWPM",
+                    "public_name": "Jannik",
+                    "biography": "-",
+                    "answers": []
+                  },
+                  {
+                    "id": 36,
+                    "code": "3VUTST",
+                    "public_name": "Robert Habermeier",
+                    "biography": "-",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              }
+            ],
+            "Loft - Workshop 0": [
+              {
+                "id": 20,
+                "guid": "4d57bbd8-83fc-55bb-8c49-7c02ea3eab15",
+                "logo": "",
+                "date": "2023-09-15T11:00:00+02:00",
+                "start": "11:00",
+                "duration": "01:20",
+                "room": "Loft - Workshop 0",
+                "slug": "protocol-berg-20-crossing-the-interoperability-bridge-a-deep-dive-into-building-interoperable-dapps-with-ibc",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/WMQHKH/",
+                "title": "Crossing the Interoperability Bridge: A Deep Dive into Building Interoperable dApps with IBC",
+                "subtitle": "",
+                "track": "Infrastructure",
+                "type": "Workshop: Deep Dive",
+                "language": "en",
+                "abstract": "This workshop will be led by Federico Kunze Küllmer, who was part of the core team that developed the Inter Blockchain Communication Protocol (IBC). Federico is also the co-founder of Evmos, an EVM compatible blockchain that supports interoperable dApps via IBC. Federico will dive deep into the technical aspects of the IBC protocol, exploring how it enables cross-chain communication and discussing how Evmos simplifies the development of interoperable dApps. Attendees will have the opportunity to learn from the speaker's firsthand experience in implementing the IBC protocol and gain valuable insights into developing successful interoperable dApps using Solidity.",
+                "description": "Join us for a comprehensive workshop on writing interoperable decentralized applications using the Ethereum Virtual Machine (EVM) and the Inter Blockchain Communication Protocol (IBC). This deep dive session will explore the key architectural components that enable interoperability between dApps, including a detailed deep dive of the EVM and IBC. The workshop will conclude with a hands-on demo, giving participants the opportunity to develop their own interoperable dApps using Solidity. This is an ideal opportunity for engineers looking to advance their dApp development skills and gain practical experience in the emerging field of blockchain interoperability.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 25,
+                    "code": "NUWLD7",
+                    "public_name": "Federico Kunze Küllmer",
+                    "biography": "Evmos Co-founder. Cosmos Core Contributor. IBC Core Engineer.",
+                    "answers": []
+                  },
+                  {
+                    "id": 28,
+                    "code": "Q9SUGB",
+                    "public_name": "Daniel Burckhardt",
+                    "biography": "-",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 11,
+                "guid": "d00817be-be6b-5682-ab26-2ca8dfc9cbb5",
+                "logo": "",
+                "date": "2023-09-15T12:30:00+02:00",
+                "start": "12:30",
+                "duration": "00:40",
+                "room": "Loft - Workshop 0",
+                "slug": "protocol-berg-11-real-web3-messaging-must-be-encrypted-decentralized-and-interoperable-utilizing-dm3-protocol-as-layer-0-of-messaging-",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/CAU9S8/",
+                "title": "Real web3 messaging must be encrypted, decentralized, and interoperable! Utilizing dm3 protocol as layer 0 of messaging.",
+                "subtitle": "",
+                "track": "Infrastructure",
+                "type": "Workshop: Educational",
+                "language": "en",
+                "abstract": "The dm3 protocol is the web3 messaging protocol focusing on encryption, decentralization, scalability, and in particular interoperability. It utilizes the essential features for a lean messaging base protocol: a registry for public keys and decentralized delivery service nodes.",
+                "description": "Email, SMS, and messengers such as WhatsApp, Signal, Telegram, and others are known and used by almost everyone today. The lack of comprehensive end-to-end encryption for e-mail and closed data silos for central messenger services are currently common. Cross-application communication is not possible. User profiles are under the control of large corporations.\r\n\r\nWith web3 we have new possibilities like key-based identities, decentralized registries on the blockchain, and end-to-end encryption, ... In the last month, several web3-based messaging solutions were introduced. While encryption, security, and privacy are consistently implemented, interoperability is still not yet solved but is needed even more. \r\n\r\nWith **dm3**, there exists a lean web3-based protocol for peer-2-peer messaging, which makes it possible to easily integrate secure communication into DApps. Interoperability with other protocols or services can be accomplished with little effort and without compromising on security. Protocol extensions for advanced privacy, group chats, public message feeds, and more enhance the basic protocol for even more applications.\r\n\r\nThe **dm3** protocol is utilizing **ENS (Ethereum Name Service)** as a central (but decentralized) registry for communication information (like public keys for encryption and signature verification and information, how and where to deliver messages) and an open and scalable network of delivery service nodes for delivering messages or as gateways to other protocols or services.\r\n\r\nThe aim of the talk is to introduce the public good dm3 protocol, emphasize how interoperability is fundamental for web3 messaging applications and how interoperability is implemented with dm3, and show how secure and interoperable communication can be integrated into DApps.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 11,
+                    "code": "QNLULM",
+                    "public_name": "Steffen Kux",
+                    "biography": "As an applied mathematician, Steffen started his career in 2000 in the automotive industry as a method- and software developer for mathematical and simulation software, with a particular focus on applications using mathematical optimization, numerical simulation, and artificial intelligence. \r\n\r\nSince 2017, he has been working to implement blockchain technology for real-world applications. He has developed applications with industry partners and products in IoT, energy, mobility, sharing economy, asset management, and self-sovereign identity.\r\n\r\n2021 Steffen co-founded with 3 partners corpus as a venture studio for web3 applications. Now Steffen is focused on web3 messaging as one of the venture studio's successful projects. He and his team are developing dm3, the web3 messaging protocol for secure and interoperable communication.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 27,
+                "guid": "af75eca1-4326-5e54-b269-4c68ce0e451c",
+                "logo": "",
+                "date": "2023-09-15T15:15:00+02:00",
+                "start": "15:15",
+                "duration": "01:20",
+                "room": "Loft - Workshop 0",
+                "slug": "protocol-berg-27-testnet-or-not-here-we-come-a-deep-dive-into-running-test-networks",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/SAG7F3/",
+                "title": "Testnet or Not, Here We Come: A deep dive into running test networks",
+                "subtitle": "",
+                "track": "Infrastructure",
+                "type": "Workshop: Deep Dive",
+                "language": "en",
+                "abstract": "Post-Merge testnets are a beast to run, this workshop would give you an overview into all the tooling that exists to make this job easier. We would also setup a small testnet during this workshop to help familiarize with the tools.",
+                "description": "Testnets are useful for more than Ethereum upgrades or dapps, they can be invaluable in prototyping EIPs and hunting for security issues. This workshop will deep dive into the extensive tooling we have for single host and multi host testnets, aiming to showcase our preferred options for various usecases.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 34,
+                    "code": "33WYMV",
+                    "public_name": "Parithosh",
+                    "biography": "I am an Ethereum enthusiast with a deep love for all things servers. I incorporated Ethereum into my Master’s thesis and loved the experience so much as to make it my full time job. I currently work in the DevOps team of the Ethereum Foundation and I mainly focus on the Ethereum protocol upgrades. I’m also an avid photographer with a specific interest in Landscape and Travel photography.",
+                    "answers": []
+                  },
+                  {
+                    "id": 35,
+                    "code": "Y3XUEK",
+                    "public_name": "Barnabas Busa",
+                    "biography": "Devops at Ethereum Foundation",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 71,
+                "guid": "f1d88d0d-ec34-5ca1-a307-836481c76a1b",
+                "logo": "/media/protocol-berg/submissions/VCNBNY/photo_2022-06-13_15-50-21_KR9yqiP.jpg",
+                "date": "2023-09-15T16:45:00+02:00",
+                "start": "16:45",
+                "duration": "00:40",
+                "room": "Loft - Workshop 0",
+                "slug": "protocol-berg-71-the-holeky-testnet-launch-hangout",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/VCNBNY/",
+                "title": "The Holešky Testnet Launch Hangout",
+                "subtitle": "",
+                "track": "Infrastructure",
+                "type": "Workshop: Educational",
+                "language": "en",
+                "abstract": "Coincidentally, the Holešky testnet is scheduled to launch during the Protocol Berg conference. Let's put it on screen and chat about testnet infrastructure.",
+                "description": "The first long-standing, merged-from-genesis, public Ethereum testnet. Holešky will replace Goerli as a staking, infrastructure and protocol-developer testnet in 2023.\r\n\r\nhttps://github.com/eth-clients/holesky",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 3,
+                    "code": "HHCRB3",
+                    "public_name": "Afri Schoedon",
+                    "biography": "Head of Protocol Engineering at ChainSafe Systems. Core-Organizer ETHBerlin, Protocol Berg, and GoerliCon. Running testnets on the side.",
+                    "answers": []
+                  },
+                  {
+                    "id": 34,
+                    "code": "33WYMV",
+                    "public_name": "Parithosh",
+                    "biography": "I am an Ethereum enthusiast with a deep love for all things servers. I incorporated Ethereum into my Master’s thesis and loved the experience so much as to make it my full time job. I currently work in the DevOps team of the Ethereum Foundation and I mainly focus on the Ethereum protocol upgrades. I’m also an avid photographer with a specific interest in Landscape and Travel photography.",
+                    "answers": []
+                  },
+                  {
+                    "id": 35,
+                    "code": "Y3XUEK",
+                    "public_name": "Barnabas Busa",
+                    "biography": "Devops at Ethereum Foundation",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              }
+            ],
+            "Atelier - Workshop 1": [
+              {
+                "id": 94,
+                "guid": "f18dc52f-bbd1-52f9-8a26-4ca673c4e6a0",
+                "logo": "",
+                "date": "2023-09-15T11:00:00+02:00",
+                "start": "11:00",
+                "duration": "01:20",
+                "room": "Atelier - Workshop 1",
+                "slug": "protocol-berg-94-libp2p-workshop-building-a-peer-to-peer-chat-application-in-rust",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/ZMKJS3/",
+                "title": "libp2p Workshop - Building a Peer-to-Peer Chat Application in Rust",
+                "subtitle": "",
+                "track": "Networking",
+                "type": "Workshop: Deep Dive",
+                "language": "en",
+                "abstract": "libp2p is a peer-to-peer networking library. We will build a chat app using the Rust implementation of libp2p. Our application will allow anyone with internet access across the globe to communicate. The workshop will give hands-on experience on how to build peer-to-peer vs. client-to-server.",
+                "description": "",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 108,
+                    "code": "KB3VLV",
+                    "public_name": "Max Inden",
+                    "biography": "Max is a software developer interested in distributed systems, type theory and consensus. At Protocol Labs he is stewarding the peer-to-peer networking project libp2p (https://libp2p.io/). He is maintaining the libp2p Rust implementation. Previously Max has been working on the monitoring system Prometheus as a core maintainer, focusing on its integration within the Kubernetes orchestrator.\r\n\r\nTo find out more visit https://max-inden.de/",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 87,
+                "guid": "a64bc28b-db02-5924-96fe-20ca610781bf",
+                "logo": "/media/protocol-berg/submissions/ZYZGWE/Frr-xVvXoAseR_S_JkxAklF.png",
+                "date": "2023-09-15T12:30:00+02:00",
+                "start": "12:30",
+                "duration": "01:20",
+                "room": "Atelier - Workshop 1",
+                "slug": "protocol-berg-87-roll-your-own-crypto",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/ZYZGWE/",
+                "title": "Roll your own crypto",
+                "subtitle": "",
+                "track": "Cryptography",
+                "type": "Workshop: Deep Dive",
+                "language": "en",
+                "abstract": "Elliptic curve cryptography underpins the trillion dollar economy of cryptocurrencies. But it's often seen as some sort of sorcery, meant only for experts. While it's true that cryptography is a minefield, and therefore you should _never roll your own crypto_, it's still a useful method to build an understanding of cryptocurrencies from first principles.\r\n\r\nIn this workshop, we'll cover basic algebra necessary to get a theoretical understanding of elliptic curves, and learn how they are used for signing and verifying transactions. We'll then put this theory to practice by rolling our own toy implementation of the elliptic curve used in Ethereum and Bitcoin.",
+                "description": "### Programme\r\n\r\nWe'll cover the following topics during the workshop, although not in the same order. Please note that this programme may be subject to minor changes.\r\n\r\n**Foundational stuff**\r\n* Introduction to elliptic curves\r\n* Field and group theory\r\n* Elliptic curves under the hood\r\n* Signature and verification (ECDSA)\r\n\r\n**Practical stuff**\r\n* Representing elliptic curves in code\r\n* Implementing primitives for elliptic curve operations\r\n* Implementing ECDSA\r\n\r\n**Fun stuff**\r\n* The Playstation 3 hack\r\n* Backdoors in elliptic curves (you may leave the workshop paranoid)\r\n\r\n### Audience\r\n\r\nNo prior background in cryptography is necessary, but some programming experience is recommended to fully engage in the hands-on implementation exercises. Make sure to bring pen and paper for working through the mathematical concepts, as well as a laptop configured to run Python or NodeJS code.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 101,
+                    "code": "8SB9KS",
+                    "public_name": "Anirudha Bose",
+                    "biography": "Anirudha is a Staff Engineer at Brave, where he works on web3 initiatives, notably the multi-chain Brave Wallet. Previously, he worked at Ledger on custody software for financial institutions, and also briefly on algorithms for quantum computers. He enjoys travelling, attending mixers, and playing the guitar.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 6,
+                "guid": "0d0f4bd1-f934-5f23-8f0f-e18717e42eff",
+                "logo": "",
+                "date": "2023-09-15T14:00:00+02:00",
+                "start": "14:00",
+                "duration": "00:40",
+                "room": "Atelier - Workshop 1",
+                "slug": "protocol-berg-6-essential-maths-for-zero-knowledge-proofs",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/DXBMVB/",
+                "title": "Essential Maths for Zero Knowledge Proofs",
+                "subtitle": "",
+                "track": "Cryptography",
+                "type": "Workshop: Educational",
+                "language": "en",
+                "abstract": "A workshop explaining the essential maths needed to understand zero knowledge proofs",
+                "description": "his interactive workshop will go through the maths needed for  zero knowledge proof creation and verification. \r\nIt will cover\r\n- Background cryptography / number theory\r\n- Polynomial theory\r\n- Commitment Schemes\r\n- A run through of the zkSNARK and zkSTARK process\r\n- Optimisation techniques used in popular protocols",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 6,
+                    "code": "SJDYHJ",
+                    "public_name": "Laurence Kirk",
+                    "biography": "I am an educator and developer in the Web3 space, with a particular passion for zero knowledge proofs.\r\nI started following blockchain tech in 2011, started working on Ethereum in 2015 and started running workshops in 2017. \r\nCurrently as CEO of Extropy.IO I teach workshops about zero knowledge proofs and advanced solidity.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 125,
+                "guid": "a659b26b-14cd-54da-9dcf-bc75100d72d5",
+                "logo": "/media/protocol-berg/submissions/QQ3H9F/DSCF5344_wL9r7Kx.JPG",
+                "date": "2023-09-15T19:00:00+02:00",
+                "start": "19:00",
+                "duration": "00:40",
+                "room": "Atelier - Workshop 1",
+                "slug": "protocol-berg-125-the-forest-that-protects-the-public-good-nym-mixnet-for-libp2p-privacy",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/QQ3H9F/",
+                "title": "The Forest That Protects the Public Good: Nym mixnet for Libp2p privacy",
+                "subtitle": "",
+                "track": "Networking",
+                "type": "Workshop: Educational",
+                "language": "en",
+                "abstract": "The public and private are not opposites, they are complementary: privacy is needed to sustain the security and integrity of people as well as infrastructure that serve the public good. This workshop will demo working code for running Libp2p traffic through the Nym mixnet, built with the Nym Rust SDK.",
+                "description": "The public and private are not opposites, they are complementary: privacy is needed to sustain the security and integrity of people as well as infrastructure that serve the public good. This workshop presents the cypherpunk principle for understanding the public and private, namely “transparency for the powerful, privacy for the rest of us” - showing how to operationalise this in the context of decentralised infrastructures. The workshop presents the Nym mixnet as a privacy commons for libp2p, a core module for decentralised networking, used by Ethereum consensus clients and beyond. Recently, Chainsafe built a proof of concept integration of Nym for Lighthouse. This workshop will demo working code for running Libp2p traffic through the Nym mixnet, built with the Nym Rust SDK.\r\n\r\nDistributed infrastructures suffer from a common vulnerability: that traffic is exposed, can reveal IP addresses and be used to deanonymise operators. This puts both operator as well as nodes at risk of DDoS attacks as well as censorship. Mixnets function like a forest surrounding and sustaining the public goods of such core modules: they encrypt and mix network traffic across several layers of mix nodes, adding small time delays - a leafy canopy to obscure the patterns of communication that might otherwise reveal sensitive network information.",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "id": 141,
+                    "code": "J9JLB3",
+                    "public_name": "Jaya Klara Brekke",
+                    "biography": "Jaya Klara Brekke is a cryptographic geographer and CSO at Nym, a global decentralised, incentivised privacy network. She works with the Nym SDK team and broader company on researching, developing and articulating the broader societal implications and importance of privacy technologies in the current major re-architecting of digital worlds.",
+                    "answers": []
+                  },
+                  {
+                    "id": 143,
+                    "code": "WZYRC8",
+                    "public_name": "Max Hampshire",
+                    "biography": "Senior Developer Relations for Nym, previously a researcher and artist with background in Philosophy.",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              },
+              {
+                "id": 119,
+                "guid": "f0111e4c-e254-5ddc-aee0-918c9431d41a",
+                "logo": "",
+                "date": "2023-09-15T20:15:00+02:00",
+                "start": "20:15",
+                "duration": "00:40",
+                "room": "Atelier - Workshop 1",
+                "slug": "protocol-berg-119-rawsciousness",
+                "url": "https://speak.protocol.berlin/protocol-berg/talk/UULLX8/",
+                "title": "Rawsciousness",
+                "subtitle": "",
+                "track": "General",
+                "type": "Workshop: Educational",
+                "language": "en",
+                "abstract": "Exploring the Meaning of Existence in a Futuristic Crypto Epoch",
+                "description": "A and B two fictional characters who transcend to a parallel crypto space.\r\nAfter reflecting on each others existence and how they’ve been communicating, \r\nonly then are able to reveal the true essence of a decentralised world. \r\n\r\nA Short Film (A Non-Dual Media Production) \r\nStarring Alice and Bob \r\nSci-Fi   15 min  (FSK 12)  4k \r\nLanguage English",
+                "recording_license": "",
+                "do_not_record": true,
+                "persons": [
+                  {
+                    "id": 135,
+                    "code": "9MSLPB",
+                    "public_name": "Grigoris",
+                    "biography": "Autonomously Interdependent\r\nBorn in 1973\r\nGrigoris",
+                    "answers": []
+                  }
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
