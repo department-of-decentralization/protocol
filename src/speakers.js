@@ -398,6 +398,7 @@ const speakers = [
     organization: {
       name: "Nym",
     },
+    image: require("./images/speakers/max.jpg"),
   },
   {
     name: "protolambda",
