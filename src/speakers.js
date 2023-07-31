@@ -305,7 +305,7 @@ const speakers = [
     organization: {
       name: "Informal Systems",
     },
-    image: require("./images/speakers/aliasgar.png"),
+    image: require("./images/speakers/aliasgar.jpg"),
     twitter: "https://twitter.com/Ali_the_Curios",
   },
   {
