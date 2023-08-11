@@ -11,35 +11,110 @@ const CONF_END_HOUR = parseInt(CONF_END_TIME.split(":")[0]);
 const CONF_END_MINUTE = parseInt(CONF_END_TIME.split(":")[1]);
 
 const CONF_START_ABSOLUTE_MINUTES = CONF_START_HOUR * 60 + CONF_START_MINUTE;
+const CONF_END_ABSOLUTE_MINUTES = CONF_END_HOUR * 60 + CONF_END_MINUTE;
+const CONF_DURATION_MINUTES =
+  CONF_END_ABSOLUTE_MINUTES - CONF_START_ABSOLUTE_MINUTES;
+const TOTAL_CELLS = CONF_DURATION_MINUTES / 5;
+
+const COLUMN_WIDTH_TW_STYLE = "min-w-[250px]";
+const SCROLL_VIEW_HEIGHT = 900;
+const SCROLL_VIEW_HEIGHT_TW_STYLE = "max-h-[" + SCROLL_VIEW_HEIGHT + "px]";
+
+const EventContainer = ({ event, eventStyle }) => {
+  const hoursDuration = parseInt(event.duration.split(":")[0]);
+  const minutesDuration = parseInt(event.duration.split(":")[1]);
+  const totalMinutesDuraation = hoursDuration * 60 + minutesDuration;
+
+  const end = addTimes(event.start, event.duration);
+  const eventEndHour = parseInt(end.split(":")[0]);
+  const eventEndMinute = parseInt(end.split(":")[1]);
+
+  return (
+    <div
+      className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer px-4 pt-4 box-border bg-orange-200`}
+      style={eventStyle}
+    >
+      <div className="text-[0.7rem]">
+        {event.type} ({totalMinutesDuraation}min)
+      </div>
+      <div className="text-[0.6rem]">
+        {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
+      </div>
+      <div className="font-bold text-[0.85rem] mt-4">{event.title}</div>
+      <div className="text-[0.75rem]">
+        {event.persons.map((person) => person.public_name).join(", ")}{" "}
+      </div>
+      <div className="mt-4 text-[0.75rem]">
+        {" "}
+        <b>Track:</b> {event.track}
+      </div>
+    </div>
+  );
+};
 
 const Schedule = () => {
   const { schedule } = pretalxSchedule;
   return (
-    <div className="flex flex-row">
-      {/* Times */}
-      <div className="flex flex-col">
-        {generateTimeIntervals(
-          CONF_START_TIME,
-          CONF_END_TIME,
-          schedule.conference.timeslot_duration
-        )}
-      </div>
-      {Object.keys(schedule.conference.days[0].rooms).map((room, i) => {
-        return (
-          <div
-            className={`relative flex flex-col w-32 mx-2 ${
-              i % 2 == 0 ? "bg-slate-100" : "bg-slate-300"
-            }`}
-          >
-            {schedule.conference.days[0].rooms[room].map((event) => {
-              return placeEventOnSchedule(
-                event,
-                schedule.conference.timeslot_duration
-              );
-            })}
+    <div>
+      {" "}
+      {/* Scrollable timetalbe */}
+      <div
+        className={`flex flex-col overflow-auto ${SCROLL_VIEW_HEIGHT_TW_STYLE}`}
+      >
+        <div className="flex">
+          {/* Times */}
+          <div className="flex flex-col sticky left-0 z-20 bg-slate-100 text-sm">
+            {generateTimeIntervals(
+              CONF_START_TIME,
+              CONF_END_TIME,
+              schedule.conference.timeslot_duration
+            )}
           </div>
-        );
-      })}
+          <div>
+            {/* Room names header */}
+            <div className="flex flex-row sticky top-0 z-10 font-bold">
+              {Object.keys(schedule.conference.days[0].rooms).map((room, i) => (
+                <div
+                  className={`${COLUMN_WIDTH_TW_STYLE} text-center ${
+                    i % 2 == 0 ? "bg-gray-200" : "bg-gray-300"
+                  } mx-2`}
+                >
+                  {room}
+                </div>
+              ))}
+            </div>
+            {/* Event Columns */}
+            <div className="flex h-full">
+              {/* Dividers */}
+              {/* <div className="relative w-full">{generateDividers()}</div> */}
+              {Object.keys(schedule.conference.days[0].rooms).map((room, i) => {
+                return (
+                  <div
+                    className={`relative ${COLUMN_WIDTH_TW_STYLE} mx-2 ${
+                      i % 2 == 0 ? "bg-gray-100" : "bg-gray-200"
+                    }`}
+                  >
+                    {schedule.conference.days[0].rooms[room].map((event) => {
+                      return placeEventOnSchedule(
+                        event,
+                        schedule.conference.timeslot_duration
+                      );
+                    })}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          {/* Times, right side */}
+          <div className="flex flex-col right-0 z-20 bg-slate-100 text-sm">
+            {generateTimeIntervals(
+              CONF_START_TIME,
+              CONF_END_TIME,
+              schedule.conference.timeslot_duration
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -73,14 +148,9 @@ const placeEventOnSchedule = (event, timeslotDuration) => {
     position: "absolute",
     height: eventSpanPixels,
     top: eventOffsetPixels,
-    backgroundColor: "red",
   };
 
-  return (
-    <div className="w-32" style={eventStyle}>
-      {event.title}
-    </div>
-  );
+  return <EventContainer event={event} eventStyle={eventStyle} />;
 };
 // Via ChatGPT
 const generateTimeIntervals = (start, end, interval) => {
@@ -106,13 +176,15 @@ const generateTimeIntervals = (start, end, interval) => {
         style={{
           height: CELL_HEIGHT,
         }}
-        className="border-b border-gray-300"
+        className={`text-center text-base px-2 ${
+          currentMinute % 15 === 0 ? "border-b border-gray-300" : ""
+        }`}
       >
         {currentMinute % 15 === 0
           ? `${String(currentHour).padStart(2, "0")}:${String(
               currentMinute
             ).padStart(2, "0")}`
-          : " ad"}
+          : ""}
       </div>
     );
 
@@ -127,6 +199,24 @@ const generateTimeIntervals = (start, end, interval) => {
   return result;
 };
 
+const generateDividers = () => {
+  const dividers = [];
+
+  for (let i = 0; i < TOTAL_CELLS; i++) {
+    const dividerStyle = {
+      position: "absolute",
+      top: CELL_HEIGHT * i,
+      height: CELL_HEIGHT,
+    };
+    dividers.push(
+      <div
+        className="w-[900px] border-b-2 border-gray-400 opacity-10 z-[25]"
+        style={dividerStyle}
+      ></div>
+    );
+  }
+  return dividers;
+};
 // Via ChatGPT
 function addTimes(time1, time2) {
   // Extract hours and minutes from the times

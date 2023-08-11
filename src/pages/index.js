@@ -157,7 +157,7 @@ const IndexPage = () => {
         <h2 className="font-bold" id="schedule">
           1.1 Schedule
         </h2>
-        <div>
+        <div className="">
           <Schedule />
         </div>
       </section>
