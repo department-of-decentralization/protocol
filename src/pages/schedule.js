@@ -87,6 +87,8 @@ const Schedule = () => {
             <div className="flex h-full">
               {/* Dividers */}
               {/* <div className="relative w-full">{generateDividers()}</div> */}
+              {/* NOW Divider */}
+              <div className="relative w-full">{generateNowDivider()}</div>
               {Object.keys(schedule.conference.days[0].rooms).map((room, i) => {
                 return (
                   <div
@@ -217,6 +219,47 @@ const generateDividers = () => {
   }
   return dividers;
 };
+
+const generateNowDivider = () => {
+  // Correct date
+  // const conferenceDate = new Date("2023-09-15T08:00:00.000Z")
+  // Debug date
+  const conferenceDate = new Date("2023-08-11T10:08:06.543Z");
+
+  const today = new Date();
+  const hour = today.getHours();
+  const min = today.getMinutes();
+
+  const isSameDay =
+    today.getFullYear() === conferenceDate.getFullYear() &&
+    today.getMonth() === conferenceDate.getMonth() &&
+    today.getDate() === conferenceDate.getDate();
+
+  if (!isSameDay) {
+    return null;
+  }
+
+  const nowTotalMinutes = hour * 60 + parseInt(min / 5) * 5; // Round to nearst 5min
+  const nowRelativeTotalMinutes = nowTotalMinutes - (9 * 60 + 30); // Relative to conf start hour: 09:30
+  const nowCellNumber = nowRelativeTotalMinutes / 5;
+  const nowCellOffset = nowCellNumber * CELL_HEIGHT;
+
+  const dividerStyle = {
+    position: "absolute",
+    top: nowCellOffset,
+    height: CELL_HEIGHT,
+  };
+  return (
+    <div
+      className="w-[900px] border-b-2 border-red-400 z-[25] animate-pulse"
+      style={dividerStyle}
+    >
+      {" "}
+      Now{" "}
+    </div>
+  );
+};
+
 // Via ChatGPT
 function addTimes(time1, time2) {
   // Extract hours and minutes from the times
