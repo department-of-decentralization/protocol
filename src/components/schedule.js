@@ -1,5 +1,5 @@
 import React from "react";
-import pretalxSchedule from "./dummySchedule.json";
+import pretalxSchedule from "../pages/dummySchedule.json";
 
 const CELL_HEIGHT = 32;
 const CONF_START_TIME = "09:30";
@@ -17,8 +17,8 @@ const CONF_DURATION_MINUTES =
 const TOTAL_CELLS = CONF_DURATION_MINUTES / 5;
 
 const COLUMN_WIDTH_TW_STYLE = "min-w-[250px]";
-const SCROLL_VIEW_HEIGHT = 900;
-const SCROLL_VIEW_HEIGHT_TW_STYLE = "max-h-[" + SCROLL_VIEW_HEIGHT + "px]";
+// const SCROLL_VIEW_HEIGHT = 900;
+// const SCROLL_VIEW_HEIGHT_TW_STYLE = "max-h-[" + SCROLL_VIEW_HEIGHT + "px]";
 
 const EventContainer = ({ event, eventStyle }) => {
   const hoursDuration = parseInt(event.duration.split(":")[0]);
@@ -58,9 +58,7 @@ const Schedule = () => {
     <div>
       {" "}
       {/* Scrollable timetalbe */}
-      <div
-        className={`flex flex-col overflow-auto ${SCROLL_VIEW_HEIGHT_TW_STYLE}`}
-      >
+      <div className={`flex flex-col overflow-auto max-h-[900px]`}>
         <div className="flex">
           {/* Times */}
           <div className="flex flex-col sticky left-0 z-20 bg-slate-100 text-sm">
