@@ -1,7 +1,7 @@
 import React from "react";
 import pretalxSchedule from "./dummySchedule.json";
 
-const CELL_HEIGHT = 25;
+const CELL_HEIGHT = 32;
 const CONF_START_TIME = "09:30";
 const CONF_END_TIME = "23:30";
 
@@ -31,7 +31,7 @@ const EventContainer = ({ event, eventStyle }) => {
 
   return (
     <div
-      className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer px-4 pt-4 box-border bg-orange-200`}
+      className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer px-4 pt-4 box-border bg-orange-200 leading-4`}
       style={eventStyle}
     >
       <div className="text-[0.7rem]">
@@ -40,11 +40,11 @@ const EventContainer = ({ event, eventStyle }) => {
       <div className="text-[0.6rem]">
         {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
       </div>
-      <div className="font-bold text-[0.85rem] mt-4">{event.title}</div>
+      <div className="font-bold text-[0.85rem] mt-2">{event.title}</div>
       <div className="text-[0.75rem]">
         {event.persons.map((person) => person.public_name).join(", ")}{" "}
       </div>
-      <div className="mt-4 text-[0.75rem]">
+      <div className="mt-2 text-[0.75rem]">
         {" "}
         <b>Track:</b> {event.track}
       </div>
@@ -180,7 +180,7 @@ const generateTimeIntervals = (start, end, interval) => {
         }}
         className={`text-center text-base px-2 ${
           currentMinute % 15 === 0 ? "border-b border-gray-300" : ""
-        }`}
+        } ${isPastTime(endHour + ":" + endMinute) ? "opacity-50" : ""}`}
       >
         {currentMinute % 15 === 0
           ? `${String(currentHour).padStart(2, "0")}:${String(
@@ -220,6 +220,18 @@ const generateDividers = () => {
   return dividers;
 };
 
+const isPastTime = (eventEndTime) => {
+  const eventHour = parseInt(eventEndTime.split(":")[0]);
+  const eventMin = parseInt(eventEndTime.split(":")[1]);
+
+  const today = new Date();
+  const hour = today.getHours();
+  const min = today.getMinutes();
+
+  if (hour > eventHour) return true;
+  else if (min > eventMin) return true;
+  else return false;
+};
 const generateNowDivider = () => {
   // Correct date
   // const conferenceDate = new Date("2023-09-15T08:00:00.000Z")
