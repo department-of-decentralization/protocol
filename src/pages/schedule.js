@@ -251,7 +251,7 @@ const generateNowDivider = () => {
   };
   return (
     <div
-      className="w-[900px] border-b-2 border-red-400 z-[25] animate-pulse"
+      className="w-[900px] border-b-2 border-red-400 z-[25] animate-bounce "
       style={dividerStyle}
     >
       {" "}
