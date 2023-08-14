@@ -1,9 +1,11 @@
-import React from "react";
-import pretalxSchedule from "../pages/dummySchedule.json";
+import React, { useEffect } from "react";
 import ReactModal from "react-modal";
 import shuffledSpeakers from "../speakers";
 import Speaker from "./Speaker";
 import "../styles/modal.css";
+
+const SCHEDULE_LINK =
+  "https://speak.protocol.berlin/protocol-berg/schedule/export/schedule.json";
 
 const CELL_HEIGHT = 38;
 const CONF_START_TIME = "09:30";
@@ -185,6 +187,32 @@ const EventContainer = ({ event, eventStyle }) => {
 };
 
 const Schedule = () => {
+  const [pretalxSchedule, setPretalxSchedule] = React.useState();
+  const [scheduleFetchError, setScheduleFetchError] = React.useState(false);
+
+  useEffect(() => {
+    fetch(SCHEDULE_LINK)
+      .then((response) => response.json())
+      .then((data) => {
+        setPretalxSchedule(data);
+      })
+      .catch((error) => {
+        console.log(error);
+        setScheduleFetchError(error);
+      });
+  }, []);
+
+  if (!pretalxSchedule) {
+    return <div>Loading Schedule...</div>;
+  }
+
+  if (scheduleFetchError) {
+    return (
+      <div className="text-red-400">
+        Error loading schedule: {"\n" + setScheduleFetchError}
+      </div>
+    );
+  }
   const { schedule } = pretalxSchedule;
   return (
     <div>
