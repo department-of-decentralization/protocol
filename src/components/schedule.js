@@ -2,7 +2,6 @@ import React from "react";
 import pretalxSchedule from "../pages/dummySchedule.json";
 import ReactModal from "react-modal";
 import shuffledSpeakers from "../speakers";
-import dummySpeaker from "../images/speakers/halftoneAvatar.png";
 import Speaker from "./Speaker";
 
 const CELL_HEIGHT = 38;
@@ -97,6 +96,7 @@ const EventContainer = ({ event, eventStyle }) => {
       </div>
       <ReactModal
         isOpen={isOpen}
+        ariaHideApp={false}
         style={{
           overlay: {
             // Default styles
@@ -109,7 +109,7 @@ const EventContainer = ({ event, eventStyle }) => {
           },
           content: {
             zIndex: 40,
-            backgroundColor: "rgba(200, 200, 200, 1)",
+            backgroundColor: "rgba(180, 180, 180, 0.9)",
             margin: "auto",
           },
         }}
@@ -120,24 +120,54 @@ const EventContainer = ({ event, eventStyle }) => {
         onRequestClose={handleCloseModal}
         closeTimeoutMS={500}
       >
-        <div className=" p-8 ">
+        <div className="p-8 overflow-auto max-w-[600px]">
+          <div
+            className="font-sans tetext-lg text-link p-1 cursor-pointer text-right"
+            onClick={handleCloseModal}
+          >
+            X
+          </div>
           <div className="text-lg font-bold text-center">{event.title}</div>
           <div className="text-center">{event.room}</div>
           <div className="text-base text-center">
             {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
           </div>
+          <div className="text-[0.7rem] text-center">
+            {event.type} ({totalMinutesDuraation}min)
+          </div>
+          <div className="mt-2 text-[0.75rem] text-center">
+            {" "}
+            <b>Track:</b> {event.track}
+          </div>
           <div className="flex items-start justify-center flex-wrap">
             {event.persons.map((person, i) => (
-              <div className="text-center min-w-[250px]" key={isOpen}>
+              <div
+                className="text-center min-w-[250px]"
+                key={`event-person-${i}`}
+              >
                 <Speaker
-                  speaker={shuffledSpeakers.find(
-                    (s) => s.name === person.public_name
-                  )}
+                  speaker={
+                    shuffledSpeakers.find(
+                      (s) => s.name === person.public_name
+                    ) || { name: person.public_name }
+                  }
                   index={i}
                 />
               </div>
             ))}
           </div>
+          {event?.abstract && (
+            <div>
+              <h2 className="text-lg text-center">Abstract</h2>
+              <div className="text-sm text-justify">{event.abstract}</div>
+            </div>
+          )}
+          {event?.description && (
+            <div>
+              <h2 className="text-lg text-center">Description</h2>
+              <div className="text-sm text-justify">{event.description}</div>
+            </div>
+          )}
         </div>
       </ReactModal>
     </>
@@ -166,6 +196,7 @@ const Schedule = () => {
               {Object.keys(schedule.conference.days[0].rooms).map((room, i) => (
                 <div
                   className={`${COLUMN_WIDTH_TW_STYLE} text-center bg-gray-200 mx-2`}
+                  key={`room-${i}}`}
                 >
                   {room}
                 </div>
