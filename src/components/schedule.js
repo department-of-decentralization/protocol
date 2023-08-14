@@ -1,7 +1,11 @@
 import React from "react";
 import pretalxSchedule from "../pages/dummySchedule.json";
+import ReactModal from "react-modal";
+import shuffledSpeakers from "../speakers";
+import dummySpeaker from "../images/speakers/halftoneAvatar.png";
+import Speaker from "./Speaker";
 
-const CELL_HEIGHT = 32;
+const CELL_HEIGHT = 38;
 const CONF_START_TIME = "09:30";
 const CONF_END_TIME = "23:30";
 
@@ -16,11 +20,12 @@ const CONF_DURATION_MINUTES =
   CONF_END_ABSOLUTE_MINUTES - CONF_START_ABSOLUTE_MINUTES;
 const TOTAL_CELLS = CONF_DURATION_MINUTES / 5;
 
-const COLUMN_WIDTH_TW_STYLE = "min-w-[250px]";
+const COLUMN_WIDTH_TW_STYLE = "min-w-[220px]";
 // const SCROLL_VIEW_HEIGHT = 900;
 // const SCROLL_VIEW_HEIGHT_TW_STYLE = "max-h-[" + SCROLL_VIEW_HEIGHT + "px]";
 
 const EventContainer = ({ event, eventStyle }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
   const hoursDuration = parseInt(event.duration.split(":")[0]);
   const minutesDuration = parseInt(event.duration.split(":")[1]);
   const totalMinutesDuraation = hoursDuration * 60 + minutesDuration;
@@ -29,26 +34,113 @@ const EventContainer = ({ event, eventStyle }) => {
   const eventEndHour = parseInt(end.split(":")[0]);
   const eventEndMinute = parseInt(end.split(":")[1]);
 
+  let backgroundColor;
+
+  switch (event.track) {
+    case "Governance & Society":
+      backgroundColor = "bg-orange-100";
+      break;
+    case "Infrastructure":
+      backgroundColor = "bg-sky-100";
+      break;
+    case "Consensus":
+      backgroundColor = "bg-red-100";
+      break;
+    case "Networking":
+      backgroundColor = "bg-green-100";
+      break;
+    case "Databases":
+      backgroundColor = "bg-yellow-100";
+      break;
+    case "Cryptography":
+      backgroundColor = "bg-indigo-100";
+      break;
+    case "General":
+      backgroundColor = "bg-gray-800";
+      break;
+    default:
+      backgroundColor = "bg-gray-200";
+      break;
+  }
+
+  const textColor =
+    event.track === "General" ? "text-gray-200" : "text-gray-900";
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
   return (
-    <div
-      className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer px-4 pt-4 box-border bg-orange-200 leading-4`}
-      style={eventStyle}
-    >
-      <div className="text-[0.7rem]">
-        {event.type} ({totalMinutesDuraation}min)
+    <>
+      <div
+        className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer px-4 pt-4 box-border ${backgroundColor} ${textColor} leading-4`}
+        onClick={handleOpenModal}
+        style={eventStyle}
+      >
+        <div className="text-[0.7rem]">
+          {event.type} ({totalMinutesDuraation}min)
+        </div>
+        <div className="text-[0.6rem]">
+          {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
+        </div>
+        <div className="font-bold text-[0.85rem] mt-2">{event.title}</div>
+        <div className="text-[0.75rem]">
+          {event.persons.map((person) => person.public_name).join(", ")}{" "}
+        </div>
+        <div className="mt-2 text-[0.75rem]">
+          {" "}
+          <b>Track:</b> {event.track}
+        </div>
       </div>
-      <div className="text-[0.6rem]">
-        {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
-      </div>
-      <div className="font-bold text-[0.85rem] mt-2">{event.title}</div>
-      <div className="text-[0.75rem]">
-        {event.persons.map((person) => person.public_name).join(", ")}{" "}
-      </div>
-      <div className="mt-2 text-[0.75rem]">
-        {" "}
-        <b>Track:</b> {event.track}
-      </div>
-    </div>
+      <ReactModal
+        isOpen={isOpen}
+        style={{
+          overlay: {
+            // Default styles
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(255, 255, 255, 0.5)",
+          },
+          content: {
+            zIndex: 40,
+            backgroundColor: "rgba(200, 200, 200, 1)",
+            margin: "auto",
+          },
+        }}
+        overlayClassName="flex items-center z-40 px-4 md:px-16 lg:px-32 xl:px-48 transition-all duration-200 ease-in-out py-8 max-h-screen"
+        className="flex flex-col items-center justify-center max-h-full"
+        shouldCloseOnEsc={true}
+        shouldCloseOnOverlayClick={true}
+        onRequestClose={handleCloseModal}
+        closeTimeoutMS={500}
+      >
+        <div className=" p-8 ">
+          <div className="text-lg font-bold text-center">{event.title}</div>
+          <div className="text-center">{event.room}</div>
+          <div className="text-base text-center">
+            {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
+          </div>
+          <div className="flex items-start justify-center flex-wrap">
+            {event.persons.map((person, i) => (
+              <div className="text-center min-w-[250px]" key={isOpen}>
+                <Speaker
+                  speaker={shuffledSpeakers.find(
+                    (s) => s.name === person.public_name
+                  )}
+                  index={i}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </ReactModal>
+    </>
   );
 };
 
@@ -73,9 +165,7 @@ const Schedule = () => {
             <div className="flex flex-row sticky top-0 z-10 font-bold">
               {Object.keys(schedule.conference.days[0].rooms).map((room, i) => (
                 <div
-                  className={`${COLUMN_WIDTH_TW_STYLE} text-center ${
-                    i % 2 == 0 ? "bg-gray-200" : "bg-gray-300"
-                  } mx-2`}
+                  className={`${COLUMN_WIDTH_TW_STYLE} text-center bg-gray-200 mx-2`}
                 >
                   {room}
                 </div>
@@ -90,9 +180,7 @@ const Schedule = () => {
               {Object.keys(schedule.conference.days[0].rooms).map((room, i) => {
                 return (
                   <div
-                    className={`relative ${COLUMN_WIDTH_TW_STYLE} mx-2 ${
-                      i % 2 == 0 ? "bg-gray-100" : "bg-gray-200"
-                    }`}
+                    className={`relative ${COLUMN_WIDTH_TW_STYLE} bg-gray-100 mx-2`}
                   >
                     {schedule.conference.days[0].rooms[room].map((event) => {
                       return placeEventOnSchedule(
@@ -176,7 +264,7 @@ const generateTimeIntervals = (start, end, interval) => {
         style={{
           height: CELL_HEIGHT,
         }}
-        className={`text-center text-base px-2 ${
+        className={`text-center text-base px-2 pt-2 ${
           currentMinute % 15 === 0 ? "border-b border-gray-300" : ""
         } ${isPastTime(endHour + ":" + endMinute) ? "opacity-50" : ""}`}
       >
