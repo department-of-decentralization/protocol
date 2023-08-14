@@ -3,10 +3,11 @@ import pretalxSchedule from "../pages/dummySchedule.json";
 import ReactModal from "react-modal";
 import shuffledSpeakers from "../speakers";
 import Speaker from "./Speaker";
+import "../styles/modal.css";
 
 const CELL_HEIGHT = 38;
 const CONF_START_TIME = "09:30";
-const CONF_END_TIME = "23:30";
+const CONF_END_TIME = "21:00";
 
 const CONF_START_HOUR = parseInt(CONF_START_TIME.split(":")[0]);
 const CONF_START_MINUTE = parseInt(CONF_START_TIME.split(":")[1]);
@@ -33,26 +34,32 @@ const EventContainer = ({ event, eventStyle }) => {
   const eventEndHour = parseInt(end.split(":")[0]);
   const eventEndMinute = parseInt(end.split(":")[1]);
 
-  let backgroundColor;
+  let backgroundColor, trackFontColor;
 
   switch (event.track) {
     case "Governance & Society":
       backgroundColor = "bg-orange-100";
+      trackFontColor = "text-orange-700";
       break;
     case "Infrastructure":
       backgroundColor = "bg-sky-100";
+      trackFontColor = "text-sky-700";
       break;
     case "Consensus":
       backgroundColor = "bg-red-100";
+      trackFontColor = "text-red-700";
       break;
     case "Networking":
       backgroundColor = "bg-green-100";
+      trackFontColor = "text-green-700";
       break;
     case "Databases":
       backgroundColor = "bg-yellow-100";
+      trackFontColor = "text-yellow-700";
       break;
     case "Cryptography":
       backgroundColor = "bg-indigo-100";
+      trackFontColor = "text-indigo-700";
       break;
     case "General":
       backgroundColor = "bg-gray-800";
@@ -89,7 +96,7 @@ const EventContainer = ({ event, eventStyle }) => {
         <div className="text-[0.75rem]">
           {event.persons.map((person) => person.public_name).join(", ")}{" "}
         </div>
-        <div className="mt-2 text-[0.75rem]">
+        <div className={`mt-2 text-[0.75rem] ${trackFontColor}`}>
           {" "}
           <b>Track:</b> {event.track}
         </div>
@@ -109,7 +116,7 @@ const EventContainer = ({ event, eventStyle }) => {
           },
           content: {
             zIndex: 40,
-            backgroundColor: "rgba(180, 180, 180, 0.9)",
+            backgroundColor: "rgba(180, 180, 180, 0.95)",
             margin: "auto",
           },
         }}
@@ -118,11 +125,10 @@ const EventContainer = ({ event, eventStyle }) => {
         shouldCloseOnEsc={true}
         shouldCloseOnOverlayClick={true}
         onRequestClose={handleCloseModal}
-        closeTimeoutMS={500}
       >
         <div className="p-8 overflow-auto max-w-[600px]">
           <div
-            className="font-sans tetext-lg text-link p-1 cursor-pointer text-right"
+            className="font-sans tetext-lg text-link p-1 cursor-pointer text-left"
             onClick={handleCloseModal}
           >
             X
@@ -159,13 +165,17 @@ const EventContainer = ({ event, eventStyle }) => {
           {event?.abstract && (
             <div>
               <h2 className="text-lg text-center">Abstract</h2>
-              <div className="text-sm text-justify">{event.abstract}</div>
+              <div className="text-sm text-justify break-all">
+                {event.abstract}
+              </div>
             </div>
           )}
           {event?.description && (
             <div>
               <h2 className="text-lg text-center">Description</h2>
-              <div className="text-sm text-justify">{event.description}</div>
+              <div className="text-sm text-justify break-all">
+                {event.description}
+              </div>
             </div>
           )}
         </div>

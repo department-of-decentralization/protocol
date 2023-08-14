@@ -97,6 +97,11 @@ const IndexPage = () => {
         <ol className="pl-6 text-lg">
           <li>
             <a href="#conference">1. Conference</a>
+            <ul className="pl-6">
+              <li>
+                <a href="#schedule">1.1 Schedule</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#speakers">2. Speakers</a>
