@@ -102,9 +102,11 @@ const IndexPage = () => {
                 <a href="#schedule">1.1 Schedule</a>
               </li>
             </ul>
-          </li>
-          <li>
-            <a href="#speakers">2. Speakers</a>
+            <ul className="pl-6">
+              <li>
+                <a href="#speakers">1.2 Speakers</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#cfp">3. Call for Participation</a>
@@ -168,7 +170,7 @@ const IndexPage = () => {
       </section>
       <section>
         <h2 className="font-bold" id="speakers">
-          2. Speakers
+          1.2 Speakers
         </h2>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
