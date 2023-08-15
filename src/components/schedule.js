@@ -167,7 +167,10 @@ const EventContainer = ({ event, eventStyle }) => {
           {event?.abstract && (
             <div>
               <h2 className="text-lg text-center">Abstract</h2>
-              <div className="text-sm text-justify break-all">
+              <div
+                className="text-sm text-justify"
+                style={{ wordBreak: "break-word" }}
+              >
                 {event.abstract}
               </div>
             </div>
@@ -175,7 +178,10 @@ const EventContainer = ({ event, eventStyle }) => {
           {event?.description && (
             <div>
               <h2 className="text-lg text-center">Description</h2>
-              <div className="text-sm text-justify break-all">
+              <div
+                className="text-sm text-justify"
+                style={{ wordBreak: "break-word" }}
+              >
                 {event.description}
               </div>
             </div>
