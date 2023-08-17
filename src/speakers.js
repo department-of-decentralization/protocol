@@ -292,15 +292,6 @@ const speakers = [
     twitter: "https://twitter.com/JonasSFT",
   },
   {
-    name: "Kaitlin Beegle",
-    organization: {
-      name: "Filecoin Foundation",
-      url: "https://filecoin.io/",
-    },
-    image: require("./images/speakers/kaitlin.jpg"),
-    twitter: "https://twitter.com/kaitlin_beegle",
-  },
-  {
     name: "Aliasgar Merchant",
     organization: {
       name: "Informal Systems",

@@ -222,29 +222,11 @@ const IndexPage = () => {
         <h3 className="font-bold" id="cfp-volunteers">
           3.2 Volunteers
         </h3>
-        <p>Volunteer applications are open!</p>
-        <p className="ml-12">
-          <a
-            href="https://help.protocol.berlin/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            help.protocol.berlin
-          </a>
-        </p>
+        <p>Volunteer applications are now closed. Thanks for supporting Protocol Berg!</p>
         <h3 className="font-bold" id="cfp-attendees">
           3.3 Attendees
         </h3>
-        <p>General admission applications are open!</p>
-        <p className="ml-12">
-          <a
-            href="https://join.protocol.berlin/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            join.protocol.berlin
-          </a>
-        </p>
+        <p>General admission applications are now closed. Watch your inbox and see you soon!</p>
         <p>
           Ticket vouchers will be distributed on a "first come first serve"
           basis for all eligible applications.
@@ -268,8 +250,9 @@ const IndexPage = () => {
         </ol>
         <p>
           Attendance is free of charge. Note that a voucher needs to be redeemed
-          and turned into a ticket in our ticket shop (link coming soon). No
-          ticket, no entry.
+          and turned into a ticket in our
+          <a href="https://tickets.protocol.berlin" target="_blanks" rel="noreferrer">ticket shop</a>.
+          No ticket, no entry.
         </p>
         <h3 className="font-bold" id="cfp-updates">
           3.4 Updates
