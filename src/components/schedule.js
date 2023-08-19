@@ -8,7 +8,7 @@ const SCHEDULE_LINK =
   "https://speak.protocol.berlin/protocol-berg/schedule/export/schedule.json";
 
 const CELL_HEIGHT = 38;
-const CONF_START_TIME = "09:30";
+const CONF_START_TIME = "09:00";
 const CONF_END_TIME = "21:00";
 
 const CONF_START_HOUR = parseInt(CONF_START_TIME.split(":")[0]);
@@ -81,6 +81,9 @@ const EventContainer = ({ event, eventStyle }) => {
   const handleCloseModal = () => {
     setIsOpen(false);
   };
+
+  let isMinimal = event.type === "Miscellaneous";
+
   return (
     <>
       <div
@@ -88,20 +91,26 @@ const EventContainer = ({ event, eventStyle }) => {
         onClick={handleOpenModal}
         style={eventStyle}
       >
-        <div className="text-[0.7rem]">
-          {event.type} ({totalMinutesDuraation}min)
-        </div>
+        {!isMinimal && (
+          <div className="text-[0.7rem]">
+            {event.type} ({totalMinutesDuraation}min)
+          </div>
+        )}
         <div className="text-[0.6rem]">
           {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
         </div>
-        <div className="font-bold text-[0.85rem] mt-2">{event.title}</div>
-        <div className="text-[0.75rem]">
+        <div className={`font-bold text-[0.85rem] ${isMinimal ? "" : "mt-2"}`}>
+          {event.title}
+        </div>
+        <div className={`${isMinimal ? "text-[0.65rem]" : "text-[0.75rem]"}`}>
           {event.persons.map((person) => person.public_name).join(", ")}{" "}
         </div>
-        <div className={`mt-2 text-[0.75rem] ${trackFontColor}`}>
-          {" "}
-          <b>Track:</b> {event.track}
-        </div>
+        {!isMinimal && (
+          <div className={`mt-2 text-[0.75rem] ${trackFontColor}`}>
+            {" "}
+            <b>Track:</b> {event.track}
+          </div>
+        )}
       </div>
       <ReactModal
         isOpen={isOpen}
@@ -239,7 +248,7 @@ const Schedule = () => {
             <div className="flex flex-row sticky top-0 z-10 font-bold">
               {Object.keys(schedule.conference.days[0].rooms).map((room, i) => (
                 <div
-                  className={`${COLUMN_WIDTH_TW_STYLE} text-center bg-gray-200 mx-2`}
+                  className={`${COLUMN_WIDTH_TW_STYLE} text-center bg-gray-200 mx-2 py-1`}
                   key={`room-${i}}`}
                 >
                   {room}
