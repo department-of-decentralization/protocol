@@ -7,7 +7,7 @@ import "../styles/modal.css";
 const SCHEDULE_LINK =
   "https://speak.protocol.berlin/protocol-berg/schedule/export/schedule.json";
 
-const CELL_HEIGHT = 38;
+const CELL_HEIGHT = 39;
 const CONF_START_TIME = "09:00";
 const CONF_END_TIME = "21:00";
 
@@ -71,6 +71,8 @@ const EventContainer = ({ event, eventStyle }) => {
       break;
   }
 
+  const tags = extractAndRemoveTags(event.description).tags;
+  const description = extractAndRemoveTags(event.description).updatedStr;
   const textColor =
     event.track === "General" ? "text-gray-200" : "text-gray-900";
 
@@ -87,7 +89,7 @@ const EventContainer = ({ event, eventStyle }) => {
   return (
     <>
       <div
-        className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer px-4 pt-4 box-border ${backgroundColor} ${textColor} leading-4`}
+        className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer px-4 py-4 box-border ${backgroundColor} ${textColor} leading-4 overflow-auto`}
         onClick={handleOpenModal}
         style={eventStyle}
       >
@@ -102,11 +104,19 @@ const EventContainer = ({ event, eventStyle }) => {
         <div className={`font-bold text-[0.85rem] ${isMinimal ? "" : "mt-2"}`}>
           {event.title}
         </div>
-        <div className={`${isMinimal ? "text-[0.65rem]" : "text-[0.75rem]"}`}>
+        <div
+          className={`${isMinimal ? "text-[0.65rem]" : "text-[0.75rem]"} mb-2`}
+        >
           {event.persons.map((person) => person.public_name).join(", ")}{" "}
         </div>
         {!isMinimal && (
-          <div className={`mt-2 text-[0.75rem] ${trackFontColor}`}>
+          <div className={`text-[0.75rem] italic mb-1`}>
+            {" "}
+            {tags.map((tag) => "#" + tag).join(", ")}
+          </div>
+        )}
+        {!isMinimal && (
+          <div className={`text-[0.75rem] ${trackFontColor}`}>
             {" "}
             <b>Track:</b> {event.track}
           </div>
@@ -184,14 +194,14 @@ const EventContainer = ({ event, eventStyle }) => {
               </div>
             </div>
           )}
-          {event?.description && (
+          {description && (
             <div>
               <h2 className="text-lg text-center">Description</h2>
               <div
                 className="text-sm text-justify"
                 style={{ wordBreak: "break-word" }}
               >
-                {event.description}
+                {description}
               </div>
             </div>
           )}
@@ -468,6 +478,35 @@ function addTimes(time1, time2) {
   const resultMinutes = String(totalMinutes).padStart(2, "0");
 
   return `${resultHours}:${resultMinutes}`;
+}
+
+// Via ChatGPT
+// Extracts tags from the end of a string and returns the updated string and tags array
+function extractAndRemoveTags(inputStr) {
+  // Regular expression to match <tags>...</tags> pattern
+  const tagPattern = /<tags>([^<]+)<\/tags>$/;
+
+  // Test for match
+  const match = inputStr.match(tagPattern);
+
+  if (match) {
+    // Extract the tags from the captured group
+    const tags = match[1].split(",").map((tag) => tag.trim());
+
+    // Remove the matched pattern from the original string
+    const updatedStr = inputStr.replace(tagPattern, "").trim();
+
+    return {
+      tags: tags,
+      updatedStr: updatedStr,
+    };
+  } else {
+    // Return the original string and empty tags array if no match is found
+    return {
+      tags: [],
+      updatedStr: inputStr,
+    };
+  }
 }
 
 export default Schedule;
