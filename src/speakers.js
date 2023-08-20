@@ -267,7 +267,7 @@ const speakers = [
     twitter: "https://twitter.com/dapplion",
   },
   {
-    name: "Garrett Macdonald",
+    name: "Garrett MacDonald",
     image: require("./images/speakers/garrett.jpg"),
     organization: {
       name: "Permanent",
