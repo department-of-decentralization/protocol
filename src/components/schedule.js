@@ -414,9 +414,9 @@ const isPastTime = (eventEndTime) => {
 };
 const generateNowDivider = () => {
   // Correct date
-  // const conferenceDate = new Date("2023-09-15T08:00:00.000Z")
+  const conferenceDate = new Date("2023-09-15T08:00:00.000Z");
   // Debug date
-  const conferenceDate = new Date("2023-08-11T10:08:06.543Z");
+  // const conferenceDate = new Date("2023-08-20T10:08:06.543Z");
 
   const today = new Date();
   const hour = today.getHours();
