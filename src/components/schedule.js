@@ -33,8 +33,8 @@ const EventContainer = ({ event, eventStyle }) => {
   const totalMinutesDuraation = hoursDuration * 60 + minutesDuration;
 
   const end = addTimes(event.start, event.duration);
-  const eventEndHour = parseInt(end.split(":")[0]);
-  const eventEndMinute = parseInt(end.split(":")[1]);
+  const eventEndHour = end.split(":")[0];
+  const eventEndMinute = end.split(":")[1];
 
   let backgroundColor, trackFontColor;
 
@@ -227,8 +227,12 @@ const Schedule = () => {
       });
   }, []);
 
-  if (!pretalxSchedule) {
-    return <div>Loading Schedule...</div>;
+  if (!pretalxSchedule || true) {
+    return (
+      <div className="flex items-center justify-center h-[900px] text-lg animate-ping">
+        Loading Schedule...
+      </div>
+    );
   }
 
   if (scheduleFetchError) {
