@@ -1,14 +1,5 @@
 const speakers = [
   {
-    name: "Gavin Wood",
-    organization: {
-      name: "Polkadot",
-    },
-    image: require("./images/speakers/gavin.jpeg"),
-    twitter: "https://twitter.com/gavofyork",
-    website: "https://gavwood.com/",
-  },
-  {
     name: "Tanishq Jasoria",
     organization: {
       name: "Nethermind",
