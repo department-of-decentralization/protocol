@@ -227,7 +227,7 @@ const Schedule = () => {
       });
   }, []);
 
-  if (!pretalxSchedule || true) {
+  if (!pretalxSchedule) {
     return (
       <div className="flex items-center justify-center h-[900px] text-lg animate-ping">
         Loading Schedule...
