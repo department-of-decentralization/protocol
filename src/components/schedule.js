@@ -286,19 +286,6 @@ const Schedule = () => {
                         schedule.conference.timeslot_duration
                       );
                     })}
-                    {
-                      /* Closing Drinks */
-                      placeEventOnSchedule(
-                        {
-                          start: "19:45",
-                          duration: "01:15",
-                          title: "Closing Drinks & Aperitiv",
-                          type: "Miscellaneous",
-                          persons: [],
-                        },
-                        schedule.conference.timeslot_duration
-                      )
-                    }
                   </div>
                 );
               })}
