@@ -109,27 +109,27 @@ const IndexPage = () => {
             </ul>
           </li>
           <li>
-            <a href="#cfp">3. Call for Participation</a>
+            <a href="#cfp">2. Call for Participation</a>
             <ul className="pl-6">
               <li>
-                <a href="#cfp-speakers">3.1 Speakers</a>
+                <a href="#cfp-speakers">2.1 Speakers</a>
               </li>
               <li>
-                <a href="#cfp-volunteers">3.2 Volunteers</a>
+                <a href="#cfp-volunteers">2.2 Volunteers</a>
               </li>
               <li>
-                <a href="#cfp-attendees">3.3 Attendees</a>
+                <a href="#cfp-attendees">2.3 Attendees</a>
               </li>
               <li>
-                <a href="#cfp-updates">3.4 Updates</a>
+                <a href="#cfp-updates">2.4 Updates</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#venue">4. Venue</a>
+            <a href="#venue">3. Venue</a>
           </li>
           <li>
-            <a href="#host">5. About the Host</a>
+            <a href="#host">4. About the Host</a>
           </li>
         </ol>
       </div>
@@ -187,10 +187,10 @@ const IndexPage = () => {
       </section>
       <section>
         <h2 className="font-bold" id="cfp">
-          3. Call for Participation
+          2. Call for Participation
         </h2>
         <h3 className="font-bold" id="cfp-speakers">
-          3.1 Speakers
+          2.1 Speakers
         </h3>
         <p>
           The call for participation is now closed. To modify or confirm your{" "}
@@ -236,11 +236,11 @@ const IndexPage = () => {
           </li>
         </ul>
         <h3 className="font-bold" id="cfp-volunteers">
-          3.2 Volunteers
+          2.2 Volunteers
         </h3>
         <p>Volunteer applications are now closed. Thanks for supporting Protocol Berg!</p>
         <h3 className="font-bold" id="cfp-attendees">
-          3.3 Attendees
+          2.3 Attendees
         </h3>
         <p>General admission applications are now closed. Watch your inbox and see you soon!</p>
         <p>
@@ -271,7 +271,7 @@ const IndexPage = () => {
           No ticket, no entry.
         </p>
         <h3 className="font-bold" id="cfp-updates">
-          3.4 Updates
+          2.4 Updates
         </h3>
         <p>
           To follow us for updates, find us on Bluesky, Lens, or Twitter:
@@ -316,7 +316,7 @@ const IndexPage = () => {
 
       <section>
         <h2 className="font-bold" id="venue">
-          4. Venue
+          3. Venue
         </h2>
         <p>
           The <span className="italic">Heeresbäckerei</span> (magazine in the
@@ -362,7 +362,7 @@ const IndexPage = () => {
 
       <section>
         <h2 className="font-bold" id="host">
-          5. About the Host
+          4. About the Host
         </h2>
         <p>
           The{" "}
