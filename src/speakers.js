@@ -1,4 +1,13 @@
 const speakers = [
+{
+    name: "Trent Van Epps",
+    organization: {
+      name: "Protocol Guild",
+      url: "https://twitter.com/ProtocolGuild",
+    },
+    image: require("./images/speakers/trent.jpg"),
+    twitter: "https://twitter.com/trent_vanepps",
+  },  
   {
     name: "Gavin Wood",
     organization: {
@@ -149,15 +158,6 @@ const speakers = [
       url: "https://ethereum.foundation/",
     },
     image: require("./images/speakers/barnabas.jpg"),
-  },
-  {
-    name: "cheeky-gorilla",
-    organization: {
-      name: "Protocol Guild",
-      url: "https://twitter.com/ProtocolGuild",
-    },
-    image: require("./images/speakers/cheeky.jpg"),
-    twitter: "https://twitter.com/ProtocolGuild",
   },
   {
     name: "Jannik",
