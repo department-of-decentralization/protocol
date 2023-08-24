@@ -1,13 +1,13 @@
 const speakers = [
-{
+  {
     name: "Trent Van Epps",
     organization: {
       name: "Protocol Guild",
       url: "https://twitter.com/ProtocolGuild",
     },
-    image: require("./images/speakers/trent.jpg"),
+    image: require("./images/speakers/trentv.jpg"),
     twitter: "https://twitter.com/trent_vanepps",
-  },  
+  },
   {
     name: "Gavin Wood",
     organization: {
