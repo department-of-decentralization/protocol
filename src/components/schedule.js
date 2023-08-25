@@ -211,7 +211,7 @@ const EventContainer = ({ event, eventStyle }) => {
   );
 };
 
-const Schedule = () => {
+const Schedule = ({ isDarkMode }) => {
   const [pretalxSchedule, setPretalxSchedule] = React.useState();
   const [scheduleFetchError, setScheduleFetchError] = React.useState(false);
 
@@ -250,7 +250,11 @@ const Schedule = () => {
       <div className={`flex flex-col overflow-auto max-h-[900px]`}>
         <div className="flex">
           {/* Times */}
-          <div className="flex flex-col sticky left-0 z-20 bg-slate-100 text-sm">
+          <div
+            className={`flex flex-col sticky left-0 z-20 ${
+              isDarkMode ? "bg-[hsl(0,0%,10%)]" : "bg-slate-100"
+            } text-sm`}
+          >
             {generateTimeIntervals(
               CONF_START_TIME,
               CONF_END_TIME,
@@ -262,7 +266,9 @@ const Schedule = () => {
             <div className="flex flex-row sticky top-0 z-10 font-bold">
               {Object.keys(schedule.conference.days[0].rooms).map((room, i) => (
                 <div
-                  className={`${COLUMN_WIDTH_TW_STYLE} text-center bg-gray-200 mx-2 py-1`}
+                  className={`${COLUMN_WIDTH_TW_STYLE} text-center ${
+                    isDarkMode ? "bg-[hsl(0,0%,10%)]" : "bg-slate-100"
+                  } mx-2 py-1`}
                   key={`room-${i}}`}
                 >
                   {room}
@@ -278,7 +284,9 @@ const Schedule = () => {
               {Object.keys(schedule.conference.days[0].rooms).map((room, i) => {
                 return (
                   <div
-                    className={`relative ${COLUMN_WIDTH_TW_STYLE} bg-gray-100 mx-2`}
+                    className={`relative ${COLUMN_WIDTH_TW_STYLE} ${
+                      isDarkMode ? "bg-[hsl(0,0%,30%)]" : "bg-gray-100"
+                    } mx-2`}
                   >
                     {schedule.conference.days[0].rooms[room].map((event) => {
                       return placeEventOnSchedule(
@@ -292,7 +300,11 @@ const Schedule = () => {
             </div>
           </div>
           {/* Times, right side */}
-          <div className="flex flex-col right-0 z-20 bg-slate-100 text-sm">
+          <div
+            className={`flex flex-col right-0 z-20 ${
+              isDarkMode ? "bg-[hsl(0,0%,10%)]" : "bg-slate-100"
+            } text-sm`}
+          >
             {generateTimeIntervals(
               CONF_START_TIME,
               CONF_END_TIME,

@@ -5,7 +5,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import speakers from "../speakers";
 import Speaker from "../components/Speaker";
 import Schedule from "../components/schedule";
-
+import logo from "../images/protocolberg.png";
 const FootNote = ({ id, author, description, year, url, accessed }) => (
   <li id={`fn${id}`} className="flex flex-row">
     <div className="mr-2 leading-5">[{id}]</div>
@@ -37,12 +37,7 @@ const Ref = ({ src }) => {
   );
 };
 
-const DarkModeButton = () => {
-  const [isDarkMode, setDarkMode] = React.useState(false);
-  const toggleDarkMode = () => {
-    setDarkMode(!isDarkMode);
-    document.body.classList.toggle("latex-dark");
-  };
+const DarkModeButton = ({ toggleDarkMode, isDarkMode }) => {
   return (
     <DarkModeSwitch
       style={{ marginBottom: "2rem" }}
@@ -55,11 +50,25 @@ const DarkModeButton = () => {
   );
 };
 const IndexPage = () => {
+  const [isDarkMode, setDarkMode] = React.useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!isDarkMode);
+    document.body.classList.toggle("latex-dark");
+  };
+
   return (
     <main>
-      <DarkModeButton />
+      <DarkModeButton toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <header className="text-center my-24">
-        <h1 className="font-bold">Protocol Berg</h1>
+        <div className="flex items-center justify-center">
+          <img
+            className={`w-full max-w-xs sm:w-auto h-auto ${
+              isDarkMode ? "invert" : ""
+            }`}
+            src={logo}
+            alt="Protocol Berg Logo"
+          />
+        </div>
         <p className="italic text-center">
           The decentralized protocol and infrastructure conference.
         </p>
@@ -165,7 +174,7 @@ const IndexPage = () => {
           1.1 Schedule
         </h2>
         <div className="">
-          <Schedule />
+          <Schedule isDarkMode={isDarkMode} />
         </div>
       </section>
       <section>
@@ -238,11 +247,17 @@ const IndexPage = () => {
         <h3 className="font-bold" id="cfp-volunteers">
           2.2 Volunteers
         </h3>
-        <p>Volunteer applications are now closed. Thanks for supporting Protocol Berg!</p>
+        <p>
+          Volunteer applications are now closed. Thanks for supporting Protocol
+          Berg!
+        </p>
         <h3 className="font-bold" id="cfp-attendees">
           2.3 Attendees
         </h3>
-        <p>General admission applications are now closed. Watch your inbox and see you soon!</p>
+        <p>
+          General admission applications are now closed. Watch your inbox and
+          see you soon!
+        </p>
         <p>
           Ticket vouchers will be distributed on a "first come first serve"
           basis for all eligible applications.
@@ -267,8 +282,14 @@ const IndexPage = () => {
         <p>
           Attendance is free of charge. Note that a voucher needs to be redeemed
           and turned into a ticket in our
-          <a href="https://tickets.protocol.berlin" target="_blanks" rel="noreferrer">ticket shop</a>.
-          No ticket, no entry.
+          <a
+            href="https://tickets.protocol.berlin"
+            target="_blanks"
+            rel="noreferrer"
+          >
+            ticket shop
+          </a>
+          . No ticket, no entry.
         </p>
         <h3 className="font-bold" id="cfp-updates">
           2.4 Updates
