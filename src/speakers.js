@@ -1,5 +1,19 @@
 const speakers = [
   {
+    name: "Afri Schoedon",
+    organization: {
+      name: "Protocol Berg Team",
+    },
+    image: require("./images/speakers/afri.jpg"),
+  },
+  {
+    name: "Franziska Heintel",
+    organization: {
+      name: "Protocol Berg Team",
+    },
+    image: require("./images/speakers/franzi.jpg"),
+  },
+  {
     name: "Trent Van Epps",
     organization: {
       name: "Protocol Guild",
