@@ -116,6 +116,11 @@ const IndexPage = () => {
                 <a href="#speakers">1.2 Speakers</a>
               </li>
             </ul>
+            <ul className="pl-6">
+              <li>
+                <a href="#stream">1.3 Stream and Recordings</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#cfp">2. Call for Participation</a>
@@ -170,17 +175,17 @@ const IndexPage = () => {
         </p>
       </section>
       <section>
-        <h2 className="font-bold" id="schedule">
+        <h3 className="font-bold" id="schedule">
           1.1 Schedule
-        </h2>
+        </h3>
         <div className="">
           <Schedule isDarkMode={isDarkMode} />
         </div>
       </section>
       <section>
-        <h2 className="font-bold" id="speakers">
+        <h3 className="font-bold" id="speakers">
           1.2 Speakers
-        </h2>
+        </h3>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {speakers.map((speaker, index) => (
@@ -195,6 +200,26 @@ const IndexPage = () => {
         </div>
       </section>
       <section>
+        <h3 className="font-bold" id="stream">
+          1.3 Stream and Recordings
+        </h3>
+        <div>
+        <p>
+          Streaming and recordings will be provided by StreamETH:{" "}
+        </p>
+        <p>
+          <a
+            href="https://watch.protocol.berlin/ethberlin/protocol_berg"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-12"
+          >
+            watch.protocol.berlin
+          </a>
+        </p>
+        </div>
+      </section>
+      <section>
         <h2 className="font-bold" id="cfp">
           2. Call for Participation
         </h2>
@@ -202,12 +227,12 @@ const IndexPage = () => {
           2.1 Speakers
         </h3>
         <p>
-          The call for participation is now closed. To modify or confirm your{" "}
-          <b>talk or workshop proposal</b>, use our Pretalx interface:{" "}
+          The call for participation is now <b>closed</b>. To modify or confirm your{" "}
+          talk or workshop proposal, use our Pretalx interface:{" "}
         </p>
         <p>
           <a
-            href="https://speak.protocol.berlin"
+            href="https://speak.protocol.berlin/protocol-berg/"
             target="_blank"
             rel="noreferrer"
             className="ml-12"
@@ -248,14 +273,14 @@ const IndexPage = () => {
           2.2 Volunteers
         </h3>
         <p>
-          Volunteer applications are now closed. Thanks for supporting Protocol
+          Volunteer applications are now <b>closed</b>. Thanks for supporting Protocol
           Berg!
         </p>
         <h3 className="font-bold" id="cfp-attendees">
           2.3 Attendees
         </h3>
         <p>
-          General admission applications are now closed. Watch your inbox and
+          General admission applications are now <b>closed</b>. Watch your inbox and
           see you soon!
         </p>
         <p>
@@ -281,15 +306,15 @@ const IndexPage = () => {
         </ol>
         <p>
           Attendance is free of charge. Note that a voucher needs to be redeemed
-          and turned into a ticket in our
+          and turned into a ticket in our{" "}
           <a
-            href="https://tickets.protocol.berlin"
+            href="https://tickets.protocol.berlin/protocol-berg/"
             target="_blanks"
             rel="noreferrer"
           >
             ticket shop
           </a>
-          . No ticket, no entry.
+          . A voucher is not a ticket. No ticket, no entry.
         </p>
         <h3 className="font-bold" id="cfp-updates">
           2.4 Updates
