@@ -174,7 +174,7 @@ const speakers = [
     image: require("./images/speakers/barnabas.jpg"),
   },
   {
-    name: "Jannik",
+    name: "Jannik Luhn",
     organization: {
       name: "Shutter Network",
     },
