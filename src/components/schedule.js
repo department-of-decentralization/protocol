@@ -448,7 +448,7 @@ const generateNowDivider = () => {
   }
 
   const nowTotalMinutes = hour * 60 + parseInt(min / 5) * 5; // Round to nearst 5min
-  const nowRelativeTotalMinutes = nowTotalMinutes - 9 * 60; // Relative to conf start hour: 09:30
+  const nowRelativeTotalMinutes = nowTotalMinutes - (9 * 60 + 30); // Relative to conf start hour: 09:30
   const nowCellNumber = nowRelativeTotalMinutes / 5;
   const nowCellOffset = nowCellNumber * CELL_HEIGHT;
 
