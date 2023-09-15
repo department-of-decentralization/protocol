@@ -215,6 +215,8 @@ const Schedule = ({ isDarkMode }) => {
   const [pretalxSchedule, setPretalxSchedule] = React.useState();
   const [scheduleFetchError, setScheduleFetchError] = React.useState(false);
 
+  const [nowDivider, setNowDivider] = React.useState(generateNowDivider());
+
   useEffect(() => {
     fetch(SCHEDULE_LINK)
       .then((response) => response.json())
@@ -225,6 +227,15 @@ const Schedule = ({ isDarkMode }) => {
         console.log(error);
         setScheduleFetchError(error);
       });
+
+    const interval = setInterval(() => {
+      // console.log("Updating now divider " + new Date());
+      setNowDivider(generateNowDivider());
+    }, 1000 * 60);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   if (!pretalxSchedule) {
@@ -280,7 +291,7 @@ const Schedule = ({ isDarkMode }) => {
               {/* Dividers */}
               {/* <div className="relative w-full">{generateDividers()}</div> */}
               {/* NOW Divider */}
-              <div className="relative w-full">{generateNowDivider()}</div>
+              <div className="relative w-full">{nowDivider}</div>
               {Object.keys(schedule.conference.days[0].rooms).map((room, i) => {
                 return (
                   <div
@@ -447,8 +458,8 @@ const generateNowDivider = () => {
     return null;
   }
 
-  const nowTotalMinutes = hour * 60 + parseInt(min / 5) * 5; // Round to nearst 5min
-  const nowRelativeTotalMinutes = nowTotalMinutes - 9 * 60; // Relative to conf start hour: 09:30
+  const nowTotalMinutes = hour * 60 + parseInt(min);
+  const nowRelativeTotalMinutes = nowTotalMinutes - 9 * 60; // Relative to conf start hour: 09:00
   const nowCellNumber = nowRelativeTotalMinutes / 5;
   const nowCellOffset = nowCellNumber * CELL_HEIGHT;
 
