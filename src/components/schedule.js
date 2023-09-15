@@ -231,7 +231,7 @@ const Schedule = ({ isDarkMode }) => {
     const interval = setInterval(() => {
       // console.log("Updating now divider " + new Date());
       setNowDivider(generateNowDivider());
-    }, 1000 * 60);
+    }, 1000 * 15);
 
     return () => {
       clearInterval(interval);
