@@ -5,7 +5,7 @@ import Speaker from "./Speaker";
 import "../styles/modal.css";
 
 const SCHEDULE_LINK =
-  "https://speak.protocol.berlin/protocol-berg/schedule/export/schedule.json";
+  "/finalSchedule.json";
 
 const CELL_HEIGHT = 39;
 const CONF_START_TIME = "09:00";
