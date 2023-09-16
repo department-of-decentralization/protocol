@@ -144,6 +144,17 @@ const IndexPage = () => {
           </li>
           <li>
             <a href="#host">4. About the Host</a>
+            <ul className="pl-6">
+            <li>
+              <a href="#contact">4.1 Contact</a>
+            </li>
+            <li>
+              <a href="#donations">4.2 Donations</a>
+            </li>
+            <li>
+              <a href="#imprint">4.3 Impressum</a>
+            </li>
+            </ul>
           </li>
         </ol>
       </div>
@@ -430,6 +441,60 @@ const IndexPage = () => {
           is primarily run from Berlin. The collective is composed of around a
           dozen members who contribute voluntarily.
         </p>
+        <h3 className="font-bold" id="contact">4.1 Contact</h3>
+        <p>
+          To connect to the Protocol Berg community, join our [matrix] space:{" "}
+          <br />
+          <a href="https://matrix.to/#/%23protocol:tchncs.de" target="_blank" className="ml-12">
+            &#x23;protocol:tchncs.de{" "}
+          </a>
+        </p>
+        <p>
+          To provide feedback or ask questions, please email us:{" "}
+          <br />
+          <a href="mailto:hello@protocol.berlin" className="ml-12">
+            hello@protocol.berlin{" "}
+          </a>
+        </p>
+        <h3 className="font-bold" id="donations">4.2 Donations</h3>
+        <p>
+          The Department of Decentralization is a non-profit organization
+          accepting donations either via cryptographic transactions or
+          traditional wire transfers.
+        </p>
+        <p>
+          Donations on Ethereum mainnet: <code>dezent.eth</code>; on other EVM chains: <code>0x59cc3Fc56B8B2988F259EC1E6f3446907130f728</code>
+        </p>
+        <p>
+          Donations on Polkadot: <code>14DfiBmme3pjph6aD86MyGfYRbAUtwCJqjECope8rpvhv6gu</code>; Substrate: <code>5FHNZrWhnGZGPA64FV3Mq7qPZyAqCdeAmEVieXenJjuBjYP1</code>
+        </p>
+        <p>
+          Wire (SEPA) donations:<br />
+          Beneficiary: <code>Goerli Dezentral gGmbH</code><br />
+          International Bank Account Number: <code>DE16 1005 0000 0190 8447 44</code><br />
+          Bank Identifier Code: <code>BELADEBEXXX</code><br />
+          Subject: <code>Spende Protocol Berg</code>
+        </p>
+        <p>
+          To donate on other platforms or to get a donation receipt,
+          please message us at {" "}
+          <a href="mailto:donations@protocol.berlin">donations@protocol.berlin</a>.
+        </p>
+        <h3 className="font-bold" id="imprint">4.3 Impressum</h3>
+        <p>
+          Angaben gem&auml;&szlig; &sect; 5 TMG: Goerli Dezentral gGmbH,
+          Mariannenstra&szlig;e 9-10, 10999 Berlin, Handelsregister: HRB 207663
+          B, Registergericht: Amtsgericht, Charlottenburg, Berlin,
+          Umstatzsteuer-ID: DE325917754, vertreten durch A. Schoedon, Telefon:
+          +49 (0) 30 20613410, E-Mail:{" "}
+          <a href="mailto:schoedon@protocol.berlin">schoedon@protocol.berlin</a>.
+        </p>
+        <p>
+          Goerli Dezentral gGmbH is a non-profit organization serving
+          tax-privileged purposes, according to the articles of association. The
+          organization meets the statutory requirements under &sect;&sect; 51,
+          59, 60, and 61 AO in Germany.
+        </p>
         <p>
           The content of this website is available through IPFS:
           <br />
@@ -446,11 +511,6 @@ const IndexPage = () => {
               https://dezent.eth
             </a>
           </span>
-        </p>
-        <p>
-          <a href="/contact">Contact</a>.{" "}
-          <a href="/contact#imprint">Impressum</a> gem&auml;&szlig; &sect; 5
-          TMG.
         </p>
       </section>
       <footer className="footnotes mt-8 break-all">
