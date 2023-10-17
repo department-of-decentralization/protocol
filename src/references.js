@@ -1,10 +1,10 @@
 const references = {
   dod: {
     author: "Department of Decentralization",
-    description: "About Us",
+    description: "Huge Logo",
     year: "2023",
-    url: "https://protocol.berlin/decentralization/",
-    accessed: "22.02.2023",
+    url: "https://dod.ngo/",
+    accessed: "17.10.2023",
   },
   heeresbaeckerei: {
     author: "Helmchen Events",
