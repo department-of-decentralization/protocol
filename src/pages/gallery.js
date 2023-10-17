@@ -34,6 +34,17 @@ const GalleryPage = () => {
     </header>
       <section>
         <h2 className="font-bold">Gallery</h2>
+        <p>
+          Photos of the event were provided by{" "}
+          <a
+            href="https://www.antontal.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+          Anton Tal
+          </a>.
+          Please consider leaving Anton a donation: <code>antontal.eth</code>
+        </p>
         <div>
         <Gallery
           images={thumbswithSrc}
