@@ -5,33 +5,11 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
 const GalleryPage = () => {
 
   const [index, setIndex] = useState(-1);
 
-  const handleClick = (index, item) => setIndex(index);
+  const handleClick = (index, _) => setIndex(index);
 
   const thumbswithSrc = images.map((image) => {
     return {
@@ -91,15 +69,19 @@ const GalleryPage = () => {
           scrollToZoom: false,
         }}
       />
-      </section>
       <p>
+        Photos of the event were provided by{" "}
         <a
-          href="/"
-          className="ml-12"
+          href="https://www.antontal.com/"
+          target="_blank"
+          rel="noreferrer"
         >
-          protocol.berlin
-        </a>
+        Anton Tal
+        </a>.
+        Please consider leaving Anton a donation: <code>antontal.eth</code>
       </p>
+      </section>
+      <p className="ml-12">Back to <a href="/">protocol.berlin</a></p>
     </main>
   )
 }

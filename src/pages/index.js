@@ -77,9 +77,7 @@ const IndexPage = () => {
           September 15, 2023, Kreuzberg, Berlin;
           <br />
           a Department-of-Decentralization
-          <Ref src={refs.dod} /> event;
-          <br />
-          edition 0b11111100111.
+          <Ref src={refs.dod} /> event.
         </p>
         <p className="author">
           <div className="mt-8 text-lg"></div>
@@ -119,7 +117,12 @@ const IndexPage = () => {
             </ul>
             <ul className="pl-6">
               <li>
-                <a href="#stream">1.3 Stream and Recordings</a>
+                <a href="#stream">1.3 Recordings</a>
+              </li>
+            </ul>
+            <ul className="pl-6">
+              <li>
+                <a href="#gallery">1.4 Gallery</a>
               </li>
             </ul>
           </li>
@@ -164,26 +167,26 @@ const IndexPage = () => {
           1. Conference
         </h2>
         <p>
-          Protocol Berg is a one-day technical conference targeting an audience
+          Protocol Berg was a one-day technical conference targeting an audience
           of protocol/system/network engineers, decentralized-infrastructure
           administrators, researchers, and other curious minds. Protocol Berg
-          aims to bring distributed technology ecosystems together to exchange
+          aimed to bring distributed technology ecosystems together to exchange
           concepts and technology, talk about shared open problems, and learn
           from each other.
         </p>
         <p>
-          Topics covered by the event orbit mainly around consensus protocols,
+          Topics covered by the event orbited mainly around consensus protocols,
           distributed virtual machines, peer-to-peer networking, decentralized
           infrastructure, open-source governance, and protocol research.
         </p>
         <p>
-          We expect 500-600 attendees, and tickets will be free, as in{" "}
-          <span className="italic">free lemonade</span>. All attendees have to
+          We welcomed 650 attendees, and tickets were free, as in{" "}
+          <span className="italic">free lemonade</span>. All attendees had to
           adhere to the event's <a href="/conduct">Code of Conduct</a>.
         </p>
         <p>
-          Protocol Berg is a donation-backed non-profit event. Therefore, there
-          will be no sponsors.
+          Protocol Berg was a donation-backed, non-profit event. Therefore, there
+          were no sponsors.
         </p>
       </section>
       <section>
@@ -213,11 +216,11 @@ const IndexPage = () => {
       </section>
       <section>
         <h3 className="font-bold" id="stream">
-          1.3 Stream and Recordings
+          1.3 Recordings
         </h3>
         <div>
         <p>
-          Streaming and recordings will be provided by StreamETH:{" "}
+          Recordings are provided by StreamETH:{" "}
         </p>
         <p>
           <a
@@ -228,6 +231,47 @@ const IndexPage = () => {
           >
             watch.protocol.berlin
           </a>
+        </p>
+        <p>
+          A mirror of all sessions is also available on our YouTube channel:{" "}
+        </p>
+        <p>
+          <a
+            href="https://www.youtube.com/@departmentofdecentralization/playlists"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-12"
+          >
+            youtube.com/@departmentofdecentralization
+          </a>
+        </p>
+        </div>
+      </section>
+      <section>
+        <h3 className="font-bold" id="gallery">
+          1.4 Gallery
+        </h3>
+        <div>
+        <p>
+          Photos of the event were provided by{" "}
+          <a
+            href="https://www.antontal.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+          Anton Tal
+          </a>:{" "}
+        </p>
+        <p>
+          <a
+            href="/gallery"
+            className="ml-12"
+          >
+            /gallery
+          </a>
+        </p>
+        <p>
+          Please consider leaving Anton a donation: <code>antontal.eth</code>
         </p>
         </div>
       </section>
