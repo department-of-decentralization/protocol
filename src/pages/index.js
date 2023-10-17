@@ -6,6 +6,7 @@ import speakers from "../speakers";
 import Speaker from "../components/Speaker";
 import Schedule from "../components/schedule";
 import logo from "../images/protocolBerg.png";
+
 const FootNote = ({ id, author, description, year, url, accessed }) => (
   <li id={`fn${id}`} className="flex flex-row">
     <div className="mr-2 leading-5">[{id}]</div>

@@ -21,8 +21,12 @@
     "latex.css": "^1.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-grid-gallery": "^1.0.1-alpha.0",
+    "react-helmet": "^6.1.0",
     "react-modal": "^3.16.1",
-    "react-toggle-dark-mode": "^1.1.1"
+    "react-responsive": "^9.0.2",
+    "react-toggle-dark-mode": "^1.1.1",
+    "yet-another-react-lightbox": "^3.14.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
