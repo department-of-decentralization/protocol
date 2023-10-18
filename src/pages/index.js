@@ -253,14 +253,15 @@ const IndexPage = () => {
         </h3>
         <div>
         <p>
-          Photos of the event were provided by{" "}
           <a
             href="https://www.antontal.com/"
             target="_blank"
             rel="noreferrer"
           >
           Anton Tal
-          </a>:{" "}
+          </a>
+          {" "}
+          helped us to document Protocol Berg's unique atmosphere and people.
         </p>
         <p>
           <a
@@ -271,7 +272,8 @@ const IndexPage = () => {
           </a>
         </p>
         <p>
-          Please consider leaving Anton a donation: <code>antontal.eth</code>
+          If you like the photos, please consider sending Anton a donation to
+          <code>antontal.eth</code>
         </p>
         </div>
       </section>
