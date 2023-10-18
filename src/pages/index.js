@@ -273,6 +273,7 @@ const IndexPage = () => {
         </p>
         <p>
           If you like the photos, please consider sending Anton a donation to
+          {" "}
           <code>antontal.eth</code>
         </p>
         </div>

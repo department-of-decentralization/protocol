@@ -45,6 +45,7 @@ const GalleryPage = () => {
           {" "}
           helped us to document Protocol Berg's unique atmosphere and people.
           If you like the photos, please consider sending Anton a donation to
+          {" "}
           <code>antontal.eth</code>
         </p>
         <div>
