@@ -224,7 +224,7 @@ const IndexPage = () => {
         </p>
         <p>
           <a
-            href="https://watch.protocol.berlin/ethberlin/protocol_berg"
+            href="https://watch.protocol.berlin/ethberlin/protocol_berg#schedule"
             target="_blank"
             rel="noreferrer"
             className="ml-12"
