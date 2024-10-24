@@ -2,9 +2,6 @@ import * as React from "react";
 import refs from "../references";
 import { SEO } from "../components/seo";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import speakers from "../speakers";
-import Speaker from "../components/Speaker";
-import Schedule from "../components/schedule";
 import logo from "../images/protocolBerg.png";
 
 const FootNote = ({ id, author, description, year, url, accessed }) => (
@@ -65,7 +62,7 @@ const IndexPage = () => {
           <img
             className={`w-full max-w-xs sm:w-auto h-auto ${isDarkMode ? "invert" : ""}`}
             src={logo}
-            alt="Protocol Berg V2 Logo"
+            alt="Protocol Berg v2 Logo"
           />
         </div>
         <p className="italic text-center">The decentralized protocol and infrastructure conference.</p>
@@ -85,7 +82,7 @@ const IndexPage = () => {
           Abstract
         </h2>
         <small className="mt-4">
-          Protocol Berg V2 is a two day summit providing a location specifically for protocol research, decentralized
+          Protocol Berg v2 is a two day summit providing a location specifically for protocol research, decentralized
           infrastructure, and core-developer experience. The one-day event with two stages, opportunities for technical
           workshops, and protocol community gatherings brings together protocol researchers and other stakeholders from
           different decentralized protocols. Attendance is free of charge. The event will not host any sponsors or
@@ -127,8 +124,8 @@ const IndexPage = () => {
           1. Conference
         </h2>
         <p>
-          Protocol Berg V2 is a two-day technical conference targeting an audience of protocol/system/network engineers,
-          decentralized-infrastructure administrators, researchers, and other curious minds. Protocol Berg V2 aims to
+          Protocol Berg v2 is a two-day technical conference targeting an audience of protocol/system/network engineers,
+          decentralized-infrastructure administrators, researchers, and other curious minds. Protocol Berg v2 aims to
           bring distributed technology ecosystems together to exchange concepts and technology, talk about shared open
           problems, and learn from each other.
         </p>
@@ -140,7 +137,7 @@ const IndexPage = () => {
           Tickets will be free, as in <span className="italic">free lemonade</span>. All attendees had to adhere to the
           event's <a href="/conduct">Code of Conduct</a>.
         </p>
-        <p>Protocol Berg V2 is a donation-backed, non-profit event. Therefore, there will be no sponsors.</p>
+        <p>Protocol Berg v2 is a donation-backed, non-profit event. Therefore, there will be no sponsors.</p>
         <p>
           Follow us in{" "}
           <a href="https://x.com/protocol_berg" target="_blank" rel="noreferrer">
@@ -155,7 +152,7 @@ const IndexPage = () => {
         <p>
           For last year's event, see{" "}
           <a href="https://2023.protocol.berlin" target="_blank" rel="noreferrer">
-            Protocol Berg V1
+            Protocol Berg v1
           </a>
           .
         </p>
@@ -224,7 +221,7 @@ const IndexPage = () => {
           4.1 Contact
         </h3>
         <p>
-          To connect to the Protocol Berg V2 community, join our [matrix] space: <br />
+          To connect to the Protocol Berg v2 community, join our [matrix] space: <br />
           <a href="https://matrix.to/#/%23protocol:tchncs.de" target="_blank" className="ml-12">
             &#x23;protocol:tchncs.de{" "}
           </a>
@@ -259,7 +256,7 @@ const IndexPage = () => {
           <br />
           Bank Identifier Code: <code>BELADEBEXXX</code>
           <br />
-          Subject: <code>Spende Protocol Berg V2</code>
+          Subject: <code>Spende Protocol Berg v2</code>
         </p>
         <p>
           To donate on other platforms or to get a donation receipt, please message us at{" "}
