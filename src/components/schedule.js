@@ -4,8 +4,7 @@ import shuffledSpeakers from "../speakers";
 import Speaker from "./Speaker";
 import "../styles/modal.css";
 
-const SCHEDULE_LINK =
-  "/finalSchedule.json";
+const SCHEDULE_LINK = "/finalSchedule.json";
 
 const CELL_HEIGHT = 39;
 const CONF_START_TIME = "09:00";
