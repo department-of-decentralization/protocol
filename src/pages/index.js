@@ -82,8 +82,8 @@ const IndexPage = () => {
           Abstract
         </h2>
         <small className="mt-4">
-          Protocol Berg v2 is a two day summit providing a location specifically for protocol research, decentralized
-          infrastructure, and core-developer experience. The one-day event with two stages, opportunities for technical
+          Protocol Berg v2 is a summit providing a location specifically for protocol research, decentralized
+          infrastructure, and core-developer experience. The two-day event with multiple stages, opportunities for technical
           workshops, and protocol community gatherings brings together protocol researchers and other stakeholders from
           different decentralized protocols. Attendance is free of charge. The event will not host any sponsors or
           commercial talks.
@@ -98,24 +98,10 @@ const IndexPage = () => {
             <a href="#conference">1. Conference</a>
           </li>
           <li>
-            <a href="#cfp">2. Call for Participation</a>
+            <a href="#venue">2. Venue</a>
           </li>
           <li>
-            <a href="#venue">3. Venue</a>
-          </li>
-          <li>
-            <a href="#host">4. About the Host</a>
-            <ul className="pl-6">
-              <li>
-                <a href="#contact">4.1 Contact</a>
-              </li>
-              <li>
-                <a href="#donations">4.2 Donations</a>
-              </li>
-              <li>
-                <a href="#imprint">4.3 Impressum</a>
-              </li>
-            </ul>
+            <a href="#host">3. About the Host</a>
           </li>
         </ol>
       </div>
@@ -125,7 +111,7 @@ const IndexPage = () => {
         </h2>
         <p>
           Protocol Berg v2 is a two-day technical conference targeting an audience of protocol/system/network engineers,
-          decentralized-infrastructure administrators, researchers, and other curious minds. Protocol Berg v2 aims to
+          decentralized-infrastructure administrators, researchers, and other curious minds. Protocol Berg aims to
           bring distributed technology ecosystems together to exchange concepts and technology, talk about shared open
           problems, and learn from each other.
         </p>
@@ -139,20 +125,20 @@ const IndexPage = () => {
         </p>
         <p>Protocol Berg v2 is a donation-backed, non-profit event. Therefore, there will be no sponsors.</p>
         <p>
-          Follow us in{" "}
+          Follow us on{" "}
           <a href="https://x.com/protocol_berg" target="_blank" rel="noreferrer">
-            Twitter
-          </a>{" "}
+            X
+          </a>,{" "}
+          <a href="https://bsky.app/profile/protocol.berlin" target="_blank" rel="noreferrer">
+            Bluesky
+          </a>,{" "}
           or{" "}
-          <a href="https://matrix.to/#/%23protocol:tchncs.de" target="_blank" rel="noreferrer">
+          <a href="https://matrix.to/#/%23protocol:dod.ngo" target="_blank" rel="noreferrer">
             Matrix
           </a>{" "}
-          for updates.
-        </p>
-        <p>
-          For last year's event, see{" "}
+          for updates. For last year's event, see{" "}
           <a href="https://2023.protocol.berlin" target="_blank" rel="noreferrer">
-            Protocol Berg v1
+            Protocol Berg 2023
           </a>
           .
         </p>
@@ -160,12 +146,14 @@ const IndexPage = () => {
 
       <section>
         <h2 className="font-bold" id="venue">
-          3. Venue
+          2. Venue
         </h2>
         <p>
           The <span className="italic">Colosseum</span>
-          <Ref src={refs.colosseum} /> in Berlin-Prenzlauer Berg is ....
-          <Ref src={refs.prenzlauerBerg} />.
+          <Ref src={refs.colosseum} /> is a cinema in the Gleimviertel district of Berlin's Prenzlauer Berg
+          <Ref src={refs.prenzlauerBerg} /> on the corner of Sch&ouml;nhauser Allee and Gleimstra&szlig;e. The building
+          was constructed around 1892 for the Great Berlin Horse Railway. It was later rebuilt and repurposed several
+          times and has served as a movie screening facility since 1924.
         </p>
         <p>
           The venue will be equipped with two stages. In addition, there will be workshop areas for deep technical study
@@ -175,21 +163,21 @@ const IndexPage = () => {
           Latitude/Longitude:
           <br />
           <a
-            href="https://nominatim.openstreetmap.org/ui/search.html?q=52.504853%2C13.434746"
+            href="https://nominatim.openstreetmap.org/ui/search.html?q=52.5477109%2C13.4125287"
             target="_blank"
             className="ml-12"
           >
-            (CHANGE HERE) 52.504853, 13.434746
+            52.5477109, 13.4125287
           </a>
           <br />
           Street Address:
           <br />
           <a
-            href="https://nominatim.openstreetmap.org/ui/search.html?q=K%C3%B6penicker+Stra%C3%9Fe+16%2C+10997+Berlin"
+            href="https://nominatim.openstreetmap.org/ui/search.html?q=Gleimstra%C3%9Fe+30%2C+10437+Berlin"
             target="_blank"
             className="ml-12"
           >
-            (CHANGE HERE) K&ouml;penicker Stra&szlig;e 16-17, 10997 Berlin-Kreuzberg
+            Gleimstra&szlig;e 30, 10437 Berlin-Kreuzberg
           </a>
           .
         </p>
@@ -197,7 +185,7 @@ const IndexPage = () => {
 
       <section>
         <h2 className="font-bold" id="host">
-          4. About the Host
+          3. About the Host
         </h2>
         <p>
           The{" "}
@@ -208,9 +196,10 @@ const IndexPage = () => {
           Berlin. The group assembled in 2018 to organize events such as ETHBerlin
           <Ref src={refs.ethberlin} />
           <Ref src={refs.ethb2rlin} />
-          <Ref src={refs.ethb3rlin} />, Protocol Berg 2023
-          <Ref src={refs.protocol2023} /> and GoerliCon
-          <Ref src={refs.goerli} /> and has been active since.
+          <Ref src={refs.ethb3rlin} />
+          <Ref src={refs.ethb4rlin} />, Protocol Berg
+          <Ref src={refs.protocol2023} />, and GoerliCon
+          <Ref src={refs.goerli} />, and has been active since.
         </p>
         <p>
           The aim is to be an agnostic vehicle to drive adoption, educate newcomers, and raise awareness of the
@@ -218,12 +207,12 @@ const IndexPage = () => {
           run from Berlin. The collective is composed of around a dozen members who contribute voluntarily.
         </p>
         <h3 className="font-bold" id="contact">
-          4.1 Contact
+          3.1 Contact
         </h3>
         <p>
           To connect to the Protocol Berg v2 community, join our [matrix] space: <br />
-          <a href="https://matrix.to/#/%23protocol:tchncs.de" target="_blank" className="ml-12">
-            &#x23;protocol:tchncs.de{" "}
+          <a href="https://matrix.to/#/%23protocol:dod.ngo" target="_blank" className="ml-12">
+            &#x23;protocol:dod.ngo{" "}
           </a>
         </p>
         <p>
@@ -233,10 +222,10 @@ const IndexPage = () => {
           </a>
         </p>
         <h3 className="font-bold" id="donations">
-          4.2 Donations
+          3.2 Donations
         </h3>
         <p>
-          The Department of Decentralization is a non-profit organization accepting donations either via cryptographic
+          The Department of Decentralization is a charitable, non-profit organization accepting donations either via cryptographic
           transactions or traditional wire transfers.
         </p>
         <p>
@@ -263,35 +252,18 @@ const IndexPage = () => {
           <a href="mailto:donations@protocol.berlin">donations@protocol.berlin</a>.
         </p>
         <h3 className="font-bold" id="imprint">
-          4.3 Impressum
+          3.3 Impressum
         </h3>
         <p>
           Angaben gem&auml;&szlig; &sect; 5 TMG: Goerli Dezentral gGmbH, Mariannenstra&szlig;e 9-10, 10999 Berlin,
           Handelsregister: HRB 207663 B, Registergericht: Amtsgericht, Charlottenburg, Berlin, Umstatzsteuer-ID:
-          DE325917754, vertreten durch A. Schoedon, Telefon: +49 (0) 30 20613410, E-Mail:{" "}
+          DE325917754, vertreten durch A. Schoedon, Telefon: +49 (0) 30 20607944, E-Mail:{" "}
           <a href="mailto:schoedon@protocol.berlin">schoedon@protocol.berlin</a>.
         </p>
         <p>
-          Goerli Dezentral gGmbH is a non-profit organization serving tax-privileged purposes, according to the articles
+          Goerli Dezentral gGmbH is a charitable, non-profit organization serving tax-privileged purposes, according to the articles
           of association. The organization meets the statutory requirements under &sect;&sect; 51, 59, 60, and 61 AO in
           Germany.
-        </p>
-        <p>
-          The content of this website is available through IPFS:
-          <br />
-          <span className="ml-12">
-            IPNS:{" "}
-            <a href="ipns://protocol.berlin" target="_blank">
-              ipns://protocol.berlin
-            </a>
-          </span>
-          <br />
-          <span className="ml-12">
-            ENS:{" "}
-            <a href="https://dezent.eth" target="_blank">
-              https://dezent.eth
-            </a>
-          </span>
         </p>
       </section>
       <footer className="footnotes mt-8 break-all">
