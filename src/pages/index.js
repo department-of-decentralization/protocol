@@ -229,12 +229,8 @@ const IndexPage = () => {
           transactions or traditional wire transfers.
         </p>
         <p>
-          Donations on Ethereum mainnet: <code>dezent.eth</code>; on other EVM chains:{" "}
-          <code>0x59cc3Fc56B8B2988F259EC1E6f3446907130f728</code>
-        </p>
-        <p>
-          Donations on Polkadot: <code>14DfiBmme3pjph6aD86MyGfYRbAUtwCJqjECope8rpvhv6gu</code>; Substrate:{" "}
-          <code>5FHNZrWhnGZGPA64FV3Mq7qPZyAqCdeAmEVieXenJjuBjYP1</code>
+          Donations on Ethereum mainnet: <code>ethberlin.eth</code>; on other EVM chains:{" "}
+          <code>0xd22dC63e2388AE8226b5CAA0341fc0c1294b6B40</code>
         </p>
         <p>
           Wire (SEPA) donations:
