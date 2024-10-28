@@ -83,10 +83,10 @@ const IndexPage = () => {
         </h2>
         <small className="mt-4">
           Protocol Berg v2 is a summit providing a location specifically for protocol research, decentralized
-          infrastructure, and core-developer experience. The two-day event with multiple stages, opportunities for technical
-          workshops, and protocol community gatherings brings together protocol researchers and other stakeholders from
-          different decentralized protocols. Attendance is free of charge. The event will not host any sponsors or
-          commercial talks.
+          infrastructure, and core-developer experience. The two-day event with multiple stages, opportunities for
+          technical workshops, and protocol community gatherings brings together protocol researchers and other
+          stakeholders from different decentralized protocols. Attendance is free of charge. The event will not host any
+          sponsors or commercial talks.
         </small>
       </div>
       <div>
@@ -111,8 +111,8 @@ const IndexPage = () => {
         </h2>
         <p>
           Protocol Berg v2 is a two-day technical conference targeting an audience of protocol/system/network engineers,
-          decentralized-infrastructure administrators, researchers, and other curious minds. Protocol Berg aims to
-          bring distributed technology ecosystems together to exchange concepts and technology, talk about shared open
+          decentralized-infrastructure administrators, researchers, and other curious minds. Protocol Berg aims to bring
+          distributed technology ecosystems together to exchange concepts and technology, talk about shared open
           problems, and learn from each other.
         </p>
         <p>
@@ -128,15 +128,16 @@ const IndexPage = () => {
           Follow us on{" "}
           <a href="https://x.com/protocol_berg" target="_blank" rel="noreferrer">
             X
-          </a>,{" "}
+          </a>
+          ,{" "}
           <a href="https://bsky.app/profile/protocol.berlin" target="_blank" rel="noreferrer">
             Bluesky
-          </a>,{" "}
-          or{" "}
+          </a>
+          , or{" "}
           <a href="https://matrix.to/#/%23protocol:dod.ngo" target="_blank" rel="noreferrer">
             Matrix
           </a>{" "}
-          for updates. For last year's event, see{" "}
+          for updates. For the previous event, see{" "}
           <a href="https://2023.protocol.berlin" target="_blank" rel="noreferrer">
             Protocol Berg 2023
           </a>
@@ -225,8 +226,8 @@ const IndexPage = () => {
           3.2 Donations
         </h3>
         <p>
-          The Department of Decentralization is a charitable, non-profit organization accepting donations either via cryptographic
-          transactions or traditional wire transfers.
+          The Department of Decentralization is a charitable, non-profit organization accepting donations either via
+          cryptographic transactions or traditional wire transfers.
         </p>
         <p>
           Donations on Ethereum mainnet: <code>ethberlin.eth</code>; on other EVM chains:{" "}
@@ -257,9 +258,9 @@ const IndexPage = () => {
           <a href="mailto:schoedon@protocol.berlin">schoedon@protocol.berlin</a>.
         </p>
         <p>
-          Goerli Dezentral gGmbH is a charitable, non-profit organization serving tax-privileged purposes, according to the articles
-          of association. The organization meets the statutory requirements under &sect;&sect; 51, 59, 60, and 61 AO in
-          Germany.
+          Goerli Dezentral gGmbH is a charitable, non-profit organization serving tax-privileged purposes, according to
+          the articles of association. The organization meets the statutory requirements under &sect;&sect; 51, 59, 60,
+          and 61 AO in Germany.
         </p>
       </section>
       <footer className="footnotes mt-8 break-all">
