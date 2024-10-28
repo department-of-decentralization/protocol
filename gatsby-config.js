@@ -10,7 +10,7 @@ module.exports = {
       "Protocol Berg is a one-day protocol and research focused technical conference taking place in Kreuzberg, Berlin, on September 15, 2023",
     twitterUsername: "@ETHBerlin",
     image: `/protocolBerg.png`,
-    twitterImage: `/protocolBerg-twitter.png`,
+    twitterImage: `/protocol-berg-twitter.png`,
   },
   plugins: [
     "gatsby-plugin-postcss",
