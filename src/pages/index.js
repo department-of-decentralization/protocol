@@ -82,11 +82,11 @@ const IndexPage = () => {
           Abstract
         </h2>
         <small className="mt-4">
-          Protocol Berg v2 is a summit providing a location specifically for protocol research, decentralized
-          infrastructure, and core-developer experience. The two-day event with multiple stages, opportunities for
-          technical workshops, and protocol community gatherings brings together protocol researchers and other
-          stakeholders from different decentralized protocols. Attendance is free of charge. The event will not host any
-          sponsors or commercial talks.
+          Protocol Berg v2 is a conference focusing on protocol research, decentralized infrastructure, and
+          core-developer experience. The two-day event with multiple stages, opportunities for technical workshops, and
+          protocol community gatherings brings together protocol researchers and other stakeholders from different
+          decentralized protocols. Attendance is free of charge. The event will not host any sponsors or commercial
+          talks.
         </small>
       </div>
       <div>
