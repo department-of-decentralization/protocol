@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://protocol.berlin`,
     url: `https://protocol.berlin`,
     description:
-      "Protocol Berg is a one-day protocol and research focused technical conference taking place in Kreuzberg, Berlin, on September 15, 2023",
+      "Protocol Berg is a two-day protocol and research focused technical conference taking place in Prenzlauer Berg, Berlin, on June 12-13, 2025.",
     twitterUsername: "@ETHBerlin",
     image: `/protocolBerg.png`,
     twitterImage: `/protocol-berg-twitter.png`,
