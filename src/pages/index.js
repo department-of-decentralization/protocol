@@ -98,10 +98,10 @@ const IndexPage = () => {
             <a href="#conference">1. Conference</a>
           </li>
           <li>
-            <a href="#venue">2. Venue</a>
+            <a href="#venue">3. Venue</a>
           </li>
           <li>
-            <a href="#host">3. About the Host</a>
+            <a href="#host">4. About the Host</a>
           </li>
         </ol>
       </div>
@@ -146,8 +146,57 @@ const IndexPage = () => {
       </section>
 
       <section>
+        <h2 className="font-bold" id="cfp">
+          2. Call for Participation
+        </h2>
+        <h3 className="font-bold" id="cfp-speakers">
+          2.1 Speakers
+        </h3>
+        <p>
+          The call for participation will open soon. Please check back here regulary.
+        </p>
+        <p>Talk and workshop proposals should align with one of our tracks:</p>
+        <ul className="list-disc pl-6">
+          <li>
+            <b>Networking:</b> communication, peer-to-peer, decentralization,
+            federation
+          </li>
+          <li>
+            <b>Storage:</b> reliability, availability, durability, recovery,
+            incentives, resilience
+          </li>
+          <li>
+            <b>Consensus:</b> validation concepts, fork choice, finality
+            considerations, virtual machines, programming languages
+          </li>
+          <li>
+            <b>Cryptography:</b> key management, zero-knowledge technologies,
+            hash functions, encryption, security, privacy
+          </li>
+          <li>
+            <b>Infrastructure:</b> distributed clusters, testing and testnet
+            infrastructure, blockchain system operations, orchestration
+          </li>
+          <li>
+            <b>Philosophy:</b> vision, debate, politics, governance,
+            coordination, open-source
+          </li>
+        </ul>
+        <h3 className="font-bold" id="cfp-volunteers">
+          2.2 Volunteers
+        </h3>
+        <p>
+          Volunteer applications will open soon. Please check back here regulary.
+        </p>
+        <h3 className="font-bold" id="cfp-attendees">
+          2.3 Attendees
+        </h3>
+        <p>
+          General admission applications will open soon. Please check back here regulary.
+        </p>
+      <section>
         <h2 className="font-bold" id="venue">
-          2. Venue
+          3. Venue
         </h2>
         <p>
           The <span className="italic">Colosseum</span>
@@ -186,11 +235,13 @@ const IndexPage = () => {
 
       <section>
         <h2 className="font-bold" id="host">
-          3. About the Host
+          4. About the Host
         </h2>
         <p>
           The{" "}
-          <a href="/decentralization" className="italic">
+          <a href="https://dod.ngo"
+            target="_blank"
+            className="italic">
             Department of Decentralization
           </a>{" "}
           is a collective of people from various crypto, decentralization, and blockchain communities in and around
@@ -208,7 +259,7 @@ const IndexPage = () => {
           run from Berlin. The collective is composed of around a dozen members who contribute voluntarily.
         </p>
         <h3 className="font-bold" id="contact">
-          3.1 Contact
+          4.1 Contact
         </h3>
         <p>
           To connect to the Protocol Berg v2 community, join our [matrix] space: <br />
@@ -223,7 +274,7 @@ const IndexPage = () => {
           </a>
         </p>
         <h3 className="font-bold" id="donations">
-          3.2 Donations
+          4.2 Donations
         </h3>
         <p>
           The Department of Decentralization is a charitable, non-profit organization accepting donations either via
@@ -249,7 +300,7 @@ const IndexPage = () => {
           <a href="mailto:donations@protocol.berlin">donations@protocol.berlin</a>.
         </p>
         <h3 className="font-bold" id="imprint">
-          3.3 Impressum
+          4.3 Impressum
         </h3>
         <p>
           Angaben gem&auml;&szlig; &sect; 5 TMG: Goerli Dezentral gGmbH, Mariannenstra&szlig;e 9-10, 10999 Berlin,
