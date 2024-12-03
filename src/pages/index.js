@@ -152,48 +152,40 @@ const IndexPage = () => {
         <h3 className="font-bold" id="cfp-speakers">
           2.1 Speakers
         </h3>
-        <p>
-          The call for participation will open soon. Please check back here regulary.
-        </p>
+        <p>The call for participation will open soon. Please check back here regulary.</p>
         <p>Talk and workshop proposals should align with one of our tracks:</p>
         <ul className="list-disc pl-6">
           <li>
-            <b>Networking:</b> communication, peer-to-peer, decentralization,
-            federation
+            <b>Networking:</b> communication, peer-to-peer, decentralization, federation
           </li>
           <li>
-            <b>Storage:</b> reliability, availability, durability, recovery,
-            incentives, resilience
+            <b>Storage:</b> reliability, availability, durability, recovery, incentives, resilience
           </li>
           <li>
-            <b>Consensus:</b> validation concepts, fork choice, finality
-            considerations, virtual machines, programming languages
+            <b>Consensus:</b> validation concepts, fork choice, finality considerations, virtual machines, programming
+            languages
           </li>
           <li>
-            <b>Cryptography:</b> key management, zero-knowledge technologies,
-            hash functions, encryption, security, privacy
+            <b>Cryptography:</b> key management, zero-knowledge technologies, hash functions, encryption, security,
+            privacy
           </li>
           <li>
-            <b>Infrastructure:</b> distributed clusters, testing and testnet
-            infrastructure, blockchain system operations, orchestration
+            <b>Infrastructure:</b> distributed clusters, testing and testnet infrastructure, blockchain system
+            operations, orchestration
           </li>
           <li>
-            <b>Philosophy:</b> vision, debate, politics, governance,
-            coordination, open-source
+            <b>Philosophy:</b> vision, debate, politics, governance, coordination, open-source
           </li>
         </ul>
         <h3 className="font-bold" id="cfp-volunteers">
           2.2 Volunteers
         </h3>
-        <p>
-          Volunteer applications will open soon. Please check back here regulary.
-        </p>
+        <p>Volunteer applications will open soon. Please check back here regulary.</p>
         <h3 className="font-bold" id="cfp-attendees">
           2.3 Attendees
         </h3>
-        <p>
-          General admission applications will open soon. Please check back here regulary.
-        </p>
+        <p>General admission applications will open soon. Please check back here regulary.</p>
+      </section>
       <section>
         <h2 className="font-bold" id="venue">
           3. Venue
@@ -239,9 +231,7 @@ const IndexPage = () => {
         </h2>
         <p>
           The{" "}
-          <a href="https://dod.ngo"
-            target="_blank"
-            className="italic">
+          <a href="https://dod.ngo" target="_blank" className="italic">
             Department of Decentralization
           </a>{" "}
           is a collective of people from various crypto, decentralization, and blockchain communities in and around
