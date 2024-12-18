@@ -219,7 +219,7 @@ const IndexPage = () => {
             target="_blank"
             className="ml-12"
           >
-            Gleimstra&szlig;e 30, 10437 Berlin-Kreuzberg
+            Gleimstra&szlig;e 30, 10437 Berlin-Prenzlauer Berg
           </a>
           .
         </p>
