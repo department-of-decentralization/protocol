@@ -120,7 +120,7 @@ const IndexPage = () => {
           peer-to-peer networking, decentralized infrastructure, open-source governance, and protocol research.
         </p>
         <p>
-          Tickets will be free, as in <span className="italic">free lemonade</span>. All attendees had to adhere to the
+          Tickets will be free, as in <span className="italic">free lemonade</span>. All attendees have to adhere to the
           event's <a href="/conduct">Code of Conduct</a>.
         </p>
         <p>Protocol Berg v2 is a donation-backed, non-profit event. Therefore, there will be no sponsors.</p>
