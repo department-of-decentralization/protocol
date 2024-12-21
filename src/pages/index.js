@@ -98,6 +98,9 @@ const IndexPage = () => {
             <a href="#conference">1. Conference</a>
           </li>
           <li>
+            <a href="#cfp">2. Call for Participation</a>
+          </li>
+          <li>
             <a href="#venue">3. Venue</a>
           </li>
           <li>
