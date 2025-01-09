@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkprotocol_berlin=self.webpackChunkprotocol_berlin||[]).push([[822],{62:function(e,l,t){t.r(l);var o=t(7294),r=t(1883);l.default=()=>((0,o.useEffect)((()=>{(0,r.navigate)("http://v1.protocol.berlin/gallery/")}),[]),null)}}]);
+//# sourceMappingURL=component---src-pages-gallery-js-bb56958f2f84dffd19c4.js.map
