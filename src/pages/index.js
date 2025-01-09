@@ -141,8 +141,8 @@ const IndexPage = () => {
             Matrix
           </a>{" "}
           for updates. For the previous event, see{" "}
-          <a href="https://2023.protocol.berlin" target="_blank" rel="noreferrer">
-            Protocol Berg 2023
+          <a href="https://v1.protocol.berlin" target="_blank" rel="noreferrer">
+            Protocol Berg v1
           </a>
           .
         </p>
