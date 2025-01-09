@@ -40,10 +40,10 @@ const references = {
     accessed: "25.10.2024",
   },
   protocol2023: {
-    author: "Protocol Berg 2023",
+    author: "Protocol Berg v1",
     description: "The decentralized protocol and infrastructure conference.",
     year: "2023",
-    url: "https://2023.protocol.berlin/",
+    url: "https://v1.protocol.berlin/",
     accessed: "25.10.2024",
   },
   colosseum: {
