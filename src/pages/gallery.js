@@ -3,7 +3,7 @@ import { navigate } from "gatsby";
 
 const GalleryPage = () => {
   useEffect(() => {
-    navigate("http://2023.protocol.berlin/gallery/");
+    navigate("http://v1.protocol.berlin/gallery/");
   }, []);
 
   return null;
