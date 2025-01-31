@@ -155,8 +155,17 @@ const IndexPage = () => {
         <h3 className="font-bold" id="cfp-speakers">
           2.1 Speakers
         </h3>
-        <p>The call for participation will open soon. Please check back here regulary.</p>
-        <p>Talk and workshop proposals should align with one of our tracks:</p>
+        <p>The call for participation is now open. Please use our pretalx backend to submit a proposal.
+          <br />
+          <a
+            href="https://cfp.protocol.berlin/protocol-berg-v2/cfp"
+            target="_blank"
+            className="ml-12"
+          >
+            cfp.protocol.berlin
+          </a>
+        </p>
+        <p>Talk and workshop content should align with one of our tracks:</p>
         <ul className="list-disc pl-6">
           <li>
             <b>Networking:</b> communication, peer-to-peer, decentralization, federation
