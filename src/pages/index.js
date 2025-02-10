@@ -155,13 +155,10 @@ const IndexPage = () => {
         <h3 className="font-bold" id="cfp-speakers">
           2.1 Speakers
         </h3>
-        <p>The call for participation is now open. Please use our pretalx backend to submit a proposal.
+        <p>
+          The call for participation is now open. Please use our pretalx backend to submit a proposal.
           <br />
-          <a
-            href="https://cfp.protocol.berlin/protocol-berg-v2/cfp"
-            target="_blank"
-            className="ml-12"
-          >
+          <a href="https://cfp.protocol.berlin/protocol-berg-v2/cfp" target="_blank" className="ml-12">
             cfp.protocol.berlin
           </a>
         </p>
@@ -192,7 +189,12 @@ const IndexPage = () => {
         <h3 className="font-bold" id="cfp-volunteers">
           2.2 Volunteers
         </h3>
-        <p>Volunteer applications will open soon. Please check back here regulary.</p>
+        <p>
+          Volunteer applications are now open! Apply at{" "}
+          <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer">
+            tickets.protocol.berlin
+          </a>
+        </p>
         <h3 className="font-bold" id="cfp-attendees">
           2.3 Attendees
         </h3>
