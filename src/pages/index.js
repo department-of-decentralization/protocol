@@ -57,7 +57,7 @@ const IndexPage = () => {
   return (
     <main>
       <DarkModeButton toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <header className="text-center my-24">
+      <header className="text-center my-12">
         <div className="flex items-center justify-center">
           <img
             className={`w-full max-w-xs sm:w-auto h-auto ${isDarkMode ? "invert" : ""}`}
@@ -72,8 +72,11 @@ const IndexPage = () => {
           a Department-of-Decentralization
           <Ref src={refs.dod} /> event.
         </p>
-        <p className="author">
-          <div className="mt-8 text-lg"></div>
+        <p className="text-center">
+          See also{" "}
+          <a href="https://v1.protocol.berlin" target="_blank" rel="noreferrer">
+            Protocol Berg v1 (2023)
+          </a>
         </p>
       </header>
 
