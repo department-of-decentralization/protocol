@@ -201,7 +201,18 @@ const IndexPage = () => {
         <h3 className="font-bold" id="cfp-attendees">
           2.3 Attendees
         </h3>
-        <p>General admission applications will open soon. Please check back here regulary.</p>
+        <p>
+          General admission applications are now open! Apply at{" "}
+          <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer">
+            tickets.protocol.berlin
+          </a>
+        </p>
+        <p>Attendance is free as in free lemonade.</p>
+        <p>
+          Tickets will be distributed on a "first come first serve" basis for all eligible applications. Please
+          remember, tickets are on application basis and approved by the team. Applying for a ticket does not guarantee
+          one.
+        </p>
       </section>
       <section>
         <h2 className="font-bold" id="venue">
