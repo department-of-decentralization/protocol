@@ -72,11 +72,11 @@ const IndexPage = () => {
           a Department-of-Decentralization
           <Ref src={refs.dod} /> event.
         </p>
-        <p className="text-center">
-          See also{" "}
+        <p className="italic text-center">
+          For last year's speakers, recordings, and gallery, see also{" "}
           <a href="https://v1.protocol.berlin" target="_blank" rel="noreferrer">
             Protocol Berg v1 (2023)
-          </a>
+          </a>.
         </p>
       </header>
 
@@ -165,6 +165,8 @@ const IndexPage = () => {
             cfp.protocol.berlin
           </a>
         </p>
+        <p>The deadline to submit a proposal is <b>2025-03-16 23:59</b> (CET/Berlin).
+        </p>
         <p>Talk and workshop content should align with one of our tracks:</p>
         <ul className="list-disc pl-6">
           <li>
@@ -193,8 +195,9 @@ const IndexPage = () => {
           2.2 Volunteers
         </h3>
         <p>
-          Volunteer applications are now open! Apply at{" "}
-          <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer">
+          Volunteer applications <b>are now open!</b> Apply at
+          <br />
+          <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
             tickets.protocol.berlin
           </a>
         </p>
@@ -202,12 +205,13 @@ const IndexPage = () => {
           2.3 Attendees
         </h3>
         <p>
-          General admission applications are now open! Apply at{" "}
-          <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer">
+          General admission applications <b>are now open!</b> Apply at
+          <br />
+          <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
             tickets.protocol.berlin
           </a>
         </p>
-        <p>Attendance is free as in free lemonade.</p>
+        <p>Attendance is free as in free lemonade. Just let us know what motivates you to join the conference.</p>
         <p>
           Tickets will be distributed on a "first come first serve" basis for all eligible applications. Please
           remember, tickets are on application basis and approved by the team. Applying for a ticket does not guarantee
