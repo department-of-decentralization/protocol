@@ -78,7 +78,8 @@ const IndexPage = () => {
           For last year's speakers, recordings, and gallery, see also{" "}
           <a href="https://v1.protocol.berlin" target="_blank" rel="noreferrer">
             Protocol Berg v1 (2023)
-          </a>.
+          </a>
+          .
         </p>
       </header>
 
@@ -157,7 +158,7 @@ const IndexPage = () => {
           .
         </p>
         <h3 className="font-bold" id="speakers">
-          1.2 Speakers
+          1.1 Speakers
         </h3>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -187,7 +188,8 @@ const IndexPage = () => {
             cfp.protocol.berlin
           </a>
         </p>
-        <p>The deadline to submit a proposal is <b>2025-03-16 23:59</b> (CET/Berlin).
+        <p>
+          The deadline to submit a proposal is <b>2025-03-16 23:59</b> (CET/Berlin).
         </p>
         <p>Talk and workshop content should align with one of our tracks:</p>
         <ul className="list-disc pl-6">
