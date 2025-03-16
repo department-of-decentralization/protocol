@@ -1,6 +1,8 @@
 import * as React from "react";
 import refs from "../references";
 import { SEO } from "../components/seo";
+import Speaker from "../components/Speaker";
+import speakers from "../speakers";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import logo from "../images/protocolBerg.png";
 
@@ -100,6 +102,11 @@ const IndexPage = () => {
           <li>
             <a href="#conference">1. Conference</a>
           </li>
+          <ul className="pl-6">
+            <li>
+              <a href="#speakers">1.1 Speakers</a>
+            </li>
+          </ul>
           <li>
             <a href="#cfp">2. Call for Participation</a>
           </li>
@@ -149,6 +156,21 @@ const IndexPage = () => {
           </a>
           .
         </p>
+        <h3 className="font-bold" id="speakers">
+          1.2 Speakers
+        </h3>
+        <div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {speakers.map((speaker, index) => (
+              <div className="text-center" key={index}>
+                <Speaker speaker={speaker} index={index} />
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center justify-center text-lg">
+            <p>Figure 1: Speakers of Protocol Berg, 2025. </p>
+          </div>
+        </div>
       </section>
 
       <section>
