@@ -179,52 +179,21 @@ const IndexPage = () => {
           2. Call for Participation
         </h2>
         <h3 className="font-bold" id="cfp-speakers">
-          2.1 Speakers
+          2.1 <s>Speakers</s>
         </h3>
         <p>
-          The call for participation is now open. Please use our pretalx backend to submit a proposal.
-          <br />
-          <a href="https://cfp.protocol.berlin/protocol-berg-v2/cfp" target="_blank" className="ml-12">
-            cfp.protocol.berlin
-          </a>
+            The deadine to submit talks and workshops is passed. Thanks for all the great submissions! To manage your proposal you can visit
+	    <br/>
+	    <a href="https://cfp.protocol.berlin/protocol-berg-v2/cfp" target="_blank" className="ml-12">
+		cfp.protocol.berlin
+	    </a>
         </p>
-        <p>
-          The deadline to submit a proposal is <b>2025-03-16 23:59</b> (CET/Berlin).
-        </p>
-        <p>Talk and workshop content should align with one of our tracks:</p>
-        <ul className="list-disc pl-6">
-          <li>
-            <b>Networking:</b> communication, peer-to-peer, decentralization, federation
-          </li>
-          <li>
-            <b>Storage:</b> reliability, availability, durability, recovery, incentives, resilience
-          </li>
-          <li>
-            <b>Consensus:</b> validation concepts, fork choice, finality considerations, virtual machines, programming
-            languages
-          </li>
-          <li>
-            <b>Cryptography:</b> key management, zero-knowledge technologies, hash functions, encryption, security,
-            privacy
-          </li>
-          <li>
-            <b>Infrastructure:</b> distributed clusters, testing and testnet infrastructure, blockchain system
-            operations, orchestration
-          </li>
-          <li>
-            <b>Philosophy:</b> vision, debate, politics, governance, coordination, open-source
-          </li>
-        </ul>
         <h3 className="font-bold" id="cfp-volunteers">
-          2.2 Volunteers
+          2.2 <s>Volunteers</s>
         </h3>
         <p>
-          Volunteer applications <b>are now open!</b> Apply at
-          <br />
-          <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
-            tickets.protocol.berlin
-          </a>
-        </p>
+          We found enough Volunteers. Thanks to all of them!
+	</p>    
         <h3 className="font-bold" id="cfp-attendees">
           2.3 Attendees
         </h3>
