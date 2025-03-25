@@ -75,7 +75,7 @@ const IndexPage = () => {
           <Ref src={refs.dod} /> event.
         </p>
         <p className="italic text-center">
-          For last year's speakers, recordings, and gallery, see also{" "}
+           For the previous (genesis) edition's speakers, recordings, and gallery, see also{" "}
           <a href="https://v1.protocol.berlin" target="_blank" rel="noreferrer">
             Protocol Berg v1 (2023)
           </a>
