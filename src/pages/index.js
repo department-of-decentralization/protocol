@@ -182,18 +182,17 @@ const IndexPage = () => {
           2.1 <s>Speakers</s>
         </h3>
         <p>
-            The deadine to submit talks and workshops is passed. Thanks for all the great submissions! To manage your proposal you can visit
-	    <br/>
-	    <a href="https://cfp.protocol.berlin/protocol-berg-v2/cfp" target="_blank" className="ml-12">
-		cfp.protocol.berlin
-	    </a>
+          The deadine to submit talks and workshops has passed. Thanks for all the great submissions! To manage your
+          proposal you can visit
+          <br />
+          <a href="https://cfp.protocol.berlin/protocol-berg-v2/cfp" target="_blank" className="ml-12">
+            cfp.protocol.berlin
+          </a>
         </p>
         <h3 className="font-bold" id="cfp-volunteers">
           2.2 <s>Volunteers</s>
         </h3>
-        <p>
-          We found enough Volunteers. Thanks to all of them!
-	</p>    
+        <p>Volunteer applicaitons has been closed. Thanks to everyone who volunteered!</p>
         <h3 className="font-bold" id="cfp-attendees">
           2.3 Attendees
         </h3>
