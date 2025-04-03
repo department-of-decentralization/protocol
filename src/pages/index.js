@@ -75,7 +75,7 @@ const IndexPage = () => {
           <Ref src={refs.dod} /> event.
         </p>
         <p className="italic text-center">
-           For the previous (genesis) edition's speakers, recordings, and gallery, see also{" "}
+          For the previous (genesis) edition's speakers, recordings, and gallery, see also{" "}
           <a href="https://v1.protocol.berlin" target="_blank" rel="noreferrer">
             Protocol Berg v1 (2023)
           </a>
@@ -111,11 +111,37 @@ const IndexPage = () => {
           <li>
             <a href="#cfp">2. Call for Participation</a>
           </li>
+          <ul className="pl-6">
+            <li>
+              <a href="#cfp-speakers">
+                <s>2.1 Speakers</s>
+              </a>
+            </li>
+            <li>
+              <a href="#cfp-volunteers">
+                <s>2.2 Volunteers</s>
+              </a>
+            </li>
+            <li>
+              <a href="#cfp-attendees">2.3 Attendees</a>
+            </li>
+          </ul>
           <li>
             <a href="#venue">3. Venue</a>
           </li>
           <li>
             <a href="#host">4. About the Host</a>
+            <ul className="pl-6">
+              <li>
+                <a href="#contact">4.1 Contact</a>
+              </li>
+              <li>
+                <a href="#donations">4.2 Donations</a>
+              </li>
+              <li>
+                <a href="#imprint">4.3 Impressum</a>
+              </li>
+            </ul>
           </li>
         </ol>
       </div>
