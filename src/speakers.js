@@ -30,25 +30,6 @@ const speakers = [
     image: require("./images/speakers/ann.jpg"),
     website: "https://annbrody.com/",
   },
-  // {
-  //   name: "Barnabé Monnot",
-  //   organization: {
-  //     name: "Ethereum Foundation",
-  //     url: "https://ethereum.foundation/",
-  //   },
-  //   image: require("./images/speakers/barnabe.jpg"),
-  //   warpcast: "https://warpcast.com/barnabe",
-  // },
-  // {
-  //   name: "Parithosh",
-  //   organization: {
-  //     name: "Ethereum Foundation",
-  //     url: "https://ethereum.foundation/",
-  //   },
-  //   image: require("./images/speakers/pari.jpg"),
-  //   twitter: "https://twitter.com/parithosh_j",
-  //   website: "https://parithosh.com",
-  // },
   {
     name: "Molly Mackinlay",
     image: require("./images/speakers/molly.jpg"),
@@ -118,6 +99,50 @@ const speakers = [
     name: "Constanza Gallo",
     image: require("./images/speakers/constanza.jpg"),
     twitter: "https://x.com/costgallo",
+  },
+  {
+    name: "Fatemeh Fannizadeh",
+    image: require("./images/speakers/fatemeh.jpg"),
+    twitter: "https://x.com/fatalmeh",
+  },
+  {
+    name: "Robert Habermeier",
+    image: require("./images/speakers/robert.jpg"),
+    github: "https://github.com/rphmeier",
+  },
+  {
+    name: "Wassim Alsindi",
+    image: require("./images/speakers/wassim.jpg"),
+    organization: {
+      name: "0xSalon",
+      url: "https://0xsalon.pubpub.org/",
+    },
+    website: "https://www.wassim.xyz",
+  },
+  {
+    name: "Tim Beiko",
+    image: require("./images/speakers/tim.jpg"),
+    organization: {
+      name: "Ethereum Foundation",
+      url: "https://ethereum.foundation/",
+    },
+    farcaster: "https://warpcast.com/tim",
+  },
+  {
+    name: "Michelle Lee",
+    image: require("./images/speakers/michelle.jpg"),
+    bluesky: "https://bsky.app/profile/mosh.bsky.social",
+    organization: {
+      name: "IPFS Foundation",
+    },
+  },
+  {
+    name: "Jaya Klara Brekke",
+    image: require("./images/speakers/jaya.jpg"),
+    organization: {
+      name: "Nym",
+      url: "https://nym.com/",
+    },
   },
 ];
 
