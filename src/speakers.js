@@ -144,6 +144,46 @@ const speakers = [
       url: "https://nym.com/",
     },
   },
+  {
+    name: "Hudson Jameson",
+    image: require("./images/speakers/hudson.jpg"),
+    organization: {
+      name: "Polygon, Former EF and Flashbots",
+    },
+    twitter: "https://x.com/hudsonjameson",
+  },
+  {
+    name: "Lefteris Karapetsas",
+    image: require("./images/speakers/lefteris.jpg"),
+    organization: {
+      name: "rotki",
+    },
+    github: "https://github.com/LefterisJP",
+  },
+  {
+    name: "Gajinder",
+    image: require("./images/speakers/gajinder.jpg"),
+    organization: {
+      name: "Zeam, Ethereumjs, Lodestar",
+    },
+    twitter: "https://x.com/Gajpower",
+  },
+  {
+    name: "odysseas",
+    image: require("./images/speakers/odysseas.jpg"),
+    organization: {
+      name: "Phylax Systems",
+    },
+    twitter: "https://twitter.com/odysseas_eth",
+  },
+  {
+    name: "Esad Yusuf Atik",
+    image: require("./images/speakers/esad.jpg"),
+    organization: {
+      name: "Citrea",
+    },
+    github: "https://github.com/chainwayxyz/citrea",
+  },
 ];
 
 const shuffledSpeakers = speakers.sort(() => (Math.random() > 0.5 ? 1 : -1));
