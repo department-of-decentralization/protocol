@@ -184,6 +184,11 @@ const speakers = [
     },
     github: "https://github.com/chainwayxyz/citrea",
   },
+  {
+    name: "Arik Galansky",
+    image: require("./images/speakers/arik.jpg"),
+    twitter: "https://x.com/arik_g",
+  },
 ];
 
 const shuffledSpeakers = speakers.sort(() => (Math.random() > 0.5 ? 1 : -1));
