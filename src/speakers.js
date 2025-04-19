@@ -79,6 +79,25 @@ const speakers = [
     image: require("./images/speakers/guillaume.jpg"),
     github: "https://github.com/gballet",
   },
+  {
+    name: "Manu Alzuru",
+    image: require("./images/speakers/manu.jpg"),
+    organization: {
+      name: "Blockravers & Lovepunks",
+    },
+  },
+  {
+    name: "Michal Rostecki",
+    image: null,
+  },
+  {
+    name: "Pedro Gomes",
+    image: require("./images/speakers/pedro.jpg"),
+    organization: {
+      name: "WalletConnect Foundation",
+    },
+    website: "https://walletconnect.network",
+  },
   // {
   //   name: "Aliasgar Merchant",
   //   organization: {
@@ -189,7 +208,113 @@ const speakers = [
     image: require("./images/speakers/arik.jpg"),
     twitter: "https://x.com/arik_g",
   },
+  {
+    name: "Axel Eckerbom",
+    image: require("./images/speakers/axel.jpg"),
+    organization: {
+      name: "X1 Labs",
+      url: "https://x1.network/",
+    },
+    twitter: "https://x.com/ackebom",
+  },
+  {
+    name: "Casey Carr",
+    image: require("./images/speakers/casey.jpg"),
+    organization: {
+      name: "Diffractions Collective",
+    },
+  },
+  {
+    name: "Thomas Hsueh",
+    image: require("./images/speakers/thomas.jpg"),
+    organization: {
+      name: "topology.gg",
+    },
+    twitter: "https://x.com/guiltygyoza",
+  },
+  {
+    name: "Frederik Luehrs",
+    image: require("./images/speakers/frederik.jpg"),
+    organization: {
+      name: "Phylax Systems",
+    },
+    twitter: "https://x.com/FredLuehrs",
+  },
+  {
+    name: "Lukas",
+    image: require("./images/speakers/lukas.jpg"),
+    organization: {
+      name: "ZeroSync",
+    },
+  },
+  {
+    name: "odysseas",
+    image: require("./images/speakers/odysseas.jpg"),
+    organization: {
+      name: "Phylax Systems",
+    },
+    twitter: "https://twitter.com/odysseas_eth",
+  },
+  {
+    name: "Shawn Tabrizi",
+    image: require("./images/speakers/shawn.jpg"),
+    organization: {
+      name: "Polkadot",
+    },
+    github: "https://github.com/shawntabrizi",
+  },
+  {
+    name: "Daniel Norman",
+    image: require("./images/speakers/daniel.jpg"),
+    organization: {
+      name: "Interplanetary Shipyard",
+    },
+    website: "https://ipshipyard.com/",
+  },
+  {
+    name: "Alejandro Ranchal-Pedrosa",
+    image: require("./images/speakers/alejandro.jpg"),
+    organization: {
+      name: "Scroll",
+    },
+  },
+  {
+    name: "Bastian Köcher",
+    image: require("./images/speakers/bastian.jpg"),
+    organization: {
+      name: "Polkadot",
+    },
+    twitter: "https://x.com/bkchr",
+  },
+  {
+    name: "Barnabé Monnot",
+    image: require("./images/speakers/barnabe.jpg"),
+    organization: {
+      name: "Ethereum Foundation Research",
+    },
+    twitter: "https://x.com/barnabemonnot",
+  },
+  {
+    name: "Sergey Fedorov",
+    image: require("./images/speakers/sergey.jpg"),
+    organization: {
+      name: "Replica_IO",
+    },
+    github: "https://github.com/sergefdrv",
+  },
+  {
+    name: "Leo Alt",
+    image: require("./images/speakers/leo.jpg"),
+    organization: {
+      name: "powdr labs",
+    },
+    twitter: "https://twitter.com/leonardoalt",
+  },
+  {
+    name: "François Garillot",
+    image: require("./images/speakers/francois.jpg"),
+    website: "https://www.garillot.net/",
+  },
 ];
-
 const shuffledSpeakers = speakers.sort(() => (Math.random() > 0.5 ? 1 : -1));
 export default shuffledSpeakers;
