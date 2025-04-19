@@ -248,14 +248,6 @@ const speakers = [
     },
   },
   {
-    name: "odysseas",
-    image: require("./images/speakers/odysseas.jpg"),
-    organization: {
-      name: "Phylax Systems",
-    },
-    twitter: "https://twitter.com/odysseas_eth",
-  },
-  {
     name: "Shawn Tabrizi",
     image: require("./images/speakers/shawn.jpg"),
     organization: {
