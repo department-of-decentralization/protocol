@@ -18,6 +18,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { fetchSubmissions } = require("./utils/api");
 
 async function verifySessions() {
   try {
@@ -26,12 +27,11 @@ async function verifySessions() {
     const speakers = JSON.parse(fs.readFileSync(speakersPath, "utf8"));
 
     // Fetch the sessions data from the API
-    const response = await fetch("https://talx.dod.ngo/api/events/protocol-berg-v2/submissions/?format=json&limit=300");
-    const data = await response.json();
+    const apiSessions = await fetchSubmissions();
 
     // Create a map of session codes to their data for quick lookup
     const sessionsMap = new Map();
-    data.results.forEach((session) => {
+    apiSessions.forEach((session) => {
       sessionsMap.set(session.code, session);
     });
 
@@ -68,6 +68,7 @@ async function verifySessions() {
     });
   } catch (error) {
     console.error("Error verifying sessions:", error);
+    process.exit(1);
   }
 }
 

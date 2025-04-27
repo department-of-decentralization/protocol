@@ -11,11 +11,15 @@
  *    - Checks if the names match between local and API data
  *    - For speakers without codes, checks if a matching code exists in the API
  *
+ * Required environment variables:
+ * - PRETALX_API_TOKEN: API token for authentication (see .env-example)
+ *
  * Usage: node verifySpeakers.js
  */
 
 const fs = require("fs");
 const path = require("path");
+const { fetchSpeakers } = require("./utils/api");
 
 async function verifySpeakers() {
   try {
@@ -24,20 +28,17 @@ async function verifySpeakers() {
     const speakers = JSON.parse(fs.readFileSync(speakersPath, "utf8"));
 
     // Fetch the API data
-    const response = await fetch(
-      "https://talx.dod.ngo/api/events/protocol-berg-v2/speakers/?format=json&questions=all&limit=300"
-    );
-    const data = await response.json();
+    const apiSpeakers = await fetchSpeakers();
 
     // Create a map of speaker codes to their data
     const apiSpeakersMap = new Map();
-    data.results.forEach((speaker) => {
+    apiSpeakers.forEach((speaker) => {
       apiSpeakersMap.set(speaker.code, speaker);
     });
 
     // Create a map of speaker names to their codes
     const nameToCodeMap = new Map();
-    data.results.forEach((speaker) => {
+    apiSpeakers.forEach((speaker) => {
       nameToCodeMap.set(speaker.name.toLowerCase(), speaker.code);
     });
 
@@ -67,6 +68,7 @@ async function verifySpeakers() {
     });
   } catch (error) {
     console.error("Error verifying speakers:", error);
+    process.exit(1);
   }
 }
 
