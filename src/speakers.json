@@ -3,7 +3,7 @@
     "name": "Michal Rostecki",
     "image": null,
     "code": "L7VGWR",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "LSQMGS",
         "title": "IBRL - making Solana (Agave) faster"
@@ -19,7 +19,7 @@
     "image": "./images/speakers/lisa.jpg",
     "twitter": "https://x.com/cryptobuilder_",
     "code": "79CGKW",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "FKXWHY",
         "title": "Anatomy of on-chain privacy"
@@ -34,7 +34,7 @@
     },
     "twitter": "https://x.com/bkchr",
     "code": "KQ7ERU",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "8TPXVT",
         "title": "CorePlay - An actor-like framework for blockchains"
@@ -49,7 +49,7 @@
     },
     "twitter": "https://x.com/barnabemonnot",
     "code": "XTVGXJ",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "VKDPKG",
         "title": "What we want from our nodes"
@@ -64,7 +64,7 @@
       "url": "https://nym.com/"
     },
     "code": "YCARUG",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "GT8GUZ",
         "title": "The Forest That Protects the Public Good: Nym for Libp2p privacy (part2)"
@@ -83,7 +83,7 @@
     },
     "twitter": "https://x.com/hudsonjameson",
     "code": "F8CS3J",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "BLKPZA",
         "title": "Are You Vitalik or Are You My Mom? An In Depth Analysis of Wallet Security Set-ups"
@@ -99,7 +99,7 @@
     "image": "./images/speakers/paul-dylan.png",
     "twitter": "https://x.com/post_polar_",
     "code": "L7UVCF",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "WBYS89",
         "title": "No friends but the hash function: Descent into the Social Layer"
@@ -114,7 +114,7 @@
     },
     "website": "https://ipshipyard.com/",
     "code": "GT9CJP",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "KPXZ9K",
         "title": "Don’t Trust, Verify: IPFS for (D)App Distribution on the Web in 2025"
@@ -129,7 +129,7 @@
     },
     "website": "https://walletconnect.network",
     "code": "SKWGBF",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "XQEZFV",
         "title": "Two flavors of Smart Sessions: Session Keys vs SubAccounts"
@@ -143,7 +143,7 @@
       "name": "Blockravers & Lovepunks"
     },
     "code": "7LYBNE",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "YXCCST",
         "title": "Redesigning Governance: Trust Networks, Decentralization, and the Dichotomy of Extremes in Politics"
@@ -158,7 +158,7 @@
     },
     "github": "https://github.com/shawntabrizi",
     "code": "7ZGFWB",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "C3EHHJ",
         "title": "PolkaVM: A fast and secure RISC-V based virtual machine"
@@ -173,7 +173,7 @@
       "name": "IPFS Foundation"
     },
     "code": "QXANZJ",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "8UJVXD",
         "title": "IPFS: A Decade in Browsers"
@@ -188,7 +188,7 @@
     },
     "twitter": "https://twitter.com/odysseas_eth",
     "code": "CYFQLS",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "ZARDCJ",
         "title": "Contract-based soft forks: Coining a term in search of hack prevention"
@@ -200,7 +200,7 @@
     "image": "./images/speakers/guillaume.jpg",
     "github": "https://github.com/gballet",
     "code": "JZGDSU",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "G9VARM",
         "title": "Building zig program for zkvms: a case study with zeam"
@@ -216,7 +216,7 @@
     },
     "twitter": "https://x.com/byteboro",
     "code": "UFZNZQ",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "EZBS39",
         "title": "Building Testnet Infrastructure (from the ground up)"
@@ -231,7 +231,7 @@
     },
     "twitter": "https://x.com/FredLuehrs",
     "code": "8Z89AT",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "SNJBB7",
         "title": "Runtime Assertions: A New Paradigm for Customized Smart Contract Security"
@@ -246,7 +246,7 @@
     "image": "./images/speakers/gavin.jpeg",
     "github": "https://github.com/gavofyork",
     "code": "TNMM9H",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "VM3L8N",
         "title": "Beyond the Ledger: JAM and the Future of Scalable Decentralized Computing"
@@ -262,7 +262,7 @@
     "image": "./images/speakers/edmund.jpg",
     "github": "https://github.com/edmundedgar",
     "code": "H3FZNT",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "37UXLY",
         "title": "Bluesky, atproto, how to hack on it and why it matters"
@@ -274,7 +274,7 @@
     "image": "./images/speakers/fatemeh.jpg",
     "twitter": "https://x.com/fatalmeh",
     "code": "QTXNGK",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "E7UHVJ",
         "title": "the economics of freedom"
@@ -286,7 +286,7 @@
     "image": "./images/speakers/robert.jpg",
     "github": "https://github.com/rphmeier",
     "code": "LZFC3A",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "RBJ89P",
         "title": "Scaling Blockchain with SSDs is Smart (and Scaling with RAM is Stupid)"
@@ -301,7 +301,7 @@
     },
     "twitter": "https://x.com/Gajpower",
     "code": "PMDAYM",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "RYELF7",
         "title": "Workings of Native Rollups and EXECUTE precompile"
@@ -316,7 +316,7 @@
     },
     "github": "https://github.com/sergefdrv",
     "code": "UQP3UF",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "QHGJDW",
         "title": "New insights into distributed and concurrent programming"
@@ -328,7 +328,7 @@
     "image": "./images/speakers/ann.jpg",
     "website": "https://annbrody.com/",
     "code": "SS78ZC",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "JBRYZC",
         "title": "Goodbye Cypherpunk values? Adapting to the new world order"
@@ -340,7 +340,7 @@
     "image": "./images/speakers/molly.jpg",
     "twitter": "https://twitter.com/momack28",
     "code": "F3TDMM",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "AKXQTP",
         "title": "Evolving Filecoin: Strengthening Storage Markets, Incentives, and Network Resilience"
@@ -356,7 +356,7 @@
     },
     "twitter": "https://x.com/ackebom",
     "code": "N8QFVP",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "VJMYK8",
         "title": "SVM Protocol Design"
@@ -368,7 +368,7 @@
     "image": "./images/speakers/francois.jpg",
     "website": "https://www.garillot.net/",
     "code": "HQHFTY",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "XSAXXE",
         "title": "Modern Multi-proposer consensus implementations"
@@ -383,7 +383,7 @@
     },
     "twitter": "https://x.com/guiltygyoza",
     "code": "QFCEN9",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "V3TSVJ",
         "title": "Coordination-Avoidance: Rethinking Decentralized Networks Beyond Global Consensus"
@@ -399,7 +399,7 @@
     },
     "farcaster": "https://warpcast.com/tim",
     "code": "VMEVD8",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "RUM7ET",
         "title": "How Ethereum Governance (Actually) Works"
@@ -414,7 +414,7 @@
     },
     "github": "https://github.com/LefterisJP",
     "code": "S3UTHE",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "QTGAY9",
         "title": "Privacy ist mir Wurst. I Got Nothing to Hide."
@@ -426,7 +426,7 @@
     "image": "./images/speakers/arik.jpg",
     "twitter": "https://x.com/arik_g",
     "code": "VQAEGL",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "SNZKTA",
         "title": "MPC at internet scale"
@@ -440,7 +440,7 @@
       "name": "ZeroSync"
     },
     "code": "N8HWF7",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "VRWUBC",
         "title": "BitVM Engineering Tales"
@@ -452,7 +452,7 @@
     "image": "./images/speakers/constanza.jpg",
     "twitter": "https://x.com/costgallo",
     "code": "ZSKWE7",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "JBRYZC",
         "title": "Goodbye Cypherpunk values? Adapting to the new world order"
@@ -468,7 +468,7 @@
     },
     "website": "https://www.wassim.xyz",
     "code": "CARPLZ",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "LATYL3",
         "title": "The Chain Mail Gaze"
@@ -482,7 +482,7 @@
       "name": "Scroll"
     },
     "code": "CH3MTN",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "ZY83BS",
         "title": "Rebased Rollups: Achieving Credibly Neutral Synchronous Composability with Low Latency and Cost"
@@ -497,7 +497,7 @@
     },
     "github": "https://github.com/chainwayxyz/citrea",
     "code": "BYQHEF",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "JVZ3HB",
         "title": "How to Build Rollups on Bitcoin"
@@ -512,7 +512,7 @@
     },
     "twitter": "https://twitter.com/leonardoalt",
     "code": "ZUNRYM",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "RRFHHB",
         "title": "Compiler-based optimizations for zkVMs"
@@ -526,7 +526,7 @@
       "name": "Diffractions Collective"
     },
     "code": "MX9MGS",
-    "acceptedSessions": [
+    "publishedSessions": [
       {
         "code": "TJ7FEP",
         "title": "Swarming by the STIX: Exploring decentralized Traffic Light Protocol (TLP) and Semaphore for Spyware Honeytrapper indicator-sharing in highly-surveilled environments"
