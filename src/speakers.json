@@ -16,7 +16,7 @@
       "name": "Aztec Labs",
       "url": "https://www.aztec-labs.com/"
     },
-    "image": "./images/speakers/lisa.jpg",
+    "image": "/speakers/lisa.jpg",
     "twitter": "https://x.com/cryptobuilder_",
     "code": "79CGKW",
     "publishedSessions": [
@@ -28,7 +28,7 @@
   },
   {
     "name": "Bastian Köcher",
-    "image": "./images/speakers/bastian.jpg",
+    "image": "/speakers/bastian.jpg",
     "organization": {
       "name": "Polkadot"
     },
@@ -43,7 +43,7 @@
   },
   {
     "name": "Barnabé Monnot",
-    "image": "./images/speakers/barnabe.jpg",
+    "image": "/speakers/barnabe.jpg",
     "organization": {
       "name": "Ethereum Foundation Research"
     },
@@ -58,7 +58,7 @@
   },
   {
     "name": "Jaya Klara Brekke",
-    "image": "./images/speakers/jaya.jpg",
+    "image": "/speakers/jaya.jpg",
     "organization": {
       "name": "Nym",
       "url": "https://nym.com/"
@@ -77,7 +77,7 @@
   },
   {
     "name": "Hudson Jameson",
-    "image": "./images/speakers/hudson.jpg",
+    "image": "/speakers/hudson.jpg",
     "organization": {
       "name": "Polygon, Former EF and Flashbots"
     },
@@ -96,7 +96,7 @@
       "name": "University College Dublin",
       "url": "https://www.ucd.ie/"
     },
-    "image": "./images/speakers/paul-dylan.png",
+    "image": "/speakers/paul-dylan.png",
     "twitter": "https://x.com/post_polar_",
     "code": "L7UVCF",
     "publishedSessions": [
@@ -108,7 +108,7 @@
   },
   {
     "name": "Daniel Norman",
-    "image": "./images/speakers/daniel.jpg",
+    "image": "/speakers/daniel.jpg",
     "organization": {
       "name": "Interplanetary Shipyard"
     },
@@ -123,7 +123,7 @@
   },
   {
     "name": "Pedro Gomes",
-    "image": "./images/speakers/pedro.jpg",
+    "image": "/speakers/pedro.jpg",
     "organization": {
       "name": "WalletConnect Foundation"
     },
@@ -138,7 +138,7 @@
   },
   {
     "name": "Manu Alzuru",
-    "image": "./images/speakers/manu.jpg",
+    "image": "/speakers/manu.jpg",
     "organization": {
       "name": "Blockravers & Lovepunks"
     },
@@ -152,7 +152,7 @@
   },
   {
     "name": "Shawn Tabrizi",
-    "image": "./images/speakers/shawn.jpg",
+    "image": "/speakers/shawn.jpg",
     "organization": {
       "name": "Polkadot"
     },
@@ -167,7 +167,7 @@
   },
   {
     "name": "Michelle Lee",
-    "image": "./images/speakers/michelle.jpg",
+    "image": "/speakers/michelle.jpg",
     "bluesky": "https://bsky.app/profile/mosh.bsky.social",
     "organization": {
       "name": "IPFS Foundation"
@@ -182,7 +182,7 @@
   },
   {
     "name": "odysseas",
-    "image": "./images/speakers/odysseas.jpg",
+    "image": "/speakers/odysseas.jpg",
     "organization": {
       "name": "Phylax Systems"
     },
@@ -197,7 +197,7 @@
   },
   {
     "name": "Guillaume Ballet",
-    "image": "./images/speakers/guillaume.jpg",
+    "image": "/speakers/guillaume.jpg",
     "github": "https://github.com/gballet",
     "code": "JZGDSU",
     "publishedSessions": [
@@ -209,7 +209,7 @@
   },
   {
     "name": "erin",
-    "image": "./images/speakers/erin.jpg",
+    "image": "/speakers/erin.jpg",
     "organization": {
       "name": "Polkadot Network",
       "url": "https://polkadot.com/"
@@ -225,7 +225,7 @@
   },
   {
     "name": "Frederik Luehrs",
-    "image": "./images/speakers/frederik.jpg",
+    "image": "/speakers/frederik.jpg",
     "organization": {
       "name": "Phylax Systems"
     },
@@ -243,7 +243,7 @@
     "organization": {
       "name": "Polkadot Network, Parity Technologies"
     },
-    "image": "./images/speakers/gavin.jpeg",
+    "image": "/speakers/gavin.jpeg",
     "github": "https://github.com/gavofyork",
     "code": "TNMM9H",
     "publishedSessions": [
@@ -259,7 +259,7 @@
       "name": "reality.eth",
       "url": "https://reality.eth.limo/"
     },
-    "image": "./images/speakers/edmund.jpg",
+    "image": "/speakers/edmund.jpg",
     "github": "https://github.com/edmundedgar",
     "code": "H3FZNT",
     "publishedSessions": [
@@ -271,7 +271,7 @@
   },
   {
     "name": "Fatemeh Fannizadeh",
-    "image": "./images/speakers/fatemeh.jpg",
+    "image": "/speakers/fatemeh.jpg",
     "twitter": "https://x.com/fatalmeh",
     "code": "QTXNGK",
     "publishedSessions": [
@@ -283,7 +283,7 @@
   },
   {
     "name": "Robert Habermeier",
-    "image": "./images/speakers/robert.jpg",
+    "image": "/speakers/robert.jpg",
     "github": "https://github.com/rphmeier",
     "code": "LZFC3A",
     "publishedSessions": [
@@ -295,7 +295,7 @@
   },
   {
     "name": "Gajinder",
-    "image": "./images/speakers/gajinder.jpg",
+    "image": "/speakers/gajinder.jpg",
     "organization": {
       "name": "Zeam, Ethereumjs, Lodestar"
     },
@@ -310,7 +310,7 @@
   },
   {
     "name": "Sergey Fedorov",
-    "image": "./images/speakers/sergey.jpg",
+    "image": "/speakers/sergey.jpg",
     "organization": {
       "name": "Replica_IO"
     },
@@ -325,7 +325,7 @@
   },
   {
     "name": "Ann Brody",
-    "image": "./images/speakers/ann.jpg",
+    "image": "/speakers/ann.jpg",
     "website": "https://annbrody.com/",
     "code": "SS78ZC",
     "publishedSessions": [
@@ -337,7 +337,7 @@
   },
   {
     "name": "Molly Mackinlay",
-    "image": "./images/speakers/molly.jpg",
+    "image": "/speakers/molly.jpg",
     "twitter": "https://twitter.com/momack28",
     "code": "F3TDMM",
     "publishedSessions": [
@@ -349,7 +349,7 @@
   },
   {
     "name": "Axel Eckerbom",
-    "image": "./images/speakers/axel.jpg",
+    "image": "/speakers/axel.jpg",
     "organization": {
       "name": "X1 Labs",
       "url": "https://x1.network/"
@@ -365,7 +365,7 @@
   },
   {
     "name": "François Garillot",
-    "image": "./images/speakers/francois.jpg",
+    "image": "/speakers/francois.jpg",
     "website": "https://www.garillot.net/",
     "code": "HQHFTY",
     "publishedSessions": [
@@ -377,7 +377,7 @@
   },
   {
     "name": "Thomas Hsueh",
-    "image": "./images/speakers/thomas.jpg",
+    "image": "/speakers/thomas.jpg",
     "organization": {
       "name": "topology.gg"
     },
@@ -392,7 +392,7 @@
   },
   {
     "name": "Tim Beiko",
-    "image": "./images/speakers/tim.jpg",
+    "image": "/speakers/tim.jpg",
     "organization": {
       "name": "Ethereum Foundation",
       "url": "https://ethereum.foundation/"
@@ -408,7 +408,7 @@
   },
   {
     "name": "Lefteris Karapetsas",
-    "image": "./images/speakers/lefteris.jpg",
+    "image": "/speakers/lefteris.jpg",
     "organization": {
       "name": "rotki"
     },
@@ -423,7 +423,7 @@
   },
   {
     "name": "Arik Galansky",
-    "image": "./images/speakers/arik.jpg",
+    "image": "/speakers/arik.jpg",
     "twitter": "https://x.com/arik_g",
     "code": "VQAEGL",
     "publishedSessions": [
@@ -435,7 +435,7 @@
   },
   {
     "name": "Lukas",
-    "image": "./images/speakers/lukas.jpg",
+    "image": "/speakers/lukas.jpg",
     "organization": {
       "name": "ZeroSync"
     },
@@ -449,7 +449,7 @@
   },
   {
     "name": "Costanza Gallo",
-    "image": "./images/speakers/constanza.jpg",
+    "image": "/speakers/constanza.jpg",
     "twitter": "https://x.com/costgallo",
     "code": "ZSKWE7",
     "publishedSessions": [
@@ -461,7 +461,7 @@
   },
   {
     "name": "Wassim Alsindi",
-    "image": "./images/speakers/wassim.jpg",
+    "image": "/speakers/wassim.jpg",
     "organization": {
       "name": "0xSalon",
       "url": "https://0xsalon.pubpub.org/"
@@ -477,7 +477,7 @@
   },
   {
     "name": "Alejandro Ranchal-Pedrosa",
-    "image": "./images/speakers/alejandro.jpg",
+    "image": "/speakers/alejandro.jpg",
     "organization": {
       "name": "Scroll"
     },
@@ -491,7 +491,7 @@
   },
   {
     "name": "Esad Yusuf Atik",
-    "image": "./images/speakers/esad.jpg",
+    "image": "/speakers/esad.jpg",
     "organization": {
       "name": "Citrea"
     },
@@ -506,7 +506,7 @@
   },
   {
     "name": "Leo Alt",
-    "image": "./images/speakers/leo.jpg",
+    "image": "/speakers/leo.jpg",
     "organization": {
       "name": "powdr labs"
     },
@@ -521,7 +521,7 @@
   },
   {
     "name": "Casey Carr",
-    "image": "./images/speakers/casey.jpg",
+    "image": "/speakers/casey.jpg",
     "organization": {
       "name": "Diffractions Collective"
     },

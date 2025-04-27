@@ -117,7 +117,7 @@ async function main() {
         speakerEntry = {
           name: speaker.name,
           code: speaker.code,
-          image: speaker.imageUrl ? speaker.imageUrl.replace(/^\.\/?/, "/") : null,
+          image: speaker.imageUrl ? `/speakers/${speaker.code}.jpg` : null,
           publishedSessions: [],
         };
         speakersJson.push(speakerEntry);
