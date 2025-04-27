@@ -18,6 +18,7 @@ const path = require("path");
 const { createCanvas, loadImage, registerFont } = require("canvas");
 const fetch = require("node-fetch");
 const { fetchUnpublishedSessionsWithSpeakers } = require("./publish");
+const SHARP = require("sharp");
 
 // Register Latin Modern fonts
 registerFont(path.join(__dirname, "../src/fonts/Latin-Modern-Roman/lmroman10-regular.otf"), {
@@ -43,10 +44,6 @@ async function downloadImage(url, dest) {
   fs.writeFileSync(dest, buffer);
 }
 
-function getTextBlockHeight(ctx, lines, fontSize, lineHeight) {
-  return lines.length * fontSize * lineHeight;
-}
-
 function wrapTextLines(ctx, text, maxWidth) {
   const words = text.split(" ");
   let lines = [];
@@ -65,99 +62,88 @@ function wrapTextLines(ctx, text, maxWidth) {
   return lines;
 }
 
-function grayscaleImage(ctx, img, x, y, w, h) {
-  // img is not used, we grayscale the drawn area
-  const imageData = ctx.getImageData(x, y, w, h);
-  const data = imageData.data;
-  for (let i = 0; i < data.length; i += 4) {
-    const avg = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
-    data[i] = data[i + 1] = data[i + 2] = avg;
-  }
-  ctx.putImageData(imageData, x, y);
+async function processAndSaveSpeakerImage(srcPath, destPath) {
+  // Crop to square, resize to 300x300, grayscale, save as jpg
+  await SHARP(srcPath)
+    .resize(SPEAKER_IMG_SIZE, SPEAKER_IMG_SIZE, { fit: "cover" })
+    .grayscale()
+    .jpeg({ quality: 90 })
+    .toFile(destPath);
 }
 
-function drawSmallCapsName(ctx, name, x, y, maxWidth) {
-  // Simulate small caps: first letter of each word larger, rest uppercase and smaller
-  const words = name.split(" ");
-  let currX = x;
-  const gap = 12; // space between words
-  for (let w = 0; w < words.length; w++) {
-    const word = words[w];
-    if (!word) continue;
-    // First letter: larger
-    ctx.font = '36px "Latin Modern"';
-    const firstLetter = word[0].toUpperCase();
-    ctx.fillText(firstLetter, currX, y);
-    const firstLetterWidth = ctx.measureText(firstLetter).width;
-    // Rest: uppercase, smaller
-    ctx.font = '26px "Latin Modern"';
-    const rest = word.slice(1).toUpperCase();
-    ctx.fillText(rest, currX + firstLetterWidth, y); // bottom-aligned
-    const restWidth = ctx.measureText(rest).width;
-    currX += firstLetterWidth + restWidth + gap;
-    // Stop if exceeding maxWidth
-    if (currX - x > maxWidth) break;
-  }
+/**
+ * Shared logic for both single and multiple speaker images
+ */
+async function prepareImage(ctx, speakers) {
+  // Download and process speaker images
+  const speakerImgPaths = await Promise.all(
+    speakers.map(async (speaker) => {
+      const speakerImgPath = path.join(__dirname, "../src/images/speakers", `${speaker.code}.jpg`);
+      if (!fs.existsSync(speakerImgPath)) {
+        let tmpPath;
+        if (speaker.imageUrl) {
+          tmpPath = speakerImgPath + ".tmp";
+          await downloadImage(speaker.imageUrl, tmpPath);
+        } else {
+          tmpPath = HALFTONE_AVATAR_PATH;
+        }
+        await processAndSaveSpeakerImage(tmpPath, speakerImgPath);
+        if (speaker.imageUrl && fs.existsSync(tmpPath)) fs.unlinkSync(tmpPath);
+      }
+      return speakerImgPath;
+    })
+  );
+
+  // Background
+  ctx.fillStyle = "#e6e6e6";
+  ctx.fillRect(0, 0, WIDTH, HEIGHT);
+  const logoImg = await loadImage(LOGO_PATH);
+  const logoWidth = 140;
+  const logoHeight = (logoImg.height / logoImg.width) * logoWidth;
+  ctx.drawImage(logoImg, WIDTH - logoWidth - 20, 20, logoWidth, logoHeight);
+
+  // Footer text
+  const footerY = HEIGHT - 40;
+  ctx.font = '20px "Latin Modern"';
+  ctx.textAlign = "center";
+  const footerText1 = "June 12-13, 2025, Berlin. ";
+  const footerText2 = "https://protocol.berlin/";
+  // Measure widths
+  const text1Width = ctx.measureText(footerText1).width;
+  const text2Width = ctx.measureText(footerText2).width;
+  // Calculate starting x so the whole footer is centered
+  const totalWidth = text1Width + text2Width;
+  const startX = WIDTH / 2 - totalWidth / 2;
+  // Draw first part (black)
+  ctx.fillStyle = "#111";
+  ctx.textAlign = "left";
+  ctx.fillText(footerText1, startX, footerY);
+  // Draw URL in red
+  ctx.fillStyle = "#a80000";
+  ctx.fillText(footerText2, startX + text1Width, footerY);
+  // Underline the URL
+  const underlineY = footerY;
+  ctx.beginPath();
+  ctx.moveTo(startX + text1Width, underlineY + 2);
+  ctx.lineTo(startX + text1Width + text2Width, underlineY + 2);
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = "#a80000";
+  ctx.stroke();
+  return speakerImgPaths;
 }
 
-async function generateImageForSession(sessionObj) {
+async function generateImageForSingleSpeaker(sessionObj) {
   const { session, speakers } = sessionObj;
-  if (speakers.length !== 1) {
-    throw new Error(`Session ${session.code} has multiple speakers. TODO: handle this case.`);
-  }
   const speaker = speakers[0];
-
-  // Speaker image: always use ../src/images/speakers/{speakerCode}.jpg
-  if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
-  const speakerImgPath = path.join(__dirname, "../src/images/speakers", `${speaker.code}.jpg`);
-  if (!fs.existsSync(speakerImgPath)) {
-    if (speaker.imageUrl) {
-      await downloadImage(speaker.imageUrl, speakerImgPath);
-    } else {
-      // Copy placeholder to speakerImgPath
-      fs.copyFileSync(HALFTONE_AVATAR_PATH, speakerImgPath);
-    }
-  }
-  const imagePath = speakerImgPath;
 
   // Compose image
   const canvas = createCanvas(WIDTH, HEIGHT);
   const ctx = canvas.getContext("2d");
 
-  // Background
-  ctx.fillStyle = "#e6e6e6";
-  ctx.fillRect(0, 0, WIDTH, HEIGHT);
+  const [imagePath] = await prepareImage(ctx, speakers);
 
-  // Speaker image (left, square, grayscale, crop to square)
-  const speakerImg = await loadImage(imagePath);
-  // Crop to square
-  const cropSize = Math.min(speakerImg.width, speakerImg.height);
-  const cropX = (speakerImg.width - cropSize) / 2;
-  const cropY = (speakerImg.height - cropSize) / 2;
-  // Draw cropped square, then grayscale
-  ctx.drawImage(
-    speakerImg,
-    cropX,
-    cropY,
-    cropSize,
-    cropSize, // source crop
-    50,
-    HEIGHT / 2 - SPEAKER_IMG_SIZE / 2,
-    SPEAKER_IMG_SIZE,
-    SPEAKER_IMG_SIZE // dest
-  );
-  // Grayscale the drawn area
-  grayscaleImage(ctx, null, 50, HEIGHT / 2 - SPEAKER_IMG_SIZE / 2, SPEAKER_IMG_SIZE, SPEAKER_IMG_SIZE);
-
-  // Protocol Berg logo (top right)
-  try {
-    const logoImg = await loadImage(LOGO_PATH);
-    const logoWidth = 140;
-    const logoHeight = (logoImg.height / logoImg.width) * logoWidth;
-    ctx.drawImage(logoImg, WIDTH - logoWidth - 20, 20, logoWidth, logoHeight);
-  } catch (e) {
-    console.warn("Could not load logo:", e.message);
-  }
+  // Speaker image (left, square, grayscale, already processed)
+  ctx.drawImage(await loadImage(imagePath), 50, HEIGHT / 2 - SPEAKER_IMG_SIZE / 2, SPEAKER_IMG_SIZE, SPEAKER_IMG_SIZE);
 
   // Text block (right half)
   const textX = SPEAKER_IMG_SIZE + 100;
@@ -170,8 +156,6 @@ async function generateImageForSession(sessionObj) {
   ctx.textBaseline = "top";
   const titleLines = wrapTextLines(ctx, session.title, textWidth);
 
-  // Speaker name (simulate small caps, not bold)
-  ctx.font = '36px "Latin Modern"';
   // Affiliation
   ctx.font = '28px "Latin Modern"';
   const affiliationLines = wrapTextLines(ctx, speaker.affiliation, textWidth);
@@ -200,12 +184,13 @@ async function generateImageForSession(sessionObj) {
   });
   y += 100; // increased gap between title and author+affiliation
 
-  // Draw speaker name (small caps, not bold, bottom-aligned)
-  ctx.font = '36px "Latin Modern"';
+  // Draw speaker name (regular, centered)
+  ctx.font = '32px "Latin Modern"';
   ctx.fillStyle = "#111";
+  ctx.textAlign = "left";
   ctx.textBaseline = "alphabetic";
-  drawSmallCapsName(ctx, speaker.name, textX, y, textWidth);
-  ctx.textBaseline = "top"; // Restore for other text
+  ctx.fillText(speaker.name, textX, y);
+  ctx.textBaseline = "top";
 
   // Draw affiliation immediately after author name
   ctx.font = '24px "Latin Modern"';
@@ -215,40 +200,83 @@ async function generateImageForSession(sessionObj) {
     y += 24 * lineHeightAff;
   });
 
-  // Footer text
-  const footerY = HEIGHT - 60;
-  ctx.font = '20px "Latin Modern"';
-  ctx.textAlign = "center";
-  const footerText1 = "June 12-13, 2025, Berlin. ";
-  const footerText2 = "https://protocol.berlin/";
-  // Measure widths
-  const text1Width = ctx.measureText(footerText1).width;
-  const text2Width = ctx.measureText(footerText2).width;
-  // Calculate starting x so the whole footer is centered
-  const totalWidth = text1Width + text2Width;
-  const startX = WIDTH / 2 - totalWidth / 2;
-  // Draw first part (black)
-  ctx.fillStyle = "#111";
-  ctx.textAlign = "left";
-  ctx.fillText(footerText1, startX, footerY);
-  // Draw URL in red
-  ctx.fillStyle = "#a80000";
-  ctx.fillText(footerText2, startX + text1Width, footerY);
-  // Underline the URL
-  const underlineY = footerY;
-  ctx.beginPath();
-  ctx.moveTo(startX + text1Width, underlineY + 28);
-  ctx.lineTo(startX + text1Width + text2Width, underlineY + 28);
-  ctx.lineWidth = 1;
-  ctx.strokeStyle = "#a80000";
-  ctx.stroke();
-
   // Save image with firstName_announcement.png
   const firstNameForFile = speaker.name
     .replace(/[^a-zA-Z0-9 ]/g, "")
     .trim()
     .split(/\s+/)[0];
   const outPath = path.join(OUTPUT_DIR, `${firstNameForFile}_announcement.png`);
+  fs.writeFileSync(outPath, canvas.toBuffer("image/png"));
+  console.log(`Generated announcement image: ${outPath}`);
+}
+
+async function generateImageForMultipleSpeakers(sessionObj) {
+  const { session, speakers } = sessionObj;
+  if (speakers.length !== 2) throw new Error("Only two speakers supported for now");
+
+  // Compose image
+  const canvas = createCanvas(WIDTH, HEIGHT);
+  const ctx = canvas.getContext("2d");
+
+  // Prepare background, logo, footer, and get image paths
+  const speakerImgPaths = await prepareImage(ctx, speakers);
+
+  // Draw session title above images, centered, smaller font and narrower area
+  const titleY = 70;
+  ctx.font = 'bold 36px "Latin Modern"';
+  ctx.textAlign = "center";
+  ctx.textBaseline = "top";
+  ctx.fillStyle = "#111";
+  const titleAreaWidth = WIDTH - 300;
+  const titleLines = wrapTextLines(ctx, session.title, titleAreaWidth);
+  let y = titleY;
+  titleLines.forEach((line) => {
+    ctx.fillText(line, WIDTH / 2, y);
+    y += 42;
+  });
+
+  // Draw both speaker images, 30% smaller, centered horizontally, below the title
+  const imgDrawSize = SPEAKER_IMG_SIZE * 0.7;
+  const imgSpacing = 40;
+  const totalWidth = 2 * imgDrawSize + imgSpacing;
+  const startX = (WIDTH - totalWidth) / 2;
+  const imgY = y + 30; // add some gap after title
+  for (let i = 0; i < 2; i++) {
+    const img = await loadImage(speakerImgPaths[i]);
+    ctx.drawImage(img, startX + i * (imgDrawSize + imgSpacing), imgY, imgDrawSize, imgDrawSize);
+  }
+
+  // Write each speaker's name and affiliation under their image, centered (no small caps)
+  for (let i = 0; i < 2; i++) {
+    const speaker = speakers[i];
+    const centerX = startX + i * (imgDrawSize + imgSpacing) + imgDrawSize / 2;
+    let textY = imgY + imgDrawSize + 36;
+    // Name (regular, centered)
+    ctx.font = '28px "Latin Modern"';
+    ctx.fillStyle = "#111";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "alphabetic";
+    ctx.fillText(speaker.name, centerX, textY);
+    ctx.textBaseline = "top";
+    // Affiliation (centered, gray)
+    ctx.font = '20px "Latin Modern"';
+    ctx.fillStyle = "#444";
+    const affLines = wrapTextLines(ctx, speaker.affiliation, imgDrawSize - 10);
+    affLines.forEach((line) => {
+      ctx.fillText(line, centerX, textY);
+      textY += 24;
+    });
+  }
+
+  // Save image with both first names
+  const firstNames = speakers.map(
+    (s) =>
+      s.name
+        .replace(/[^a-zA-Z0-9 ]/g, "")
+        .trim()
+        .split(/\s+/)[0]
+  );
+  const outPath = path.join(OUTPUT_DIR, `${firstNames.join("_")}_announcement.png`);
   fs.writeFileSync(outPath, canvas.toBuffer("image/png"));
   console.log(`Generated announcement image: ${outPath}`);
 }
@@ -261,7 +289,13 @@ async function main() {
   }
   unpublished.forEach(async (sessionObj) => {
     try {
-      await generateImageForSession(sessionObj);
+      if (sessionObj.speakers.length === 1) {
+        await generateImageForSingleSpeaker(sessionObj);
+      } else if (sessionObj.speakers.length === 2) {
+        await generateImageForMultipleSpeakers(sessionObj);
+      } else {
+        throw new Error(`Unsupported number of speakers: ${sessionObj.speakers.length}`);
+      }
     } catch (error) {
       console.error(`Failed to generate image for session ${sessionObj.session.code}:`, error);
     }
