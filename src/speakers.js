@@ -5,7 +5,7 @@ const speakers = [
       name: "Aztec Labs",
       url: "https://www.aztec-labs.com/",
     },
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/lisa.jpg",
     twitter: "https://x.com/cryptobuilder_",
     code: "79CGKW",
     acceptedSessions: [
@@ -20,7 +20,7 @@ const speakers = [
     organization: {
       name: "Polkadot Network, Parity Technologies",
     },
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/gavin.jpeg",
     github: "https://github.com/gavofyork",
     code: "TNMM9H",
     acceptedSessions: [
@@ -32,9 +32,9 @@ const speakers = [
   },
   {
     name: "Ann Brody",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/ann.jpg",
     website: "https://annbrody.com/",
-    code: "SS78ZC", // The speaker in the API is "Ann and Costanza"
+    code: "SS78ZC",
     acceptedSessions: [
       {
         code: "JBRYZC",
@@ -44,7 +44,7 @@ const speakers = [
   },
   {
     name: "Molly Mackinlay",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/molly.jpg",
     twitter: "https://twitter.com/momack28",
     code: "F3TDMM",
     acceptedSessions: [],
@@ -55,7 +55,7 @@ const speakers = [
       name: "reality.eth",
       url: "https://reality.eth.limo/",
     },
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/edmund.jpg",
     github: "https://github.com/edmundedgar",
     code: "H3FZNT",
     acceptedSessions: [
@@ -71,7 +71,7 @@ const speakers = [
       name: "University College Dublin",
       url: "https://www.ucd.ie/",
     },
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/paul-dylan.png",
     twitter: "https://x.com/post_polar_",
     code: "L7UVCF",
     acceptedSessions: [
@@ -83,7 +83,7 @@ const speakers = [
   },
   {
     name: "erin",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/erin.jpg",
     organization: {
       name: "Polkadot Network",
       url: "https://polkadot.com/",
@@ -94,14 +94,14 @@ const speakers = [
   },
   {
     name: "Guillaume Ballet",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/guillaume.jpg",
     github: "https://github.com/gballet",
     code: "JZGDSU",
     acceptedSessions: [],
   },
   {
     name: "Manu Alzuru",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/manu.jpg",
     organization: {
       name: "Blockravers & Lovepunks",
     },
@@ -110,13 +110,13 @@ const speakers = [
   },
   {
     name: "Michal Rostecki",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: null,
     code: "L7VGWR",
     acceptedSessions: [],
   },
   {
     name: "Pedro Gomes",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/pedro.jpg",
     organization: {
       name: "WalletConnect Foundation",
     },
@@ -125,8 +125,8 @@ const speakers = [
     acceptedSessions: [],
   },
   {
-    name: "Costanza Gallo", // Name in the API is lowercase
-    image: require("./images/speakers/placeholder.jpg"),
+    name: "Costanza Gallo",
+    image: "./images/speakers/constanza.jpg",
     twitter: "https://x.com/costgallo",
     code: "ZSKWE7",
     acceptedSessions: [
@@ -138,21 +138,21 @@ const speakers = [
   },
   {
     name: "Fatemeh Fannizadeh",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/fatemeh.jpg",
     twitter: "https://x.com/fatalmeh",
     code: "QTXNGK",
     acceptedSessions: [],
   },
   {
     name: "Robert Habermeier",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/robert.jpg",
     github: "https://github.com/rphmeier",
     code: "LZFC3A",
     acceptedSessions: [],
   },
   {
     name: "Wassim Alsindi",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/wassim.jpg",
     organization: {
       name: "0xSalon",
       url: "https://0xsalon.pubpub.org/",
@@ -168,7 +168,7 @@ const speakers = [
   },
   {
     name: "Tim Beiko",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/tim.jpg",
     organization: {
       name: "Ethereum Foundation",
       url: "https://ethereum.foundation/",
@@ -184,7 +184,7 @@ const speakers = [
   },
   {
     name: "Michelle Lee",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/michelle.jpg",
     bluesky: "https://bsky.app/profile/mosh.bsky.social",
     organization: {
       name: "IPFS Foundation",
@@ -194,7 +194,7 @@ const speakers = [
   },
   {
     name: "Jaya Klara Brekke",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/jaya.jpg",
     organization: {
       name: "Nym",
       url: "https://nym.com/",
@@ -204,7 +204,7 @@ const speakers = [
   },
   {
     name: "Hudson Jameson",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/hudson.jpg",
     organization: {
       name: "Polygon, Former EF and Flashbots",
     },
@@ -214,7 +214,7 @@ const speakers = [
   },
   {
     name: "Lefteris Karapetsas",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/lefteris.jpg",
     organization: {
       name: "rotki",
     },
@@ -224,7 +224,7 @@ const speakers = [
   },
   {
     name: "Gajinder",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/gajinder.jpg",
     organization: {
       name: "Zeam, Ethereumjs, Lodestar",
     },
@@ -234,7 +234,7 @@ const speakers = [
   },
   {
     name: "odysseas",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/odysseas.jpg",
     organization: {
       name: "Phylax Systems",
     },
@@ -244,7 +244,7 @@ const speakers = [
   },
   {
     name: "Esad Yusuf Atik",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/esad.jpg",
     organization: {
       name: "Citrea",
     },
@@ -259,7 +259,7 @@ const speakers = [
   },
   {
     name: "Arik Galansky",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/arik.jpg",
     twitter: "https://x.com/arik_g",
     code: "VQAEGL",
     acceptedSessions: [
@@ -271,7 +271,7 @@ const speakers = [
   },
   {
     name: "Axel Eckerbom",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/axel.jpg",
     organization: {
       name: "X1 Labs",
       url: "https://x1.network/",
@@ -287,7 +287,7 @@ const speakers = [
   },
   {
     name: "Casey Carr",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/casey.jpg",
     organization: {
       name: "Diffractions Collective",
     },
@@ -302,7 +302,7 @@ const speakers = [
   },
   {
     name: "Thomas Hsueh",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/thomas.jpg",
     organization: {
       name: "topology.gg",
     },
@@ -312,7 +312,7 @@ const speakers = [
   },
   {
     name: "Frederik Luehrs",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/frederik.jpg",
     organization: {
       name: "Phylax Systems",
     },
@@ -322,7 +322,7 @@ const speakers = [
   },
   {
     name: "Lukas",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/lukas.jpg",
     organization: {
       name: "ZeroSync",
     },
@@ -331,7 +331,7 @@ const speakers = [
   },
   {
     name: "Shawn Tabrizi",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/shawn.jpg",
     organization: {
       name: "Polkadot",
     },
@@ -346,7 +346,7 @@ const speakers = [
   },
   {
     name: "Daniel Norman",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/daniel.jpg",
     organization: {
       name: "Interplanetary Shipyard",
     },
@@ -361,7 +361,7 @@ const speakers = [
   },
   {
     name: "Alejandro Ranchal-Pedrosa",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/alejandro.jpg",
     organization: {
       name: "Scroll",
     },
@@ -375,7 +375,7 @@ const speakers = [
   },
   {
     name: "Bastian Köcher",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/bastian.jpg",
     organization: {
       name: "Polkadot",
     },
@@ -390,7 +390,7 @@ const speakers = [
   },
   {
     name: "Barnabé Monnot",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/barnabe.jpg",
     organization: {
       name: "Ethereum Foundation Research",
     },
@@ -405,7 +405,7 @@ const speakers = [
   },
   {
     name: "Sergey Fedorov",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/sergey.jpg",
     organization: {
       name: "Replica_IO",
     },
@@ -420,7 +420,7 @@ const speakers = [
   },
   {
     name: "Leo Alt",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/leo.jpg",
     organization: {
       name: "powdr labs",
     },
@@ -435,7 +435,7 @@ const speakers = [
   },
   {
     name: "François Garillot",
-    image: require("./images/speakers/placeholder.jpg"),
+    image: "./images/speakers/francois.jpg",
     website: "https://www.garillot.net/",
     code: "HQHFTY",
     acceptedSessions: [
@@ -449,4 +449,4 @@ const speakers = [
 
 const shuffledSpeakers = speakers.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
-export default shuffledSpeakers;
+module.exports = shuffledSpeakers;
