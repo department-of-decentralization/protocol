@@ -18,7 +18,7 @@ function getAlphab(index) {
 
 const Speaker = ({ speaker, index }) => {
   const { twitter, github, website, matrix, farcaster, bluesky, name, image, organization } = speaker;
-  const src = image?.default || speaker?.image || dummySpeaker;
+  const src = image ? image.replace(/^\.\/?/, "/") : dummySpeaker;
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Check if dark mode is active

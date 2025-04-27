@@ -2,7 +2,7 @@ import * as React from "react";
 import refs from "../references";
 import { SEO } from "../components/seo";
 import Speaker from "../components/Speaker";
-import speakers from "../speakers";
+import speakers from "../speakers.json";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import logo from "../images/protocolBerg.png";
 

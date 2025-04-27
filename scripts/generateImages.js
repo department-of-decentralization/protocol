@@ -35,7 +35,7 @@ const WIDTH = 1200;
 const HEIGHT = 675;
 const SPEAKER_IMG_SIZE = 400;
 const LOGO_PATH = path.join(__dirname, "../src/images/protocolBerg.png");
-const HALFTONE_AVATAR_PATH = path.join(__dirname, "../src/images/speakers/halftoneAvatar.png");
+const HALFTONE_AVATAR_PATH = path.join(__dirname, "../static/speakers/halftoneAvatar.png");
 
 async function downloadImage(url, dest) {
   const res = await fetch(url);
@@ -78,7 +78,7 @@ async function prepareImage(ctx, speakers) {
   // Download and process speaker images
   const speakerImgPaths = await Promise.all(
     speakers.map(async (speaker) => {
-      const speakerImgPath = path.join(__dirname, "../src/images/speakers", `${speaker.code}.jpg`);
+      const speakerImgPath = path.join(__dirname, "../static/speakers", `${speaker.code}.jpg`);
       if (!fs.existsSync(speakerImgPath)) {
         let tmpPath;
         if (speaker.imageUrl) {
