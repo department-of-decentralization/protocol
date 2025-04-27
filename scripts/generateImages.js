@@ -281,25 +281,4 @@ async function generateImageForMultipleSpeakers(sessionObj) {
   console.log(`Generated announcement image: ${outPath}`);
 }
 
-async function main() {
-  const unpublished = await fetchUnpublishedSessionsWithSpeakers();
-  if (!unpublished.length) {
-    console.log("No unpublished sessions found.");
-    return;
-  }
-  unpublished.forEach(async (sessionObj) => {
-    try {
-      if (sessionObj.speakers.length === 1) {
-        await generateImageForSingleSpeaker(sessionObj);
-      } else if (sessionObj.speakers.length === 2) {
-        await generateImageForMultipleSpeakers(sessionObj);
-      } else {
-        throw new Error(`Unsupported number of speakers: ${sessionObj.speakers.length}`);
-      }
-    } catch (error) {
-      console.error(`Failed to generate image for session ${sessionObj.session.code}:`, error);
-    }
-  });
-}
-
-main();
+module.exports = { generateImageForSingleSpeaker, generateImageForMultipleSpeakers };

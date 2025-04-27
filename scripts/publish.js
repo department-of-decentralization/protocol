@@ -12,6 +12,7 @@
 const fs = require("fs");
 const path = require("path");
 const { fetchSpeakers, fetchSubmissions } = require("./utils/api");
+const { generateImageForSingleSpeaker, generateImageForMultipleSpeakers } = require("./generateImages");
 
 function getSpeakerField(speaker, questionId) {
   const answerObj = (speaker.answers || []).find((a) => a.question && a.question.id === questionId);
@@ -81,4 +82,61 @@ async function fetchUnpublishedSessionsWithSpeakers() {
   return result;
 }
 
-module.exports = { fetchUnpublishedSessionsWithSpeakers };
+async function main() {
+  const unpublished = await fetchUnpublishedSessionsWithSpeakers();
+  if (!unpublished.length) {
+    console.log("No unpublished sessions found.");
+    return;
+  }
+
+  // Generate images and collect new sessions
+  for (const sessionObj of unpublished) {
+    try {
+      if (sessionObj.speakers.length === 1) {
+        await generateImageForSingleSpeaker(sessionObj);
+      } else {
+        await generateImageForMultipleSpeakers(sessionObj);
+      }
+    } catch (error) {
+      console.error(`Failed to generate image for session ${sessionObj.session.code}:`, error);
+    }
+  }
+
+  // Update speakers.json
+  const speakersJsonPath = path.join(__dirname, "..", "src", "speakers.json");
+  let speakersJson = [];
+  if (fs.existsSync(speakersJsonPath)) {
+    speakersJson = JSON.parse(fs.readFileSync(speakersJsonPath, "utf8"));
+  }
+
+  for (const sessionObj of unpublished) {
+    for (const speaker of sessionObj.speakers) {
+      let speakerEntry = speakersJson.find((sp) => sp.code === speaker.code);
+      if (!speakerEntry) {
+        // Add new speaker
+        speakerEntry = {
+          name: speaker.name,
+          code: speaker.code,
+          image: `./images/speakers/${speaker.code}.jpg`,
+          publishedSessions: [],
+        };
+        speakersJson.push(speakerEntry);
+      }
+      if (!speakerEntry.publishedSessions) speakerEntry.publishedSessions = [];
+      // Avoid duplicate sessions
+      if (!speakerEntry.publishedSessions.some((s) => s.code === sessionObj.session.code)) {
+        speakerEntry.publishedSessions.push({
+          code: sessionObj.session.code,
+          title: sessionObj.session.title,
+        });
+      }
+    }
+  }
+
+  fs.writeFileSync(speakersJsonPath, JSON.stringify(speakersJson, null, 2));
+  console.log("Updated speakers.json with new published sessions.");
+}
+
+if (require.main === module) {
+  main();
+}
