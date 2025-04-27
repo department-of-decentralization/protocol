@@ -45,8 +45,10 @@ async function fetchWithAuth(url, options = {}) {
  * @returns {Promise<Array>} Array of speaker objects
  */
 async function fetchSpeakers() {
+  console.log("Fetching speakers...");
   const response = await fetchWithAuth(`${API_BASE}speakers/?format=json&questions=all&limit=300`);
   const data = await response.json();
+  console.log("Speakers fetched");
   return data.results;
 }
 
@@ -55,8 +57,10 @@ async function fetchSpeakers() {
  * @returns {Promise<Array>} Array of submission objects
  */
 async function fetchSubmissions() {
+  console.log("Fetching submissions...");
   const response = await fetchWithAuth(`${API_BASE}submissions/?format=json&limit=300`);
   const data = await response.json();
+  console.log("Submissions fetched");
   return data.results;
 }
 
