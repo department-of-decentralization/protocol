@@ -4,7 +4,7 @@
 
 require("dotenv").config();
 
-const API_BASE = "https://pretalx.com/api/events/berg2/";
+const API_BASE = "https://talx.dod.ngo/api/events/protocol-berg-v2/";
 
 // Validate environment variables before making any API calls
 function validateEnvironment() {
@@ -45,7 +45,7 @@ async function fetchWithAuth(url, options = {}) {
  * @returns {Promise<Array>} Array of speaker objects
  */
 async function fetchSpeakers() {
-  const response = await fetchWithAuth(`${API_BASE}speakers/`);
+  const response = await fetchWithAuth(`${API_BASE}speakers/?format=json&questions=all&limit=300`);
   const data = await response.json();
   return data.results;
 }
@@ -55,7 +55,7 @@ async function fetchSpeakers() {
  * @returns {Promise<Array>} Array of submission objects
  */
 async function fetchSubmissions() {
-  const response = await fetchWithAuth(`${API_BASE}submissions/`);
+  const response = await fetchWithAuth(`${API_BASE}submissions/?format=json&limit=300`);
   const data = await response.json();
   return data.results;
 }
