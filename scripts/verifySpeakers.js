@@ -1,12 +1,12 @@
 /**
  * Speaker Verification Script
  *
- * This script verifies the consistency between speaker data in src/speakers.js
+ * This script verifies the consistency between speaker data in src/speakers.json
  * and the Protocol Berg v2 API. It performs the following checks:
  *
- * 1. Reads the local speakers.js file
+ * 1. Reads the local speakers.json file
  * 2. Fetches speaker data from the Protocol Berg v2 API
- * 3. For each speaker in speakers.js:
+ * 3. For each speaker in speakers.json:
  *    - Verifies if their code exists in the API
  *    - Checks if the names match between local and API data
  *    - For speakers without codes, checks if a matching code exists in the API
@@ -19,20 +19,9 @@ const path = require("path");
 
 async function verifySpeakers() {
   try {
-    // Read the current speakers.js file
-    const speakersPath = path.join(__dirname, "src", "speakers.js");
-    let speakersContent = fs.readFileSync(speakersPath, "utf8");
-
-    // Remove image imports to avoid require errors
-    speakersContent = speakersContent.replace(/require\(.*?\)/g, "null");
-
-    // Extract the speakers array using a simple regex
-    const speakersMatch = speakersContent.match(/const speakers = (\[[\s\S]*?\]);/);
-    if (!speakersMatch) {
-      throw new Error("Could not find speakers array in speakers.js");
-    }
-
-    const speakers = eval(speakersMatch[1]);
+    // Read the current speakers.json file
+    const speakersPath = path.join(__dirname, "..", "src", "speakers.json");
+    const speakers = JSON.parse(fs.readFileSync(speakersPath, "utf8"));
 
     // Fetch the API data
     const response = await fetch(
@@ -57,7 +46,7 @@ async function verifySpeakers() {
 
     speakers.forEach((speaker) => {
       console.log(`Code: ${speaker.code || "No code"}`);
-      console.log(`Name from speakers.js:\t ${speaker.name}`);
+      console.log(`Name from speakers.json: ${speaker.name}`);
 
       if (speaker.code) {
         const apiSpeaker = apiSpeakersMap.get(speaker.code);
