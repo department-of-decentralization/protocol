@@ -3,7 +3,12 @@
     "name": "Michal Rostecki",
     "image": null,
     "code": "L7VGWR",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "LSQMGS",
+        "title": "IBRL - making Solana (Agave) faster"
+      }
+    ]
   },
   {
     "name": "Lisa Akselrod",
@@ -59,7 +64,16 @@
       "url": "https://nym.com/"
     },
     "code": "YCARUG",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "GT8GUZ",
+        "title": "The Forest That Protects the Public Good: Nym for Libp2p privacy (part2)"
+      },
+      {
+        "code": "GSXXDQ",
+        "title": "Liberating the self from calculation: entropy in privacy enhancing technologies"
+      }
+    ]
   },
   {
     "name": "Hudson Jameson",
@@ -69,7 +83,12 @@
     },
     "twitter": "https://x.com/hudsonjameson",
     "code": "F8CS3J",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "BLKPZA",
+        "title": "Are You Vitalik or Are You My Mom? An In Depth Analysis of Wallet Security Set-ups"
+      }
+    ]
   },
   {
     "name": "Paul Dylan-Ennis",
@@ -110,7 +129,12 @@
     },
     "website": "https://walletconnect.network",
     "code": "SKWGBF",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "XQEZFV",
+        "title": "Two flavors of Smart Sessions: Session Keys vs SubAccounts"
+      }
+    ]
   },
   {
     "name": "Manu Alzuru",
@@ -119,7 +143,12 @@
       "name": "Blockravers & Lovepunks"
     },
     "code": "7LYBNE",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "YXCCST",
+        "title": "Redesigning Governance: Trust Networks, Decentralization, and the Dichotomy of Extremes in Politics"
+      }
+    ]
   },
   {
     "name": "Shawn Tabrizi",
@@ -144,7 +173,12 @@
       "name": "IPFS Foundation"
     },
     "code": "QXANZJ",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "8UJVXD",
+        "title": "IPFS: A Decade in Browsers"
+      }
+    ]
   },
   {
     "name": "odysseas",
@@ -154,14 +188,24 @@
     },
     "twitter": "https://twitter.com/odysseas_eth",
     "code": "CYFQLS",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "ZARDCJ",
+        "title": "Contract-based soft forks: Coining a term in search of hack prevention"
+      }
+    ]
   },
   {
     "name": "Guillaume Ballet",
     "image": "./images/speakers/guillaume.jpg",
     "github": "https://github.com/gballet",
     "code": "JZGDSU",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "G9VARM",
+        "title": "Building zig program for zkvms: a case study with zeam"
+      }
+    ]
   },
   {
     "name": "erin",
@@ -172,7 +216,12 @@
     },
     "twitter": "https://x.com/byteboro",
     "code": "UFZNZQ",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "EZBS39",
+        "title": "Building Testnet Infrastructure (from the ground up)"
+      }
+    ]
   },
   {
     "name": "Frederik Luehrs",
@@ -182,7 +231,12 @@
     },
     "twitter": "https://x.com/FredLuehrs",
     "code": "8Z89AT",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "SNJBB7",
+        "title": "Runtime Assertions: A New Paradigm for Customized Smart Contract Security"
+      }
+    ]
   },
   {
     "name": "Gavin Wood",
@@ -220,14 +274,24 @@
     "image": "./images/speakers/fatemeh.jpg",
     "twitter": "https://x.com/fatalmeh",
     "code": "QTXNGK",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "E7UHVJ",
+        "title": "the economics of freedom"
+      }
+    ]
   },
   {
     "name": "Robert Habermeier",
     "image": "./images/speakers/robert.jpg",
     "github": "https://github.com/rphmeier",
     "code": "LZFC3A",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "RBJ89P",
+        "title": "Scaling Blockchain with SSDs is Smart (and Scaling with RAM is Stupid)"
+      }
+    ]
   },
   {
     "name": "Gajinder",
@@ -237,7 +301,12 @@
     },
     "twitter": "https://x.com/Gajpower",
     "code": "PMDAYM",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "RYELF7",
+        "title": "Workings of Native Rollups and EXECUTE precompile"
+      }
+    ]
   },
   {
     "name": "Sergey Fedorov",
@@ -271,7 +340,12 @@
     "image": "./images/speakers/molly.jpg",
     "twitter": "https://twitter.com/momack28",
     "code": "F3TDMM",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "AKXQTP",
+        "title": "Evolving Filecoin: Strengthening Storage Markets, Incentives, and Network Resilience"
+      }
+    ]
   },
   {
     "name": "Axel Eckerbom",
@@ -309,7 +383,12 @@
     },
     "twitter": "https://x.com/guiltygyoza",
     "code": "QFCEN9",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "V3TSVJ",
+        "title": "Coordination-Avoidance: Rethinking Decentralized Networks Beyond Global Consensus"
+      }
+    ]
   },
   {
     "name": "Tim Beiko",
@@ -335,7 +414,12 @@
     },
     "github": "https://github.com/LefterisJP",
     "code": "S3UTHE",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "QTGAY9",
+        "title": "Privacy ist mir Wurst. I Got Nothing to Hide."
+      }
+    ]
   },
   {
     "name": "Arik Galansky",
@@ -356,7 +440,12 @@
       "name": "ZeroSync"
     },
     "code": "N8HWF7",
-    "acceptedSessions": []
+    "acceptedSessions": [
+      {
+        "code": "VRWUBC",
+        "title": "BitVM Engineering Tales"
+      }
+    ]
   },
   {
     "name": "Costanza Gallo",
