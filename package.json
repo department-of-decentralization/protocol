@@ -16,6 +16,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "canvas": "^3.1.0",
     "gatsby": "^5.7.0",
     "gatsby-plugin-manifest": "^5.7.0",
     "latex.css": "^1.8.0",
