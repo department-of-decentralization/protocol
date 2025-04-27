@@ -16,6 +16,7 @@ const speakers = [
     },
     image: require("./images/speakers/lisa.jpg"),
     twitter: "https://x.com/cryptobuilder_",
+    code: "79CGKW",
   },
   {
     name: "Gavin Wood",
@@ -24,16 +25,19 @@ const speakers = [
     },
     image: require("./images/speakers/gavin.jpeg"),
     github: "https://github.com/gavofyork",
+    code: "TNMM9H",
   },
   {
     name: "Ann Brody",
     image: require("./images/speakers/ann.jpg"),
     website: "https://annbrody.com/",
+    code: "SS78ZC",
   },
   {
     name: "Molly Mackinlay",
     image: require("./images/speakers/molly.jpg"),
     twitter: "https://twitter.com/momack28",
+    code: "F3TDMM",
   },
   {
     name: "Edmund Edgar",
@@ -43,6 +47,7 @@ const speakers = [
     },
     image: require("./images/speakers/edmund.jpg"),
     github: "https://github.com/edmundedgar",
+    code: "H3FZNT",
   },
   // {
   //   name: "Robert Habermeier",
@@ -64,6 +69,7 @@ const speakers = [
     },
     image: require("./images/speakers/paul-dylan.png"),
     twitter: "https://x.com/post_polar_",
+    code: "L7UVCF",
   },
   {
     name: "erin",
@@ -73,11 +79,13 @@ const speakers = [
       url: "https://polkadot.com/",
     },
     twitter: "https://x.com/byteboro",
+    code: "UFZNZQ",
   },
   {
     name: "Guillaume Ballet",
     image: require("./images/speakers/guillaume.jpg"),
     github: "https://github.com/gballet",
+    code: "JZGDSU",
   },
   {
     name: "Manu Alzuru",
@@ -85,10 +93,12 @@ const speakers = [
     organization: {
       name: "Blockravers & Lovepunks",
     },
+    code: "7LYBNE",
   },
   {
     name: "Michal Rostecki",
     image: null,
+    code: "L7VGWR",
   },
   {
     name: "Pedro Gomes",
@@ -97,6 +107,7 @@ const speakers = [
       name: "WalletConnect Foundation",
     },
     website: "https://walletconnect.network",
+    code: "SKWGBF",
   },
   // {
   //   name: "Aliasgar Merchant",
@@ -115,19 +126,22 @@ const speakers = [
   //   twitter: "https://twitter.com/austingriffith",
   // },
   {
-    name: "Constanza Gallo",
+    name: "Costanza Gallo",
     image: require("./images/speakers/constanza.jpg"),
     twitter: "https://x.com/costgallo",
+    code: "ZSKWE7",
   },
   {
     name: "Fatemeh Fannizadeh",
     image: require("./images/speakers/fatemeh.jpg"),
     twitter: "https://x.com/fatalmeh",
+    code: "QTXNGK",
   },
   {
     name: "Robert Habermeier",
     image: require("./images/speakers/robert.jpg"),
     github: "https://github.com/rphmeier",
+    code: "LZFC3A",
   },
   {
     name: "Wassim Alsindi",
@@ -137,6 +151,7 @@ const speakers = [
       url: "https://0xsalon.pubpub.org/",
     },
     website: "https://www.wassim.xyz",
+    code: "CARPLZ",
   },
   {
     name: "Tim Beiko",
@@ -146,6 +161,7 @@ const speakers = [
       url: "https://ethereum.foundation/",
     },
     farcaster: "https://warpcast.com/tim",
+    code: "VMEVD8",
   },
   {
     name: "Michelle Lee",
@@ -154,6 +170,7 @@ const speakers = [
     organization: {
       name: "IPFS Foundation",
     },
+    code: "QXANZJ",
   },
   {
     name: "Jaya Klara Brekke",
@@ -162,6 +179,7 @@ const speakers = [
       name: "Nym",
       url: "https://nym.com/",
     },
+    code: "YCARUG",
   },
   {
     name: "Hudson Jameson",
@@ -170,6 +188,7 @@ const speakers = [
       name: "Polygon, Former EF and Flashbots",
     },
     twitter: "https://x.com/hudsonjameson",
+    code: "F8CS3J",
   },
   {
     name: "Lefteris Karapetsas",
@@ -178,6 +197,7 @@ const speakers = [
       name: "rotki",
     },
     github: "https://github.com/LefterisJP",
+    code: "S3UTHE",
   },
   {
     name: "Gajinder",
@@ -186,6 +206,7 @@ const speakers = [
       name: "Zeam, Ethereumjs, Lodestar",
     },
     twitter: "https://x.com/Gajpower",
+    code: "PMDAYM",
   },
   {
     name: "odysseas",
@@ -194,6 +215,7 @@ const speakers = [
       name: "Phylax Systems",
     },
     twitter: "https://twitter.com/odysseas_eth",
+    code: "CYFQLS",
   },
   {
     name: "Esad Yusuf Atik",
@@ -202,11 +224,13 @@ const speakers = [
       name: "Citrea",
     },
     github: "https://github.com/chainwayxyz/citrea",
+    code: "BYQHEF",
   },
   {
     name: "Arik Galansky",
     image: require("./images/speakers/arik.jpg"),
     twitter: "https://x.com/arik_g",
+    code: "VQAEGL",
   },
   {
     name: "Axel Eckerbom",
@@ -216,6 +240,7 @@ const speakers = [
       url: "https://x1.network/",
     },
     twitter: "https://x.com/ackebom",
+    code: "N8QFVP",
   },
   {
     name: "Casey Carr",
@@ -223,6 +248,7 @@ const speakers = [
     organization: {
       name: "Diffractions Collective",
     },
+    code: "MX9MGS",
   },
   {
     name: "Thomas Hsueh",
@@ -231,6 +257,7 @@ const speakers = [
       name: "topology.gg",
     },
     twitter: "https://x.com/guiltygyoza",
+    code: "QFCEN9",
   },
   {
     name: "Frederik Luehrs",
@@ -239,6 +266,7 @@ const speakers = [
       name: "Phylax Systems",
     },
     twitter: "https://x.com/FredLuehrs",
+    code: "8Z89AT",
   },
   {
     name: "Lukas",
@@ -246,6 +274,7 @@ const speakers = [
     organization: {
       name: "ZeroSync",
     },
+    code: "N8HWF7",
   },
   {
     name: "Shawn Tabrizi",
@@ -254,6 +283,7 @@ const speakers = [
       name: "Polkadot",
     },
     github: "https://github.com/shawntabrizi",
+    code: "7ZGFWB",
   },
   {
     name: "Daniel Norman",
@@ -262,6 +292,7 @@ const speakers = [
       name: "Interplanetary Shipyard",
     },
     website: "https://ipshipyard.com/",
+    code: "GT9CJP",
   },
   {
     name: "Alejandro Ranchal-Pedrosa",
@@ -269,6 +300,7 @@ const speakers = [
     organization: {
       name: "Scroll",
     },
+    code: "CH3MTN",
   },
   {
     name: "Bastian Köcher",
@@ -277,6 +309,7 @@ const speakers = [
       name: "Polkadot",
     },
     twitter: "https://x.com/bkchr",
+    code: "KQ7ERU",
   },
   {
     name: "Barnabé Monnot",
@@ -285,6 +318,7 @@ const speakers = [
       name: "Ethereum Foundation Research",
     },
     twitter: "https://x.com/barnabemonnot",
+    code: "XTVGXJ",
   },
   {
     name: "Sergey Fedorov",
@@ -293,6 +327,7 @@ const speakers = [
       name: "Replica_IO",
     },
     github: "https://github.com/sergefdrv",
+    code: "UQP3UF",
   },
   {
     name: "Leo Alt",
@@ -301,11 +336,13 @@ const speakers = [
       name: "powdr labs",
     },
     twitter: "https://twitter.com/leonardoalt",
+    code: "ZUNRYM",
   },
   {
     name: "François Garillot",
     image: require("./images/speakers/francois.jpg"),
     website: "https://www.garillot.net/",
+    code: "HQHFTY",
   },
 ];
 const shuffledSpeakers = speakers.sort(() => (Math.random() > 0.5 ? 1 : -1));
