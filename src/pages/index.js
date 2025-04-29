@@ -188,11 +188,13 @@ const IndexPage = () => {
         </h3>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {speakers.map((speaker, index) => (
-              <div className="text-center" key={index}>
-                <Speaker speaker={speaker} index={index} />
-              </div>
-            ))}
+            {[...speakers] // sort speakers randomly
+              .sort(() => Math.random() - 0.5)
+              .map((speaker, index) => (
+                <div className="text-center" key={speaker.code}>
+                  <Speaker speaker={speaker} index={index} />
+                </div>
+              ))}
           </div>
           <div className="flex items-center justify-center text-lg">
             <p>Figure 1: Speakers of Protocol Berg, 2025. </p>

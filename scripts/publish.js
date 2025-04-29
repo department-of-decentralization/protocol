@@ -120,7 +120,24 @@ async function main() {
           image: speaker.imageUrl ? `/speakers/${speaker.code}.jpg` : null,
           publishedSessions: [],
         };
+        if (speaker.affiliation) {
+          speakerEntry.organization = { name: speaker.affiliation };
+        }
         speakersJson.push(speakerEntry);
+      }
+      if (speaker.socialLink) {
+        const url = speaker.socialLink;
+        if (url.includes("twitter.com") || url.includes("x.com")) {
+          speakerEntry.twitter = url;
+        } else if (url.includes("github.com")) {
+          speakerEntry.github = url;
+        } else if (url.includes("warpcast.com") || url.includes("farcaster")) {
+          speakerEntry.farcaster = url;
+        } else if (url.includes("bsky.app")) {
+          speakerEntry.bluesky = url;
+        } else {
+          speakerEntry.website = url; // Default to website if no other match
+        }
       }
       if (!speakerEntry.publishedSessions) speakerEntry.publishedSessions = [];
       // Avoid duplicate sessions

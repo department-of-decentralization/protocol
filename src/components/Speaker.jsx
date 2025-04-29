@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import dummySpeaker from "../images/speakers/halftoneAvatar.png";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiMatrix, SiFarcaster, SiBluesky } from "react-icons/si";
+import { SiFarcaster, SiBluesky } from "react-icons/si";
 
 function getAlphab(index) {
   if (index < 0) {
@@ -17,7 +17,7 @@ function getAlphab(index) {
 }
 
 const Speaker = ({ speaker, index }) => {
-  const { twitter, github, website, matrix, farcaster, bluesky, name, image, organization } = speaker;
+  const { twitter, github, website, farcaster, bluesky, name, image, organization } = speaker;
   const src = image ? image.replace(/^\.\/?/, "/") : dummySpeaker;
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -78,11 +78,6 @@ const Speaker = ({ speaker, index }) => {
           {website && (
             <a href={website} rel="noopener noreferrer" target="_blank">
               <FaGlobe className={iconClass} />
-            </a>
-          )}
-          {matrix && (
-            <a href={"https://matrix.to/#/" + matrix} rel="noopener noreferrer" target="_blank">
-              <SiMatrix className={iconClass} />
             </a>
           )}
           {farcaster && (
