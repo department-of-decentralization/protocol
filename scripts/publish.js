@@ -11,6 +11,8 @@
 
 const fs = require("fs");
 const path = require("path");
+const readline = require("readline");
+const { spawn } = require("child_process");
 const { fetchSpeakers, fetchSubmissions } = require("./utils/api");
 const { generateImageForSingleSpeaker, generateImageForMultipleSpeakers } = require("./generateImages");
 
@@ -82,7 +84,7 @@ async function fetchUnpublishedSessionsWithSpeakers() {
   return result;
 }
 
-const updateSpeakersJson = (speakersJson, speaker) => {
+const updateSpeakersJson = (speakersJson, speaker, sessionObj) => {
   let speakerEntry = speakersJson.find((sp) => sp.code === speaker.code);
   if (!speakerEntry) {
     // Add new speaker
@@ -121,35 +123,153 @@ const updateSpeakersJson = (speakersJson, speaker) => {
   }
 };
 
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+const promptUser = (question) => {
+  return new Promise((resolve) => {
+    rl.question(question, (answer) => {
+      resolve(answer);
+    });
+  });
+};
+
+let userEditor = null;
+
+const editInEditor = async (content) => {
+  const tmpFile = path.join(__dirname, "tmp_session.json");
+  fs.writeFileSync(tmpFile, JSON.stringify(content, null, 2));
+
+  // Use the user's chosen editor, fallback to environment, then vim
+  const editor = userEditor || process.env.EDITOR || "vim";
+
+  return new Promise((resolve, reject) => {
+    const child = spawn(editor, [tmpFile], {
+      stdio: "inherit",
+    });
+
+    child.on("exit", () => {
+      try {
+        const modified = JSON.parse(fs.readFileSync(tmpFile, "utf8"));
+        fs.unlinkSync(tmpFile);
+        resolve(modified);
+      } catch (e) {
+        fs.unlinkSync(tmpFile);
+        reject(e);
+      }
+    });
+  });
+};
+
 async function main() {
+  // Ask for editor preference at the start
+  userEditor = await promptUser(
+    "Which editor would you like to use for modifying sessions? (vim/code/sublime/atom/other - press enter for system default): "
+  );
+
+  if (userEditor.trim() === "") {
+    userEditor = null; // Will use system default
+  } else if (userEditor === "code") {
+    userEditor = "code --wait"; // VS Code needs --wait flag
+  }
+
   const unpublished = await fetchUnpublishedSessionsWithSpeakers();
   if (!unpublished.length) {
     console.log("No unpublished sessions found.");
+    rl.close();
     return;
   }
-  // Update speakers.json
+
+  // First show all sessions
+  console.log("\nFound the following unpublished sessions:");
+  unpublished.forEach((sessionObj, index) => {
+    console.log(`\n[${index + 1}/${unpublished.length}]:`);
+    console.log(JSON.stringify(sessionObj, null, 2));
+  });
+
+  const answer = await promptUser("\nWould you like to modify any sessions before processing? (y/n): ");
+
   const speakersJsonPath = path.join(__dirname, "..", "src", "speakers.json");
   let speakersJson = [];
   if (fs.existsSync(speakersJsonPath)) {
     speakersJson = JSON.parse(fs.readFileSync(speakersJsonPath, "utf8"));
   }
 
-  for (const sessionObj of unpublished) {
-    // Generate images of unpublished sessions
-    if (sessionObj.speakers.length === 1) {
-      await generateImageForSingleSpeaker(sessionObj);
-    } else {
-      await generateImageForMultipleSpeakers(sessionObj);
-    }
+  if (answer.toLowerCase() === "y") {
+    // Go through each session with modification options
+    for (let i = 0; i < unpublished.length; i++) {
+      const sessionObj = unpublished[i];
+      console.log(`\nProcessing session [${i + 1}/${unpublished.length}]:`);
+      console.log(JSON.stringify(sessionObj, null, 2));
 
-    // Update speakers.json
-    for (const speaker of sessionObj.speakers) {
-      updateSpeakersJson(speakersJson, speaker, sessionObj);
+      const action = await promptUser(
+        "\nWould you like to:\n" +
+          "1. Process this session as is\n" +
+          "2. Skip this session\n" +
+          "3. Modify this session\n" +
+          "Choose (1/2/3): "
+      );
+
+      if (action === "2") {
+        console.log("Skipping session...");
+        continue;
+      }
+
+      if (action === "3") {
+        console.log("Opening session in editor...");
+        try {
+          const modified = await editInEditor(sessionObj);
+          Object.assign(sessionObj, modified);
+          console.log("Session updated successfully.");
+        } catch (e) {
+          console.error("Invalid JSON. Using original session.");
+        }
+      }
+
+      try {
+        if (sessionObj.speakers.length === 1) {
+          await generateImageForSingleSpeaker(sessionObj);
+        } else {
+          await generateImageForMultipleSpeakers(sessionObj);
+        }
+
+        for (const speaker of sessionObj.speakers) {
+          updateSpeakersJson(speakersJson, speaker, sessionObj);
+        }
+      } catch (error) {
+        console.error(`Error processing session ${sessionObj.session.code}:`, error);
+        const retry = await promptUser("Would you like to retry this session? (y/n): ");
+        if (retry.toLowerCase() === "y") {
+          i--; // Retry this session
+        }
+      }
+    }
+  } else {
+    // Process all sessions without modification
+    console.log("\nProcessing all sessions...");
+    for (const sessionObj of unpublished) {
+      try {
+        if (sessionObj.speakers.length === 1) {
+          await generateImageForSingleSpeaker(sessionObj);
+        } else {
+          await generateImageForMultipleSpeakers(sessionObj);
+        }
+
+        for (const speaker of sessionObj.speakers) {
+          updateSpeakersJson(speakersJson, speaker, sessionObj);
+        }
+        console.log(`Processed session: ${sessionObj.session.code}`);
+      } catch (error) {
+        console.error(`Error processing session ${sessionObj.session.code}:`, error);
+      }
     }
   }
 
   fs.writeFileSync(speakersJsonPath, JSON.stringify(speakersJson, null, 2));
   console.log("Updated speakers.json with new published sessions.");
+  rl.close();
 }
 
 if (require.main === module) {
