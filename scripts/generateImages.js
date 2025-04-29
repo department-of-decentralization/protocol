@@ -221,14 +221,19 @@ async function generateImageForMultipleSpeakers(sessionObj) {
   // Prepare background, logo, footer, and get image paths
   const speakerImgPaths = await prepareImage(ctx, speakers);
 
-  // Draw session title above images, centered, smaller font and narrower area
-  const titleY = 70;
+  // Calculate title lines first to determine margin
   ctx.font = 'bold 36px "Latin Modern"';
   ctx.textAlign = "center";
   ctx.textBaseline = "top";
   ctx.fillStyle = "#111";
   const titleAreaWidth = WIDTH - 300;
   const titleLines = wrapTextLines(ctx, session.title, titleAreaWidth);
+
+  // Add margin based on number of lines (32px for one line, 64px for two or more)
+  const topMargin = titleLines.length > 1 ? 48 : 24;
+  const titleY = 70 + topMargin;
+
+  // Draw title with the calculated margin
   let y = titleY;
   titleLines.forEach((line) => {
     ctx.fillText(line, WIDTH / 2, y);

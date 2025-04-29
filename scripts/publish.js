@@ -165,8 +165,9 @@ const editInEditor = async (content) => {
 
 async function main() {
   // Ask for editor preference at the start
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   userEditor = await promptUser(
-    "Which editor would you like to use for modifying sessions? (vim/code/sublime/atom/other - press enter for system default): "
+    "\n\nWhich editor would you like to use for modifying sessions? (vim/code/sublime/atom/other - press enter for system default): "
   );
 
   if (userEditor.trim() === "") {
