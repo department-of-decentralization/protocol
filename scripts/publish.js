@@ -82,26 +82,51 @@ async function fetchUnpublishedSessionsWithSpeakers() {
   return result;
 }
 
+const updateSpeakersJson = (speakersJson, speaker) => {
+  let speakerEntry = speakersJson.find((sp) => sp.code === speaker.code);
+  if (!speakerEntry) {
+    // Add new speaker
+    speakerEntry = {
+      name: speaker.name,
+      code: speaker.code,
+      image: speaker.imageUrl ? `/speakers/${speaker.code}.jpg` : null,
+      publishedSessions: [],
+    };
+    if (speaker.affiliation) {
+      speakerEntry.organization = { name: speaker.affiliation };
+    }
+    speakersJson.push(speakerEntry);
+  }
+  if (speaker.socialLink) {
+    const url = speaker.socialLink;
+    if (url.includes("twitter.com") || url.includes("x.com")) {
+      speakerEntry.twitter = url;
+    } else if (url.includes("github.com")) {
+      speakerEntry.github = url;
+    } else if (url.includes("warpcast.com") || url.includes("farcaster")) {
+      speakerEntry.farcaster = url;
+    } else if (url.includes("bsky.app")) {
+      speakerEntry.bluesky = url;
+    } else {
+      speakerEntry.website = url; // Default to website if no other match
+    }
+  }
+  if (!speakerEntry.publishedSessions) speakerEntry.publishedSessions = [];
+  // Avoid duplicate sessions
+  if (!speakerEntry.publishedSessions.some((s) => s.code === sessionObj.session.code)) {
+    speakerEntry.publishedSessions.push({
+      code: sessionObj.session.code,
+      title: sessionObj.session.title,
+    });
+  }
+};
+
 async function main() {
   const unpublished = await fetchUnpublishedSessionsWithSpeakers();
   if (!unpublished.length) {
     console.log("No unpublished sessions found.");
     return;
   }
-
-  // Generate images and collect new sessions
-  for (const sessionObj of unpublished) {
-    try {
-      if (sessionObj.speakers.length === 1) {
-        await generateImageForSingleSpeaker(sessionObj);
-      } else {
-        await generateImageForMultipleSpeakers(sessionObj);
-      }
-    } catch (error) {
-      console.error(`Failed to generate image for session ${sessionObj.session.code}:`, error);
-    }
-  }
-
   // Update speakers.json
   const speakersJsonPath = path.join(__dirname, "..", "src", "speakers.json");
   let speakersJson = [];
@@ -110,43 +135,16 @@ async function main() {
   }
 
   for (const sessionObj of unpublished) {
+    // Generate images of unpublished sessions
+    if (sessionObj.speakers.length === 1) {
+      await generateImageForSingleSpeaker(sessionObj);
+    } else {
+      await generateImageForMultipleSpeakers(sessionObj);
+    }
+
+    // Update speakers.json
     for (const speaker of sessionObj.speakers) {
-      let speakerEntry = speakersJson.find((sp) => sp.code === speaker.code);
-      if (!speakerEntry) {
-        // Add new speaker
-        speakerEntry = {
-          name: speaker.name,
-          code: speaker.code,
-          image: speaker.imageUrl ? `/speakers/${speaker.code}.jpg` : null,
-          publishedSessions: [],
-        };
-        if (speaker.affiliation) {
-          speakerEntry.organization = { name: speaker.affiliation };
-        }
-        speakersJson.push(speakerEntry);
-      }
-      if (speaker.socialLink) {
-        const url = speaker.socialLink;
-        if (url.includes("twitter.com") || url.includes("x.com")) {
-          speakerEntry.twitter = url;
-        } else if (url.includes("github.com")) {
-          speakerEntry.github = url;
-        } else if (url.includes("warpcast.com") || url.includes("farcaster")) {
-          speakerEntry.farcaster = url;
-        } else if (url.includes("bsky.app")) {
-          speakerEntry.bluesky = url;
-        } else {
-          speakerEntry.website = url; // Default to website if no other match
-        }
-      }
-      if (!speakerEntry.publishedSessions) speakerEntry.publishedSessions = [];
-      // Avoid duplicate sessions
-      if (!speakerEntry.publishedSessions.some((s) => s.code === sessionObj.session.code)) {
-        speakerEntry.publishedSessions.push({
-          code: sessionObj.session.code,
-          title: sessionObj.session.title,
-        });
-      }
+      updateSpeakersJson(speakersJson, speaker, sessionObj);
     }
   }
 
