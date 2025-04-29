@@ -532,5 +532,325 @@
         "title": "Swarming by the STIX: Exploring decentralized Traffic Light Protocol (TLP) and Semaphore for Spyware Honeytrapper indicator-sharing in highly-surveilled environments"
       }
     ]
+  },
+  {
+    "name": "Sergei Tikhomirov",
+    "code": "73S8YB",
+    "image": "/speakers/73S8YB.jpg",
+    "publishedSessions": [
+      {
+        "code": "NGJRRR",
+        "title": "Waku Service Marketplace: Decentralized Infrastructure for dApps"
+      }
+    ],
+    "organization": {
+      "name": "Waku"
+    },
+    "website": "https://s-tikhomirov.github.io/about/"
+  },
+  {
+    "name": "José Pedro Sousa",
+    "code": "HAFEPA",
+    "image": "/speakers/HAFEPA.jpg",
+    "publishedSessions": [
+      {
+        "code": "U8E93M",
+        "title": "Learn Noir in an Afternoon (Or Your Money Back)"
+      }
+    ],
+    "organization": {
+      "name": "Aztec Labs"
+    },
+    "github": "https://github.com/signorecello"
+  },
+  {
+    "name": "Dennis Trautwein",
+    "code": "BDZGLT",
+    "image": "/speakers/BDZGLT.jpg",
+    "publishedSessions": [
+      {
+        "code": "HPXLCR",
+        "title": "The surprising challenges of counting nodes"
+      }
+    ],
+    "organization": {
+      "name": "ProbeLab"
+    },
+    "github": "https://github.com/dennis-tra"
+  },
+  {
+    "name": "Alexander Herrmann",
+    "code": "RHMJPM",
+    "image": null,
+    "publishedSessions": [
+      {
+        "code": "ZZD9LC",
+        "title": "Synchronized Priority Auctions"
+      }
+    ],
+    "website": "https://www.linkedin.com/in/alexander-herrmann-a98573a5/"
+  },
+  {
+    "name": "Vijay Krishnavanshi",
+    "code": "NA3QK9",
+    "image": "/speakers/NA3QK9.jpg",
+    "publishedSessions": [
+      {
+        "code": "TLAYTK",
+        "title": "Multi agentic architecture on top of p2p infra"
+      }
+    ],
+    "github": "https://github.com/vijaykrishnavanshi"
+  },
+  {
+    "name": "Boris Godlin",
+    "code": "DJ7QAA",
+    "image": "/speakers/DJ7QAA.jpg",
+    "publishedSessions": [
+      {
+        "code": "R73NJP",
+        "title": "Integrating Blockchain Data into AI Agents"
+      }
+    ],
+    "organization": {
+      "name": "Representing DevRel"
+    }
+  },
+  {
+    "name": "Thomas Pani",
+    "code": "NPFFLH",
+    "image": "/speakers/NPFFLH.jpg",
+    "publishedSessions": [
+      {
+        "code": "ZKLDUM",
+        "title": "25-Minute Solidity Fuzzer: Fuzzing Smarter, Not Harder"
+      }
+    ],
+    "organization": {
+      "name": "blltprf.xyz"
+    },
+    "website": "https://blltprf.xyz/"
+  },
+  {
+    "name": "Tess Rinearson",
+    "code": "EU3CJ3",
+    "image": "/speakers/EU3CJ3.jpg",
+    "publishedSessions": [
+      {
+        "code": "DERHGL",
+        "title": "Building for Core Devs: How OP Labs Accelerates Protocol Engineering"
+      }
+    ],
+    "organization": {
+      "name": "OP Labs / Optimism"
+    },
+    "twitter": "http://twitter.com/_tessr"
+  },
+  {
+    "name": "Pavel Bautista",
+    "code": "HVCQ7M",
+    "image": "/speakers/HVCQ7M.jpg",
+    "publishedSessions": [
+      {
+        "code": "N9WYVH",
+        "title": "Monitoring Ethereum’s Beacon Chain: A DEFCON Alert System for Safety and Liveness"
+      }
+    ],
+    "organization": {
+      "name": "MigaLabs"
+    }
+  },
+  {
+    "name": "Ira Nezhynska",
+    "code": "9PPFWN",
+    "image": "/speakers/9PPFWN.jpg",
+    "publishedSessions": [
+      {
+        "code": "9TCAGF",
+        "title": "How to turn strangers into early adopters when they don't understand your tech"
+      }
+    ],
+    "organization": {
+      "name": "Creative Director"
+    },
+    "website": "https://nezhynska.com"
+  },
+  {
+    "name": "Tino Breddin",
+    "code": "VBA97D",
+    "image": "/speakers/VBA97D.jpg",
+    "publishedSessions": [
+      {
+        "code": "QB3QFF",
+        "title": "Fast-track workshop: Running a HOPR node and using the GnosisVPN PoC"
+      }
+    ],
+    "organization": {
+      "name": "HOPR Association"
+    },
+    "github": "https://github.com/tolbrino"
+  },
+  {
+    "name": "Ekaterina Riazantseva",
+    "code": "PYRMPX",
+    "image": "/speakers/PYRMPX.jpg",
+    "publishedSessions": [
+      {
+        "code": "AVUSNW",
+        "title": "Standardizing Ethereum metrics: PeerDAS and FOCIL retrospective"
+      }
+    ],
+    "github": "https://github.com/KatyaRyazantseva"
+  },
+  {
+    "name": "Andrej Berlin",
+    "code": "WQE7P8",
+    "image": "/speakers/WQE7P8.jpg",
+    "publishedSessions": [
+      {
+        "code": "YFGBSW",
+        "title": "Designing Protocols for a New Social Fabric"
+      }
+    ],
+    "organization": {
+      "name": "Deep Work"
+    },
+    "twitter": "https://twitter.com/kischiman"
+  },
+  {
+    "name": "Beth McCarthy",
+    "code": "N7VMZ8",
+    "image": "/speakers/N7VMZ8.jpg",
+    "publishedSessions": [
+      {
+        "code": "YFGBSW",
+        "title": "Designing Protocols for a New Social Fabric"
+      }
+    ],
+    "organization": {
+      "name": "Funding the Commons, LayerLabs (layer.xyz)"
+    },
+    "twitter": "https://x.com/ontologymachine"
+  },
+  {
+    "name": "Madvi",
+    "code": "X8VGR9",
+    "image": "/speakers/X8VGR9.jpg",
+    "publishedSessions": [
+      {
+        "code": "BXTKTW",
+        "title": "Coordination as Intelligence: Envisioning Open Learning"
+      }
+    ],
+    "organization": {
+      "name": "Co-founder Newfoundation"
+    },
+    "website": "https://madvi.xyz/bio"
+  },
+  {
+    "name": "Warren Winter",
+    "code": "RWCS3S",
+    "image": "/speakers/RWCS3S.jpg",
+    "publishedSessions": [
+      {
+        "code": "T8RDUS",
+        "title": "Mapping and Funding Our Dependencies in Open Knowledge"
+      }
+    ],
+    "organization": {
+      "name": "Drips"
+    }
+  },
+  {
+    "name": "Aron Soos",
+    "code": "EB8S8R",
+    "image": null,
+    "publishedSessions": [
+      {
+        "code": "SAY8FU",
+        "title": "How to Decentralize Any Front-End"
+      }
+    ]
+  },
+  {
+    "name": "Norbert Vadas",
+    "code": "N8NADW",
+    "image": "/speakers/N8NADW.jpg",
+    "publishedSessions": [
+      {
+        "code": "GUX8EZ",
+        "title": "Economic security behind ZK proof generation"
+      }
+    ],
+    "organization": {
+      "name": "ZkCloud built by Gevulot Labs."
+    },
+    "website": "https://www.linkedin.com/in/norbert-vadas-1b32b9242/"
+  },
+  {
+    "name": "DistributedDoge",
+    "code": "WEUW9R",
+    "image": "/speakers/WEUW9R.jpg",
+    "publishedSessions": [
+      {
+        "code": "B89VJS",
+        "title": "Datadex Pattern: Collect and share protocol-level metrics"
+      }
+    ]
+  },
+  {
+    "name": "Lukas Rajnoha",
+    "code": "RRTWX9",
+    "image": "/speakers/RRTWX9.jpg",
+    "publishedSessions": [
+      {
+        "code": "RRXKL7",
+        "title": "The Art of Manually Guided Fuzzing"
+      }
+    ],
+    "organization": {
+      "name": "Ackee Blockchain Security"
+    },
+    "twitter": "https://x.com/soyrubioeth"
+  },
+  {
+    "name": "Michal Převrátil",
+    "code": "ES3VQL",
+    "image": "/speakers/ES3VQL.jpg",
+    "publishedSessions": [
+      {
+        "code": "RRXKL7",
+        "title": "The Art of Manually Guided Fuzzing"
+      }
+    ],
+    "organization": {
+      "name": "Ackee Blockchain Security"
+    }
+  },
+  {
+    "name": "Teresa Carballo",
+    "code": "EKWPTX",
+    "image": "/speakers/EKWPTX.jpg",
+    "publishedSessions": [
+      {
+        "code": "PGWYAG",
+        "title": "Not your vote, not your lawyer: Delegation and the Legal Challenges"
+      }
+    ],
+    "organization": {
+      "name": "Pacífica Legal"
+    },
+    "twitter": "https://x.com/teresacd"
+  },
+  {
+    "name": "Zimt",
+    "code": "7YGDN7",
+    "image": "/speakers/7YGDN7.jpg",
+    "publishedSessions": [
+      {
+        "code": "PGWYAG",
+        "title": "Not your vote, not your lawyer: Delegation and the Legal Challenges"
+      }
+    ]
   }
 ]

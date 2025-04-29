@@ -1,0 +1,16 @@
+{
+  "session": {
+    "code": "NGJRRR",
+    "title": "Waku Service Marketplace: Decentralized Infrastructure for dApps",
+    "state": "confirmed"
+  },
+  "speakers": [
+    {
+      "name": "Sergei Tikhomirov",
+      "code": "73S8YB",
+      "imageUrl": "https://cfp.protocol.berlin/media/avatars/73S8YB_f7NDSlG.jpeg",
+      "affiliation": "Waku",
+      "socialLink": "https://s-tikhomirov.github.io/about/"
+    }
+  ]
+}
