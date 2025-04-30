@@ -852,5 +852,565 @@
         "title": "Not your vote, not your lawyer: Delegation and the Legal Challenges"
       }
     ]
+  },
+  {
+    "name": "Nitya Subramanian",
+    "code": "XVW8JJ",
+    "image": "/speakers/XVW8JJ.jpg",
+    "publishedSessions": [
+      {
+        "code": "VKXMYH",
+        "title": "Key Management Mechanisms and their UX Properties"
+      }
+    ],
+    "organization": {
+      "name": "Para- getpara.com"
+    },
+    "twitter": "https://x.com/_nityas"
+  },
+  {
+    "name": "basti",
+    "code": "7V8RLX",
+    "image": "/speakers/7V8RLX.jpg",
+    "publishedSessions": [
+      {
+        "code": "GE9YUM",
+        "title": "Golden Raspberry Awards Of Ethereum Scaling 2025"
+      }
+    ],
+    "organization": {
+      "name": "L2BEAT.com"
+    },
+    "github": "https://github.com/sekuba"
+  },
+  {
+    "name": "Konrad Urban",
+    "code": "VP8SZW",
+    "image": "/speakers/VP8SZW.jpg",
+    "publishedSessions": [
+      {
+        "code": "BMFNEV",
+        "title": "When Help Hurts: Why a Friendly Government is a Threat to Crypto"
+      }
+    ],
+    "organization": {
+      "name": "Peanut Protocol"
+    },
+    "website": "https://kkonrad.com/"
+  },
+  {
+    "name": "Misha Komarov",
+    "code": "3PNFPB",
+    "image": "/speakers/3PNFPB.jpg",
+    "publishedSessions": [
+      {
+        "code": "YQGMLC",
+        "title": "Bitcoin PIPEs: ZK-Proofs and Covenants without Protocol Changes"
+      }
+    ],
+    "organization": {
+      "name": "[[alloc] init] Cryptography Research & Development"
+    },
+    "twitter": "https://x.com/nemothenoone"
+  },
+  {
+    "name": "viktor tron",
+    "code": "BJSQWF",
+    "image": "/speakers/BJSQWF.jpg",
+    "publishedSessions": [
+      {
+        "code": "TV3VT3",
+        "title": "Non-local redundancy: Erasure coding and dispersed replicas for robust retrieval in the Swarm peer-to-peer network"
+      }
+    ],
+    "organization": {
+      "name": "Swarm Foundation"
+    },
+    "website": "https://ethswarm.org"
+  },
+  {
+    "name": "Jim Posen",
+    "code": "FVVXBD",
+    "image": "/speakers/FVVXBD.jpg",
+    "publishedSessions": [
+      {
+        "code": "FLVGYT",
+        "title": "A Functional VM for Verifiable Computing over Binary Fields"
+      }
+    ],
+    "organization": {
+      "name": "Irreducible"
+    },
+    "github": "https://github.com/jimpo-ulvt"
+  },
+  {
+    "name": "Vasco Santos",
+    "code": "FCGZAM",
+    "image": "/speakers/FCGZAM.jpg",
+    "publishedSessions": [
+      {
+        "code": "QXXDPU",
+        "title": "Off-the-shelf Trustless HTTP Server for Content-Addressable Data"
+      }
+    ],
+    "github": "https://github.com/vasco-santos"
+  },
+  {
+    "name": "Christopher Goes",
+    "code": "U9LQDF",
+    "image": "/speakers/U9LQDF.jpg",
+    "publishedSessions": [
+      {
+        "code": "NYZMG9",
+        "title": "What would it really mean to build a world computer?"
+      }
+    ],
+    "organization": {
+      "name": "Anoma"
+    },
+    "website": "https://pluranimity.org/"
+  },
+  {
+    "name": "Ori Shimony",
+    "code": "NBRWTB",
+    "image": "/speakers/NBRWTB.jpg",
+    "publishedSessions": [
+      {
+        "code": "PS773B",
+        "title": "DeCom - Building the Infrastructure for Decentralized Commerce"
+      }
+    ],
+    "organization": {
+      "name": "Ethereum Foundation (Research Fellow)"
+    },
+    "twitter": "https://x.com/orishim"
+  },
+  {
+    "name": "Soares Chen",
+    "code": "UHE8HR",
+    "image": "/speakers/UHE8HR.jpg",
+    "publishedSessions": [
+      {
+        "code": "SS8RQ7",
+        "title": "How to use context-generic types to enforce correctness of multi-chain client applications in Rust"
+      }
+    ],
+    "organization": {
+      "name": "Informal Systems"
+    },
+    "website": "https://contextgeneric.dev/"
+  },
+  {
+    "name": "Phil Ngo",
+    "code": "WL3PME",
+    "image": "/speakers/WL3PME.jpg",
+    "publishedSessions": [
+      {
+        "code": "9ZTAYZ",
+        "title": "How client diversity saved Holesky: Lessons for the future"
+      }
+    ],
+    "organization": {
+      "name": "Lodestar/ChainSafe"
+    },
+    "twitter": "https://x.com/philngo_"
+  },
+  {
+    "name": "nflaig",
+    "code": "DZBYYC",
+    "image": "/speakers/DZBYYC.jpg",
+    "publishedSessions": [
+      {
+        "code": "9ZTAYZ",
+        "title": "How client diversity saved Holesky: Lessons for the future"
+      }
+    ],
+    "organization": {
+      "name": "Lodestar"
+    },
+    "github": "https://github.com/nflaig"
+  },
+  {
+    "name": "Victor Grishchenko",
+    "code": "ECJSXL",
+    "image": "/speakers/ECJSXL.jpg",
+    "publishedSessions": [
+      {
+        "code": "EGUXVT",
+        "title": "Can we do better than git's Merkle DAG?"
+      }
+    ],
+    "organization": {
+      "name": "researcher, consultant"
+    },
+    "github": "https://github.com/gritzko/librdx/"
+  },
+  {
+    "name": "Masih Derkani",
+    "code": "SHDBWW",
+    "image": "/speakers/SHDBWW.jpg",
+    "publishedSessions": [
+      {
+        "code": "XTZ3CE",
+        "title": "From Hours to Minutes: The Journey of Fast Finality on Filecoin"
+      }
+    ],
+    "website": "https://derkani.org/"
+  },
+  {
+    "name": "Josh Bowen",
+    "code": "RPY8ZR",
+    "image": "/speakers/RPY8ZR.jpg",
+    "publishedSessions": [
+      {
+        "code": "UMVBGD",
+        "title": "Comparing transaction submission pipelines of different blockchains (Ethereum, Solana, Monad, Astria)"
+      }
+    ],
+    "organization": {
+      "name": "Founder of Astria"
+    },
+    "twitter": "https://x.com/Jskybowen"
+  },
+  {
+    "name": "Samuel JJ Gosling",
+    "code": "J8VU3Z",
+    "image": "/speakers/J8VU3Z.jpg",
+    "publishedSessions": [
+      {
+        "code": "AHJH7K",
+        "title": "Quad-linear Voting (QLV)"
+      }
+    ],
+    "organization": {
+      "name": "Independent"
+    },
+    "github": "https://github.com/deomaius"
+  },
+  {
+    "name": "Aata Hokoridani",
+    "code": "HLTZVN",
+    "image": "/speakers/HLTZVN.jpg",
+    "publishedSessions": [
+      {
+        "code": "33YVDT",
+        "title": "StorageBeat: An Evaluation Framework for Storage Services"
+      }
+    ],
+    "organization": {
+      "name": "Shtuka Research"
+    },
+    "website": "https://shtuka.io"
+  },
+  {
+    "name": "Nadiem Sissouno",
+    "code": "BCEDEW",
+    "image": "/speakers/BCEDEW.jpg",
+    "publishedSessions": [
+      {
+        "code": "FT9DGG",
+        "title": "Rethinking Competition Models in Solver-Based Protocols"
+      }
+    ],
+    "organization": {
+      "name": "Chainsafe (Sprinter)"
+    },
+    "website": "https://de.linkedin.com/in/nadiem-sissouno-66004197"
+  },
+  {
+    "name": "Alexander Mueller",
+    "code": "AE7VYW",
+    "image": "/speakers/AE7VYW.jpg",
+    "publishedSessions": [
+      {
+        "code": "FT9DGG",
+        "title": "Rethinking Competition Models in Solver-Based Protocols"
+      }
+    ]
+  },
+  {
+    "name": "Nina Barbakadze",
+    "code": "FXQV9E",
+    "image": null,
+    "publishedSessions": [
+      {
+        "code": "PJRZYJ",
+        "title": "ZK: Accelerating DA Interop"
+      }
+    ]
+  },
+  {
+    "name": "Savio",
+    "code": "LBR9HV",
+    "image": "/speakers/LBR9HV.jpg",
+    "publishedSessions": [
+      {
+        "code": "CBJK8S",
+        "title": "Welcome to Noirland"
+      }
+    ],
+    "organization": {
+      "name": "Aztec Labs"
+    },
+    "twitter": "https://x.com/Savio_Sou_"
+  },
+  {
+    "name": "Johannes Kühlewindt",
+    "code": "SJJPFL",
+    "image": "/speakers/SJJPFL.jpg",
+    "publishedSessions": [
+      {
+        "code": "LHLZT9",
+        "title": "Moderation is not a bad word: Towards Decentralised Content Moderation in P2P-Networks"
+      }
+    ],
+    "organization": {
+      "name": "radicle.xyz"
+    },
+    "bluesky": "https://bsky.app/profile/kuehlewindt.com"
+  },
+  {
+    "name": "Aayush Gupta",
+    "code": "W7KVPA",
+    "image": "/speakers/W7KVPA.jpg",
+    "publishedSessions": [
+      {
+        "code": "WWSQU7",
+        "title": "Programmable Provenance with ZK Email and Proteus: Whistleblowing, Deepfake Detection, and More"
+      }
+    ],
+    "organization": {
+      "name": "Steward at ZK Email"
+    },
+    "website": "https://aayushg.com"
+  },
+  {
+    "name": "Andreas Erwig",
+    "code": "NCDSLJ",
+    "image": "/speakers/NCDSLJ.jpg",
+    "publishedSessions": [
+      {
+        "code": "HNX89Z",
+        "title": "The Holy Trinity of Censorship Resistance in Ethereum"
+      }
+    ],
+    "organization": {
+      "name": "Shutter Network"
+    },
+    "twitter": "https://x.com/ShutterNetwork"
+  },
+  {
+    "name": "Luis Bezzenberger",
+    "code": "UZYNLU",
+    "image": null,
+    "publishedSessions": [
+      {
+        "code": "HNX89Z",
+        "title": "The Holy Trinity of Censorship Resistance in Ethereum"
+      }
+    ]
+  },
+  {
+    "name": "Nick Almond",
+    "code": "UZJULB",
+    "image": "/speakers/UZJULB.jpg",
+    "publishedSessions": [
+      {
+        "code": "HHPWP8",
+        "title": "F**k Off!: What if we forked crypto?"
+      }
+    ],
+    "organization": {
+      "name": "Factory Labs"
+    },
+    "twitter": "https://x.com/DrNickA"
+  },
+  {
+    "name": "Marius",
+    "code": "LDYWCB",
+    "image": "/speakers/LDYWCB.jpg",
+    "publishedSessions": [
+      {
+        "code": "78HCMY",
+        "title": "Geth AMA"
+      }
+    ],
+    "organization": {
+      "name": "EF"
+    }
+  },
+  {
+    "name": "lightclient",
+    "code": "X78RLZ",
+    "image": "/speakers/X78RLZ.jpg",
+    "publishedSessions": [
+      {
+        "code": "78HCMY",
+        "title": "Geth AMA"
+      }
+    ]
+  },
+  {
+    "name": "Ellie Davidson",
+    "code": "TMSHF7",
+    "image": "/speakers/TMSHF7.jpg",
+    "publishedSessions": [
+      {
+        "code": "MWXD9H",
+        "title": "DA Layers vs. Confirmation Layers vs. Settlement Layers - Have we all just built the same thing?"
+      }
+    ],
+    "organization": {
+      "name": "Espresso Systems"
+    },
+    "twitter": "https://x.com/ellierdavidson"
+  },
+  {
+    "name": "Lefteris Kokoris Kogias",
+    "code": "ENPK8C",
+    "image": "/speakers/ENPK8C.jpg",
+    "publishedSessions": [
+      {
+        "code": "BDJX8M",
+        "title": "Walrus: An Efficient Decentralized Storage Network"
+      }
+    ],
+    "organization": {
+      "name": "MystenLabs"
+    },
+    "website": "https://lefkok.github.io/"
+  },
+  {
+    "name": "Trent",
+    "code": "B3HWUY",
+    "image": "/speakers/B3HWUY.jpg",
+    "publishedSessions": [
+      {
+        "code": "XEFYMB",
+        "title": "Long term capture risks in Ethereum"
+      }
+    ],
+    "organization": {
+      "name": "Protocol Guild"
+    },
+    "website": "https://trent.mirror.xyz/"
+  },
+  {
+    "name": "Andrew Macpherson",
+    "code": "QXHVQP",
+    "image": "/speakers/QXHVQP.jpg",
+    "publishedSessions": [
+      {
+        "code": "S9JXTZ",
+        "title": "Reward and resource sharing mechanisms in decentralised storage"
+      }
+    ],
+    "organization": {
+      "name": "Shtuka Research"
+    },
+    "website": "https://shtuka.io"
+  },
+  {
+    "name": "rodiazet",
+    "code": "CDK9WM",
+    "image": "/speakers/CDK9WM.jpg",
+    "publishedSessions": [
+      {
+        "code": "CPCEHY",
+        "title": "EVMMAX - Fast modular arithmetic in EVM"
+      }
+    ],
+    "organization": {
+      "name": "EF-ipsilon"
+    },
+    "website": "https://ipsilon.xyz"
+  },
+  {
+    "name": "Leo BG",
+    "code": "LUM37K",
+    "image": "/speakers/LUM37K.jpg",
+    "publishedSessions": [
+      {
+        "code": "ABAEUK",
+        "title": "At the Intersection of Data Availability Sampling and Sharded Mempools"
+      }
+    ],
+    "organization": {
+      "name": "MigaLabs"
+    },
+    "website": "https://migalabs.io"
+  },
+  {
+    "name": "Raluca Diugan",
+    "code": "ZUCVDJ",
+    "image": "/speakers/ZUCVDJ.jpg",
+    "publishedSessions": [
+      {
+        "code": "TTSAWE",
+        "title": "Mechanisms for Unlocking Idle Blobspace"
+      }
+    ],
+    "organization": {
+      "name": "=nil; Foundation"
+    }
+  },
+  {
+    "name": "Diogo Ribeiro",
+    "code": "FKQP9B",
+    "image": "/speakers/FKQP9B.jpg",
+    "publishedSessions": [
+      {
+        "code": "WXWDQB",
+        "title": "Designing Decentralized Storage: Without Better UX, Decentralization Remains an Underutilized Alternative"
+      }
+    ],
+    "organization": {
+      "name": "Chainsafe/Sprinter"
+    },
+    "twitter": "https://x.com/diogoaribeiro"
+  },
+  {
+    "name": "Mikel Cortes",
+    "code": "7ARZQP",
+    "image": "/speakers/7ARZQP.jpg",
+    "publishedSessions": [
+      {
+        "code": "J8LEBQ",
+        "title": "The eternal research of broadcasting messages, the limits of GossipSub"
+      }
+    ],
+    "organization": {
+      "name": "ProbeLab"
+    },
+    "github": "https://github.com/cortze"
+  },
+  {
+    "name": "Georgy",
+    "code": "AWD3GP",
+    "image": "/speakers/AWD3GP.jpg",
+    "publishedSessions": [
+      {
+        "code": "DVHMGY",
+        "title": "Blockchain Ethics: Pure Reason or Pure Madness?"
+      }
+    ],
+    "organization": {
+      "name": "Inria / Rennes University"
+    }
+  },
+  {
+    "name": "Mf",
+    "code": "AJQA7B",
+    "image": "/speakers/AJQA7B.jpg",
+    "publishedSessions": [
+      {
+        "code": "PUHVJ7",
+        "title": "the new Cypherpunk generation"
+      }
+    ],
+    "organization": {
+      "name": "Web3Privacy Now"
+    },
+    "website": "https://michiel.degruytere.com"
   }
 ]
