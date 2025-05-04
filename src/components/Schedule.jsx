@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ReactModal from "react-modal";
 import Speaker from "./Speaker";
+import { marked } from "marked";
 import "../styles/modal.css";
 
 const SCHEDULE_LINK = "https://cfp.protocol.berlin/protocol-berg-v2/schedule/export/schedule.json";
@@ -164,17 +165,21 @@ const EventContainer = ({ event, eventStyle, speakers }) => {
           {event?.abstract && (
             <div>
               <h2 className="text-lg text-center">Abstract</h2>
-              <div className="text-sm text-justify" style={{ wordBreak: "break-word" }}>
-                {event.abstract}
-              </div>
+              <div
+                className="text-sm text-justify markdown-content"
+                style={{ wordBreak: "break-word" }}
+                dangerouslySetInnerHTML={{ __html: marked(event.abstract) }}
+              />
             </div>
           )}
           {description && (
             <div>
               <h2 className="text-lg text-center">Description</h2>
-              <div className="text-sm text-justify" style={{ wordBreak: "break-word" }}>
-                {description}
-              </div>
+              <div
+                className="text-sm text-justify markdown-content"
+                style={{ wordBreak: "break-word" }}
+                dangerouslySetInnerHTML={{ __html: marked(description) }}
+              />
             </div>
           )}
           {event.logo && (
