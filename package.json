@@ -35,6 +35,6 @@
     "gatsby-plugin-postcss": "^6.7.0",
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.4.17"
   }
 }
