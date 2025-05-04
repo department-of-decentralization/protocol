@@ -368,8 +368,14 @@ const Schedule = ({ isDarkMode, speakers }) => {
           <button
             key={`day-${index}`}
             onClick={() => setShowDay(index)}
-            className={`px-4 py-2 rounded ${
-              showDay === index ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-800"
+            className={`px-4 py-2 rounded transition-all duration-200 ${
+              showDay === index
+                ? isDarkMode
+                  ? "bg-sky-300 text-black shadow-md"
+                  : "bg-red-800 text-white shadow-md"
+                : isDarkMode
+                ? "bg-gray-700 text-gray-300 hover:bg-gray-600 opacity-60 hover:opacity-80"
+                : "bg-gray-200 text-gray-800 hover:bg-gray-300 opacity-70 hover:opacity-90"
             }`}
           >
             Day {index + 1} -{" "}
