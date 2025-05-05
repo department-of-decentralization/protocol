@@ -141,6 +141,9 @@ const IndexPage = () => {
               <li>
                 <a href="#imprint">4.3 Impressum</a>
               </li>
+              <li>
+                <a href="#privacy">4.4 Privacy Policy</a>
+              </li>
             </ul>
           </li>
         </ol>
@@ -354,6 +357,12 @@ const IndexPage = () => {
           Goerli Dezentral gGmbH is a charitable, non-profit organization serving tax-privileged purposes, according to
           the articles of association. The organization meets the statutory requirements under &sect;&sect; 51, 59, 60,
           and 61 AO in Germany.
+        </p>
+        <h3 className="font-bold" id="privacy">
+          4.4 Privacy Policy
+        </h3>
+        <p>
+          You can read our detailed privacy policy at <a href="/privacy">protocol.berlin/privacy</a>.
         </p>
       </section>
       <footer className="footnotes mt-8 break-all">
