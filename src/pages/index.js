@@ -144,6 +144,9 @@ const IndexPage = () => {
               <li>
                 <a href="#privacy">4.4 Privacy Policy</a>
               </li>
+              <li>
+                <a href="#conduct">4.5 Code of Conduct</a>
+              </li>
             </ul>
           </li>
         </ol>
@@ -363,6 +366,12 @@ const IndexPage = () => {
         </h3>
         <p>
           You can read our detailed privacy policy at <a href="/privacy">protocol.berlin/privacy</a>.
+        </p>
+        <h3 className="font-bold" id="conduct">
+          4.5 Code of Conduct
+        </h3>
+        <p>
+          All attendees have to adhere to the event's <a href="/conduct">Code of Conduct</a>.
         </p>
       </section>
       <footer className="footnotes mt-8 break-all">
