@@ -47,6 +47,17 @@ const PrivacyPage = () => {
         </ul>
         <h3 className="font-bold">Sharing your data</h3>
         <p>We don't pass on your information to anyone.</p>
+        <p>The following services are granted access to our user data on request:</p>
+        <ul>
+          <li>
+            Zupass is used to provide cryptographic credentials to allow you to use
+            tailored services. Therefore, Zupass is privileged to query your email address
+            and ticket status from ETHBerlin if you intend to use their services.{" "}
+            <a href="https://zupass.org/#/terms">
+              Zupass Privacy Notice
+            </a>.
+          </li>
+        </ul>
         <h3 className="font-bold">Transferring your data outside of the EU</h3>
         <p>
           The Department of Decentralization is based in Germany. Your data, will be processed and collected in Europe
