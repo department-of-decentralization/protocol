@@ -106,10 +106,10 @@ const IndexPage = () => {
           </li>
           <ul className="pl-6">
             <li>
-              <a href="#speakers">1.1 Speakers</a>
+              <a href="#schedule">1.1 Schedule</a>
             </li>
             <li>
-              <a href="#schedule">1.2 Schedule</a>
+              <a href="#speakers">1.2 Speakers</a>
             </li>
           </ul>
           <li>
@@ -188,7 +188,7 @@ const IndexPage = () => {
           .
         </p>
         <h3 className="font-bold mt-8" id="schedule">
-          1.2 Schedule
+          1.1 Schedule
         </h3>
         <div className="mt-4">
           <Schedule isDarkMode={isDarkMode} speakers={speakers} />
@@ -197,7 +197,7 @@ const IndexPage = () => {
           </div>
         </div>
         <h3 className="font-bold" id="speakers">
-          1.1 Speakers
+          1.2 Speakers
         </h3>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
