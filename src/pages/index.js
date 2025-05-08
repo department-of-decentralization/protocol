@@ -2,6 +2,7 @@ import * as React from "react";
 import refs from "../references";
 import { SEO } from "../components/seo";
 import Speaker from "../components/Speaker";
+import Schedule from "../components/Schedule";
 import speakers from "../speakers.json";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import logo from "../images/protocolBerg.png";
@@ -105,7 +106,10 @@ const IndexPage = () => {
           </li>
           <ul className="pl-6">
             <li>
-              <a href="#speakers">1.1 Speakers</a>
+              <a href="#schedule">1.1 Schedule</a>
+            </li>
+            <li>
+              <a href="#speakers">1.2 Speakers</a>
             </li>
           </ul>
           <li>
@@ -189,8 +193,17 @@ const IndexPage = () => {
           </a>
           .
         </p>
+        <h3 className="font-bold mt-8" id="schedule">
+          1.1 Schedule
+        </h3>
+        <div className="mt-4">
+          <Schedule isDarkMode={isDarkMode} speakers={speakers} />
+          <div className="flex items-center justify-center text-lg mt-4">
+            <p>Figure 1: Schedule of Protocol Berg, 2025. </p>
+          </div>
+        </div>
         <h3 className="font-bold" id="speakers">
-          1.1 Speakers
+          1.2 Speakers
         </h3>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -203,7 +216,7 @@ const IndexPage = () => {
               ))}
           </div>
           <div className="flex items-center justify-center text-lg">
-            <p>Figure 1: Speakers of Protocol Berg, 2025. </p>
+            <p>Figure 2: Speakers of Protocol Berg, 2025. </p>
           </div>
         </div>
       </section>
