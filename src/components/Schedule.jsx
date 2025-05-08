@@ -87,8 +87,8 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
   return (
     <>
       <div
-        className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer px-4 ${
-          isShort ? "py-1" : "py-4"
+        className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer  ${
+          isShort ? "px-3 py-1" : "px-4 py-4"
         } box-border ${backgroundColor} ${textColor} leading-4 overflow-auto`}
         onClick={handleOpenModal}
         style={eventStyle}
@@ -98,10 +98,24 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
             {event.type} ({totalMinutesDuraation}min)
           </div>
         )}
-        <div className="text-[0.6rem]">
-          {event.start} - {eventEndHour + ":" + eventEndMinute} {isShort && "(10min short talk)"}
+        <div className="flex justify-between items-center text-[0.6rem]">
+          {event.start} - {eventEndHour + ":" + eventEndMinute} {isShort && "(10min short talk)"}{" "}
+          {isShort && (
+            <span className={`text-[0.45rem] ${trackFontColor}`}>
+              {" "}
+              <b>{event.track}</b>
+            </span>
+          )}
         </div>
-        <div className={`font-bold ${isMinimal || isShort ? "text-[0.75rem] line-clamp-2" : "mt-2 text-[0.85rem]"}`}>
+        <div
+          className={`font-bold ${
+            isMinimal || isShort
+              ? "text-[0.75rem] line-clamp-2"
+              : event.title.length > 70 && event.type === "Presentation: Standard"
+              ? "mt-2 text-[0.7rem]"
+              : "mt-2 text-[0.85rem]"
+          }`}
+        >
           {event.title}
         </div>
         <div className={`text-[0.75rem] mb-2`}>{event.persons.map((person) => person.public_name).join(", ")} </div>
