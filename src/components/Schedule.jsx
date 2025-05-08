@@ -22,7 +22,7 @@ const TOTAL_CELLS = CONF_DURATION_MINUTES / 5;
 
 const COLUMN_WIDTH_TW_STYLE = "min-w-[220px]";
 
-const EventContainer = ({ event, eventStyle, speakers }) => {
+const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const hoursDuration = parseInt(event.duration.split(":")[0]);
   const minutesDuration = parseInt(event.duration.split(":")[1]);
@@ -122,22 +122,25 @@ const EventContainer = ({ event, eventStyle, speakers }) => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(255, 255, 255, 0.5)",
+            backgroundColor: isDarkMode ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.5)",
           },
           content: {
             zIndex: 40,
-            backgroundColor: "rgba(180, 180, 180, 0.95)",
+            backgroundColor: isDarkMode ? "rgba(30, 30, 30, 0.95)" : "rgba(180, 180, 180, 0.95)",
             margin: "auto",
           },
         }}
         overlayClassName="flex items-center z-40 px-4 md:px-16 lg:px-32 xl:px-48 transition-all duration-200 ease-in-out py-8 max-h-screen"
-        className="flex flex-col items-center justify-center max-h-full"
+        className={`flex flex-col items-center justify-center max-h-full ${isDarkMode ? "text-gray-200" : ""}`}
         shouldCloseOnEsc={true}
         shouldCloseOnOverlayClick={true}
         onRequestClose={handleCloseModal}
       >
-        <div className="p-8 overflow-auto max-w-[600px]">
-          <div className="font-sans tetext-lg text-link p-1 cursor-pointer text-left" onClick={handleCloseModal}>
+        <div className={`p-8 overflow-auto max-w-[600px] ${isDarkMode ? "text-gray-200" : ""}`}>
+          <div
+            className={`font-sans tetext-lg ${isDarkMode ? "text-gray-200" : "text-link"} p-1 cursor-pointer text-left`}
+            onClick={handleCloseModal}
+          >
             X
           </div>
           <div className="text-lg font-bold text-center">{event.title}</div>
@@ -166,7 +169,7 @@ const EventContainer = ({ event, eventStyle, speakers }) => {
             <div>
               <h2 className="text-lg text-center">Abstract</h2>
               <div
-                className="text-sm text-justify markdown-content"
+                className={`text-sm text-justify markdown-content ${isDarkMode ? "text-gray-200" : ""}`}
                 style={{ wordBreak: "break-word" }}
                 dangerouslySetInnerHTML={{ __html: marked(event.abstract) }}
               />
@@ -176,7 +179,7 @@ const EventContainer = ({ event, eventStyle, speakers }) => {
             <div>
               <h2 className="text-lg text-center">Description</h2>
               <div
-                className="text-sm text-justify markdown-content"
+                className={`text-sm text-justify markdown-content ${isDarkMode ? "text-gray-200" : ""}`}
                 style={{ wordBreak: "break-word" }}
                 dangerouslySetInnerHTML={{ __html: marked(description) }}
               />
@@ -420,7 +423,7 @@ const Schedule = ({ isDarkMode, speakers }) => {
                     key={`room-col-${i}`}
                   >
                     {dayRooms[room].map((event, j) => {
-                      return placeEventOnSchedule(event, schedule.conference.timeslot_duration, speakers);
+                      return placeEventOnSchedule(event, schedule.conference.timeslot_duration, speakers, isDarkMode);
                     })}
                   </div>
                 );
@@ -437,7 +440,7 @@ const Schedule = ({ isDarkMode, speakers }) => {
   );
 };
 
-const placeEventOnSchedule = (event, timeslotDuration, speakers) => {
+const placeEventOnSchedule = (event, timeslotDuration, speakers, isDarkMode) => {
   const { start, duration } = event;
   const end = addTimes(start, duration);
   const eventDurationMinutes = parseInt(duration.split(":")[0]) * 60 + parseInt(duration.split(":")[1]);
@@ -462,7 +465,7 @@ const placeEventOnSchedule = (event, timeslotDuration, speakers) => {
     top: eventOffsetPixels,
   };
 
-  return <EventContainer event={event} eventStyle={eventStyle} speakers={speakers} />;
+  return <EventContainer event={event} eventStyle={eventStyle} speakers={speakers} isDarkMode={isDarkMode} />;
 };
 
 // Via ChatGPT
