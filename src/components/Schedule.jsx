@@ -3,6 +3,9 @@ import ReactModal from "react-modal";
 import Speaker from "./Speaker";
 import { marked } from "marked";
 import "../styles/modal.css";
+import { IoCloseOutline } from "react-icons/io5";
+import { IoMdCloseCircle } from "react-icons/io";
+import { MdOutlineCloseFullscreen } from "react-icons/md";
 
 const SCHEDULE_LINK = "https://cfp.protocol.berlin/protocol-berg-v2/schedule/export/schedule.json";
 
@@ -150,13 +153,7 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
         shouldCloseOnOverlayClick={true}
         onRequestClose={handleCloseModal}
       >
-        <div className={`p-8 overflow-auto max-w-[600px] ${isDarkMode ? "text-gray-200" : ""}`}>
-          <div
-            className={`font-sans tetext-lg ${isDarkMode ? "text-gray-200" : "text-link"} p-1 cursor-pointer text-left`}
-            onClick={handleCloseModal}
-          >
-            X
-          </div>
+        <div className={`p-8 overflow-auto max-w-[600px] relative ${isDarkMode ? "text-gray-200" : ""}`}>
           <div className="text-lg font-bold text-center">{event.title}</div>
           <div className="text-center">{event.room}</div>
           <div className="text-base text-center">
@@ -208,6 +205,16 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
               />
             </div>
           )}
+          <div className="fixed bottom-1 right-1 flex justify-center">
+            <button
+              onClick={handleCloseModal}
+              className={`px-3 py-1 shadow-lg transition-all duration-200 text-sm flex items-center gap-1 ${
+                isDarkMode ? "bg-gray-700 text-white hover:bg-gray-600" : "bg-red-800 text-white hover:bg-red-700"
+              }`}
+            >
+              <MdOutlineCloseFullscreen className="text-lg" /> Close
+            </button>
+          </div>
         </div>
       </ReactModal>
     </>
