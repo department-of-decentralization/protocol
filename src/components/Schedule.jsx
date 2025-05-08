@@ -366,7 +366,7 @@ const Schedule = ({ isDarkMode, speakers }) => {
   return (
     <div>
       {/* Day selector */}
-      <div className="flex justify-center mb-4 space-x-4">
+      <div className="flex flex-col sm:flex-row justify-center mb-4 space-y-2 sm:space-y-0 sm:space-x-4">
         {conferenceDays.map((day, index) => (
           <button
             key={`day-${index}`}
@@ -382,7 +382,7 @@ const Schedule = ({ isDarkMode, speakers }) => {
             }`}
           >
             Day {index + 1} -{" "}
-            {new Date(day.date).toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })}
+            {new Date(day.date).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}
           </button>
         ))}
       </div>
@@ -491,9 +491,9 @@ const generateTimeIntervals = (start, end, interval) => {
         style={{
           height: CELL_HEIGHT,
         }}
-        className={`text-center text-base px-2 pt-2 ${currentMinute % 15 === 0 ? "border-b border-gray-300" : ""} ${
-          isPastTime(formattedHour + ":" + formattedMinute) ? "opacity-50" : ""
-        }`}
+        className={`flex items-end text-center text-xs sm:text-xs md:text-base px-1 sm:px-2 pt-1 sm:pt-2 ${
+          currentMinute % 15 === 0 ? "border-b border-gray-300" : ""
+        } ${isPastTime(formattedHour + ":" + formattedMinute) ? "opacity-50" : ""}`}
         key={`time-${formattedHour}-${formattedMinute}`}
       >
         {currentMinute % 15 === 0 ? `${formattedHour}:${formattedMinute}` : ""}
