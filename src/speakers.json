@@ -1413,5 +1413,16 @@
       "name": "Web3Privacy Now"
     },
     "website": "https://michiel.degruytere.com"
+  },
+  {
+    "name": "Marc Harvey-Hill",
+    "code": "QCUENV",
+    "image": null,
+    "publishedSessions": [
+      {
+        "code": "HNX89Z",
+        "title": "The Holy Trinity of Censorship Resistance in Ethereum"
+      }
+    ]
   }
 ]
