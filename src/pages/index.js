@@ -196,6 +196,13 @@ const IndexPage = () => {
         <h3 className="font-bold mt-8" id="schedule">
           1.1 Schedule
         </h3>
+        <p>
+          For the pretalx view of the schedule, please check:{" "}
+          <br />
+          <a href="https://sched.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
+            sched.protocol.berlin
+          </a>
+        </p>
         <div className="mt-4">
           <Schedule isDarkMode={isDarkMode} speakers={speakers} />
           <div className="flex items-center justify-center text-lg mt-4">
