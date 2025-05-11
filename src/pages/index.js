@@ -239,7 +239,7 @@ const IndexPage = () => {
         <h3 className="font-bold" id="cfp-volunteers">
           2.2 <s>Volunteers</s>
         </h3>
-        <p>Volunteer applicaitons has been closed. Thanks to everyone who volunteered!</p>
+        <p>Volunteer applications has been closed. Thanks to everyone who volunteered!</p>
         <h3 className="font-bold" id="cfp-attendees">
           2.3 Attendees
         </h3>
