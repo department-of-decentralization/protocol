@@ -343,21 +343,12 @@ const Schedule = ({ isDarkMode, speakers }) => {
       const dayDate = new Date(conferenceDays[showDay].date).toISOString().split("T")[0];
 
       if (eventDate === dayDate) {
-        // If this is a workshop, ensure it's in the workshop room
-        if (event.type.toLowerCase().includes("workshop")) {
-          // Add to workshop room regardless of assigned room
-          if (!dayRooms["9 - Workshop"]) {
-            dayRooms["9 - Workshop"] = [];
-          }
-          dayRooms["9 - Workshop"].push({ ...event, room: "9 - Workshop" });
-        } else {
-          // Add to the room specified in the event
-          if (dayRooms[event.room]) {
-            dayRooms[event.room].push(event);
-          } else if (event.room !== "4 - Do not use") {
-            // If the room doesn't exist yet, create it (as long as it's not the "do not use" room)
-            dayRooms[event.room] = [event];
-          }
+        // Add to the room specified in the event
+        if (dayRooms[event.room]) {
+          dayRooms[event.room].push(event);
+        } else if (event.room !== "4 - Do not use") {
+          // If the room doesn't exist yet, create it (as long as it's not the "do not use" room)
+          dayRooms[event.room] = [event];
         }
       }
     });
