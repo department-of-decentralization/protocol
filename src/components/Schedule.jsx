@@ -157,6 +157,9 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
           <div className="text-lg font-bold text-center">{event.title}</div>
           <div className="text-center">{event.room}</div>
           <div className="text-base text-center">
+            {new Date(event.date).toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })}
+          </div>
+          <div className="text-base text-center">
             {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
           </div>
           <div className="text-[0.7rem] text-center">
