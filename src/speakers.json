@@ -1424,5 +1424,87 @@
         "title": "The Holy Trinity of Censorship Resistance in Ethereum"
       }
     ]
+  },
+  {
+    "name": "Nikita Polianskii",
+    "code": "DEH7TR",
+    "image": "/speakers/DEH7TR.jpg",
+    "publishedSessions": [
+      {
+        "code": "XA7EHJ",
+        "title": "Starfish: push-based dissemination can be efficient on uncertified DAG"
+      }
+    ],
+    "organization": {
+      "name": "IOTA Foundation"
+    }
+  },
+  {
+    "name": "Matthew Stephenson",
+    "code": "YVD9LG",
+    "image": null,
+    "publishedSessions": [
+      {
+        "code": "HGXBJH",
+        "title": "Veiled Oracles: A fair, liveness-preserving method for enshrined information feeds"
+      }
+    ]
+  },
+  {
+    "name": "Joel Thorstensson",
+    "code": "EQKXSR",
+    "image": "/speakers/EQKXSR.jpg",
+    "publishedSessions": [
+      {
+        "code": "FUQJNX",
+        "title": "Making dapps censorship resistant"
+      }
+    ],
+    "website": "https://dapprank.eth.link"
+  },
+  {
+    "name": "István András Seres",
+    "code": "URTNMK",
+    "image": "/speakers/URTNMK.jpg",
+    "publishedSessions": [
+      {
+        "code": "GM38KT",
+        "title": "Forking the RANDAO: Manipulating Ethereum’s Distributed Randomness Beacon"
+      }
+    ],
+    "organization": {
+      "name": "Eötvös Loránd University"
+    },
+    "twitter": "https://x.com/Istvan_A_Seres"
+  },
+  {
+    "name": "zygis",
+    "code": "FSXTKF",
+    "image": "/speakers/FSXTKF.jpg",
+    "publishedSessions": [
+      {
+        "code": "MPJKLF",
+        "title": "testing in production: gathering actually useful data"
+      }
+    ],
+    "organization": {
+      "name": "interchain labs"
+    },
+    "twitter": "https://twitter.com/magelinskaas"
+  },
+  {
+    "name": "Jeff Strnad",
+    "code": "3D9DPR",
+    "image": "/speakers/3D9DPR.jpg",
+    "publishedSessions": [
+      {
+        "code": "FG3P9B",
+        "title": "Delegation and Participation in  Decentralized Governance: An Epistemic View"
+      }
+    ],
+    "organization": {
+      "name": "Stanford University"
+    },
+    "website": "https://www.linkedin.com/in/jeff-strnad-2b15137b"
   }
 ]
