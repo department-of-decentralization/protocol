@@ -215,7 +215,7 @@ const IndexPage = () => {
           1.2 Speakers
         </h3>
         <div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
             {[...speakers] // sort speakers randomly
               .sort(() => Math.random() - 0.5)
               .map((speaker, index) => (

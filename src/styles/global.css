@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Mobile padding */
-/* body {
-  padding: 2.5rem 0.5rem !important;
-} */
+body {
+  max-width: 55rem !important;
+}
