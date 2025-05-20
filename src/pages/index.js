@@ -127,7 +127,10 @@ const IndexPage = () => {
               </a>
             </li>
             <li>
-              <a href="#cfp-attendees">2.3 Attendees</a>
+              <a href="#cfp-attendees">
+                {" "}
+                <s>2.3 Attendees</s>
+              </a>
             </li>
           </ul>
           <li>
@@ -197,8 +200,7 @@ const IndexPage = () => {
           1.1 Schedule
         </h3>
         <p>
-          For the pretalx view of the schedule, please check:{" "}
-          <br />
+          For the pretalx view of the schedule, please check: <br />
           <a href="https://sched.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
             sched.protocol.berlin
           </a>
@@ -248,20 +250,15 @@ const IndexPage = () => {
         </h3>
         <p>Volunteer applications has been closed. Thanks to everyone who volunteered!</p>
         <h3 className="font-bold" id="cfp-attendees">
-          2.3 Attendees
+          2.3 <s>Attendees</s>
         </h3>
         <p>
-          General admission applications <b>are now open!</b> Apply at
+          General admission applications <b>are now closed</b>. If you have already received a ticket, you can manage it
+          at
           <br />
           <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
             tickets.protocol.berlin
           </a>
-        </p>
-        <p>Attendance is free as in free lemonade. Just let us know what motivates you to join the conference.</p>
-        <p>
-          Tickets will be distributed on a "first come first serve" basis for all eligible applications. Please
-          remember, tickets are on application basis and approved by the team. Applying for a ticket does not guarantee
-          one.
         </p>
       </section>
       <section>
