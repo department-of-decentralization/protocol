@@ -253,7 +253,7 @@ const IndexPage = () => {
           2.3 <s>Attendees</s>
         </h3>
         <p>
-          General admission applications <b>are now closed</b>. If you have already received a ticket, you can manage it
+          General admission applications are now closed. If you have already received a ticket, you can manage it
           at
           <br />
           <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
