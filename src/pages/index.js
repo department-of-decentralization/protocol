@@ -201,6 +201,7 @@ const IndexPage = () => {
         </h3>
         <p>
           For a full-screen view of the schedule, check out the pretalx page:
+          <br />
           <a href="https://sched.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
             sched.protocol.berlin
           </a>
