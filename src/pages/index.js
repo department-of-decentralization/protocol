@@ -346,11 +346,12 @@ const IndexPage = () => {
           cryptographic transactions or traditional wire transfers.
         </p>
         <p>
-          Donations on Ethereum mainnet: <code>ethberlin.eth</code>; on other EVM chains:{" "}
-          <code>0xd22dC63e2388AE8226b5CAA0341fc0c1294b6B40</code>
+          Donations on <b>Ethereum mainnet</b>: <code>ethberlin.eth</code>
+          <br />
+          Donations on <b>other EVM chains</b>: <code>0xd22dC63e2388AE8226b5CAA0341fc0c1294b6B40</code>
         </p>
         <p>
-          Wire (SEPA) donations:
+          <b>Wire (SEPA) donations:</b>
           <br />
           Beneficiary: <code>Goerli Dezentral gGmbH</code>
           <br />
