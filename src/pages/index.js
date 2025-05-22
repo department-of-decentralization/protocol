@@ -275,7 +275,7 @@ const IndexPage = () => {
         </p>
         <p>
           The venue will be equipped with three stages. In addition, there will be a workshop area for deep technical study
-          and knowledge-sharing classes. And there will be space, whiteboards, .. around the venue to have Impromptu sessions.
+          and knowledge-sharing classes. There will also be spaces with whiteboards around the venue to have Impromptu sessions.
         </p>
         <p>
           Latitude/Longitude:
