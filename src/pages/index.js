@@ -274,8 +274,8 @@ const IndexPage = () => {
           times and has served as a movie screening facility since 1924.
         </p>
         <p>
-          The venue will be equipped with two stages. In addition, there will be workshop areas for deep technical study
-          and knowledge-sharing classes.
+          The venue will be equipped with threee stages. In addition, there will be a workshop area for deep technical study
+          and knowledge-sharing classes. And there will be space, whiteboards, .. around the venue to have Impromptu sessions.
         </p>
         <p>
           Latitude/Longitude:
