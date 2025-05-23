@@ -435,20 +435,6 @@
     ]
   },
   {
-    "name": "Lukas",
-    "image": "/speakers/lukas.jpg",
-    "organization": {
-      "name": "ZeroSync"
-    },
-    "code": "N8HWF7",
-    "publishedSessions": [
-      {
-        "code": "VRWUBC",
-        "title": "BitVM Engineering Tales"
-      }
-    ]
-  },
-  {
     "name": "Costanza Gallo",
     "image": "/speakers/constanza.jpg",
     "twitter": "https://x.com/costgallo",
@@ -987,21 +973,6 @@
     "twitter": "https://x.com/orishim"
   },
   {
-    "name": "Soares Chen",
-    "code": "UHE8HR",
-    "image": "/speakers/UHE8HR.jpg",
-    "publishedSessions": [
-      {
-        "code": "SS8RQ7",
-        "title": "How to use context-generic types to enforce correctness of multi-chain client applications in Rust"
-      }
-    ],
-    "organization": {
-      "name": "Informal Systems"
-    },
-    "website": "https://contextgeneric.dev/"
-  },
-  {
     "name": "Phil Ngo",
     "code": "WL3PME",
     "image": "/speakers/WL3PME.jpg",
@@ -1171,21 +1142,6 @@
     "bluesky": "https://bsky.app/profile/kuehlewindt.com"
   },
   {
-    "name": "Aayush Gupta",
-    "code": "W7KVPA",
-    "image": "/speakers/W7KVPA.jpg",
-    "publishedSessions": [
-      {
-        "code": "WWSQU7",
-        "title": "Programmable Provenance with ZK Email and Proteus: Whistleblowing, Deepfake Detection, and More"
-      }
-    ],
-    "organization": {
-      "name": "ZK Email"
-    },
-    "website": "https://aayushg.com"
-  },
-  {
     "name": "Andreas Erwig",
     "code": "NCDSLJ",
     "image": "/speakers/NCDSLJ.jpg",
@@ -1310,21 +1266,6 @@
       "name": "Shtuka Research"
     },
     "website": "https://shtuka.io"
-  },
-  {
-    "name": "rodiazet",
-    "code": "CDK9WM",
-    "image": "/speakers/CDK9WM.jpg",
-    "publishedSessions": [
-      {
-        "code": "CPCEHY",
-        "title": "EVMMAX - Fast modular arithmetic in EVM"
-      }
-    ],
-    "organization": {
-      "name": "EF-ipsilon"
-    },
-    "website": "https://ipsilon.xyz"
   },
   {
     "name": "Leo BG",

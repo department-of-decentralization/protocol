@@ -177,6 +177,44 @@ async function main() {
     userEditor = "code --wait"; // VS Code needs --wait flag
   }
 
+  // Fetch API data and speakers.json
+  const [speakers, sessions] = await Promise.all([fetchSpeakers(), fetchSubmissions()]);
+  const speakersJsonPath = path.join(__dirname, "..", "src", "speakers.json");
+  let speakersJson = [];
+  if (fs.existsSync(speakersJsonPath)) {
+    speakersJson = JSON.parse(fs.readFileSync(speakersJsonPath, "utf8"));
+  }
+
+  // --- NEW: Check for removed/unpublished sessions ---
+  // Collect all session codes from API
+  const apiSessionCodes = new Set(
+    sessions.filter((s) => s.state === "accepted" || s.state === "confirmed").map((s) => s.code)
+  );
+  // Collect all published session codes from speakers.json
+  const publishedSessions = [];
+  speakersJson.forEach((speaker) => {
+    (speaker.publishedSessions || []).forEach((session) => {
+      publishedSessions.push({
+        code: session.code,
+        title: session.title,
+        speakerName: speaker.name,
+      });
+    });
+  });
+  // Find sessions in speakers.json but not in API
+  const removedSessions = publishedSessions.filter((s) => !apiSessionCodes.has(s.code));
+  if (removedSessions.length > 0) {
+    console.log(
+      "\n\x1b[33mWarning: The following sessions are found in speakers.json but not in the API response (possibly removed):\x1b[0m"
+    );
+    removedSessions.forEach((s) => {
+      console.log(`- ${s.code}: ${s.title} (Speaker: ${s.speakerName})`);
+    });
+  } else {
+    console.log("\nNo removed sessions found in speakers.json.");
+  }
+  // --- END NEW ---
+
   const unpublished = await fetchUnpublishedSessionsWithSpeakers();
   if (!unpublished.length) {
     console.log("No unpublished sessions found.");
@@ -185,19 +223,13 @@ async function main() {
   }
 
   // First show all sessions
-  console.log("\nFound the following unpublished sessions:");
+  console.log("\nFound the following sessions not published yet:");
   unpublished.forEach((sessionObj, index) => {
     console.log(`\n[${index + 1}/${unpublished.length}]:`);
     console.log(JSON.stringify(sessionObj, null, 2));
   });
 
   const answer = await promptUser("\nWould you like to modify any sessions before processing? (y/n): ");
-
-  const speakersJsonPath = path.join(__dirname, "..", "src", "speakers.json");
-  let speakersJson = [];
-  if (fs.existsSync(speakersJsonPath)) {
-    speakersJson = JSON.parse(fs.readFileSync(speakersJsonPath, "utf8"));
-  }
 
   if (answer.toLowerCase() === "y") {
     // Go through each session with modification options
