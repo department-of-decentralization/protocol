@@ -156,6 +156,9 @@ const IndexPage = () => {
               </li>
             </ul>
           </li>
+          <li>
+             <a href="#more">5. More</a>
+          </li>
         </ol>
       </div>
       <section>
@@ -254,12 +257,13 @@ const IndexPage = () => {
           2.3 <s>Attendees</s>
         </h3>
         <p>
-          General admission applications are now closed. If you have already received a ticket, you can manage it
-          at
+            General admission applications are now closed. If you want to join the waitlist or have already received a ticket, you can manage it at
           <br />
           <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
             tickets.protocol.berlin
           </a>
+	  <br />
+	  There are also other events around that time in Berlin that might still have capacity - you can find them on <a href="http://days.protocol.berlin">days.protocol.berlin</a>.
         </p>
       </section>
       <section>
@@ -393,6 +397,15 @@ const IndexPage = () => {
           All attendees have to adhere to the event's <a href="/conduct">Code of Conduct</a>.
         </p>
       </section>
+      <section>
+        <h2 className="font-bold" id="more">
+          5. More
+        </h2>
+          <p>
+           Surrounding Protocol Berg v2 there are some other events in Berlin - you can find them at <a href="http://days.protocol.berlin">days.protocol.berlin</a>.
+          </p>
+      </section>	  
+
       <footer className="footnotes mt-8 break-all">
         <ul>
           {
