@@ -52,7 +52,8 @@ async function fetchUnpublishedSessionsWithSpeakers() {
   const result = [];
   for (const session of unpublishedSessions) {
     if (!session.speakers || session.speakers.length === 0) {
-      throw new Error(`Session ${session.code} has no speakers. Skipping.`);
+      console.warn(`⚠️ Session ${session.title} (${session.code}) has no speakers. Skipping.`);
+      continue;
     }
     // Map API speaker objects to full speaker info from API
     const sessionSpeakers = session.speakers
