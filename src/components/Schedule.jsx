@@ -6,6 +6,7 @@ import "../styles/modal.css";
 import { IoCloseOutline } from "react-icons/io5";
 import { IoMdCloseCircle } from "react-icons/io";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
+import BerlinDate from "../utils/BerlinDate";
 
 const SCHEDULE_LINK = "https://cfp.protocol.berlin/protocol-berg-v2/schedule/export/schedule.json";
 
@@ -92,7 +93,9 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
       <div
         className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer  ${
           isShort ? "px-3 py-1" : "px-4 py-4"
-        } box-border ${backgroundColor} ${textColor} leading-4 overflow-auto`}
+        } box-border ${backgroundColor} ${textColor} leading-4 overflow-auto border ${
+          isDarkMode ? "border-gray-700" : "border-gray-100"
+        }`}
         onClick={handleOpenModal}
         style={eventStyle}
       >
@@ -157,7 +160,11 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
           <div className="text-lg font-bold text-center">{event.title}</div>
           <div className="text-center">{event.room}</div>
           <div className="text-base text-center">
-            {new Date(event.date).toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })}
+            {new BerlinDate(event.date).toLocaleDateString("en-US", {
+              weekday: "long",
+              month: "short",
+              day: "numeric",
+            })}
           </div>
           <div className="text-base text-center">
             {event.start} - {eventEndHour + ":" + eventEndMinute}{" "}
@@ -232,17 +239,20 @@ const Schedule = ({ isDarkMode, speakers }) => {
   // Update nowDivider when showDay changes
   const generateNowDivider = () => {
     // Get the actual conference dates from the API if available
-    let conferenceDates = [new Date("2025-06-12T08:00:00.000Z"), new Date("2025-06-13T08:00:00.000Z")];
+    let conferenceDates = [new BerlinDate("2025-06-12T08:00:00.000Z"), new BerlinDate("2025-06-13T08:00:00.000Z")];
 
     // Try to get dates from the conference data if available
     if (pretalxSchedule && pretalxSchedule.schedule && pretalxSchedule.schedule.conference) {
       const confData = pretalxSchedule.schedule.conference;
       if (confData.start && confData.end) {
-        conferenceDates = [new Date(confData.start + "T08:00:00.000Z"), new Date(confData.end + "T08:00:00.000Z")];
+        conferenceDates = [
+          new BerlinDate(confData.start + "T08:00:00.000Z"),
+          new BerlinDate(confData.end + "T08:00:00.000Z"),
+        ];
       }
     }
 
-    const today = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" }));
+    const today = new BerlinDate();
     const hour = today.getHours();
     const min = today.getMinutes();
 
@@ -342,8 +352,8 @@ const Schedule = ({ isDarkMode, speakers }) => {
     // Fix workshop events that might be in the wrong room
     allEvents.forEach((event) => {
       // Check if the event date matches the current day's date
-      const eventDate = new Date(event.date).toISOString().split("T")[0];
-      const dayDate = new Date(conferenceDays[showDay].date).toISOString().split("T")[0];
+      const eventDate = new BerlinDate(event.date).toISOString().split("T")[0];
+      const dayDate = new BerlinDate(conferenceDays[showDay].date).toISOString().split("T")[0];
 
       if (eventDate === dayDate) {
         // Add to the room specified in the event
@@ -397,7 +407,11 @@ const Schedule = ({ isDarkMode, speakers }) => {
             }`}
           >
             Day {index + 1} -{" "}
-            {new Date(day.date).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}
+            {new BerlinDate(day.date).toLocaleDateString("en-US", {
+              weekday: "short",
+              month: "short",
+              day: "numeric",
+            })}
           </button>
         ))}
       </div>
@@ -530,7 +544,7 @@ const isPastTime = (eventEndTime) => {
   const eventHour = parseInt(eventEndTime.split(":")[0]);
   const eventMin = parseInt(eventEndTime.split(":")[1]);
 
-  const today = new Date();
+  const today = new BerlinDate();
   const hour = today.getHours();
   const min = today.getMinutes();
 
