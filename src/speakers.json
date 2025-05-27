@@ -337,18 +337,6 @@
     ]
   },
   {
-    "name": "Molly Mackinlay",
-    "image": "/speakers/molly.jpg",
-    "twitter": "https://twitter.com/momack28",
-    "code": "F3TDMM",
-    "publishedSessions": [
-      {
-        "code": "AKXQTP",
-        "title": "Evolving Filecoin: Strengthening Storage Markets, Incentives, and Network Resilience"
-      }
-    ]
-  },
-  {
     "name": "Axel Eckerbom",
     "image": "/speakers/axel.jpg",
     "organization": {
