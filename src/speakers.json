@@ -1447,5 +1447,20 @@
       "name": "Stanford University"
     },
     "website": "https://www.linkedin.com/in/jeff-strnad-2b15137b"
+  },
+  {
+    "name": "Jarrad Hope",
+    "code": "ZFAQV3",
+    "image": "/speakers/ZFAQV3.jpg",
+    "publishedSessions": [
+      {
+        "code": "8SDEGJ",
+        "title": "Cryptarchia Consensus & Blend Broadcasting for Private Blockchains"
+      }
+    ],
+    "organization": {
+      "name": "Logos"
+    },
+    "twitter": "https://x.com/jarradhope_"
   }
 ]
