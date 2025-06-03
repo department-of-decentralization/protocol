@@ -295,21 +295,6 @@
     ]
   },
   {
-    "name": "Gajinder",
-    "image": "/speakers/gajinder.jpg",
-    "organization": {
-      "name": "Zeam, Ethereumjs, Lodestar"
-    },
-    "twitter": "https://x.com/Gajpower",
-    "code": "PMDAYM",
-    "publishedSessions": [
-      {
-        "code": "RYELF7",
-        "title": "Workings of Native Rollups and EXECUTE precompile"
-      }
-    ]
-  },
-  {
     "name": "Sergey Fedorov",
     "image": "/speakers/sergey.jpg",
     "organization": {
@@ -1450,5 +1435,20 @@
       "name": "Logos"
     },
     "twitter": "https://x.com/jarradhope_"
+  },
+  {
+    "name": "Vitalik Buterin",
+    "code": "7X8AJ8",
+    "image": "/speakers/7X8AJ8.jpg",
+    "publishedSessions": [
+      {
+        "code": "GGTZDH",
+        "title": "Long-term L1 Proposal: Replacing the EVM with RISC-V"
+      }
+    ],
+    "organization": {
+      "name": "Ethereum Foundation"
+    },
+    "website": "https://vitalik.eth.limo/"
   }
 ]
