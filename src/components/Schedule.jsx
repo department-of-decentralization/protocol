@@ -23,8 +23,9 @@ const CONF_START_ABSOLUTE_MINUTES = CONF_START_HOUR * 60 + CONF_START_MINUTE;
 const CONF_END_ABSOLUTE_MINUTES = CONF_END_HOUR * 60 + CONF_END_MINUTE;
 const CONF_DURATION_MINUTES = CONF_END_ABSOLUTE_MINUTES - CONF_START_ABSOLUTE_MINUTES;
 const TOTAL_CELLS = CONF_DURATION_MINUTES / 5;
+const COLUMN_WIDTH = 220;
 
-const COLUMN_WIDTH_TW_STYLE = "min-w-[220px]";
+const COLUMN_WIDTH_TW_STYLE = `min-w-[${COLUMN_WIDTH}px]`;
 
 const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -275,14 +276,13 @@ const Schedule = ({ isDarkMode, speakers }) => {
 
     const dividerStyle = {
       position: "absolute",
-      top: nowCellOffset,
-      height: CELL_HEIGHT,
-      width: "100%",
-      zIndex: 30,
+      top: nowCellOffset - 28,
+      width: COLUMN_WIDTH * 5 + (5 - 1) * 20,
+      zIndex: 50,
     };
 
     return (
-      <div className="border-b-2 border-red-400 z-[25] animate-bounce" style={dividerStyle}>
+      <div className={`border-b-2 border-red-400 z-50 animate-bounce `} style={dividerStyle}>
         <span className="bg-red-400 text-white px-2 py-1 rounded-md text-xs">Now</span>
       </div>
     );
@@ -470,7 +470,7 @@ const Schedule = ({ isDarkMode, speakers }) => {
 };
 
 const placeEventOnSchedule = (event, timeslotDuration, speakers, isDarkMode) => {
-  const { start, duration } = event;
+  const { start, duration, date } = event;
   const end = addTimes(start, duration);
   const eventDurationMinutes = parseInt(duration.split(":")[0]) * 60 + parseInt(duration.split(":")[1]);
   const timeslotDurationMinutes =
@@ -488,10 +488,15 @@ const placeEventOnSchedule = (event, timeslotDuration, speakers, isDarkMode) => 
   const eventOffsetSize = (eventStartAbsoluteMinutes - CONF_START_ABSOLUTE_MINUTES) / timeslotDurationMinutes;
   const eventOffsetPixels = eventOffsetSize * CELL_HEIGHT;
 
+  const endDate = date.split("T")[0] + "T" + end + ":00";
+
+  const isPast = isPastDate(endDate);
+  console.log(event.title, endDate, isPast);
   const eventStyle = {
     position: "absolute",
     height: eventSpanPixels,
     top: eventOffsetPixels,
+    opacity: isPast ? 0.4 : 1,
   };
 
   return <EventContainer event={event} eventStyle={eventStyle} speakers={speakers} isDarkMode={isDarkMode} />;
@@ -551,6 +556,14 @@ const isPastTime = (eventEndTime) => {
   if (hour > eventHour) return true;
   else if (hour === eventHour && min > eventMin) return true;
   else return false;
+};
+
+const isPastDate = (eventDate) => {
+  const eventDateObj = new BerlinDate(eventDate);
+  const today = new BerlinDate();
+
+  // Compare full date and time
+  return today > eventDateObj;
 };
 
 // Via ChatGPT
