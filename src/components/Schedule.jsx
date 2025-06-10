@@ -23,9 +23,8 @@ const CONF_START_ABSOLUTE_MINUTES = CONF_START_HOUR * 60 + CONF_START_MINUTE;
 const CONF_END_ABSOLUTE_MINUTES = CONF_END_HOUR * 60 + CONF_END_MINUTE;
 const CONF_DURATION_MINUTES = CONF_END_ABSOLUTE_MINUTES - CONF_START_ABSOLUTE_MINUTES;
 const TOTAL_CELLS = CONF_DURATION_MINUTES / 5;
-const COLUMN_WIDTH = 220;
 
-const COLUMN_WIDTH_TW_STYLE = `min-w-[${COLUMN_WIDTH}px]`;
+const COLUMN_WIDTH = 220;
 
 const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -92,13 +91,13 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
   return (
     <>
       <div
-        className={`${COLUMN_WIDTH_TW_STYLE} cursor-pointer  ${
+        className={`cursor-pointer  ${
           isShort ? "px-3 py-1" : "px-4 py-4"
         } box-border ${backgroundColor} ${textColor} leading-4 overflow-auto border ${
           isDarkMode ? "border-gray-700" : "border-gray-100"
         }`}
         onClick={handleOpenModal}
-        style={eventStyle}
+        style={{ ...eventStyle, minWidth: COLUMN_WIDTH + "px" }}
       >
         {!isMinimal && !isShort && (
           <div className="text-[0.7rem]">
@@ -430,10 +429,9 @@ const Schedule = ({ isDarkMode, speakers }) => {
             <div className="flex flex-row sticky top-0 z-10 font-bold">
               {roomNames.map((room, i) => (
                 <div
-                  className={`${COLUMN_WIDTH_TW_STYLE} text-center ${
-                    isDarkMode ? "bg-[hsl(0,0%,10%)]" : "bg-slate-100"
-                  } mx-2 py-1`}
+                  className={`text-center ${isDarkMode ? "bg-[hsl(0,0%,10%)]" : "bg-slate-100"} mx-2 py-1`}
                   key={`room-${i}`}
+                  style={{ minWidth: COLUMN_WIDTH + "px" }}
                 >
                   {room}
                 </div>
@@ -446,10 +444,9 @@ const Schedule = ({ isDarkMode, speakers }) => {
               {roomNames.map((room, i) => {
                 return (
                   <div
-                    className={`relative ${COLUMN_WIDTH_TW_STYLE} ${
-                      isDarkMode ? "bg-[hsl(0,0%,30%)]" : "bg-gray-100"
-                    } mx-2`}
+                    className={`relative ${isDarkMode ? "bg-[hsl(0,0%,30%)]" : "bg-gray-100"} mx-2`}
                     key={`room-col-${i}`}
+                    style={{ minWidth: COLUMN_WIDTH + "px" }}
                   >
                     {dayRooms[room].map((event, j) => {
                       return placeEventOnSchedule(event, schedule.conference.timeslot_duration, speakers, isDarkMode);
