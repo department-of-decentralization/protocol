@@ -5,6 +5,7 @@ import Speaker from "../components/Speaker";
 import Schedule from "../components/Schedule";
 import speakers from "../speakers.json";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { GoVideo } from "react-icons/go";
 import logo from "../images/protocolBerg.png";
 
 const FootNote = ({ id, author, description, year, url, accessed }) => (
@@ -106,10 +107,15 @@ const IndexPage = () => {
           </li>
           <ul className="pl-6">
             <li>
-              <a href="#schedule">1.1 Schedule</a>
+              <a href="#livestream">
+                1.1 Livestream <GoVideo className="inline-block" />
+              </a>
             </li>
             <li>
-              <a href="#speakers">1.2 Speakers</a>
+              <a href="#schedule">1.2 Schedule</a>
+            </li>
+            <li>
+              <a href="#speakers">1.3 Speakers</a>
             </li>
           </ul>
           <li>
@@ -196,8 +202,18 @@ const IndexPage = () => {
           </a>
           .
         </p>
-        <h3 className="font-bold mt-8" id="schedule">
-          1.1 Schedule
+        <h3 className="font-bold mt-8" id="livestream">
+          1.1 Livestream <GoVideo className="inline-block" />
+        </h3>
+        <p>
+          You can watch the livestream at <br />
+          <a href="https://watch.protocol.berlin" target="_blank" rel="noreferrer" className="ml-12">
+            watch.protocol.berlin
+          </a>
+          .
+        </p>
+        <h3 className="font-bold" id="schedule">
+          1.2 Schedule
         </h3>
         <p>
           For a full-screen view of the schedule, check out the pretalx page:
@@ -213,7 +229,7 @@ const IndexPage = () => {
           </div>
         </div>
         <h3 className="font-bold" id="speakers">
-          1.2 Speakers
+          1.3 Speakers
         </h3>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
@@ -254,8 +270,7 @@ const IndexPage = () => {
           2.3 <s>Attendees</s>
         </h3>
         <p>
-          General admission applications are now closed. If you have already received a ticket, you can manage it
-          at
+          General admission applications are now closed. If you have already received a ticket, you can manage it at
           <br />
           <a href="https://tickets.protocol.berlin/" target="_blank" rel="noreferrer" className="ml-12">
             tickets.protocol.berlin
@@ -274,8 +289,9 @@ const IndexPage = () => {
           times and has served as a movie screening facility since 1924.
         </p>
         <p>
-          The venue will be equipped with three stages. In addition, there will be a workshop area for deep technical study
-          and knowledge-sharing classes. There will also be spaces with whiteboards around the venue to have Impromptu sessions.
+          The venue will be equipped with three stages. In addition, there will be a workshop area for deep technical
+          study and knowledge-sharing classes. There will also be spaces with whiteboards around the venue to have
+          Impromptu sessions.
         </p>
         <p>
           Latitude/Longitude:
