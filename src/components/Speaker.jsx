@@ -26,7 +26,6 @@ const Speaker = ({ speaker, index }) => {
     const checkDarkMode = () => {
       // Check specifically for the latex-dark class on the body
       const isDark = document.body.classList.contains("latex-dark");
-      console.log("Dark mode detected:", isDark);
       setIsDarkMode(isDark);
     };
 

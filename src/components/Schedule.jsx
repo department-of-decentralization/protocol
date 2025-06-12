@@ -252,12 +252,13 @@ const Schedule = ({ isDarkMode, speakers }) => {
       }
     }
 
-    const today = new BerlinDate();
+    const today = new BerlinDate(new Date().toISOString());
     const hour = today.getHours();
     const min = today.getMinutes();
 
     // Check if today matches the currently selected conference day
     const selectedDate = conferenceDates[showDay];
+
     const isSameDay =
       selectedDate &&
       today.getFullYear() === selectedDate.getFullYear() &&
@@ -293,7 +294,7 @@ const Schedule = ({ isDarkMode, speakers }) => {
     fetch(SCHEDULE_LINK)
       .then((response) => response.json())
       .then((data) => {
-        console.log("Schedule data loaded:", data);
+        // console.log("Schedule data loaded:", data);
         setPretalxSchedule(data);
       })
       .catch((error) => {
@@ -488,7 +489,6 @@ const placeEventOnSchedule = (event, timeslotDuration, speakers, isDarkMode) => 
   const endDate = date.split("T")[0] + "T" + end + ":00";
 
   const isPast = isPastDate(endDate);
-  console.log(event.title, endDate, isPast);
   const eventStyle = {
     position: "absolute",
     height: eventSpanPixels,
