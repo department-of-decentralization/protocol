@@ -278,11 +278,11 @@ const Schedule = ({ isDarkMode, speakers }) => {
       position: "absolute",
       top: nowCellOffset - 28,
       width: COLUMN_WIDTH * 5 + (5 - 1) * 20,
-      zIndex: 50,
+      zIndex: 40,
     };
 
     return (
-      <div className={`border-b-2 border-red-400 z-50 animate-bounce `} style={dividerStyle}>
+      <div className={`border-b-2 border-red-400 animate-bounce `} style={dividerStyle}>
         <span className="bg-red-400 text-white px-2 py-1 rounded-md text-xs">Now</span>
       </div>
     );
