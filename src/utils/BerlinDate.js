@@ -1,6 +1,9 @@
 import { TZDate } from "@date-fns/tz";
 
 const BerlinDate = function (dateString) {
+  if (!dateString) {
+    dateString = new Date().toISOString();
+  }
   return new TZDate(dateString, "Europe/Berlin");
 };
 

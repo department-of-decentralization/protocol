@@ -7,6 +7,7 @@ import speakers from "../speakers.json";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { GoVideo } from "react-icons/go";
 import logo from "../images/protocolBerg.png";
+import BerlinDate from "../utils/BerlinDate";
 
 const FootNote = ({ id, author, description, year, url, accessed }) => (
   <li id={`fn${id}`} className="flex flex-row">

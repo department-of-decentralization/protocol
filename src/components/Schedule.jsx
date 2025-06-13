@@ -234,7 +234,11 @@ const EventContainer = ({ event, eventStyle, speakers, isDarkMode }) => {
 const Schedule = ({ isDarkMode, speakers }) => {
   const [pretalxSchedule, setPretalxSchedule] = React.useState();
   const [scheduleFetchError, setScheduleFetchError] = React.useState(false);
-  const [showDay, setShowDay] = React.useState(0); // 0 for first day, 1 for second day
+
+  // Check if current date is June 13th, 2025
+  const today = new BerlinDate(new Date().toISOString());
+  const isJune13 = today.getFullYear() === 2025 && today.getMonth() === 5 && today.getDate() === 13;
+  const [showDay, setShowDay] = React.useState(isJune13 ? 1 : 0); // 1 for second day if June 13th, otherwise 0
 
   // Update nowDivider when showDay changes
   const generateNowDivider = () => {
@@ -252,11 +256,6 @@ const Schedule = ({ isDarkMode, speakers }) => {
       }
     }
 
-    const today = new BerlinDate(new Date().toISOString());
-    const hour = today.getHours();
-    const min = today.getMinutes();
-
-    // Check if today matches the currently selected conference day
     const selectedDate = conferenceDates[showDay];
 
     const isSameDay =
@@ -269,7 +268,7 @@ const Schedule = ({ isDarkMode, speakers }) => {
       return null;
     }
 
-    const nowTotalMinutes = hour * 60 + parseInt(min);
+    const nowTotalMinutes = today.getHours() * 60 + today.getMinutes();
     const nowRelativeTotalMinutes = nowTotalMinutes - CONF_START_ABSOLUTE_MINUTES;
     const nowCellNumber = nowRelativeTotalMinutes / 5;
     const nowCellOffset = nowCellNumber * CELL_HEIGHT;
